@@ -1,19 +1,19 @@
 {
   "name": "Valomedic Global Medical Concierge",
-  "short_term": "Valomedic",
+  "short_name": "Valomedic",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#030814",
   "theme_color": "#0d9488",
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=192&q=80",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "icon-512.png",
-      "sizes": "512x192",
+      "src": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=512&q=80",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]
