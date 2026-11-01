@@ -59,6 +59,14 @@
             background-size: cover;
             background-position: center;
         }
+        /* Hide Google Translate Default Banner & Tooltips */
+        .goog-te-banner-frame.skiptranslate { display: none !important; }
+        body { top: 0px !important; }
+        #google_translate_element { display: inline-block; }
+        .goog-te-gadget { font-family: 'Inter', sans-serif !important; font-size: 0px !important; color: transparent !important; }
+        .goog-te-gadget select { background-color: #0f172a !important; color: #ffffff !important; border: 1px solid #334155 !important; padding: 6px 12px !important; border-radius: 8px !important; font-size: 12px !important; outline: none !important; cursor: pointer; }
+        .goog-logo-link { display: none !important; }
+        .goog-te-gadget span { display: none !important; }
     </style>
 </head>
 <body class="bg-gradient-to-br from-slate-900 via-slate-950 to-teal-950 text-slate-100 font-sans antialiased selection:bg-teal-500 selection:text-white">
@@ -107,14 +115,14 @@
 
             <!-- Desktop Navigation -->
             <nav class="hidden xl:flex items-center space-x-1">
-                <a href="#" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg" data-i18n="nav_home">Home</a>
-                <a href="#procedures" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg" data-i18n="nav_depts">Departments</a>
-                <a href="#destinations" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg" data-i18n="nav_hubs">Hubs</a>
-                <a href="#estimator" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg" data-i18n="nav_calc">Calculator</a>
-                <a href="#tourism" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg" data-i18n="nav_tourism">Tourism</a>
-                <a href="#medication" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg" data-i18n="nav_pharmacy">Pharmacy</a>
-                <a href="#second-opinion" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg" data-i18n="nav_opinions">Opinions</a>
-                <a href="#consultation" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg" data-i18n="nav_inquire">Inquire</a>
+                <a href="#" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Home</a>
+                <a href="#procedures" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Departments</a>
+                <a href="#destinations" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Hubs</a>
+                <a href="#estimator" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Calculator</a>
+                <a href="#tourism" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Tourism</a>
+                <a href="#medication" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Pharmacy</a>
+                <a href="#second-opinion" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Opinions</a>
+                <a href="#consultation" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Inquire</a>
             </nav>
 
             <!-- Mobile Hamburger Menu Toggle -->
@@ -145,17 +153,17 @@
                 <span class="inline-flex items-center gap-2 bg-teal-500/20 text-teal-300 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest border border-teal-500/30">
                     <i class="fa-solid fa-crown text-amber-400"></i> Elite International Medical Concierge & Travelism
                 </span>
-                <h1 class="text-4xl sm:text-6xl font-extrabold font-heading tracking-tight leading-tight" data-i18n="hero_title">
+                <h1 class="text-4xl sm:text-6xl font-extrabold font-heading tracking-tight leading-tight">
                     Valomedic Global Medical Concierge. All-Inclusive Luxury & Surgery at 40%–50% Net Savings.
                 </h1>
-                <p class="text-slate-300 text-lg sm:text-xl font-normal leading-relaxed max-w-2xl" data-i18n="hero_desc">
+                <p class="text-slate-300 text-lg sm:text-xl font-normal leading-relaxed max-w-2xl">
                     While staying in America or Europe costs double for surgery alone, Valomedic bundles elite JCI surgery, luxury 5-star recovery villas, VIP airport transfers, private medical escorts, and complete travelism into one transparent all-inclusive price.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                    <a href="#consultation" class="bg-emerald-400 hover:bg-emerald-500 text-slate-950 font-extrabold px-8 py-4 rounded-2xl shadow-2xl transition-all text-center text-sm uppercase tracking-wider" data-i18n="btn_inquiry">
+                    <a href="#consultation" class="bg-emerald-400 hover:bg-emerald-500 text-slate-950 font-extrabold px-8 py-4 rounded-2xl shadow-2xl transition-all text-center text-sm uppercase tracking-wider">
                         Start Your Inquiry 🌟
                     </a>
-                    <a href="#estimator" class="bg-slate-800/80 hover:bg-slate-800 text-white border border-slate-700 font-bold px-8 py-4 rounded-2xl transition-all text-center text-sm" data-i18n="btn_calc">
+                    <a href="#estimator" class="bg-slate-800/80 hover:bg-slate-800 text-white border border-slate-700 font-bold px-8 py-4 rounded-2xl transition-all text-center text-sm">
                         Calculate Your Savings ↓
                     </a>
                 </div>
@@ -819,7 +827,7 @@
                 </div>
             </div>
 
-            <!-- CURRENCY & TRANSLATION SELECTORS -->
+            <!-- CURRENCY & GOOGLE TRANSLATE WIDGET -->
             <div class="border-t border-slate-800 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6">
                 <div class="flex flex-wrap items-center gap-4">
                     <span class="text-xs font-bold text-teal-300"><i class="fa-solid fa-coins mr-1"></i> Currency:</span>
@@ -836,202 +844,33 @@
                         <option value="94.91" data-symbol="₹">INR (₹)</option>
                     </select>
 
-                    <span class="text-xs font-bold text-teal-300 ml-4"><i class="fa-solid fa-language mr-1"></i> Language:</span>
-                    <select id="bottom-language" onchange="triggerTranslate(this.value)" class="bg-slate-900 border border-slate-700 text-xs text-white rounded-lg px-3 py-1.5 focus:outline-none">
-                        <option value="en" selected>English (Global)</option>
-                        <option value="ar">Arabic (العربية)</option>
-                        <option value="hi">Hindi (हिन्दी)</option>
-                        <option value="es">Spanish (Español)</option>
-                        <option value="fr">French (Français)</option>
-                        <option value="de">German (Deutsch)</option>
-                        <option value="zh">Mandarin (中文)</option>
-                        <option value="ru">Russian (Русский)</option>
-                        <option value="ja">Japanese (日本語)</option>
-                        <option value="pt">Portuguese (Português)</option>
-                    </select>
+                    <span class="text-xs font-bold text-teal-300 ml-4"><i class="fa-solid fa-language mr-1"></i> Real-Time Translate:</span>
+                    <!-- Google Translate Live Container -->
+                    <div id="google_translate_element"></div>
                 </div>
                 <div>&copy; 2026 Valomedic Global Medical Concierge (Founder: Karan Suthar). All Rights Reserved. Udyam MSME & Zero-GST Compliant.</div>
             </div>
         </div>
     </footer>
 
+    <!-- GOOGLE TRANSLATE API SCRIPT -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,ar,hi,es,fr,de,zh-CN,ru,ja,pt',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
     <!-- JAVASCRIPT LOGIC -->
     <script>
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
-        }
-
-        // Full Multi-Language Dictionary Engine
-        const translations = {
-            en: {
-                hero_title: "Valomedic Global Medical Concierge. All-Inclusive Luxury & Surgery at 40%–50% Net Savings.",
-                hero_desc: "While staying in America or Europe costs double for surgery alone, Valomedic bundles elite JCI surgery, luxury 5-star recovery villas, VIP airport transfers, private medical escorts, and complete travelism into one transparent all-inclusive price.",
-                btn_inquiry: "Start Your Inquiry 🌟",
-                btn_calc: "Calculate Your Savings ↓",
-                nav_home: "Home",
-                nav_depts: "Departments",
-                nav_hubs: "Hubs",
-                nav_calc: "Calculator",
-                nav_tourism: "Tourism",
-                nav_pharmacy: "Pharmacy",
-                nav_opinions: "Opinions",
-                nav_inquire: "Inquire"
-            },
-            ar: {
-                hero_title: "فالوميديك للخدمات الطبية العالمية. رعاية فاخرة وجراحة شاملة بتوفير 40% - 50%.",
-                hero_desc: "بينما يكلف البقاء في أمريكا أو أوروبا ضعف التكلفة للجراحة وحدها، تجمع فالوميديك بين جراحات JCI النخبوية، وفيلات التعافي الفاخرة، وخدمات الاستقبال VIP في سعر شامل واحد.",
-                btn_inquiry: "ابدأ استفسارك 🌟",
-                btn_calc: "احسب توفيرك ↓",
-                nav_home: "الرئيسية",
-                nav_depts: "الأقسام",
-                nav_hubs: "المراكز",
-                nav_calc: "الحاسبة",
-                nav_tourism: "السياحة",
-                nav_pharmacy: "الصيدلية",
-                nav_opinions: "الآراء",
-                nav_inquire: "استفسر"
-            },
-            hi: {
-                hero_title: "वालोमेडिक ग्लोबल मेडिकल कॉन्स्यर्ज। 40%-50% की बचत के साथ सभी समावेशी सर्जरी।",
-                hero_desc: "जबकि अमेरिका या यूरोप में अकेले सर्जरी की लागत दोगुनी होती है, वालोमेडिक JCI सर्जरी, 5-स्टार रिकवरी विला, वीआईपी एयरपोर्ट ट्रांसफर और मेडिकल कंसर्जय को एक पारदर्शी पैकेज में जोड़ता है।",
-                btn_inquiry: "अपनी पूछताछ शुरू करें 🌟",
-                btn_calc: "अपनी बचत की गणना करें ↓",
-                nav_home: "होम",
-                nav_depts: "विभाग",
-                nav_hubs: "हब्स",
-                nav_calc: "कैलकुलेटर",
-                nav_tourism: "पर्यटन",
-                nav_pharmacy: "फ़ार्मेसी",
-                nav_opinions: "राय",
-                nav_inquire: "पूछताछ"
-            },
-            es: {
-                hero_title: "Conserje Médico Global Valomedic. Cirugía y Lujo Todo Incluido con 40%–50% de Ahorro.",
-                hero_desc: "Mientras que en EE.UU. o Europa la cirugía sola cuesta el doble, Valomedic incluye cirugía JCI de élite, villas de recuperación de 5 estrellas, traslados VIP y escoltas médicos en un precio transparente.",
-                btn_inquiry: "Iniciar Consulta 🌟",
-                btn_calc: "Calcular Ahorros ↓",
-                nav_home: "Inicio",
-                nav_depts: "Departamentos",
-                nav_hubs: "Centros",
-                nav_calc: "Calculadora",
-                nav_tourism: "Turismo",
-                nav_pharmacy: "Farmacia",
-                nav_opinions: "Opiniones",
-                nav_inquire: "Consultar"
-            },
-            fr: {
-                hero_title: "Conciergerie Médicale Mondiale Valomedic. Chirurgie et Luxe Tout Compris avec 40%–50% d'Économies.",
-                hero_desc: "Alors qu'aux États-Unis ou en Europe la chirurgie seule coûte le double, Valomedic regroupe chirurgie JCI d'élite, villas de récupération 5 étoiles et transferts VIP dans un tarif tout compris.",
-                btn_inquiry: "Commencer Votre Demande 🌟",
-                btn_calc: "Calculer Vos Économies ↓",
-                nav_home: "Accueil",
-                nav_depts: "Départements",
-                nav_hubs: "Centres",
-                nav_calc: "Calculateur",
-                nav_tourism: "Tourisme",
-                nav_pharmacy: "Pharmacie",
-                nav_opinions: "Avis",
-                nav_inquire: "S'informer"
-            },
-            de: {
-                hero_title: "Valomedic Global Medical Concierge. All-Inclusive Luxus & Chirurgie mit 40%–50% Ersparnis.",
-                hero_desc: "Während Operationen in Amerika oder Europa das Doppelte kosten, bündelt Valomedic JCI-Chirurgie, 5-Sterne-Villen und VIP-Transfers zu einem transparenten All-Inclusive-Preis.",
-                btn_inquiry: "Anfrage Starten 🌟",
-                btn_calc: "Ersparnis Berechnen ↓",
-                nav_home: "Startseite",
-                nav_depts: "Abteilungen",
-                nav_hubs: "Standorte",
-                nav_calc: "Rechner",
-                nav_tourism: "Tourismus",
-                nav_pharmacy: "Apotheke",
-                nav_opinions: "Meinungen",
-                nav_inquire: "Anfragen"
-            },
-            zh: {
-                hero_title: "Valomedic 全球医疗礼宾服务。全包式豪华手术，立省 40%–50%。",
-                hero_desc: "在美国或欧洲，仅手术费用就极其昂贵。Valomedic 将精英 JCI 手术、五星级康复别墅、VIP 机场接送和私人医疗陪同融为一体，提供全包透明价格。",
-                btn_inquiry: "开始咨询 🌟",
-                btn_calc: "计算您的 savings ↓",
-                nav_home: "首页",
-                nav_depts: "科室",
-                nav_hubs: "医疗中心",
-                nav_calc: "计算器",
-                nav_tourism: "医疗旅游",
-                nav_pharmacy: "药房",
-                nav_opinions: "专家意见",
-                nav_inquire: "联系我们"
-            },
-            ru: {
-                hero_title: "Глобальный медицинский консьерж Valomedic. Все включено: элитная хирургия со скидкой 40%–50%.",
-                hero_desc: "В то время как в США или Европе операция стоит вдвое дороже, Valomedic объединяет элитную хирургию JCI, 5-звездочные виллы для восстановления и VIP-трансферы в единую цену.",
-                btn_inquiry: "Начать запрос 🌟",
-                btn_calc: "Рассчитать экономию ↓",
-                nav_home: "Главная",
-                nav_depts: "Отделения",
-                nav_hubs: "Центры",
-                nav_calc: "Калькулятор",
-                nav_tourism: "Туризм",
-                nav_pharmacy: "Аптека",
-                nav_opinions: "Мнения",
-                nav_inquire: "Запрос"
-            },
-            ja: {
-                hero_title: "バロメディック・グローバル・メディカル・コンシェルジュ。40%〜50%の節約で最高級の手術と滞在を提供。",
-                hero_desc: "アメリカやヨーロッパでは手術だけで莫大な費用がかかりますが、バロメディックはJCI認定の高度外科手術、5つ星のリカバリーヴィラ、VIP送迎をすべて含んだパッケージを提供します。",
-                btn_inquiry: "お問い合わせ開始 🌟",
-                btn_calc: "節約額を計算 ↓",
-                nav_home: "ホーム",
-                nav_depts: "診療科",
-                nav_hubs: "拠点",
-                nav_calc: "料金計算",
-                nav_tourism: "ツーリズム",
-                nav_pharmacy: "薬局",
-                nav_opinions: "セカンドオピニオン",
-                nav_inquire: "お問い合わせ"
-            },
-            pt: {
-                hero_title: "Concierge Médico Global Valomedic. Cirurgia e Luxo Tudo Incluído com 40%–50% de Economia.",
-                hero_desc: "Enquanto nos EUA ou Europa a cirurgia sozinha custa o dobro, a Valomedic reúne cirurgia JCI de elite, vilas de recuperação 5 estrelas e transfers VIP em um preço transparente.",
-                btn_inquiry: "Iniciar Consulta 🌟",
-                btn_calc: "Calcular Economia ↓",
-                nav_home: "Início",
-                nav_depts: "Departamentos",
-                nav_hubs: "Centros",
-                nav_calc: "Calculadora",
-                nav_tourism: "Turismo",
-                nav_pharmacy: "Farmácia",
-                nav_opinions: "Opiniões",
-                nav_inquire: "Consultar"
-            }
-        };
-
-        function triggerTranslate(langCode) {
-            const t = translations[langCode] || translations['en'];
-            
-            // Translate main dynamic text elements
-            const titleEl = document.querySelector('[data-i18n="hero_title"]');
-            const descEl = document.querySelector('[data-i18n="hero_desc"]');
-            const btnInq = document.querySelector('[data-i18n="btn_inquiry"]');
-            const btnCalc = document.querySelector('[data-i18n="btn_calc"]');
-
-            if (titleEl) titleEl.innerText = t.hero_title;
-            if (descEl) descEl.innerText = t.hero_desc;
-            if (btnInq) btnInq.innerText = t.btn_inquiry;
-            if (btnCalc) btnCalc.innerText = t.btn_calc;
-
-            // Translate navbar links
-            document.querySelectorAll('nav a').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (key && t[key]) el.innerText = t[key];
-            });
-
-            // Show translation success notification popup
-            const msg = document.createElement('div');
-            msg.className = 'fixed top-10 left-1/2 transform -translate-x-1/2 bg-teal-600 text-white px-6 py-4 rounded-2xl shadow-2xl z-50 text-xs font-bold';
-            msg.innerText = 'Language updated successfully to ' + langCode.toUpperCase() + '!';
-            document.body.appendChild(msg);
-            setTimeout(() => { msg.remove(); }, 2500);
         }
 
         function calculateEstimate() {
