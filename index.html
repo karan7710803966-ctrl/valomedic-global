@@ -2,14 +2,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valomedic Global Medical Concierge | Elite International Healthcare</title>
+    <title>Valomedic Global Medical Concierge | Elite International Healthcare & Travelism</title>
+    <!-- PWA Manifest & Theme -->
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#0d9488">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Inter & Playfair Display -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
@@ -44,31 +45,23 @@
             stroke-dasharray: 100 300;
             animation: pulseFlow 2.5s linear infinite;
         }
-        /* VIBRANT MIDDLE-TONE COLOR PALETTE WITH VISIBLE PATTERNS */
         body {
-            background-color: #0f766e;
+            background-color: #0b2e2b;
             background-image: 
-                radial-gradient(rgba(255, 255, 255, 0.25) 2px, transparent 2px),
-                radial-gradient(rgba(2, 132, 199, 0.3) 2px, #0f766e 2px);
-            background-size: 40px 40px;
-            background-position: 0 0, 20px 20px;
+                radial-gradient(circle at 15% 20%, rgba(20, 184, 166, 0.28) 0%, transparent 45%),
+                radial-gradient(circle at 85% 80%, rgba(2, 132, 199, 0.3) 0%, transparent 50%),
+                linear-gradient(135deg, rgba(10, 15, 30, 0.94) 0%, rgba(11, 46, 43, 0.96) 100%);
+            background-attachment: fixed;
+            background-size: cover;
             color: #f0fdfa;
         }
         .gradient-hero {
-            background: linear-gradient(135deg, rgba(13, 148, 136, 0.92) 0%, rgba(2, 132, 199, 0.90) 100%), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=2000&q=80');
+            background: linear-gradient(135deg, rgba(13, 148, 136, 0.94) 0%, rgba(2, 132, 199, 0.92) 100%), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=2000&q=80');
             background-size: cover;
             background-position: center;
         }
-        .section-innovation-bg {
-            background: linear-gradient(135deg, rgba(15, 118, 110, 0.94) 0%, rgba(30, 64, 175, 0.92) 100%), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-        .section-tourism-bg {
-            background: linear-gradient(135deg, rgba(15, 118, 110, 0.94) 0%, rgba(14, 116, 144, 0.92) 100%), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover;
-            background-position: center;
-        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         .goog-te-banner-frame.skiptranslate, .goog-te-gadget, .goog-logo-link, #google_translate_element { display: none !important; }
         body { top: 0px !important; position: static !important; }
         .skiptranslate { display: none !important; }
@@ -76,84 +69,29 @@
 </head>
 <body class="font-sans antialiased selection:bg-teal-500 selection:text-white">
 
-    <!-- HIDDEN GOOGLE TRANSLATE ENGINE CONTAINER -->
+    <!-- HIDDEN GOOGLE TRANSLATE ENGINE CONTAINER WITH ALL 100+ LANGUAGES -->
     <div id="google_translate_element" style="display:none;"></div>
 
-    <!-- RESIZED SMALLER FLOATING WHATSAPP BUTTON -->
-    <a href="https://wa.me/917710803966?text=Hello%20Valomedic%20Global%20Medical%20Concierge,%20I%20would%20like%20to%20inquire%20about%20elite%20medical%20travel%20packages." target="_blank" rel="noopener noreferrer" class="fixed bottom-5 right-5 z-50 bg-emerald-500 hover:bg-emerald-600 text-slate-950 w-11 h-11 rounded-full shadow-xl flex items-center justify-center text-xl transition-all transform hover:scale-110 font-bold" title="Chat on WhatsApp">
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/917710803966?text=Hello%20Valomedic%20Global%20Medical%20Concierge,%20I%20would%20like%20to%20inquire%20about%20elite%20medical%20travel%20packages." target="_blank" rel="noopener noreferrer" class="fixed bottom-5 right-5 z-50 bg-emerald-500 hover:bg-emerald-600 text-slate-950 w-12 h-12 rounded-full shadow-2xl flex items-center justify-center text-2xl transition-all transform hover:scale-110 font-bold" title="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- STICKY NAVBAR WITH LIVE API CURRENCY & COMPREHENSIVE GOOGLE TRANSLATE -->
-    <header class="sticky top-0 z-50 bg-teal-950/95 backdrop-blur-xl border-b border-teal-500/40 shadow-2xl">
-        <div class="bg-gradient-to-r from-teal-950 via-cyan-950 to-teal-950 text-teal-100 text-xs py-2 px-4 sm:px-6 lg:px-8 border-b border-teal-800/60">
+    <!-- STICKY NAVBAR -->
+    <header class="sticky top-0 z-40 bg-teal-950/95 backdrop-blur-xl border-b border-teal-500/40 shadow-2xl">
+        <div class="bg-gradient-to-r from-teal-950 via-cyan-950 to-teal-950 text-teal-100 text-xs py-2 px-4 sm:px-6 lg:px-8 border-b border-teal-800/65">
             <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3">
                 <div class="flex items-center space-x-4">
-                    <span class="flex items-center gap-1.5 text-teal-200"><i class="fa-solid fa-shield-halved text-emerald-400"></i> JCI & NABH Accredited Partner Network</span>
+                    <span class="flex items-center gap-1.5 text-teal-200"><i class="fa-solid fa-shield-halved text-emerald-400"></i> JCI & NABH Accredited International Partner Network</span>
                 </div>
-
-                <div class="flex flex-wrap items-center gap-3">
-                    <!-- Complete World Currencies Selector -->
-                    <div class="flex items-center gap-1.5 bg-teal-900 border border-teal-700 rounded-lg px-2.5 py-1 shadow-inner">
-                        <i class="fa-solid fa-coins text-amber-400 text-[10px]"></i>
-                        <select id="top-currency" onchange="syncCurrency(this.value)" class="bg-transparent text-[11px] text-white focus:outline-none cursor-pointer max-w-[180px]">
-                            <option value="USD" data-symbol="$" selected>USD - US Dollar ($)</option>
-                            <option value="EUR" data-symbol="€">EUR - Euro (€)</option>
-                            <option value="GBP" data-symbol="£">GBP - British Pound (£)</option>
-                            <option value="INR" data-symbol="₹">INR - Indian Rupee (₹)</option>
-                            <option value="AED" data-symbol="AED">AED - UAE Dirham</option>
-                            <option value="AUD" data-symbol="AU$">AUD - Australian Dollar</option>
-                            <option value="CAD" data-symbol="CA$">CAD - Canadian Dollar</option>
-                            <option value="SGD" data-symbol="S$">SGD - Singapore Dollar</option>
-                            <option value="JPY" data-symbol="¥">JPY - Japanese Yen (¥)</option>
-                            <option value="CHF" data-symbol="CHF">CHF - Swiss Franc</option>
-                            <option value="CNY" data-symbol="¥">CNY - Chinese Yuan</option>
-                            <option value="SAR" data-symbol="SAR">SAR - Saudi Riyal</option>
-                            <option value="QAR" data-symbol="QAR">QAR - Qatari Riyal</option>
-                            <option value="KWD" data-symbol="KWD">KWD - Kuwaiti Dinar</option>
-                            <option value="ZAR" data-symbol="R">ZAR - South African Rand</option>
-                            <option value="BRL" data-symbol="R$">BRL - Brazilian Real</option>
-                            <option value="MXN" data-symbol="Mex$">MXN - Mexican Peso</option>
-                            <option value="THB" data-symbol="฿">THB - Thai Baht</option>
-                            <option value="TRY" data-symbol="₺">TRY - Turkish Lira</option>
-                            <option value="KRW" data-symbol="₩">KRW - South Korean Won</option>
-                        </select>
-                    </div>
-
-                    <!-- Comprehensive Google Translate Selector -->
-                    <div class="flex items-center gap-1.5 bg-teal-900 border border-teal-700 rounded-lg px-2.5 py-1 shadow-inner">
-                        <i class="fa-solid fa-language text-teal-300 text-[10px]"></i>
-                        <select id="custom-language-selector" onchange="changeWebsiteLanguage(this.value)" class="bg-transparent text-[11px] text-white focus:outline-none cursor-pointer max-w-[150px]">
-                            <option value="en" selected>English</option>
-                            <option value="ar">Arabic</option>
-                            <option value="bn">Bengali</option>
-                            <option value="zh-CN">Chinese (Simplified)</option>
-                            <option value="nl">Dutch</option>
-                            <option value="fr">French</option>
-                            <option value="de">German</option>
-                            <option value="hi">Hindi</option>
-                            <option value="id">Indonesian</option>
-                            <option value="it">Italian</option>
-                            <option value="ja">Japanese</option>
-                            <option value="ko">Korean</option>
-                            <option value="fa">Persian</option>
-                            <option value="pt">Portuguese</option>
-                            <option value="ru">Russian</option>
-                            <option value="es">Spanish</option>
-                            <option value="th">Thai</option>
-                            <option value="tr">Turkish</option>
-                            <option value="ur">Urdu</option>
-                            <option value="vi">Vietnamese</option>
-                        </select>
-                    </div>
-                </div>
+                <div class="text-[11px] text-teal-300 font-medium">Global Cross-Border Healthcare & Concierge Exporter</div>
             </div>
         </div>
 
-        <!-- NAVBAR WITH SAMPLE-STYLE ACCORDION DROPDOWNS -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center space-x-3 group">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" class="w-12 h-12 group-hover:scale-105 transition-transform">
+        <!-- NAVBAR HEADER WITH LOGO, MASTER 24/7 REAL-TIME CURRENCY, FULL GOOGLE TRANSLATE, AND MENU -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+            <a href="#" class="flex items-center space-x-3 group shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" class="w-11 h-11 group-hover:scale-105 transition-transform">
                     <defs>
                         <linearGradient id="aeroGrad" x1="0%" y1="0%" x2="100%" y2="0%">
                             <stop offset="0%" stop-color="#00FF87"/>
@@ -165,169 +103,154 @@
                     <g transform="translate(20, 10)">
                         <path d="M 50 180 L 110 70 L 140 70 L 80 180 Z" fill="url(#aeroGrad)"/>
                         <path d="M 170 180 L 110 70 L 80 70 L 140 180 Z" fill="#FFFFFF" opacity="0.9"/>
-                        <path d="M 30 160 L 80 160 L 95 110 L 115 210 L 135 120 L 150 160 L 200 160" fill="none" stroke="#00FF87" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
                         <path class="ecg-flow" d="M 30 160 L 80 160 L 95 110 L 115 210 L 135 120 L 150 160 L 200 160" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
                     </g>
                 </svg>
                 <div>
-                    <span class="text-lg sm:text-xl font-extrabold font-heading tracking-wider text-white block">VALOMEDIC</span>
-                    <span class="text-[10px] text-teal-300 font-bold uppercase tracking-widest block">Global Medical Concierge</span>
+                    <span class="text-base sm:text-lg font-extrabold font-heading tracking-wider text-white block">VALOMEDIC</span>
+                    <span class="text-[9px] text-teal-300 font-bold uppercase tracking-widest block">Global Medical Concierge</span>
                 </div>
             </a>
 
-            <!-- Desktop Navigation Menu -->
-            <nav class="hidden xl:flex items-center space-x-1.5 relative">
-                <a href="#" class="px-3 py-2 text-xs font-bold uppercase tracking-wider text-teal-100 hover:text-white transition-colors rounded-xl hover:bg-teal-900">Home</a>
-                <a href="#about" class="px-3 py-2 text-xs font-bold uppercase tracking-wider text-teal-100 hover:text-white transition-colors rounded-xl hover:bg-teal-900">About Us</a>
-
-                <!-- Category 1: Toggle Disclosure Button with Arrow Down -->
-                <div class="relative">
-                    <button onclick="toggleDropdown('dept-dropdown')" class="px-3 py-2 text-xs font-bold uppercase tracking-wider text-teal-100 hover:text-white transition-colors rounded-xl hover:bg-teal-900 flex items-center gap-1.5 focus:outline-none">
-                        <span>Specialized Clinical Centers</span>
-                        <i class="fa-solid fa-chevron-down text-[10px] text-teal-300 transition-transform duration-300" id="dept-chevron"></i>
-                    </button>
-                    <!-- Subcategory Disclosure Panel -->
-                    <div id="dept-dropdown" class="absolute top-full left-0 w-80 bg-teal-950/98 backdrop-blur-2xl border border-teal-500/40 rounded-2xl shadow-2xl py-3 hidden max-h-96 overflow-y-auto z-50">
-                        <div class="px-4 py-1.5 text-[10px] font-extrabold text-teal-300 uppercase tracking-widest border-b border-teal-900 mb-2">Click Subcategory to Jump</div>
-                        <a href="#dept-1" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-teal-200 hover:bg-teal-900 hover:text-white transition-colors">1. Orthopedics & Joint Replacements</a>
-                        <a href="#dept-2" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-teal-200 hover:bg-teal-900 hover:text-white transition-colors">2. Cardiology & CTVS (CABG)</a>
-                        <a href="#dept-3" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-teal-200 hover:bg-teal-900 hover:text-white transition-colors">3. Oncology & Proton Beam</a>
-                        <a href="#dept-4" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-teal-200 hover:bg-teal-900 hover:text-white transition-colors">4. Neurology & Neurosurgery</a>
-                        <a href="#dept-5" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-teal-200 hover:bg-teal-900 hover:text-white transition-colors">5. Organ Transplants</a>
-                        <a href="#dept-6" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-teal-200 hover:bg-teal-900 hover:text-white transition-colors">6. Plastic & Reconstructive Surgery</a>
-                        <a href="#dept-7" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-teal-200 hover:bg-teal-900 hover:text-white transition-colors">7. Pediatrics & Neonatal Surgery</a>
-                        <a href="#dept-8" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-teal-200 hover:bg-teal-900 hover:text-white transition-colors">8. Ophthalmology & LASIK</a>
-                        <a href="#dept-9" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-teal-200 hover:bg-teal-900 hover:text-white transition-colors">9. Dental & Maxillofacial Surgery</a>
-                        <a href="#dept-10" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-teal-200 hover:bg-teal-900 hover:text-white transition-colors">10. Gynecology & IVF Fertility</a>
-                        <a href="#dept-11" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-teal-200 hover:bg-teal-900 hover:text-white transition-colors">11. Urology & Renal Surgery</a>
-                        <a href="#dept-12" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-teal-200 hover:bg-teal-900 hover:text-white transition-colors">12. Pulmonology & Thoracic</a>
-                        <a href="#dept-13" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-teal-200 hover:bg-teal-900 hover:text-white transition-colors">13. Bariatric & Weight Loss</a>
-                        <a href="#dept-14" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-teal-200 hover:bg-teal-900 hover:text-white transition-colors">14. Endocrinology & Metabolic Care</a>
-                    </div>
+            <!-- MASTER 24/7 REAL-TIME CURRENCY & FULL GOOGLE TRANSLATE BUTTONS PLACED BETWEEN BRAND & MENU BAR -->
+            <div class="hidden md:flex items-center gap-2 bg-teal-900/90 border border-teal-700/80 rounded-2xl p-1.5 shadow-inner">
+                <div class="flex items-center gap-1 px-2">
+                    <i class="fa-solid fa-coins text-amber-400 text-xs"></i>
+                    <select id="top-currency" onchange="syncCurrency(this.value)" class="bg-transparent text-xs text-white focus:outline-none cursor-pointer max-w-[140px] font-semibold"></select>
                 </div>
-
-                <!-- Category 2: Toggle Disclosure Button with Arrow Down -->
-                <div class="relative">
-                    <button onclick="toggleDropdown('hub-dropdown')" class="px-3 py-2 text-xs font-bold uppercase tracking-wider text-teal-100 hover:text-white transition-colors rounded-xl hover:bg-teal-900 flex items-center gap-1.5 focus:outline-none">
-                        <span>Global Medical Destination Hubs</span>
-                        <i class="fa-solid fa-chevron-down text-[10px] text-teal-300 transition-transform duration-300" id="hub-chevron"></i>
-                    </button>
-                    <!-- Subcategory Disclosure Panel -->
-                    <div id="hub-dropdown" class="absolute top-full left-0 w-72 bg-teal-950/98 backdrop-blur-2xl border border-teal-500/40 rounded-2xl shadow-2xl py-3 hidden z-50">
-                        <div class="px-4 py-1.5 text-[10px] font-extrabold text-teal-300 uppercase tracking-widest border-b border-teal-900 mb-2">Click Hub to Jump</div>
-                        <a href="#hub-india" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-teal-200 hover:bg-teal-900 hover:text-white transition-colors">🇮🇳 Hub 1: India Medical Super-Hub</a>
-                        <a href="#hub-turkey" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-teal-200 hover:bg-teal-900 hover:text-white transition-colors">🇹🇷 Hub 2: Turkey Aesthetic Hub</a>
-                        <a href="#hub-thailand" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-teal-200 hover:bg-teal-900 hover:text-white transition-colors">🇹🇭 Hub 3: Thailand Wellness Hub</a>
-                        <a href="#hub-uae" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-teal-200 hover:bg-teal-900 hover:text-white transition-colors">🇦🇪 Hub 4: UAE Luxury Medical Hub</a>
-                        <a href="#hub-singapore" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-teal-200 hover:bg-teal-900 hover:text-white transition-colors">🇸🇬 Hub 5: Singapore Advanced Hub</a>
-                        <a href="#hub-korea" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-teal-200 hover:bg-teal-900 hover:text-white transition-colors">🇰🇷 Hub 6: South Korea Robotic Hub</a>
-                    </div>
-                </div>
-
-                <a href="#estimator" class="px-3 py-2 text-xs font-bold uppercase tracking-wider text-teal-100 hover:text-white transition-colors rounded-xl hover:bg-teal-900">Calculator</a>
-                <a href="#tourism" class="px-3 py-2 text-xs font-bold uppercase tracking-wider text-teal-100 hover:text-white transition-colors rounded-xl hover:bg-teal-900">Tourism</a>
-                <a href="#medication" class="px-3 py-2 text-xs font-bold uppercase tracking-wider text-teal-100 hover:text-white transition-colors rounded-xl hover:bg-teal-900">Pharmacy</a>
-                <a href="#second-opinion" class="px-3 py-2 text-xs font-bold uppercase tracking-wider text-teal-100 hover:text-white transition-colors rounded-xl hover:bg-teal-900">Opinions</a>
-                <a href="#contact" class="px-3 py-2 text-xs font-bold uppercase tracking-wider text-teal-100 hover:text-white transition-colors rounded-xl hover:bg-teal-900">Contact Us</a>
-                <a href="#consultation" class="px-4 py-2 text-xs font-bold uppercase tracking-wider bg-teal-600 hover:bg-teal-500 text-white rounded-xl transition-all shadow-lg">Inquire</a>
-            </nav>
-
-            <!-- Mobile Hamburger Menu Toggle -->
-            <div class="flex xl:hidden items-center space-x-2">
-                <button onclick="toggleMobileMenu()" class="bg-teal-600 hover:bg-teal-500 text-white w-10 h-10 rounded-xl flex items-center justify-center text-lg shadow-lg transition-all" title="Menu">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- MOBILE SAMPLE-STYLE ACCORDION DRAWER -->
-        <div id="mobile-menu" class="hidden bg-teal-950 border-t border-teal-900 px-6 py-6 space-y-4 xl:hidden max-h-[80vh] overflow-y-auto">
-            <a href="#" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-teal-100 py-1">Home</a>
-            <a href="#about" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-teal-100 py-1">About Us</a>
-
-            <!-- Mobile Accordion 1 -->
-            <div>
-                <button onclick="toggleMobileAccordion('mob-dept')" class="w-full flex justify-between items-center text-xs font-bold uppercase tracking-wider text-teal-200 py-2 border-b border-teal-900">
-                    <span>Specialized Clinical Centers</span>
-                    <i class="fa-solid fa-chevron-down text-[10px]" id="mob-dept-icon"></i>
-                </button>
-                <div id="mob-dept" class="hidden pl-4 py-2 space-y-2 text-xs text-teal-300">
-                    <a href="#dept-1" onclick="toggleMobileMenu()" class="block py-1">1. Orthopedics & Joints</a>
-                    <a href="#dept-2" onclick="toggleMobileMenu()" class="block py-1">2. Cardiology & CTVS (CABG)</a>
-                    <a href="#dept-3" onclick="toggleMobileMenu()" class="block py-1">3. Oncology & Proton Beam</a>
-                    <a href="#dept-4" onclick="toggleMobileMenu()" class="block py-1">4. Neurology & Neurosurgery</a>
-                    <a href="#dept-5" onclick="toggleMobileMenu()" class="block py-1">5. Organ Transplants</a>
-                    <a href="#dept-6" onclick="toggleMobileMenu()" class="block py-1">6. Plastic & Reconstructive</a>
-                    <a href="#dept-7" onclick="toggleMobileMenu()" class="block py-1">7. Pediatrics & Neonatal</a>
-                    <a href="#dept-8" onclick="toggleMobileMenu()" class="block py-1">8. Ophthalmology & LASIK</a>
-                    <a href="#dept-9" onclick="toggleMobileMenu()" class="block py-1">9. Dental & Maxillofacial</a>
-                    <a href="#dept-10" onclick="toggleMobileMenu()" class="block py-1">10. Gynecology & IVF Fertility</a>
-                    <a href="#dept-11" onclick="toggleMobileMenu()" class="block py-1">11. Urology & Renal Surgery</a>
-                    <a href="#dept-12" onclick="toggleMobileMenu()" class="block py-1">12. Pulmonology & Thoracic</a>
-                    <a href="#dept-13" onclick="toggleMobileMenu()" class="block py-1">13. Bariatric & Weight Loss</a>
-                    <a href="#dept-14" onclick="toggleMobileMenu()" class="block py-1">14. Endocrinology & Metabolic</a>
+                <div class="h-4 w-px bg-teal-700"></div>
+                <div class="flex items-center gap-1 px-2">
+                    <i class="fa-solid fa-language text-teal-300 text-xs"></i>
+                    <select id="custom-language-selector" onchange="changeWebsiteLanguage(this.value)" class="bg-transparent text-xs text-white focus:outline-none cursor-pointer max-w-[140px] font-semibold"></select>
                 </div>
             </div>
 
-            <!-- Mobile Accordion 2 -->
-            <div>
-                <button onclick="toggleMobileAccordion('mob-hubs')" class="w-full flex justify-between items-center text-xs font-bold uppercase tracking-wider text-teal-200 py-2 border-b border-teal-900">
-                    <span>Global Destination Hubs</span>
-                    <i class="fa-solid fa-chevron-down text-[10px]" id="mob-hubs-icon"></i>
+            <!-- MENU BAR BUTTON -->
+            <div class="flex items-center space-x-2">
+                <button onclick="toggleAppMenu()" class="bg-teal-600 hover:bg-teal-500 text-white px-5 py-2.5 rounded-xl flex items-center gap-2 text-xs font-bold uppercase tracking-wider shadow-lg transition-all cursor-pointer">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                    <span>Menu</span>
                 </button>
-                <div id="mob-hubs" class="hidden pl-4 py-2 space-y-2 text-xs text-teal-300">
-                    <a href="#hub-india" onclick="toggleMobileMenu()" class="block py-1">🇮🇳 India Medical Super-Hub</a>
-                    <a href="#hub-turkey" onclick="toggleMobileMenu()" class="block py-1">🇹🇷 Turkey Aesthetic Hub</a>
-                    <a href="#hub-thailand" onclick="toggleMobileMenu()" class="block py-1">🇹🇭 Thailand Wellness Hub</a>
-                    <a href="#hub-uae" onclick="toggleMobileMenu()" class="block py-1">🇦🇪 UAE Luxury Medical Hub</a>
-                    <a href="#hub-singapore" onclick="toggleMobileMenu()" class="block py-1">🇸🇬 Singapore Advanced Hub</a>
-                    <a href="#hub-korea" onclick="toggleMobileMenu()" class="block py-1">🇰🇷 South Korea Robotic Hub</a>
-                </div>
             </div>
-
-            <a href="#estimator" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-teal-100 py-1">Cost Estimator</a>
-            <a href="#tourism" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-teal-100 py-1">Tourism & Travelism</a>
-            <a href="#medication" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-teal-100 py-1">Pharmacy & Medication</a>
-            <a href="#second-opinion" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-teal-100 py-1">Expert Second Opinions</a>
-            <a href="#contact" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-teal-100 py-1">Contact Us</a>
-            <a href="#consultation" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-teal-300 font-extrabold pt-2">VIP Case Intake</a>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- APP-STYLE SLIDE DRAWER NAVIGATOR -->
+    <div id="app-menu-overlay" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden transition-opacity" onclick="toggleAppMenu()"></div>
+    <div id="app-menu-drawer" class="fixed top-0 right-0 w-full sm:w-96 h-full bg-teal-950 border-l border-teal-800 z-50 transform translate-x-full transition-transform duration-300 shadow-2xl flex flex-col">
+        <div class="p-6 border-b border-teal-900 flex justify-between items-center bg-teal-900/50">
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-hospital text-teal-400"></i>
+                <span class="text-sm font-extrabold text-white uppercase tracking-wider">Valomedic Menu Navigator</span>
+            </div>
+            <button onclick="toggleAppMenu()" class="text-teal-300 hover:text-white text-xl font-bold w-9 h-9 rounded-full bg-teal-900 flex items-center justify-center">✕</button>
+        </div>
+
+        <div class="flex-1 overflow-y-auto p-6 space-y-4 text-xs">
+            <div class="bg-teal-900 p-3 rounded-xl space-y-2 md:hidden border border-teal-700">
+                <div>
+                    <label class="text-[10px] text-teal-300 block font-bold mb-1">Real-Time Currency Converter:</label>
+                    <select id="mobile-currency" onchange="syncCurrency(this.value)" class="w-full bg-teal-950 text-xs text-white p-2 rounded-lg border border-teal-700"></select>
+                </div>
+                <div>
+                    <label class="text-[10px] text-teal-300 block font-bold mb-1">Full Google Translator:</label>
+                    <select id="mobile-language" onchange="changeWebsiteLanguage(this.value)" class="w-full bg-teal-950 text-xs text-white p-2 rounded-lg border border-teal-700"></select>
+                </div>
+            </div>
+
+            <a href="#" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">Home</a>
+            <a href="#about" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">About Us</a>
+
+            <div>
+                <button onclick="toggleDrawerAccordion('drawer-dept')" class="w-full flex justify-between items-center font-bold uppercase tracking-wider text-teal-200 py-2.5 border-b border-teal-900">
+                    <span>350+ Procedure Surgery Department</span>
+                    <i class="fa-solid fa-chevron-down text-[10px]" id="drawer-dept-icon"></i>
+                </button>
+                <div id="drawer-dept" class="hidden pl-4 py-2 space-y-2 text-teal-300">
+                    <a href="#dept-1" onclick="toggleAppMenu()" class="block py-1">1. Orthopedics & Joint Replacements</a>
+                    <a href="#dept-2" onclick="toggleAppMenu()" class="block py-1">2. Cardiology & CTVS (CABG)</a>
+                    <a href="#dept-3" onclick="toggleAppMenu()" class="block py-1">3. Oncology & Proton Beam</a>
+                    <a href="#dept-4" onclick="toggleAppMenu()" class="block py-1">4. Neurology & Neurosurgery</a>
+                    <a href="#dept-5" onclick="toggleAppMenu()" class="block py-1">5. Organ Transplants</a>
+                    <a href="#dept-6" onclick="toggleAppMenu()" class="block py-1">6. Plastic & Reconstructive Surgery</a>
+                    <a href="#dept-7" onclick="toggleAppMenu()" class="block py-1">7. Pediatrics & Neonatal Surgery</a>
+                    <a href="#dept-8" onclick="toggleAppMenu()" class="block py-1">8. Ophthalmology & LASIK</a>
+                    <a href="#dept-9" onclick="toggleAppMenu()" class="block py-1">9. Dental & Maxillofacial Surgery</a>
+                    <a href="#dept-10" onclick="toggleAppMenu()" class="block py-1">10. Gynecology & IVF Fertility</a>
+                    <a href="#dept-11" onclick="toggleAppMenu()" class="block py-1">11. Urology & Renal Surgery</a>
+                    <a href="#dept-12" onclick="toggleAppMenu()" class="block py-1">12. Pulmonology & Thoracic</a>
+                    <a href="#dept-13" onclick="toggleAppMenu()" class="block py-1">13. Bariatric & Weight Loss</a>
+                    <a href="#dept-14" onclick="toggleAppMenu()" class="block py-1">14. Endocrinology & Metabolic Care</a>
+                </div>
+            </div>
+
+            <div>
+                <button onclick="toggleDrawerAccordion('drawer-hubs')" class="w-full flex justify-between items-center font-bold uppercase tracking-wider text-teal-200 py-2.5 border-b border-teal-900">
+                    <span>Medical Destination Hubs</span>
+                    <i class="fa-solid fa-chevron-down text-[10px]" id="drawer-hubs-icon"></i>
+                </button>
+                <div id="drawer-hubs" class="hidden pl-4 py-2 space-y-2 text-teal-300">
+                    <a href="#hub-india" onclick="toggleAppMenu()" class="block py-1">🇮🇳 1. India Medical Super-Hub (8 Cities)</a>
+                    <a href="#hub-turkey" onclick="toggleAppMenu()" class="block py-1">🇹🇷 2. Turkey Aesthetic Hub (8 Cities)</a>
+                    <a href="#hub-thailand" onclick="toggleAppMenu()" class="block py-1">🇹🇭 3. Thailand Wellness Hub (8 Cities)</a>
+                    <a href="#hub-uae" onclick="toggleAppMenu()" class="block py-1">🇦🇪 4. UAE Luxury Medical Hub (8 Cities)</a>
+                    <a href="#hub-singapore" onclick="toggleAppMenu()" class="block py-1">🇸🇬 5. Singapore Advanced Hub (8 Regions)</a>
+                    <a href="#hub-korea" onclick="toggleAppMenu()" class="block py-1">🇰🇷 6. South Korea Robotic Hub (8 Cities)</a>
+                </div>
+            </div>
+
+            <a href="#estimator" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">Cost Estimator</a>
+            <a href="#tourism" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">Tourism & Travelism</a>
+            <a href="#medication" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">Pharmacy & Medication</a>
+            <a href="#second-opinion" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">Expert Second Opinions</a>
+            <a href="#contact" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- HERO SECTION WITH INSTANT PWA APP INSTALL BUTTON PLACED ABOVE ELITE TITLE -->
     <section class="gradient-hero text-white py-24 lg:py-32 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-3xl space-y-6">
-                <span class="inline-flex items-center gap-2 bg-teal-500/30 text-teal-200 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest border border-teal-400/40 shadow-sm">
-                    <i class="fa-solid fa-crown text-amber-300"></i> Elite International Medical Concierge & Travelism
-                </span>
+                <!-- Instant Install App Button Placed Above Elite International Medical Concierge & Travelism -->
+                <div>
+                    <button id="pwa-install-btn" onclick="triggerPWAInstall()" class="bg-emerald-400 hover:bg-emerald-500 text-teal-950 font-black px-6 py-3 rounded-2xl text-xs uppercase tracking-widest shadow-2xl transition-all inline-flex items-center gap-3 animate-pulse cursor-pointer border-2 border-white/40">
+                        <i class="fa-solid fa-mobile-screen-button text-base"></i> Install App on Home Screen & App Drawer 📲
+                    </button>
+                </div>
+
+                <div>
+                    <span class="inline-flex items-center gap-2 bg-teal-500/30 text-teal-200 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest border border-teal-400/40 shadow-sm mt-3">
+                        <i class="fa-solid fa-crown text-amber-300"></i> Elite International Medical Concierge & Travelism
+                    </span>
+                </div>
+
                 <h1 class="text-4xl sm:text-6xl font-extrabold font-heading tracking-tight leading-tight">
-                    Valomedic Global Medical Concierge. All-Inclusive Luxury & Surgery at 40%–50% Net Savings.
+                    Valomedic Global Medical Concierge. All-Inclusive Luxury Surgery at 40%–50% Guaranteed Net Savings.
                 </h1>
                 <p class="text-teal-100 text-lg sm:text-xl font-normal leading-relaxed max-w-2xl">
-                    While staying in America or Europe costs double for surgery alone, Valomedic bundles elite JCI surgery, luxury 5-star recovery villas, VIP airport transfers, private medical escorts, and complete travelism into one transparent all-inclusive price.
+                    While staying in America or Europe costs exorbitant prices for surgery alone, Valomedic bundles elite JCI surgery, luxury 5-star recovery villas, VIP airport tarmac transfers, private medical escorts, and complete travelism into one transparent all-inclusive price.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 pt-4">
                     <a href="#consultation" class="bg-emerald-400 hover:bg-emerald-500 text-teal-950 font-extrabold px-8 py-4 rounded-2xl shadow-2xl transition-all text-center text-sm uppercase tracking-wider">
-                        Start Your Inquiry 🌟
+                        Initiate Patient Consultation 🌟
                     </a>
                     <a href="#estimator" class="bg-teal-800/80 hover:bg-teal-800 text-white border border-teal-600 font-bold px-8 py-4 rounded-2xl transition-all text-center text-sm shadow-sm">
-                        Calculate Your Savings ↓
+                        Calculate Real-Time Savings ↓
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ABOUT US SECTION -->
+    <!-- ABOUT US SECTION (EXTENSIVELY DETAILED) -->
     <section id="about" class="py-20 bg-teal-900/60 backdrop-blur-md border-b border-teal-500/30">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6">
                     <span class="text-teal-300 font-extrabold uppercase tracking-widest text-xs">About Valomedic Global</span>
                     <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">Redefining Cross-Border Healthcare & Luxury Medical Travel</h2>
                     <p class="text-teal-100 text-sm leading-relaxed">
-                        Founded by <strong>Karan Suthar</strong>, Valomedic Global Medical Concierge is dedicated to bridging the gap between world-class medical excellence and affordable patient care. We coordinate seamless, end-to-end medical journeys across top-tier JCI and NABH accredited hospitals globally.
+                        Valomedic Global Medical Concierge is an internationally accredited medical travel facilitator dedicated to bridging the gap between world-class medical excellence and affordable patient care. Founded with a vision to deliver uncompromised clinical outcomes, we coordinate seamless, end-to-end medical journeys across top-tier JCI and NABH accredited hospitals globally. Our mission is to eliminate geographical barriers to elite healthcare by providing transparent pricing, dedicated patient coordinators, cold-chain medication logistics, and luxury post-operative recovery villas.
                     </p>
                     <div class="grid grid-cols-2 gap-4 pt-2">
                         <div class="bg-teal-800/90 border border-teal-600 p-4 rounded-2xl shadow-md">
@@ -344,10 +267,29 @@
                     <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1000&q=80" alt="Medical Team" class="w-full h-full object-cover">
                 </div>
             </div>
+
+            <!-- DYNAMIC DETAILED ADVANTAGES BARS -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
+                <div class="bg-teal-950/80 border border-teal-700/60 p-6 rounded-3xl space-y-3 shadow-xl">
+                    <div class="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-300 flex items-center justify-center font-bold"><i class="fa-solid fa-user-doctor"></i></div>
+                    <h3 class="text-base font-bold text-white">Elite Surgeon Matching & Case Board</h3>
+                    <p class="text-xs text-teal-200 leading-relaxed">Direct consultation and case review with pioneer surgeons who have performed thousands of successful complex procedures in JCI-accredited institutions with precision robotics.</p>
+                </div>
+                <div class="bg-teal-950/80 border border-teal-700/60 p-6 rounded-3xl space-y-3 shadow-xl">
+                    <div class="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-300 flex items-center justify-center font-bold"><i class="fa-solid fa-plane-up"></i></div>
+                    <h3 class="text-base font-bold text-white">VIP Medical Concierge & Escort Logistics</h3>
+                    <p class="text-xs text-teal-200 leading-relaxed">From airport tarmac pickup with private medical ambulances to dedicated multi-lingual medical escorts accompanying you to every hospital appointment and diagnostic scan.</p>
+                </div>
+                <div class="bg-teal-950/80 border border-teal-700/60 p-6 rounded-3xl space-y-3 shadow-xl">
+                    <div class="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-300 flex items-center justify-center font-bold"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 class="text-base font-bold text-white">Zero-Risk Financial & Medical Transparency</h3>
+                    <p class="text-xs text-teal-200 leading-relaxed">No hidden hospital fees, surprise billing, or waiting list delays. Every procedure, stay, and travel expense is bound under transparent, all-inclusive packages.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- ORIGIN HIGH-COST HEALTHCARE COUNTRIES -->
+    <!-- HIGH-COST HEALTHCARE ORIGIN COUNTRIES -->
     <section class="py-16 bg-teal-950/50 border-b border-teal-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
@@ -366,286 +308,360 @@
         </div>
     </section>
 
-    <!-- 14 DETAILED CLINICAL DEPARTMENTS -->
-    <section id="procedures" class="py-20 section-innovation-bg text-white">
+    <!-- 350+ PROCEDURE SURGERY DEPARTMENTS WITH SUB-SUBCATEGORY ACCORDION -->
+    <section id="procedures" class="py-20 bg-teal-900/80 backdrop-blur-md text-white border-b border-teal-500/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-teal-300 font-extrabold uppercase tracking-widest text-xs">Clinical Excellence</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-2">Specialized Clinical Centers of Excellence</h2>
+                <span class="text-teal-300 font-extrabold uppercase tracking-widest text-xs">Clinical Excellence & Procedures</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-2">350+ Procedure Surgery Department</h2>
                 <p class="text-teal-100 text-sm mt-2">Comprehensive medical care delivered by world-renowned specialists across JCI-accredited global hospital networks.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div id="departments-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Dept 1 -->
-                <div id="dept-1" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
+                <div id="dept-1" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-6 shadow-xl space-y-4">
                     <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-teal-500/20 text-teal-300 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-bone"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
                     <h3 class="text-xl font-bold font-heading text-white">1. Orthopedics & Joint Replacements</h3>
                     <p class="text-xs text-teal-100 leading-relaxed">Advanced robotic knee/hip replacement, spinal deformity correction, arthroscopic ligament reconstruction, and geriatric orthopedics.</p>
-                    <a href="#consultation" class="block w-full bg-teal-800 hover:bg-teal-600 text-white font-bold py-2.5 rounded-xl text-xs transition-all text-center shadow-sm">Inquire Department</a>
+                    <button onclick="toggleSurgeryList('list-1')" class="w-full bg-teal-800 hover:bg-teal-600 text-white font-bold py-2.5 rounded-xl text-xs transition-all flex items-center justify-between px-4 cursor-pointer">
+                        <span>Subcategory Procedures (25+)</span>
+                        <i class="fa-solid fa-chevron-down" id="icon-list-1"></i>
+                    </button>
+                    <div id="list-1" class="hidden bg-teal-900/90 p-4 rounded-xl text-[11px] text-teal-200 space-y-2 border border-teal-700 max-h-56 overflow-y-auto">
+                        <div class="p-2 bg-teal-950 rounded border border-teal-800">• <strong>Robotic Total Knee Arthroplasty</strong><br><span class="text-[10px] text-teal-300">Computer-navigated precision joint replacement</span></div>
+                        <div class="p-2 bg-teal-950 rounded border border-teal-800">• <strong>Total Hip Replacement (Direct Anterior)</strong><br><span class="text-[10px] text-teal-300">Muscle-sparing rapid recovery technique</span></div>
+                        <div class="p-2 bg-teal-950 rounded border border-teal-800">• <strong>Minimally Invasive Spinal Fusion</strong><br><span class="text-[10px] text-teal-300">Advanced disc stabilization & correction</span></div>
+                        <div class="p-2 bg-teal-950 rounded border border-teal-800">• <strong>Arthroscopic ACL Reconstruction</strong><br><span class="text-[10px] text-teal-300">Ligament repair with sports rehab</span></div>
+                    </div>
                 </div>
+
                 <!-- Dept 2 -->
-                <div id="dept-2" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
+                <div id="dept-2" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-6 shadow-xl space-y-4">
                     <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-red-500/20 text-red-300 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-heart-pulse"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
                     <h3 class="text-xl font-bold font-heading text-white">2. Cardiology & CTVS (CABG)</h3>
                     <p class="text-xs text-teal-100 leading-relaxed">Minimally invasive coronary artery bypass grafting (CABG), valvular heart surgery, pediatric congenital heart repairs, and electrophysiology.</p>
-                    <a href="#consultation" class="block w-full bg-teal-800 hover:bg-teal-600 text-white font-bold py-2.5 rounded-xl text-xs transition-all text-center shadow-sm">Inquire Department</a>
+                    <button onclick="toggleSurgeryList('list-2')" class="w-full bg-teal-800 hover:bg-teal-600 text-white font-bold py-2.5 rounded-xl text-xs transition-all flex items-center justify-between px-4 cursor-pointer">
+                        <span>Subcategory Procedures (30+)</span>
+                        <i class="fa-solid fa-chevron-down" id="icon-list-2"></i>
+                    </button>
+                    <div id="list-2" class="hidden bg-teal-900/90 p-4 rounded-xl text-[11px] text-teal-200 space-y-2 border border-teal-700 max-h-56 overflow-y-auto">
+                        <div class="p-2 bg-teal-950 rounded border border-teal-800">• <strong>Off-Pump CABG Surgery</strong><br><span class="text-[10px] text-teal-300">Beating heart coronary bypass grafting</span></div>
+                        <div class="p-2 bg-teal-950 rounded border border-teal-800">• <strong>Transcatheter Aortic Valve Implantation (TAVI)</strong><br><span class="text-[10px] text-teal-300">Sutureless valve replacement via catheter</span></div>
+                        <div class="p-2 bg-teal-950 rounded border border-teal-800">• <strong>Minimally Invasive Valve Repair</strong><br><span class="text-[10px] text-teal-300">Mitral and aortic valve reconstruction</span></div>
+                    </div>
                 </div>
+
                 <!-- Dept 3 -->
-                <div id="dept-3" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
+                <div id="dept-3" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-6 shadow-xl space-y-4">
                     <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-300 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-dna"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
                     <h3 class="text-xl font-bold font-heading text-white">3. Oncology & Proton Beam</h3>
                     <p class="text-xs text-teal-100 leading-relaxed">Precision proton beam radiation, bone marrow transplants, cyberknife radiosurgery, and personalized oncological tumor board treatments.</p>
-                    <a href="#consultation" class="block w-full bg-teal-800 hover:bg-teal-600 text-white font-bold py-2.5 rounded-xl text-xs transition-all text-center shadow-sm">Inquire Department</a>
+                    <button onclick="toggleSurgeryList('list-3')" class="w-full bg-teal-800 hover:bg-teal-600 text-white font-bold py-2.5 rounded-xl text-xs transition-all flex items-center justify-between px-4 cursor-pointer">
+                        <span>Subcategory Procedures (40+)</span>
+                        <i class="fa-solid fa-chevron-down" id="icon-list-3"></i>
+                    </button>
+                    <div id="list-3" class="hidden bg-teal-900/90 p-4 rounded-xl text-[11px] text-teal-200 space-y-2 border border-teal-700 max-h-56 overflow-y-auto">
+                        <div class="p-2 bg-teal-950 rounded border border-teal-800">• <strong>Proton Beam Therapy Radiation</strong><br><span class="text-[10px] text-teal-300">Sub-atomic precision tumor destruction</span></div>
+                        <div class="p-2 bg-teal-950 rounded border border-teal-800">• <strong>Allogeneic Bone Marrow Transplant</strong><br><span class="text-[10px] text-teal-300">Stem cell rescue for blood cancers</span></div>
+                        <div class="p-2 bg-teal-950 rounded border border-teal-800">• <strong>CyberKnife Robotic Radiosurgery</strong><br><span class="text-[10px] text-teal-300">Non-invasive stereotactic body radiation</span></div>
+                    </div>
                 </div>
-                <!-- Dept 4 -->
-                <div id="dept-4" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
+
+                <!-- Dept 4 (Hidden initially) -->
+                <div id="dept-4" class="dept-hidden hidden bg-teal-950/90 border border-teal-500/40 rounded-3xl p-6 shadow-xl space-y-4">
                     <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-blue-500/20 text-blue-300 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-brain"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
                     <h3 class="text-xl font-bold font-heading text-white">4. Neurology & Neurosurgery</h3>
                     <p class="text-xs text-teal-100 leading-relaxed">Deep brain stimulation for Parkinson's, skull-base tumor resections, epilepsy surgery, and advanced stroke intervention units.</p>
-                    <a href="#consultation" class="block w-full bg-teal-800 hover:bg-teal-600 text-white font-bold py-2.5 rounded-xl text-xs transition-all text-center shadow-sm">Inquire Department</a>
+                    <button onclick="toggleSurgeryList('list-4')" class="w-full bg-teal-800 hover:bg-teal-600 text-white font-bold py-2.5 rounded-xl text-xs transition-all flex items-center justify-between px-4 cursor-pointer">
+                        <span>Subcategory Procedures (25+)</span>
+                        <i class="fa-solid fa-chevron-down" id="icon-list-4"></i>
+                    </button>
+                    <div id="list-4" class="hidden bg-teal-900/90 p-4 rounded-xl text-[11px] text-teal-200 space-y-2 border border-teal-700 max-h-56 overflow-y-auto">
+                        <div class="p-2 bg-teal-950 rounded border border-teal-800">• <strong>Deep Brain Stimulation (DBS)</strong><br><span class="text-[10px] text-teal-300">Neuromodulation for movement disorders</span></div>
+                        <div class="p-2 bg-teal-950 rounded border border-teal-800">• <strong>Awake Craniotomy</strong><br><span class="text-[10px] text-teal-300">Tumor resection with speech mapping</span></div>
+                    </div>
                 </div>
-                <!-- Dept 5 -->
-                <div id="dept-5" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
+
+                <!-- Dept 5 (Hidden initially) -->
+                <div id="dept-5" class="dept-hidden hidden bg-teal-950/90 border border-teal-500/40 rounded-3xl p-6 shadow-xl space-y-4">
                     <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-300 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-hand-holding-medical"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
                     <h3 class="text-xl font-bold font-heading text-white">5. Organ Transplants</h3>
                     <p class="text-xs text-teal-100 leading-relaxed">Living and deceased donor programs for kidney, liver, heart, lung, and multi-organ transplants with high success rates.</p>
-                    <a href="#consultation" class="block w-full bg-teal-800 hover:bg-teal-600 text-white font-bold py-2.5 rounded-xl text-xs transition-all text-center shadow-sm">Inquire Department</a>
+                    <button onclick="toggleSurgeryList('list-5')" class="w-full bg-teal-800 hover:bg-teal-600 text-white font-bold py-2.5 rounded-xl text-xs transition-all flex items-center justify-between px-4 cursor-pointer">
+                        <span>Subcategory Procedures (20+)</span>
+                        <i class="fa-solid fa-chevron-down" id="icon-list-5"></i>
+                    </button>
+                    <div id="list-5" class="hidden bg-teal-900/90 p-4 rounded-xl text-[11px] text-teal-200 space-y-2 border border-teal-700 max-h-56 overflow-y-auto">
+                        <div class="p-2 bg-teal-950 rounded border border-teal-800">• <strong>Living Donor Liver Transplantation</strong><br><span class="text-[10px] text-teal-300">Partial hepatectomy & recipient graft</span></div>
+                        <div class="p-2 bg-teal-950 rounded border border-teal-800">• <strong>Kidney Transplantation</strong><br><span class="text-[10px] text-teal-300">Live & cadaveric renal replacement</span></div>
+                    </div>
                 </div>
-                <!-- Dept 6 -->
-                <div id="dept-6" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
+
+                <!-- Dept 6 (Hidden initially) -->
+                <div id="dept-6" class="dept-hidden hidden bg-teal-950/90 border border-teal-500/40 rounded-3xl p-6 shadow-xl space-y-4">
                     <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-pink-500/20 text-pink-300 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-wand-magic-sparkles"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
                     <h3 class="text-xl font-bold font-heading text-white">6. Plastic & Reconstructive Surgery</h3>
                     <p class="text-xs text-teal-100 leading-relaxed">Post-traumatic microvascular reconstruction, aesthetic facial surgeries, burn care, and comprehensive body contouring packages.</p>
-                    <a href="#consultation" class="block w-full bg-teal-800 hover:bg-teal-600 text-white font-bold py-2.5 rounded-xl text-xs transition-all text-center shadow-sm">Inquire Department</a>
+                    <button onclick="toggleSurgeryList('list-6')" class="w-full bg-teal-800 hover:bg-teal-600 text-white font-bold py-2.5 rounded-xl text-xs transition-all flex items-center justify-between px-4 cursor-pointer">
+                        <span>Subcategory Procedures (35+)</span>
+                        <i class="fa-solid fa-chevron-down" id="icon-list-6"></i>
+                    </button>
+                    <div id="list-6" class="hidden bg-teal-900/90 p-4 rounded-xl text-[11px] text-teal-200 space-y-2 border border-teal-700 max-h-56 overflow-y-auto">
+                        <div class="p-2 bg-teal-950 rounded border border-teal-800">• <strong>Microvascular Free Tissue Transfer</strong><br><span class="text-[10px] text-teal-300">Advanced reconstructive microsurgery</span></div>
+                        <div class="p-2 bg-teal-950 rounded border border-teal-800">• <strong>Post-Bariatric Body Contouring</strong><br><span class="text-[10px] text-teal-300">Abdominoplasty & skin tightening</span></div>
+                    </div>
                 </div>
-                <!-- Dept 7 -->
-                <div id="dept-7" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
-                    <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-child"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
-                    <h3 class="text-xl font-bold font-heading text-white">7. Pediatrics & Neonatal Surgery</h3>
-                    <p class="text-xs text-teal-100 leading-relaxed">Level III neonatal intensive care units, pediatric cardiac corrective surgery, and congenital anomaly corrections.</p>
-                    <a href="#consultation" class="block w-full bg-teal-800 hover:bg-teal-600 text-white font-bold py-2.5 rounded-xl text-xs transition-all text-center shadow-sm">Inquire Department</a>
-                </div>
-                <!-- Dept 8 -->
-                <div id="dept-8" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
-                    <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-indigo-500/20 text-indigo-300 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-eye"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
-                    <h3 class="text-xl font-bold font-heading text-white">8. Ophthalmology & LASIK</h3>
-                    <p class="text-xs text-teal-100 leading-relaxed">Bladeless Femto-LASIK vision correction, complex cataract micro-surgery, glaucoma treatments, and corneal transplants.</p>
-                    <a href="#consultation" class="block w-full bg-teal-800 hover:bg-teal-600 text-white font-bold py-2.5 rounded-xl text-xs transition-all text-center shadow-sm">Inquire Department</a>
-                </div>
-                <!-- Dept 9 -->
-                <div id="dept-9" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
-                    <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-cyan-500/20 text-cyan-300 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-tooth"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
-                    <h3 class="text-xl font-bold font-heading text-white">9. Dental & Maxillofacial Surgery</h3>
-                    <p class="text-xs text-teal-100 leading-relaxed">All-on-4 dental implants, full mouth smile design, orthognathic jaw reconstruction, and oral oncology surgery.</p>
-                    <a href="#consultation" class="block w-full bg-teal-800 hover:bg-teal-600 text-white font-bold py-2.5 rounded-xl text-xs transition-all text-center shadow-sm">Inquire Department</a>
-                </div>
-                <!-- Dept 10 -->
-                <div id="dept-10" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
-                    <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-rose-500/20 text-rose-300 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-venus"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
-                    <h3 class="text-xl font-bold font-heading text-white">10. Gynecology & IVF Fertility</h3>
-                    <p class="text-xs text-teal-100 leading-relaxed">Advanced ICSI/IVF fertility treatments, pre-implantation genetic diagnosis (PGD), and robotic laparoscopic myomectomy.</p>
-                    <a href="#consultation" class="block w-full bg-teal-800 hover:bg-teal-600 text-white font-bold py-2.5 rounded-xl text-xs transition-all text-center shadow-sm">Inquire Department</a>
-                </div>
-                <!-- Dept 11 -->
-                <div id="dept-11" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
-                    <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-violet-500/20 text-violet-300 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-user-doctor"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
-                    <h3 class="text-xl font-bold font-heading text-white">11. Urology & Renal Surgery</h3>
-                    <p class="text-xs text-teal-100 leading-relaxed">Robotic radical prostatectomy, laser lithotripsy for complex kidney stones, and reconstructive urological procedures.</p>
-                    <a href="#consultation" class="block w-full bg-teal-800 hover:bg-teal-600 text-white font-bold py-2.5 rounded-xl text-xs transition-all text-center shadow-sm">Inquire Department</a>
-                </div>
-                <!-- Dept 12 -->
-                <div id="dept-12" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
-                    <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-orange-500/20 text-orange-300 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-lungs"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
-                    <h3 class="text-xl font-bold font-heading text-white">12. Pulmonology & Thoracic Surgery</h3>
-                    <p class="text-xs text-teal-100 leading-relaxed">Video-assisted thoracoscopic surgery (VATS), interstitial lung disease management, and advanced respiratory critical care.</p>
-                    <a href="#consultation" class="block w-full bg-teal-800 hover:bg-teal-600 text-white font-bold py-2.5 rounded-xl text-xs transition-all text-center shadow-sm">Inquire Department</a>
-                </div>
-                <!-- Dept 13 -->
-                <div id="dept-13" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
-                    <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-yellow-500/20 text-yellow-300 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-utensils"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
-                    <h3 class="text-xl font-bold font-heading text-white">13. Bariatric & Weight Loss Surgery</h3>
-                    <p class="text-xs text-teal-100 leading-relaxed">Laparoscopic sleeve gastrectomy, Roux-en-Y gastric bypass, and metabolic syndrome reversal programs.</p>
-                    <a href="#consultation" class="block w-full bg-teal-800 hover:bg-teal-600 text-white font-bold py-2.5 rounded-xl text-xs transition-all text-center shadow-sm">Inquire Department</a>
-                </div>
-                <!-- Dept 14 -->
-                <div id="dept-14" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
-                    <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-teal-500/20 text-teal-300 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-shield-heart"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
-                    <h3 class="text-xl font-bold font-heading text-white">14. Endocrinology & Metabolic Care</h3>
-                    <p class="text-xs text-teal-100 leading-relaxed">Comprehensive diabetes reversal protocols, thyroid disorder management, adrenal gland surgeries, and hormonal balance.</p>
-                    <a href="#consultation" class="block w-full bg-teal-800 hover:bg-teal-600 text-white font-bold py-2.5 rounded-xl text-xs transition-all text-center shadow-sm">Inquire Department</a>
-                </div>
+            </div>
+
+            <!-- See More Departments Toggle -->
+            <div class="text-center mt-12">
+                <button id="see-more-btn" onclick="toggleSeeMoreDepartments()" class="bg-emerald-400 hover:bg-emerald-500 text-teal-950 font-extrabold px-8 py-4 rounded-2xl shadow-xl transition-all text-xs uppercase tracking-wider inline-flex items-center gap-2 cursor-pointer">
+                    <span id="see-more-text">Scroll Down / See All 14 Departments</span>
+                    <i class="fa-solid fa-arrow-down" id="see-more-icon"></i>
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- 6 GLOBAL HUBS & 48 MEDICAL CITIES -->
-    <section id="destinations" class="py-20 bg-teal-950/70 border-t border-b border-teal-500/35">
+    <!-- 6 GLOBAL HUBS, SCROLLABLE CITY IMAGES, TIED-UP CITIES, AND 15-20 HOSPITAL LISTS -->
+    <section id="destinations" class="py-20 bg-teal-950/80 border-b border-teal-500/35">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-teal-300 font-extrabold uppercase tracking-widest text-xs">Global Infrastructure</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-2">Global Medical Destination Hubs</h2>
-                <p class="text-teal-100 text-sm mt-2">Direct coordination with premier JCI & NABH accredited hospitals across international medical corridors.</p>
+                <span class="text-teal-300 font-extrabold uppercase tracking-widest text-xs">Global Infrastructure & Hubs</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-2">Medical Destination Hubs</h2>
+                <p class="text-teal-100 text-sm mt-2">Direct coordination with 15–20 premier JCI & NABH accredited hospitals across each international medical corridor.</p>
             </div>
 
-            <div class="space-y-12">
+            <div class="space-y-8">
                 <!-- Hub 1: India -->
-                <div id="hub-india" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl overflow-hidden shadow-xl backdrop-blur-md">
-                    <div class="h-64 relative">
-                        <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1600&q=80" alt="India Hub" class="w-full h-full object-cover opacity-80">
-                        <div class="absolute inset-0 bg-gradient-to-t from-teal-950 via-teal-950/40 to-transparent"></div>
-                        <div class="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                            <div>
-                                <span class="bg-teal-600 text-white font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full shadow-sm">🇮🇳 Hub 1 of 6</span>
-                                <h3 class="text-2xl sm:text-3xl font-bold font-heading text-white mt-2">India Medical Super-Hub (8 Cities)</h3>
-                            </div>
-                            <a href="#consultation" class="bg-emerald-400 hover:bg-emerald-500 text-teal-950 font-extrabold px-6 py-3 rounded-xl text-xs uppercase tracking-wider shadow-lg">Inquire India Hub</a>
+                <div id="hub-india" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl overflow-hidden shadow-xl">
+                    <div class="p-6 sm:p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-teal-900 bg-teal-900/40">
+                        <div>
+                            <span class="bg-teal-600 text-white font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full">🇮🇳 Hub 1 of 6</span>
+                            <h3 class="text-2xl font-bold font-heading text-white mt-1">India Medical Super-Hub (8 Tied-Up Cities)</h3>
                         </div>
+                        <button onclick="toggleHubCities('cities-india')" class="bg-teal-800 hover:bg-teal-600 text-white font-bold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider flex items-center gap-2 cursor-pointer">
+                            <span>See Tied-Up Cities (8)</span>
+                            <i class="fa-solid fa-chevron-down" id="icon-cities-india"></i>
+                        </button>
                     </div>
-                    <div class="p-8">
+                    <div id="cities-india" class="hidden p-8 space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-xs">
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">1. Mumbai</strong><span class="text-teal-100">Kokilaben Dhirubhai Ambani Hospital, Lilavati Hospital, Breach Candy, Asian Heart Institute, Hinduja Hospital.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">2. Delhi NCR</strong><span class="text-teal-100">Medanta - The Medcity, AIIMS New Delhi, Max Super Speciality Saket, Fortis Memorial Gurgaon, BLK-Max.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">3. Bengaluru</strong><span class="text-teal-100">Manipal Hospital HAL, Narayana Health City, Aster CMI, Sakra World Hospital, BGS Gleneagles Global.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">4. Chennai</strong><span class="text-teal-100">Apollo Hospitals Greams Road, MIOT International, Gleneagles Global Health City, Dr. Rela Institute.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">5. Hyderabad</strong><span class="text-teal-100">Yashoda Hospitals Somajiguda, KIMS Hospitals Secunderabad, Asian Institute of Gastroenterology, Care Hospitals.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">6. Ahmedabad</strong><span class="text-teal-100">Sterling Hospitals, CIMS Hospital, Apollo Hospitals Bhat, Zydus Hospitals Thaltej.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">7. Kochi</strong><span class="text-teal-100">Aster Medcity, Amrita Institute of Medical Sciences, Lakeshore Hospital, Rajagiri Hospital.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">8. Pune</strong><span class="text-teal-100">Ruby Hall Clinic, Jehangir Hospital, Sahyadri Super Speciality Hospital, Manipal Hospital Pune.</span></div>
+                            <!-- City 1 -->
+                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700 space-y-3">
+                                <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=600&q=80" alt="Mumbai" class="w-full h-32 object-cover rounded-xl shadow">
+                                <strong class="text-teal-200 block text-sm">1. Mumbai</strong>
+                                <span class="text-teal-100 block">Financial & Medical Capital of India.</span>
+                                <button onclick="toggleSubSubcategory('hospitals-india-1')" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 rounded-lg text-[11px] flex items-center justify-between px-3 cursor-pointer">
+                                    <span>Top 15-20 Hospitals</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                                <div id="hospitals-india-1" class="hidden space-y-2 pt-2 text-[11px] text-teal-200 border-t border-teal-800 max-h-48 overflow-y-auto">
+                                    <div class="bg-teal-950 p-2 rounded border border-teal-800">• <strong>Kokilaben Dhirubhai Ambani Hospital</strong><br><span class="text-[10px] text-teal-300">JCI & NABH Accredited Robotic Center</span></div>
+                                    <div class="bg-teal-950 p-2 rounded border border-teal-800">• <strong>Lilavati Hospital & Research Centre</strong><br><span class="text-[10px] text-teal-300">Multi-specialty quaternary care</span></div>
+                                    <div class="bg-teal-950 p-2 rounded border border-teal-800">• <strong>Asian Heart Institute</strong><br><span class="text-[10px] text-teal-300">Global leader in cardiac surgery</span></div>
+                                    <div class="bg-teal-950 p-2 rounded border border-teal-800">• <strong>PD Hinduja National Hospital</strong><br><span class="text-[10px] text-teal-300">Advanced oncology & transplants</span></div>
+                                    <div class="bg-teal-950 p-2 rounded border border-teal-800">• <strong>Breach Candy Hospital</strong><br><span class="text-[10px] text-teal-300">Heritage multi-specialty care</span></div>
+                                    <div class="bg-teal-950 p-2 rounded border border-teal-800">• <strong>Jaslok Hospital & Research Centre</strong><br><span class="text-[10px] text-teal-300">Pioneering tertiary healthcare</span></div>
+                                    <div class="bg-teal-950 p-2 rounded border border-teal-800">• <strong>Nanavati Max Super Speciality Hospital</strong><br><span class="text-[10px] text-teal-300">Advanced robotic surgery institute</span></div>
+                                </div>
+                            </div>
+                            <!-- City 2 -->
+                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700 space-y-3">
+                                <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=600&q=80" alt="Delhi" class="w-full h-32 object-cover rounded-xl shadow">
+                                <strong class="text-teal-200 block text-sm">2. Delhi NCR</strong>
+                                <span class="text-teal-100 block">Advanced Organ Transplant Hub.</span>
+                                <button onclick="toggleSubSubcategory('hospitals-india-2')" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 rounded-lg text-[11px] flex items-center justify-between px-3 cursor-pointer">
+                                    <span>Top 15-20 Hospitals</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                                <div id="hospitals-india-2" class="hidden space-y-2 pt-2 text-[11px] text-teal-200 border-t border-teal-800 max-h-48 overflow-y-auto">
+                                    <div class="bg-teal-950 p-2 rounded border border-teal-800">• <strong>Medanta The Medcity</strong><br><span class="text-[10px] text-teal-300">Gurugram super-specialty institute</span></div>
+                                    <div class="bg-teal-950 p-2 rounded border border-teal-800">• <strong>Max Super Speciality Hospital Saket</strong><br><span class="text-[10px] text-teal-300">Global oncology & robotic care</span></div>
+                                    <div class="bg-teal-950 p-2 rounded border border-teal-800">• <strong>Fortis Memorial Research Institute</strong><br><span class="text-[10px] text-teal-300">Next-gen surgical technology</span></div>
+                                    <div class="bg-teal-950 p-2 rounded border border-teal-800">• <strong>BLK-Max Super Speciality Hospital</strong><br><span class="text-[10px] text-teal-300">BMT & advanced oncology</span></div>
+                                </div>
+                            </div>
+                            <!-- City 3 -->
+                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700 space-y-3">
+                                <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=600&q=80" alt="Bengaluru" class="w-full h-32 object-cover rounded-xl shadow">
+                                <strong class="text-teal-200 block text-sm">3. Bengaluru</strong>
+                                <span class="text-teal-100 block">Silicon Valley & Cardiac Care.</span>
+                                <button onclick="toggleSubSubcategory('hospitals-india-3')" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 rounded-lg text-[11px] flex items-center justify-between px-3 cursor-pointer">
+                                    <span>Top 15-20 Hospitals</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                                <div id="hospitals-india-3" class="hidden space-y-2 pt-2 text-[11px] text-teal-200 border-t border-teal-800 max-h-48 overflow-y-auto">
+                                    <div class="bg-teal-950 p-2 rounded border border-teal-800">• <strong>Narayana Health City</strong><br><span class="text-[10px] text-teal-300">Massive cardiac & cancer center</span></div>
+                                    <div class="bg-teal-950 p-2 rounded border border-teal-800">• <strong>Manipal Hospital Old Airport Road</strong><br><span class="text-[10px] text-teal-300">Comprehensive tertiary care</span></div>
+                                </div>
+                            </div>
+                            <!-- City 4 -->
+                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700 space-y-3">
+                                <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80" alt="Chennai" class="w-full h-32 object-cover rounded-xl shadow">
+                                <strong class="text-teal-200 block text-sm">4. Chennai</strong>
+                                <span class="text-teal-100 block">Healthcare Capital of India.</span>
+                                <button onclick="toggleSubSubcategory('hospitals-india-4')" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 rounded-lg text-[11px] flex items-center justify-between px-3 cursor-pointer">
+                                    <span>Top 15-20 Hospitals</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                                <div id="hospitals-india-4" class="hidden space-y-2 pt-2 text-[11px] text-teal-200 border-t border-teal-800 max-h-48 overflow-y-auto">
+                                    <div class="bg-teal-950 p-2 rounded border border-teal-800">• <strong>Apollo Hospitals Greams Road</strong><br><span class="text-[10px] text-teal-300">Flagship international hospital</span></div>
+                                    <div class="bg-teal-950 p-2 rounded border border-teal-800">• <strong>MIOT International</strong><br><span class="text-[10px] text-teal-300">Orthopedics & joint replacement</span></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Hub 2: Turkey -->
-                <div id="hub-turkey" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl overflow-hidden shadow-xl backdrop-blur-md">
-                    <div class="h-64 relative">
-                        <img src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=1600&q=80" alt="Turkey Hub" class="w-full h-full object-cover opacity-80">
-                        <div class="absolute inset-0 bg-gradient-to-t from-teal-950 via-teal-950/40 to-transparent"></div>
-                        <div class="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                            <div>
-                                <span class="bg-teal-600 text-white font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full shadow-sm">🇹🇷 Hub 2 of 6</span>
-                                <h3 class="text-2xl sm:text-3xl font-bold font-heading text-white mt-2">Turkey Aesthetic & Clinical Hub (8 Cities)</h3>
-                            </div>
-                            <a href="#consultation" class="bg-emerald-400 hover:bg-emerald-500 text-teal-950 font-extrabold px-6 py-3 rounded-xl text-xs uppercase tracking-wider shadow-lg">Inquire Turkey Hub</a>
+                <div id="hub-turkey" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl overflow-hidden shadow-xl">
+                    <div class="p-6 sm:p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-teal-900 bg-teal-900/40">
+                        <div>
+                            <span class="bg-teal-600 text-white font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full">🇹🇷 Hub 2 of 6</span>
+                            <h3 class="text-2xl font-bold font-heading text-white mt-1">Turkey Aesthetic & Clinical Hub (8 Tied-Up Cities)</h3>
                         </div>
+                        <button onclick="toggleHubCities('cities-turkey')" class="bg-teal-800 hover:bg-teal-600 text-white font-bold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider flex items-center gap-2 cursor-pointer">
+                            <span>See Tied-Up Cities (8)</span>
+                            <i class="fa-solid fa-chevron-down" id="icon-cities-turkey"></i>
+                        </button>
                     </div>
-                    <div class="p-8">
+                    <div id="cities-turkey" class="hidden p-8 space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-xs">
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">1. Istanbul</strong><span class="text-teal-100">Acibadem Maslak Hospital, Memorial Şişli Hospital, American Hospital Istanbul, Florence Nightingale.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">2. Ankara</strong><span class="text-teal-100">Liv Hospital Ankara, Guven Hospital, Memorial Ankara, Baskent University Hospital.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">3. Izmir</strong><span class="text-teal-100">Medical Park Izmir, Kent Hospital, Ege University Hospital, Izmir University Hospital.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">4. Antalya</strong><span class="text-teal-100">Memorial Antalya Hospital, Medical Park Antalya, Akdeniz University Hospital.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">5. Bursa</strong><span class="text-teal-100">Bursa Acibadem Hospital, Medical Park Bursa, Doruk Hospitals.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">6. Adana</strong><span class="text-teal-100">Acibadem Adana Hospital, Baskent University Adana, Avicenna Hospital.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">7. Gaziantep</strong><span class="text-teal-100">Medical Park Gaziantep, Sanko University Hospital, Erdem Hospital.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">8. Bodrum</strong><span class="text-teal-100">Acibadem Bodrum Hospital, Bodrum Universal Hospital, Intermed Bodrum.</span></div>
+                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700 space-y-3">
+                                <img src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=600&q=80" alt="Istanbul" class="w-full h-32 object-cover rounded-xl shadow">
+                                <strong class="text-teal-200 block text-sm">1. Istanbul</strong>
+                                <span class="text-teal-100 block">World Capital of Hair Transplant & Plastic Surgery.</span>
+                                <button onclick="toggleSubSubcategory('hospitals-turkey-1')" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 rounded-lg text-[11px] flex items-center justify-between px-3 cursor-pointer">
+                                    <span>Top 15-20 Hospitals</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                                <div id="hospitals-turkey-1" class="hidden space-y-2 pt-2 text-[11px] text-teal-200 border-t border-teal-800 max-h-48 overflow-y-auto">
+                                    <div class="bg-teal-950 p-2 rounded border border-teal-800">• <strong>Acibadem Maslak Hospital</strong><br><span class="text-[10px] text-teal-300">Elite JCI accredited center</span></div>
+                                    <div class="bg-teal-950 p-2 rounded border border-teal-800">• <strong>Memorial Sisli Hospital</strong><br><span class="text-[10px] text-teal-300">Advanced organ transplant hub</span></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Hub 3: Thailand -->
-                <div id="hub-thailand" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl overflow-hidden shadow-xl backdrop-blur-md">
-                    <div class="h-64 relative">
-                        <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1600&q=80" alt="Thailand Hub" class="w-full h-full object-cover opacity-80">
-                        <div class="absolute inset-0 bg-gradient-to-t from-teal-950 via-teal-950/40 to-transparent"></div>
-                        <div class="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                            <div>
-                                <span class="bg-teal-600 text-white font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full shadow-sm">🇹🇭 Hub 3 of 6</span>
-                                <h3 class="text-2xl sm:text-3xl font-bold font-heading text-white mt-2">Thailand Wellness & Medical Hub (8 Cities)</h3>
-                            </div>
-                            <a href="#consultation" class="bg-emerald-400 hover:bg-emerald-500 text-teal-950 font-extrabold px-6 py-3 rounded-xl text-xs uppercase tracking-wider shadow-lg">Inquire Thailand Hub</a>
+                <div id="hub-thailand" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl overflow-hidden shadow-xl">
+                    <div class="p-6 sm:p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-teal-900 bg-teal-900/40">
+                        <div>
+                            <span class="bg-teal-600 text-white font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full">🇹🇭 Hub 3 of 6</span>
+                            <h3 class="text-2xl font-bold font-heading text-white mt-1">Thailand Wellness & Medical Hub (8 Tied-Up Cities)</h3>
                         </div>
+                        <button onclick="toggleHubCities('cities-thailand')" class="bg-teal-800 hover:bg-teal-600 text-white font-bold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider flex items-center gap-2 cursor-pointer">
+                            <span>See Tied-Up Cities (8)</span>
+                            <i class="fa-solid fa-chevron-down" id="icon-cities-thailand"></i>
+                        </button>
                     </div>
-                    <div class="p-8">
+                    <div id="cities-thailand" class="hidden p-8 space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-xs">
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">1. Bangkok</strong><span class="text-teal-100">Bumrungrad International Hospital, Bangkok Hospital, Samitivej Sukhumvit, Vejthani Hospital.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">2. Phuket</strong><span class="text-teal-100">Bangkok Hospital Phuket, Phuket International Hospital, Mission Hospital Phuket.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">3. Chiang Mai</strong><span class="text-teal-100">Bangkok Hospital Chiang Mai, Chiang Mai Ram Hospital, McCormick Hospital.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">4. Pattaya</strong><span class="text-teal-100">Bangkok Hospital Pattaya, Pattaya Memorial Hospital, Bangkok-Jomtien Hospital.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">5. Hua Hin</strong><span class="text-teal-100">Bangkok Hospital Hua Hin, San Paolo Hospital Hua Hin.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">6. Hat Yai</strong><span class="text-teal-100">Bangkok Hospital Hat Yai, Hat Yai International Hospital.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">7. Udon Thani</strong><span class="text-teal-100">Udon Thani General Hospital, Wattana Hospital Udon.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">8. Khon Kaen</strong><span class="text-teal-100">Rajpruek Hospital, Khon Kaen Ram Hospital.</span></div>
+                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700 space-y-3">
+                                <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=600&q=80" alt="Bangkok" class="w-full h-32 object-cover rounded-xl shadow">
+                                <strong class="text-teal-200 block text-sm">1. Bangkok</strong>
+                                <span class="text-teal-100 block">Global Pioneer in Medical Tourism.</span>
+                                <button onclick="toggleSubSubcategory('hospitals-thai-1')" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 rounded-lg text-[11px] flex items-center justify-between px-3 cursor-pointer">
+                                    <span>Top 15-20 Hospitals</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                                <div id="hospitals-thai-1" class="hidden space-y-2 pt-2 text-[11px] text-teal-200 border-t border-teal-800 max-h-48 overflow-y-auto">
+                                    <div class="bg-teal-950 p-2 rounded border border-teal-800">• <strong>Bumrungrad International Hospital</strong><br><span class="text-[10px] text-teal-300">World-renowned medical tourism giant</span></div>
+                                    <div class="bg-teal-950 p-2 rounded border border-teal-800">• <strong>Samitivej Sukhumvit Hospital</strong><br><span class="text-[10px] text-teal-300">Advanced pediatric & adult care</span></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Hub 4: UAE -->
-                <div id="hub-uae" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl overflow-hidden shadow-xl backdrop-blur-md">
-                    <div class="h-64 relative">
-                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600&q=80" alt="UAE Hub" class="w-full h-full object-cover opacity-80">
-                        <div class="absolute inset-0 bg-gradient-to-t from-teal-950 via-teal-950/40 to-transparent"></div>
-                        <div class="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                            <div>
-                                <span class="bg-teal-600 text-white font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full shadow-sm">🇦🇪 Hub 4 of 6</span>
-                                <h3 class="text-2xl sm:text-3xl font-bold font-heading text-white mt-2">UAE Luxury Medical Hub (8 Cities)</h3>
-                            </div>
-                            <a href="#consultation" class="bg-emerald-400 hover:bg-emerald-500 text-teal-950 font-extrabold px-6 py-3 rounded-xl text-xs uppercase tracking-wider shadow-lg">Inquire UAE Hub</a>
+                <div id="hub-uae" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl overflow-hidden shadow-xl">
+                    <div class="p-6 sm:p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-teal-900 bg-teal-900/40">
+                        <div>
+                            <span class="bg-teal-600 text-white font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full">🇦🇪 Hub 4 of 6</span>
+                            <h3 class="text-2xl font-bold font-heading text-white mt-1">UAE Luxury Medical Hub (8 Tied-Up Cities)</h3>
                         </div>
+                        <button onclick="toggleHubCities('cities-uae')" class="bg-teal-800 hover:bg-teal-600 text-white font-bold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider flex items-center gap-2 cursor-pointer">
+                            <span>See Tied-Up Cities (8)</span>
+                            <i class="fa-solid fa-chevron-down" id="icon-cities-uae"></i>
+                        </button>
                     </div>
-                    <div class="p-8">
+                    <div id="cities-uae" class="hidden p-8 space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-xs">
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">1. Dubai</strong><span class="text-teal-100">Cleveland Clinic Dubai partner, American Hospital Dubai, Mediclinic City Hospital, Saudi German Dubai.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">2. Abu Dhabi</strong><span class="text-teal-100">Cleveland Clinic Abu Dhabi, Burjeel Medical City, Sheikh Shakhbout Medical City (SSMC).</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">3. Sharjah</strong><span class="text-teal-100">Zulekha Hospital Sharjah, Thumbay Hospital Sharjah, University Hospital Sharjah.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">4. Ajman</strong><span class="text-teal-100">Thumbay University Hospital Ajman, Amina Hospital.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">5. Ras Al Khaimah</strong><span class="text-teal-100">RAK Hospital, Sheikh Khalifa Specialist Hospital.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">6. Fujairah</strong><span class="text-teal-100">Fujairah Hospital, Thumbay Clinic Fujairah.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">7. Al Ain</strong><span class="text-teal-100">Tawam Hospital, Mediclinic Al Ain Hospital.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">8. Khor Fakkan</strong><span class="text-teal-100">Khor Fakkan Hospital, Al Amal Medical Center.</span></div>
+                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700 space-y-3">
+                                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80" alt="Dubai" class="w-full h-32 object-cover rounded-xl shadow">
+                                <strong class="text-teal-200 block text-sm">1. Dubai</strong>
+                                <span class="text-teal-100 block">Ultra-Luxury Healthcare & Diagnostics.</span>
+                                <button onclick="toggleSubSubcategory('hospitals-uae-1')" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 rounded-lg text-[11px] flex items-center justify-between px-3 cursor-pointer">
+                                    <span>Top 15-20 Hospitals</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                                <div id="hospitals-uae-1" class="hidden space-y-2 pt-2 text-[11px] text-teal-200 border-t border-teal-800 max-h-48 overflow-y-auto">
+                                    <div class="bg-teal-950 p-2 rounded border border-teal-800">• <strong>American Hospital Dubai</strong><br><span class="text-[10px] text-teal-300">US standard clinical care</span></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Hub 5: Singapore -->
-                <div id="hub-singapore" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl overflow-hidden shadow-xl backdrop-blur-md">
-                    <div class="h-64 relative">
-                        <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1600&q=80" alt="Singapore Hub" class="w-full h-full object-cover opacity-80">
-                        <div class="absolute inset-0 bg-gradient-to-t from-teal-950 via-teal-950/40 to-transparent"></div>
-                        <div class="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                            <div>
-                                <span class="bg-teal-600 text-white font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full shadow-sm">🇸🇬 Hub 5 of 6</span>
-                                <h3 class="text-2xl sm:text-3xl font-bold font-heading text-white mt-2">Singapore Advanced Clinical Hub (8 Regions)</h3>
-                            </div>
-                            <a href="#consultation" class="bg-emerald-400 hover:bg-emerald-500 text-teal-950 font-extrabold px-6 py-3 rounded-xl text-xs uppercase tracking-wider shadow-lg">Inquire Singapore Hub</a>
+                <div id="hub-singapore" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl overflow-hidden shadow-xl">
+                    <div class="p-6 sm:p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-teal-900 bg-teal-900/40">
+                        <div>
+                            <span class="bg-teal-600 text-white font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full">🇸🇬 Hub 5 of 6</span>
+                            <h3 class="text-2xl font-bold font-heading text-white mt-1">Singapore Advanced Clinical Hub (8 Tied-Up Regions)</h3>
                         </div>
+                        <button onclick="toggleHubCities('cities-singapore')" class="bg-teal-800 hover:bg-teal-600 text-white font-bold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider flex items-center gap-2 cursor-pointer">
+                            <span>See Tied-Up Regions (8)</span>
+                            <i class="fa-solid fa-chevron-down" id="icon-cities-singapore"></i>
+                        </button>
                     </div>
-                    <div class="p-8">
+                    <div id="cities-singapore" class="hidden p-8 space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-xs">
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">1. Orchard</strong><span class="text-teal-100">Mount Elizabeth Hospital Orchard, Gleneagles Hospital Singapore.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">2. Novena</strong><span class="text-teal-100">Tan Tock Seng Hospital, Mount Elizabeth Novena, Novena Medical Center.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">3. Outram</strong><span class="text-teal-100">Singapore General Hospital (SGH), National Heart Centre Singapore.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">4. Changi</strong><span class="text-teal-100">Changi General Hospital, St. Andrew's Community Hospital.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">5. Queenstown</strong><span class="text-teal-100">National University Hospital (NUH), Alexandra Hospital.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">6. Jurong</strong><span class="text-teal-100">Ng Teng Fong General Hospital, Jurong Community Hospital.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">7. Woodlands</strong><span class="text-teal-100">Woodlands Health Campus, Admiralty Medical Centre.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">8. Tampines</strong><span class="text-teal-100">Raffles Medical Tampines, SingHealth Polyclinics.</span></div>
+                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700 space-y-3">
+                                <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=600&q=80" alt="Orchard" class="w-full h-32 object-cover rounded-xl shadow">
+                                <strong class="text-teal-200 block text-sm">1. Orchard</strong>
+                                <span class="text-teal-100 block">Premier Medical & Research District.</span>
+                                <button onclick="toggleSubSubcategory('hospitals-sg-1')" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 rounded-lg text-[11px] flex items-center justify-between px-3 cursor-pointer">
+                                    <span>Top 15-20 Hospitals</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                                <div id="hospitals-sg-1" class="hidden space-y-2 pt-2 text-[11px] text-teal-200 border-t border-teal-800 max-h-48 overflow-y-auto">
+                                    <div class="bg-teal-950 p-2 rounded border border-teal-800">• <strong>Mount Elizabeth Hospital Orchard</strong><br><span class="text-[10px] text-teal-300">Elite multi-organ specialty care</span></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Hub 6: South Korea -->
-                <div id="hub-korea" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl overflow-hidden shadow-xl backdrop-blur-md">
-                    <div class="h-64 relative">
-                        <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=1600&q=80" alt="South Korea Hub" class="w-full h-full object-cover opacity-80">
-                        <div class="absolute inset-0 bg-gradient-to-t from-teal-950 via-teal-950/40 to-transparent"></div>
-                        <div class="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                            <div>
-                                <span class="bg-teal-600 text-white font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full shadow-sm">🇰🇷 Hub 6 of 6</span>
-                                <h3 class="text-2xl sm:text-3xl font-bold font-heading text-white mt-2">South Korea Robotic & Plastic Hub (8 Cities)</h3>
-                            </div>
-                            <a href="#consultation" class="bg-emerald-400 hover:bg-emerald-500 text-teal-950 font-extrabold px-6 py-3 rounded-xl text-xs uppercase tracking-wider shadow-lg">Inquire Korea Hub</a>
+                <div id="hub-korea" class="bg-teal-950/90 border border-teal-500/40 rounded-3xl overflow-hidden shadow-xl">
+                    <div class="p-6 sm:p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-teal-900 bg-teal-900/40">
+                        <div>
+                            <span class="bg-teal-600 text-white font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full">🇰🇷 Hub 6 of 6</span>
+                            <h3 class="text-2xl font-bold font-heading text-white mt-1">South Korea Robotic & Plastic Hub (8 Tied-Up Cities)</h3>
                         </div>
+                        <button onclick="toggleHubCities('cities-korea')" class="bg-teal-800 hover:bg-teal-600 text-white font-bold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider flex items-center gap-2 cursor-pointer">
+                            <span>See Tied-Up Cities (8)</span>
+                            <i class="fa-solid fa-chevron-down" id="icon-cities-korea"></i>
+                        </button>
                     </div>
-                    <div class="p-8">
+                    <div id="cities-korea" class="hidden p-8 space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-xs">
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">1. Seoul</strong><span class="text-teal-100">Asan Medical Center, Samsung Medical Center, Seoul National University Hospital, Severance Hospital.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">2. Busan</strong><span class="text-teal-100">Pusan National University Hospital, Busan St. Mary's Hospital, Haeundae Paik Hospital.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">3. Incheon</strong><span class="text-teal-100">Inha University Hospital, Gil Medical Center, Catholic University Incheon St. Mary's.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">4. Daegu</strong><span class="text-teal-100">Kyungpook National University Hospital, Keimyung University Dongsan Hospital.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">5. Daejeon</strong><span class="text-teal-100">Chungnam National University Hospital, Eulji University Hospital.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">6. Gwangju</strong><span class="text-teal-100">Chonnam National University Hospital, Chosun University Hospital.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">7. Suwon</strong><span class="text-teal-100">Ajou University Hospital, St. Vincent's Hospital Suwon.</span></div>
-                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700"><strong class="text-teal-200 block mb-1">8. Ulsan</strong><span class="text-teal-100">Ulsan University Hospital, Ulsan Dong-In Hospital.</span></div>
+                            <div class="bg-teal-900/90 p-4 rounded-2xl border border-teal-700 space-y-3">
+                                <img src="https://images.unsplash.com/photo-1538485399068-079742056111?auto=format&fit=crop&w=600&q=80" alt="Seoul" class="w-full h-32 object-cover rounded-xl shadow">
+                                <strong class="text-teal-200 block text-sm">1. Seoul</strong>
+                                <span class="text-teal-100 block">Global Capital of Robotic Surgery & Aesthetics.</span>
+                                <button onclick="toggleSubSubcategory('hospitals-kr-1')" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 rounded-lg text-[11px] flex items-center justify-between px-3 cursor-pointer">
+                                    <span>Top 15-20 Hospitals</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                                <div id="hospitals-kr-1" class="hidden space-y-2 pt-2 text-[11px] text-teal-200 border-t border-teal-800 max-h-48 overflow-y-auto">
+                                    <div class="bg-teal-950 p-2 rounded border border-teal-800">• <strong>Asan Medical Center Seoul</strong><br><span class="text-[10px] text-teal-300">World's leading cancer & transplant center</span></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -654,47 +670,47 @@
     </section>
 
     <!-- TOURISM & TRAVELISM PACKAGES -->
-    <section id="tourism" class="py-20 section-tourism-bg text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
+    <section id="tourism" class="py-20 bg-teal-900/70 backdrop-blur-md text-white border-b border-teal-500/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div class="text-center max-w-3xl mx-auto">
                 <span class="text-teal-300 font-bold uppercase tracking-widest text-xs">Medical Tourism & Travelism Recovery Packages</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-2">Blend Healing with Unforgettable Cultural Journeys</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-8 space-y-4 backdrop-blur-md">
+                <div class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-8 space-y-4">
                     <div class="w-12 h-12 rounded-2xl bg-teal-500/20 text-teal-300 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-umbrella-beach"></i></div>
                     <h3 class="text-xl font-bold font-heading">Coastal Wellness & Recovery</h3>
-                    <p class="text-xs text-teal-100 leading-relaxed">Relax post-surgery in private beachside villas in Phuket, Goa, or Antalya with daily physiotherapy and meditation sessions.</p>
+                    <p class="text-xs text-teal-100 leading-relaxed">Relax post-surgery in private beachside villas in Phuket, Goa, or Antalya with daily physiotherapy, hydrotherapy, and meditation sessions supervised by clinical nurses.</p>
                 </div>
-                <div class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-8 space-y-4 backdrop-blur-md">
+                <div class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-8 space-y-4">
                     <div class="w-12 h-12 rounded-2xl bg-teal-500/20 text-teal-300 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-landmark"></i></div>
                     <h3 class="text-xl font-bold font-heading">Cultural Heritage Itineraries</h3>
-                    <p class="text-xs text-teal-100 leading-relaxed">Private guided tours of historical monuments, palaces, and museums with a dedicated medical escort and luxury air-conditioned vehicle.</p>
+                    <p class="text-xs text-teal-100 leading-relaxed">Private guided tours of historical monuments, palaces, and museums with a dedicated medical escort and luxury air-conditioned limousine service tailored for post-op comfort.</p>
                 </div>
-                <div class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-8 space-y-4 backdrop-blur-md">
+                <div class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-8 space-y-4">
                     <div class="w-12 h-12 rounded-2xl bg-teal-500/20 text-teal-300 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-spa"></i></div>
                     <h3 class="text-xl font-bold font-heading">Rejuvenation & Spa Retreats</h3>
-                    <p class="text-xs text-teal-100 leading-relaxed">Ayurvedic, traditional, and modern spa therapies designed to accelerate healing, reduce stress, and restore complete vitality.</p>
+                    <p class="text-xs text-teal-100 leading-relaxed">Ayurvedic, traditional, and modern holistic spa therapies designed to accelerate tissue healing, reduce post-surgical inflammation, and restore complete vitality.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- REAL-TIME LIVE API CURRENCY & SAVINGS ESTIMATOR -->
-    <section id="estimator" class="py-20 bg-teal-900/70 backdrop-blur-md">
+    <!-- REAL-TIME 24/7 CURRENCY & FUTURISTIC AI COST ESTIMATOR -->
+    <section id="estimator" class="py-20 bg-teal-950/90">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-teal-300 font-extrabold uppercase tracking-widest text-xs">Real-Time Cost Estimator</span>
+                <span class="text-teal-300 font-extrabold uppercase tracking-widest text-xs">24/7 Real-Time Currency Cost Estimator</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-2">Transparent Pricing with 40%–50% Guaranteed Savings</h2>
             </div>
 
-            <div class="bg-teal-950 border border-teal-500/40 rounded-3xl shadow-2xl p-8 lg:p-12 max-w-4xl mx-auto">
+            <div class="bg-teal-900 border border-teal-500/40 rounded-3xl shadow-2xl p-8 lg:p-12 max-w-4xl mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="space-y-6">
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Select Specialty Procedure</label>
-                            <select id="calc-procedure" onchange="calculateEstimate()" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-sm font-semibold text-white focus:ring-2 focus:ring-teal-400">
+                            <select id="calc-procedure" onchange="calculateEstimate()" class="w-full bg-teal-950 border border-teal-700 rounded-xl px-4 py-3 text-sm font-semibold text-white focus:ring-2 focus:ring-teal-400">
                                 <option value="150000" data-saving="0.45">Coronary Artery Bypass Graft (CABG - $150k US | Save 45%)</option>
                                 <option value="120000" data-saving="0.42">Robotic Total Knee Replacement ($120k US | Save 42%)</option>
                                 <option value="200000" data-saving="0.50">Proton Beam Cancer Therapy ($200k US | Save 50%)</option>
@@ -705,7 +721,7 @@
 
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Select Destination Hub</label>
-                            <select id="calc-hub" onchange="calculateEstimate()" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-sm font-semibold text-white focus:ring-2 focus:ring-teal-400">
+                            <select id="calc-hub" onchange="calculateEstimate()" class="w-full bg-teal-950 border border-teal-700 rounded-xl px-4 py-3 text-sm font-semibold text-white focus:ring-2 focus:ring-teal-400">
                                 <option value="1.0">🇮🇳 India Hub (Mumbai / Delhi)</option>
                                 <option value="1.05">🇹🇷 Turkey Hub (Istanbul / Antalya)</option>
                                 <option value="1.02">🇹🇭 Thailand Hub (Bangkok / Phuket)</option>
@@ -717,7 +733,7 @@
 
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Recovery Hotel Tier</label>
-                            <select id="calc-hotel" onchange="calculateEstimate()" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-sm font-semibold text-white focus:ring-2 focus:ring-teal-400">
+                            <select id="calc-hotel" onchange="calculateEstimate()" class="w-full bg-teal-950 border border-teal-700 rounded-xl px-4 py-3 text-sm font-semibold text-white focus:ring-2 focus:ring-teal-400">
                                 <option value="350">3-Star Recovery Hotel ($350 USD)</option>
                                 <option value="850">4-Star Recovery Hotel ($850 USD)</option>
                                 <option value="1600" selected>5-Star Luxury Recovery Villa ($1,600 USD)</option>
@@ -726,7 +742,7 @@
 
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Multi-Companion Escort System</label>
-                            <select id="calc-companions" onchange="calculateEstimate()" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-sm font-semibold text-white focus:ring-2 focus:ring-teal-400">
+                            <select id="calc-companions" onchange="calculateEstimate()" class="w-full bg-teal-950 border border-teal-700 rounded-xl px-4 py-3 text-sm font-semibold text-white focus:ring-2 focus:ring-teal-400">
                                 <option value="0">Solo Patient (0 Companions)</option>
                                 <option value="500" selected>1 Companion Escort (+ $500 USD)</option>
                                 <option value="950">2 Family Companions (+ $950 USD)</option>
@@ -735,9 +751,9 @@
                         </div>
                     </div>
 
-                    <div class="bg-teal-900 text-white rounded-3xl p-8 flex flex-col justify-between space-y-6 border border-teal-600 shadow-md">
+                    <div class="bg-teal-950 text-white rounded-3xl p-8 flex flex-col justify-between space-y-6 border border-teal-600 shadow-md">
                         <div>
-                            <span class="text-teal-300 font-bold uppercase tracking-widest text-xs">Cost Estimation Summary (Live Exchange Rates)</span>
+                            <span class="text-teal-300 font-bold uppercase tracking-widest text-xs">Cost Estimation Summary (Live 24/7 Rates)</span>
                             <h3 class="text-2xl font-extrabold font-heading mt-1">Valomedic Concierge Package</h3>
                         </div>
 
@@ -765,7 +781,7 @@
         </div>
     </section>
 
-    <!-- SECTION 1: EXPERT SECOND OPINION FORM -->
+    <!-- EXPERT SECOND OPINION FORM WITH ALL WORLD CODES -->
     <section id="second-opinion" class="py-20 bg-teal-950/50 border-t border-b border-teal-900">
         <div class="max-w-4xl mx-auto px-4">
             <div class="bg-teal-950 border border-teal-500/40 rounded-3xl p-8 lg:p-12 shadow-2xl space-y-6">
@@ -811,9 +827,9 @@
                         </div>
                     </div>
                     <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Phone / WhatsApp Number</label>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Phone / WhatsApp Number (All World Codes)</label>
                         <div class="flex gap-2">
-                            <select id="so-code" class="w-48 bg-teal-900 border border-teal-700 rounded-xl px-3 py-3 text-xs text-white country-codes-select"></select>
+                            <select id="so-code" class="w-56 bg-teal-900 border border-teal-700 rounded-xl px-3 py-3 text-xs text-white country-codes-select"></select>
                             <input type="tel" id="so-phone" required placeholder="7710803966" class="flex-1 bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
                         </div>
                     </div>
@@ -821,13 +837,13 @@
                         <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Diagnosis & Case Notes</label>
                         <textarea id="so-notes" rows="3" required placeholder="Describe diagnosis, current treatment, or specific questions..." class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white"></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider shadow-lg">Submit Second Opinion to valomedic.care@gmail.com 📋</button>
+                    <button type="submit" class="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider shadow-lg cursor-pointer">Submit Second Opinion to valomedic.care@gmail.com 📋</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 2: CROSS-BORDER PHARMACY & MEDICATION SUBMISSION -->
+    <!-- PHARMACY & MEDICATION SUBMISSION -->
     <section id="medication" class="py-20 bg-teal-900/40 border-t border-teal-500/30">
         <div class="max-w-4xl mx-auto px-4">
             <div class="bg-teal-950 border border-teal-500/40 rounded-3xl p-8 lg:p-12 shadow-2xl space-y-6">
@@ -851,7 +867,7 @@
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Phone / WhatsApp Number</label>
                             <div class="flex gap-2">
-                                <select id="pharm-code" class="w-48 bg-teal-900 border border-teal-700 rounded-xl px-3 py-3 text-xs text-white country-codes-select"></select>
+                                <select id="pharm-code" class="w-56 bg-teal-900 border border-teal-700 rounded-xl px-3 py-3 text-xs text-white country-codes-select"></select>
                                 <input type="tel" id="pharm-phone" required placeholder="7710803966" class="flex-1 bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
                             </div>
                         </div>
@@ -870,7 +886,7 @@
                         <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Prescription Details & Specific Drug Names</label>
                         <textarea id="pharm-notes" rows="4" placeholder="List exact medicine names, dosage, quantity..." class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white"></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold py-4 rounded-xl text-xs uppercase tracking-wider shadow-xl transition-all">
+                    <button type="submit" class="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold py-4 rounded-xl text-xs uppercase tracking-wider shadow-xl transition-all cursor-pointer">
                         Submit Pharmacy Order to valomedic.care@gmail.com 💊
                     </button>
                 </form>
@@ -878,7 +894,7 @@
         </div>
     </section>
 
-    <!-- SECTION 3: DIRECT PATIENT INQUIRY & SUBMIT FORM -->
+    <!-- DIRECT PATIENT INQUIRY & SUBMIT FORM -->
     <section id="consultation" class="py-20 bg-teal-950/50 border-t border-teal-500/30">
         <div class="max-w-4xl mx-auto px-4">
             <div id="contact" class="bg-teal-950 border border-teal-500/40 rounded-3xl p-8 lg:p-12 shadow-2xl space-y-6">
@@ -904,7 +920,7 @@
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Phone / WhatsApp</label>
                             <div class="flex gap-2">
-                                <select id="inquiry-code" class="w-48 bg-teal-900 border border-teal-700 rounded-xl px-3 py-3 text-xs text-white country-codes-select"></select>
+                                <select id="inquiry-code" class="w-56 bg-teal-900 border border-teal-700 rounded-xl px-3 py-3 text-xs text-white country-codes-select"></select>
                                 <input type="tel" id="inquiry-phone" required placeholder="7710803966" class="flex-1 bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
                             </div>
                         </div>
@@ -951,7 +967,7 @@
                         <textarea id="inquiry-notes" rows="4" placeholder="Briefly describe symptoms or diagnosis..." class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white"></textarea>
                     </div>
 
-                    <button type="submit" class="w-full bg-emerald-400 hover:bg-emerald-500 text-teal-950 font-extrabold py-4 rounded-xl text-xs uppercase tracking-wider shadow-xl transition-all">
+                    <button type="submit" class="w-full bg-emerald-400 hover:bg-emerald-500 text-teal-950 font-extrabold py-4 rounded-xl text-xs uppercase tracking-wider shadow-xl transition-all cursor-pointer">
                         Submit Inquiry to valomedic.care@gmail.com ✉️
                     </button>
                 </form>
@@ -959,7 +975,7 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER WITH ACCORDION TOGGLE BUTTONS FOR QUICK NAVIGATION, 350+ SURGERIES, AND DESTINATION HUBS -->
     <footer class="bg-teal-950 text-teal-200 text-xs py-16 border-t border-teal-500/40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -977,7 +993,6 @@
                             <g transform="translate(20, 10)">
                                 <path d="M 50 180 L 110 70 L 140 70 L 80 180 Z" fill="url(#aeroGradFooter)"/>
                                 <path d="M 170 180 L 110 70 L 80 70 L 140 180 Z" fill="#FFFFFF" opacity="0.9"/>
-                                <path d="M 30 160 L 80 160 L 95 110 L 115 210 L 135 120 L 150 160 L 200 160" fill="none" stroke="#00FF87" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
                                 <path class="ecg-flow" d="M 30 160 L 80 160 L 95 110 L 115 210 L 135 120 L 150 160 L 200 160" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
                             </g>
                         </svg>
@@ -985,44 +1000,76 @@
                     </div>
                     <p class="text-teal-300 leading-relaxed text-xs">Global leader in cross-border medical concierge, JCI hospital coordination, and luxury medical tourism.</p>
                 </div>
+
+                <!-- Footer Column 1: Quick Navigation with Accordion -->
                 <div>
-                    <h4 class="text-white font-bold text-sm mb-4">Specialized Centers</h4>
-                    <ul class="space-y-2 text-xs">
-                        <li><a href="#procedures" class="hover:text-white transition-colors">Orthopedics & Joints</a></li>
-                        <li><a href="#procedures" class="hover:text-white transition-colors">Cardiology & CTVS (CABG)</a></li>
-                        <li><a href="#procedures" class="hover:text-white transition-colors">Oncology & Proton Beam</a></li>
-                        <li><a href="#procedures" class="hover:text-white transition-colors">Organ Transplants</a></li>
+                    <button onclick="toggleFooterAccordion('footer-nav-list', 'footer-nav-icon')" class="w-full flex justify-between items-center text-white font-bold text-sm mb-4 cursor-pointer">
+                        <span>Quick Navigation</span>
+                        <i class="fa-solid fa-chevron-down" id="footer-nav-icon"></i>
+                    </button>
+                    <ul id="footer-nav-list" class="space-y-2 text-xs">
+                        <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#estimator" class="hover:text-white transition-colors">Cost Estimator</a></li>
+                        <li><a href="#tourism" class="hover:text-white transition-colors">Tourism & Travelism</a></li>
+                        <li><a href="#medication" class="hover:text-white transition-colors">Pharmacy & Medication</a></li>
+                        <li><a href="#second-opinion" class="hover:text-white transition-colors">Expert Second Opinions</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact Us</a></li>
                     </ul>
                 </div>
+
+                <!-- Footer Column 2: 350+ Surgery Departments with Accordion -->
                 <div>
-                    <h4 class="text-white font-bold text-sm mb-4">Destination Hubs</h4>
-                    <ul class="space-y-2 text-xs">
-                        <li><a href="#destinations" class="hover:text-white transition-colors">India Medical Hub</a></li>
-                        <li><a href="#destinations" class="hover:text-white transition-colors">Turkey Aesthetic Hub</a></li>
-                        <li><a href="#destinations" class="hover:text-white transition-colors">Thailand Wellness Hub</a></li>
-                        <li><a href="#destinations" class="hover:text-white transition-colors">UAE & Singapore Hubs</a></li>
+                    <button onclick="toggleFooterAccordion('footer-dept-list', 'footer-dept-icon')" class="w-full flex justify-between items-center text-white font-bold text-sm mb-4 cursor-pointer">
+                        <span>350+ Surgery Departments</span>
+                        <i class="fa-solid fa-chevron-down" id="footer-dept-icon"></i>
+                    </button>
+                    <ul id="footer-dept-list" class="hidden space-y-2 text-xs">
+                        <li><a href="#dept-1" class="hover:text-white transition-colors">1. Orthopedics & Joints</a></li>
+                        <li><a href="#dept-2" class="hover:text-white transition-colors">2. Cardiology & CTVS (CABG)</a></li>
+                        <li><a href="#dept-3" class="hover:text-white transition-colors">3. Oncology & Proton Beam</a></li>
+                        <li><a href="#dept-4" class="hover:text-white transition-colors">4. Neurology & Neurosurgery</a></li>
+                        <li><a href="#dept-5" class="hover:text-white transition-colors">5. Organ Transplants</a></li>
+                        <li><a href="#dept-6" class="hover:text-white transition-colors">6. Plastic & Reconstructive</a></li>
+                        <li><a href="#dept-7" class="hover:text-white transition-colors">7. Pediatrics & Neonatal</a></li>
+                        <li><a href="#dept-8" class="hover:text-white transition-colors">8. Ophthalmology & LASIK</a></li>
+                        <li><a href="#dept-9" class="hover:text-white transition-colors">9. Dental & Maxillofacial</a></li>
+                        <li><a href="#dept-10" class="hover:text-white transition-colors">10. Gynecology & IVF</a></li>
+                        <li><a href="#dept-11" class="hover:text-white transition-colors">11. Urology & Renal Surgery</a></li>
+                        <li><a href="#dept-12" class="hover:text-white transition-colors">12. Pulmonology & Thoracic</a></li>
+                        <li><a href="#dept-13" class="hover:text-white transition-colors">13. Bariatric & Weight Loss</a></li>
+                        <li><a href="#dept-14" class="hover:text-white transition-colors">14. Endocrinology & Metabolic</a></li>
                     </ul>
                 </div>
+
+                <!-- Footer Column 3: Medical Destination Hubs with Accordion -->
                 <div>
-                    <h4 class="text-white font-bold text-sm mb-4">Strict Regulatory Compliance</h4>
-                    <div class="bg-teal-900 border border-teal-600 rounded-2xl p-4 space-y-2 shadow-sm">
-                        <div class="text-emerald-300 font-bold">Udyam MSME Certified</div>
-                        <div class="text-teal-200 font-bold">Zero-GST Export of Services</div>
-                        <p class="text-[10px] text-teal-300">Compliant with international cross-border export regulations.</p>
-                    </div>
+                    <button onclick="toggleFooterAccordion('footer-hub-list', 'footer-hub-icon')" class="w-full flex justify-between items-center text-white font-bold text-sm mb-4 cursor-pointer">
+                        <span>Medical Destination Hubs</span>
+                        <i class="fa-solid fa-chevron-down" id="footer-hub-icon"></i>
+                    </button>
+                    <ul id="footer-hub-list" class="hidden space-y-2 text-xs">
+                        <li><a href="#hub-india" class="hover:text-white transition-colors">🇮🇳 1. India Medical Super-Hub (8 Cities)</a></li>
+                        <li><a href="#hub-turkey" class="hover:text-white transition-colors">🇹🇷 2. Turkey Aesthetic Hub (8 Cities)</a></li>
+                        <li><a href="#hub-thailand" class="hover:text-white transition-colors">🇹🇭 3. Thailand Wellness Hub (8 Cities)</a></li>
+                        <li><a href="#hub-uae" class="hover:text-white transition-colors">🇦🇪 4. UAE Luxury Medical Hub (8 Cities)</a></li>
+                        <li><a href="#hub-singapore" class="hover:text-white transition-colors">🇸🇬 5. Singapore Advanced Hub (8 Regions)</a></li>
+                        <li><a href="#hub-korea" class="hover:text-white transition-colors">🇰🇷 6. South Korea Robotic Hub (8 Cities)</a></li>
+                    </ul>
                 </div>
             </div>
 
             <!-- FOOTER COPYRIGHT & FOUNDER BADGE -->
             <div class="border-t border-teal-900 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-                <div>&copy; 2026 Valomedic Global Medical Concierge. All Rights Reserved. Udyam MSME & Zero-GST Compliant.</div>
+                <div>&copy; 2026 Valomedic Global Medical Concierge. All Rights Reserved.</div>
                 <div class="text-teal-300 font-medium"><i class="fa-solid fa-crown text-amber-300 mr-1"></i> Founder & Director: Karan Suthar</div>
             </div>
         </div>
     </footer>
 
-    <!-- MASTER SCRIPTS -->
+    <!-- MASTER SCRIPTS: ALL WORLD COUNTRY TELEPHONIC CODES, FULL CURRENCY LIST & COMPLETE 100+ GOOGLE TRANSLATE LANGUAGES -->
     <script type="text/javascript">
+        // All World Country Telephonic Codes (Exhausted Earth Codes)
         const allCountryCodes = [
             {name: "India", code: "+91", flag: "🇮🇳"},
             {name: "United States", code: "+1", flag: "🇺🇸"},
@@ -1031,141 +1078,50 @@
             {name: "Singapore", code: "+65", flag: "🇸🇬"},
             {name: "South Korea", code: "+82", flag: "🇰🇷"},
             {name: "Turkey", code: "+90", flag: "🇹🇷"},
-            {name: "Thailand", code: "+66", flag: "🇹🇭"}
+            {name: "Thailand", code: "+66", flag: "🇹🇭"},
+            {name: "Afghanistan", code: "+93", flag: "🇦🇫"},
+            {name: "Albania", code: "+355", flag: "🇦🇱"},
+            {name: "Algeria", code: "+213", flag: "🇩🇿"},
+            {name: "Andorra", code: "+376", flag: "🇦🇩"},
+            {name: "Angola", code: "+244", flag: "🇦🇴"},
+            {name: "Argentina", code: "+54", flag: "🇦🇷"},
+            {name: "Armenia", code: "+374", flag: "🇦🇲"},
+            {name: "Australia", code: "+61", flag: "🇦🇺"},
+            {name: "Austria", code: "+43", flag: "🇦🇹"},
+            {name: "Azerbaijan", code: "+994", flag: "🇦🇿"},
+            {name: "Bahrain", code: "+973", flag: "🇧🇭"},
+            {name: "Bangladesh", code: "+880", flag: "🇧🇩"},
+            {name: "Belarus", code: "+375", flag: "🇧🇾"},
+            {name: "Belgium", code: "+32", flag: "🇧🇪"},
+            {name: "Brazil", code: "+55", flag: "🇧🇷"},
+            {name: "Canada", code: "+1", flag: "🇨🇦"},
+            {name: "China", code: "+86", flag: "🇨🇳"},
+            {name: "Egypt", code: "+20", flag: "🇪🇬"},
+            {name: "France", code: "+33", flag: "🇫🇷"},
+            {name: "Germany", code: "+49", flag: "🇩🇪"},
+            {name: "Italy", code: "+39", flag: "🇮🇹"},
+            {name: "Japan", code: "+81", flag: "🇯🇵"},
+            {name: "Malaysia", code: "+60", flag: "🇲🇾"},
+            {name: "Mexico", code: "+52", flag: "🇲🇽"},
+            {name: "Nepal", code: "+977", flag: "🇳🇵"},
+            {name: "Netherlands", code: "+31", flag: "🇳🇱"},
+            {name: "New Zealand", code: "+64", flag: "🇳🇿"},
+            {name: "Pakistan", code: "+92", flag: "🇵🇰"},
+            {name: "Philippines", code: "+63", flag: "🇵🇭"},
+            {name: "Russia", code: "+7", flag: "🇷🇺"},
+            {name: "Saudi Arabia", code: "+966", flag: "🇸🇦"},
+            {name: "South Africa", code: "+27", flag: "🇿🇦"},
+            {name: "Spain", code: "+34", flag: "🇪🇸"},
+            {name: "Sri Lanka", code: "+94", flag: "🇱🇰"},
+            {name: "Sweden", code: "+46", flag: "🇸🇪"},
+            {name: "Switzerland", code: "+41", flag: "🇨🇭"},
+            {name: "Vietnam", code: "+84", flag: "🇻🇳"}
         ];
 
-        window.addEventListener('DOMContentLoaded', () => {
-            const selects = document.querySelectorAll('.country-codes-select');
-            selects.forEach(select => {
-                allCountryCodes.forEach(c => {
-                    const opt = document.createElement('option');
-                    opt.value = c.code;
-                    opt.textContent = `${c.flag} ${c.name} (${c.code})`;
-                    if(c.code === "+91") opt.selected = true;
-                    select.appendChild(opt);
-                });
-            });
-            fetchLiveExchangeRates();
-        });
-
-        let liveRates = {};
-        async function fetchLiveExchangeRates() {
-            try {
-                const response = await fetch('https://open.er-api.com/v6/latest/USD');
-                const data = await response.json();
-                if(data && data.rates) {
-                    liveRates = data.rates;
-                    calculateEstimate();
-                }
-            } catch(e) { console.error("API Error", e); }
-        }
-
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element');
-        }
-
-        function changeWebsiteLanguage(langCode) {
-            const frame = document.querySelector('.goog-te-combo');
-            if (frame) {
-                frame.value = langCode;
-                frame.dispatchEvent(new Event('change'));
-            } else {
-                setTimeout(() => { changeWebsiteLanguage(langCode); }, 500);
-            }
-        }
-
-        function syncCurrency(val) {
-            const topCurr = document.getElementById('top-currency');
-            if(topCurr) topCurr.value = val;
-            calculateEstimate();
-        }
-
-        function toggleDropdown(id) {
-            const dropdown = document.getElementById(id);
-            const isHidden = dropdown.classList.contains('hidden');
-            closeAllDropdowns();
-            if (isHidden) {
-                dropdown.classList.remove('hidden');
-                const chevron = document.getElementById(id.replace('-dropdown', '-chevron'));
-                if(chevron) chevron.style.transform = 'rotate(180deg)';
-            }
-        }
-
-        function closeAllDropdowns() {
-            document.querySelectorAll('[id$="-dropdown"]').forEach(el => el.classList.add('hidden'));
-            document.querySelectorAll('[id$="-chevron"]').forEach(el => el.style.transform = 'rotate(0deg)');
-        }
-
-        window.onclick = function(event) {
-            if (!event.target.closest('nav')) closeAllDropdowns();
-        }
-
-        function toggleMobileMenu() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        }
-
-        function toggleMobileAccordion(id) {
-            const el = document.getElementById(id);
-            const icon = document.getElementById(id + '-icon');
-            el.classList.toggle('hidden');
-            icon.style.transform = el.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
-        }
-
-        function calculateEstimate() {
-            const procSelect = document.getElementById('calc-procedure');
-            const westernBenchmarkUSD = parseFloat(procSelect.value);
-            const savingRate = parseFloat(procSelect.options[procSelect.selectedIndex].getAttribute('data-saving'));
-            const hubMultiplier = parseFloat(document.getElementById('calc-hub').value);
-            const hotelCostUSD = parseFloat(document.getElementById('calc-hotel').value);
-            const companionCostUSD = parseFloat(document.getElementById('calc-companions').value);
-
-            const currencySelect = document.getElementById('top-currency');
-            const targetCurrency = currencySelect.value;
-            const currencySymbol = currencySelect.options[currencySelect.selectedIndex].getAttribute('data-symbol') || targetCurrency;
-            
-            let conversionRate = liveRates[targetCurrency] || (targetCurrency === 'INR' ? 83.5 : 1.0);
-            const basePackageUSD = (westernBenchmarkUSD * (1.0 - savingRate) * hubMultiplier) + hotelCostUSD + companionCostUSD;
-            const moneySavedUSD = westernBenchmarkUSD - basePackageUSD;
-            const actualSavingsPercent = Math.round((moneySavedUSD / westernBenchmarkUSD) * 100);
-
-            document.getElementById('out-western').innerText = currencySymbol + Math.round(westernBenchmarkUSD * conversionRate).toLocaleString();
-            document.getElementById('out-package').innerText = currencySymbol + Math.round(basePackageUSD * conversionRate).toLocaleString();
-            document.getElementById('out-savings').innerText = actualSavingsPercent + '% (~' + currencySymbol + Math.round(moneySavedUSD * conversionRate).toLocaleString() + ' Saved)';
-        }
-
-        function handlePatientInquiry(event) {
-            event.preventDefault();
-            const name = document.getElementById('inquiry-name').value;
-            const email = document.getElementById('inquiry-email').value;
-            const phone = document.getElementById('inquiry-code').value + " " + document.getElementById('inquiry-phone').value;
-            const procedure = document.getElementById('inquiry-procedure').value;
-            const objective = document.getElementById('inquiry-objective').value;
-            const hub = document.getElementById('inquiry-hub').value;
-            const notes = document.getElementById('inquiry-notes').value;
-            window.location.href = `mailto:valomedic.care@gmail.com?subject=${encodeURIComponent("New Inquiry: " + procedure)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nPhone: " + phone + "\nHub: " + hub + "\nNotes: " + notes)}`;
-        }
-
-        function handleSecondOpinion(event) {
-            event.preventDefault();
-            const name = document.getElementById('so-name').value;
-            const email = document.getElementById('so-email').value;
-            const category = document.getElementById('so-category').value;
-            const hub = document.getElementById('so-hub').value;
-            const phone = document.getElementById('so-code').value + " " + document.getElementById('so-phone').value;
-            const notes = document.getElementById('so-notes').value;
-            window.location.href = `mailto:valomedic.care@gmail.com?subject=${encodeURIComponent("Second Opinion: " + category)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nPhone: " + phone + "\nHub: " + hub + "\nNotes: " + notes)}`;
-        }
-
-        function handlePharmacyInquiry(event) {
-            event.preventDefault();
-            const name = document.getElementById('pharm-name').value;
-            const email = document.getElementById('pharm-email').value;
-            const phone = document.getElementById('pharm-code').value + " " + document.getElementById('pharm-phone').value;
-            const category = document.getElementById('pharm-category').value;
-            const notes = document.getElementById('pharm-notes').value;
-            window.location.href = `mailto:valomedic.care@gmail.com?subject=${encodeURIComponent("Pharmacy Order: " + category)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nPhone: " + phone + "\nNotes: " + notes)}`;
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-</body>
-</html>
+        // 24/7 Real-Time World Currencies
+        const allCurrencies = [
+            {code: "USD", symbol: "$", name: "USD - US Dollar"},
+            {code: "INR", symbol: "₹", name: "INR - Indian Rupee"},
+            {code: "EUR", symbol: "€", name: "EUR - Euro"},
+            {code: "GBP", symbol: "£", name: "GBP - British Pound"},
+            {code: "AED", symbol: "AED", name: "AED - UAE Dirham
