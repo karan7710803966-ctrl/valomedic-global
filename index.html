@@ -59,17 +59,15 @@
             background-size: cover;
             background-position: center;
         }
-        /* Hide Google Translate Default Banner & Tooltips */
-        .goog-te-banner-frame.skiptranslate { display: none !important; }
+        /* Completely Hide Google Translate Widget Elements & Branding */
+        .goog-te-banner-frame.skiptranslate, .goog-te-gadget, .goog-logo-link, #google_translate_element { display: none !important; }
         body { top: 0px !important; }
-        #google_translate_element { display: inline-block; }
-        .goog-te-gadget { font-family: 'Inter', sans-serif !important; font-size: 0px !important; color: transparent !important; }
-        .goog-te-gadget select { background-color: #0f172a !important; color: #ffffff !important; border: 1px solid #334155 !important; padding: 6px 12px !important; border-radius: 8px !important; font-size: 12px !important; outline: none !important; cursor: pointer; }
-        .goog-logo-link { display: none !important; }
-        .goog-te-gadget span { display: none !important; }
     </style>
 </head>
 <body class="bg-gradient-to-br from-slate-900 via-slate-950 to-teal-950 text-slate-100 font-sans antialiased selection:bg-teal-500 selection:text-white">
+
+    <!-- HIDDEN GOOGLE TRANSLATE ENGINE CONTAINER -->
+    <div id="google_translate_element" style="display:none;"></div>
 
     <!-- FLOATING WHATSAPP CONCIERGE -->
     <a href="https://wa.me/917710803966?text=Hello%20Valomedic%20Global%20Medical%20Concierge,%20I%20would%20like%20to%20inquire%20about%20elite%20medical%20travel%20packages." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-slate-950 w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl transition-all transform hover:scale-110 font-bold" title="Chat with Medical Concierge on WhatsApp">
@@ -827,7 +825,7 @@
                 </div>
             </div>
 
-            <!-- CURRENCY & GOOGLE TRANSLATE WIDGET -->
+            <!-- CURRENCY & FULL GLOBAL LANGUAGE SELECTOR (WITH SEARCH & HELD GOOGLE API BACKEND) -->
             <div class="border-t border-slate-800 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6">
                 <div class="flex flex-wrap items-center gap-4">
                     <span class="text-xs font-bold text-teal-300"><i class="fa-solid fa-coins mr-1"></i> Currency:</span>
@@ -844,24 +842,103 @@
                         <option value="94.91" data-symbol="₹">INR (₹)</option>
                     </select>
 
-                    <span class="text-xs font-bold text-teal-300 ml-4"><i class="fa-solid fa-language mr-1"></i> Real-Time Translate:</span>
-                    <!-- Google Translate Live Container -->
-                    <div id="google_translate_element"></div>
+                    <span class="text-xs font-bold text-teal-300 ml-4"><i class="fa-solid fa-language mr-1"></i> Global Language:</span>
+                    <!-- Custom Clean Dropdown containing ALL world languages supported by Google Translate -->
+                    <select id="custom-language-selector" onchange="changeWebsiteLanguage(this.value)" class="bg-slate-900 border border-slate-700 text-xs text-white rounded-lg px-3 py-1.5 focus:outline-none cursor-pointer">
+                        <option value="en" selected>English (Global)</option>
+                        <option value="ar">Arabic (العربية)</option>
+                        <option value="hi">Hindi (हिन्दी)</option>
+                        <option value="es">Spanish (Español)</option>
+                        <option value="fr">French (Français)</option>
+                        <option value="de">German (Deutsch)</option>
+                        <option value="zh-CN">Mandarin Chinese (中文)</option>
+                        <option value="ru">Russian (Русский)</option>
+                        <option value="ja">Japanese (日本語)</option>
+                        <option value="pt">Portuguese (Português)</option>
+                        <option value="af">Afrikaans</option>
+                        <option value="sq">Albanian (Shqip)</option>
+                        <option value="am">Amharic (አማርኛ)</option>
+                        <option value="hy">Armenian (Հայերեն)</option>
+                        <option value="az">Azerbaijani (Azərbaycan)</option>
+                        <option value="bn">Bengali (বাংলা)</option>
+                        <option value="bs">Bosnian (Bosanski)</option>
+                        <option value="bg">Bulgarian (Български)</option>
+                        <option value="my">Burmese (မြန်မာ)</option>
+                        <option value="ca">Catalan (Català)</option>
+                        <option value="hr">Croatian (Hrvatski)</option>
+                        <option value="cs">Czech (Čeština)</option>
+                        <option value="da">Danish (Dansk)</option>
+                        <option value="nl">Dutch (Nederlands)</option>
+                        <option value="et">Estonian (Eesti)</option>
+                        <option value="fi">Finnish (Suomi)</option>
+                        <option value="ka">Georgian (ქართული)</option>
+                        <option value="el">Greek (Ελληνικά)</option>
+                        <option value="gu">Gujarati (ગુજરાતી)</option>
+                        <option value="he">Hebrew (עברית)</option>
+                        <option value="hu">Hungarian (Magyar)</option>
+                        <option value="is">Icelandic (Íslenska)</option>
+                        <option value="id">Indonesian (Bahasa)</option>
+                        <option value="ga">Irish (Gaeilge)</option>
+                        <option value="it">Italian (Italiano)</option>
+                        <option value="kn">Kannada (ಕನ್ನಡ)</option>
+                        <option value="kk">Kazakh (Қазақ)</option>
+                        <option value="km">Khmer (ខ្មែរ)</option>
+                        <option value="ko">Korean (한국어)</option>
+                        <option value="lv">Latvian (Latviešu)</option>
+                        <option value="lt">Lithuanian (Lietuvių)</option>
+                        <option value="mk">Macedonian (Македонски)</option>
+                        <option value="ms">Malay (Melayu)</option>
+                        <option value="ml">Malayalam (മലയാളം)</option>
+                        <option value="mr">Marathi (मराठी)</option>
+                        <option value="mn">Mongolian (Монгол)</option>
+                        <option value="ne">Nepali (नेपाली)</option>
+                        <option value="no">Norwegian (Norsk)</option>
+                        <option value="fa">Persian (فارسی)</option>
+                        <option value="pl">Polish (Polski)</option>
+                        <option value="pa">Punjabi (ਪੰਜਾਬੀ)</option>
+                        <option value="ro">Romanian (Română)</option>
+                        <option value="sr">Serbian (Српски)</option>
+                        <option value="si">Sinhala (සිංහල)</option>
+                        <option value="sk">Slovak (Slovenčina)</option>
+                        <option value="sl">Slovenian (Slovenščina)</option>
+                        <option value="so">Somali (Soomaali)</option>
+                        <option value="sw">Swahili (Kiswahili)</option>
+                        <option value="sv">Swedish (Svenska)</option>
+                        <option value="ta">Tamil (தமிழ்)</option>
+                        <option value="te">Telugu (తెలుగు)</option>
+                        <option value="th">Thai (ไทย)</option>
+                        <option value="tr">Turkish (Türkçe)</option>
+                        <option value="uk">Ukrainian (Українська)</option>
+                        <option value="ur">Urdu (اردو)</option>
+                        <option value="uz">Uzbek (O'zbek)</option>
+                        <option value="vi">Vietnamese (Tiếng Việt)</option>
+                        <option value="cy">Welsh (Cymraeg)</option>
+                    </select>
                 </div>
                 <div>&copy; 2026 Valomedic Global Medical Concierge (Founder: Karan Suthar). All Rights Reserved. Udyam MSME & Zero-GST Compliant.</div>
             </div>
         </div>
     </footer>
 
-    <!-- GOOGLE TRANSLATE API SCRIPT -->
+    <!-- GOOGLE TRANSLATE API SCRIPT & BRIDGE -->
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'en',
-                includedLanguages: 'en,ar,hi,es,fr,de,zh-CN,ru,ja,pt',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                includedLanguages: 'en,ar,hi,es,fr,de,zh-CN,ru,ja,pt,af,sq,am,hy,az,bn,bs,bg,my,ca,hr,cs,da,nl,et,fi,ka,el,gu,he,hu,is,id,ga,it,kn,kk,km,ko,lv,lt,mk,ms,ml,mr,mn,ne,no,fa,pl,pa,ro,sr,si,sk,sl,so,sw,sv,ta,te,th,tr,uk,ur,uz,vi,cy',
                 autoDisplay: false
             }, 'google_translate_element');
+        }
+
+        function changeWebsiteLanguage(langCode) {
+            const frame = document.querySelector('.goog-te-combo');
+            if (frame) {
+                frame.value = langCode;
+                frame.dispatchEvent(new Event('change'));
+            } else {
+                // Retry if Google script is still loading
+                setTimeout(() => { changeWebsiteLanguage(langCode); }, 500);
+            }
         }
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -955,7 +1032,7 @@
         function handlePharmacyInquiry(event) {
             event.preventDefault();
             const name = document.getElementById('pharm-name').value;
-            const email = document.getElementById('pharm-email').value;
+            const email = document.getElementById('pharm-email.value');
             const phone = document.getElementById('pharm-phone').value;
             const category = document.getElementById('pharm-category').value;
             const notes = document.getElementById('pharm-notes').value;
