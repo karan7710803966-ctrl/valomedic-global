@@ -2,8 +2,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="manifest" href="manifest.json">
     <title>Valomedic Global Medical Concierge | Elite International Healthcare</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0d9488">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -106,14 +107,14 @@
 
             <!-- Desktop Navigation -->
             <nav class="hidden xl:flex items-center space-x-1">
-                <a href="#" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg" data-i18n="nav_home">Home</a>
-                <a href="#procedures" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg" data-i18n="nav_depts">Departments</a>
-                <a href="#destinations" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg" data-i18n="nav_hubs">Hubs</a>
-                <a href="#estimator" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg" data-i18n="nav_calc">Calculator</a>
-                <a href="#tourism" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg" data-i18n="nav_tourism">Tourism</a>
-                <a href="#medication" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg" data-i18n="nav_pharmacy">Pharmacy</a>
-                <a href="#second-opinion" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg" data-i18n="nav_opinions">Opinions</a>
-                <a href="#consultation" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg" data-i18n="nav_inquire">Inquire</a>
+                <a href="#" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Home</a>
+                <a href="#procedures" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Departments</a>
+                <a href="#destinations" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Hubs</a>
+                <a href="#estimator" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Calculator</a>
+                <a href="#tourism" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Tourism</a>
+                <a href="#medication" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Pharmacy</a>
+                <a href="#second-opinion" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Opinions</a>
+                <a href="#consultation" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Inquire</a>
             </nav>
 
             <!-- Mobile Hamburger Menu Toggle -->
@@ -861,7 +862,6 @@
             menu.classList.toggle('hidden');
         }
 
-        // Multi-Language Translation Dictionary
         const translations = {
             en: {
                 hero_title: "Valomedic Global Medical Concierge. All-Inclusive Luxury & Surgery at 40%–50% Net Savings.",
@@ -944,10 +944,8 @@
             document.getElementById('out-savings').innerText = actualSavingsPercent + '% (~' + currencySymbol + Math.round(convertedSaved).toLocaleString() + ' Saved)';
         }
 
-        // 1. Handler for Patient Inquiry Form
         function handlePatientInquiry(event) {
             event.preventDefault();
-
             const name = document.getElementById('inquiry-name').value;
             const email = document.getElementById('inquiry-email').value;
             const phone = document.getElementById('inquiry-phone').value;
@@ -973,14 +971,11 @@
                 notes + "\n\n" +
                 "Please review case details and initiate patient coordination."
             );
-
             window.location.href = `mailto:${recipientEmail}?subject=${emailSubject}&body=${emailBody}`;
         }
 
-        // 2. Handler for Second Opinion Form
         function handleSecondOpinion(event) {
             event.preventDefault();
-
             const name = document.getElementById('so-name').value;
             const email = document.getElementById('so-email').value;
             const category = document.getElementById('so-category').value;
@@ -1000,14 +995,11 @@
                 notes + "\n\n" +
                 "Please assign a senior specialist for review."
             );
-
             window.location.href = `mailto:${recipientEmail}?subject=${emailSubject}&body=${emailBody}`;
         }
 
-        // 3. Handler for Pharmacy / Medication Form
         function handlePharmacyInquiry(event) {
             event.preventDefault();
-
             const name = document.getElementById('pharm-name').value;
             const email = document.getElementById('pharm-email').value;
             const phone = document.getElementById('pharm-phone').value;
@@ -1027,7 +1019,6 @@
                 notes + "\n\n" +
                 "Please verify cold-chain compliance and coordinate shipment."
             );
-
             window.location.href = `mailto:${recipientEmail}?subject=${emailSubject}&body=${emailBody}`;
         }
 
