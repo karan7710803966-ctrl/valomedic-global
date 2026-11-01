@@ -59,9 +59,10 @@
             background-size: cover;
             background-position: center;
         }
-        /* Completely Hide Google Translate Widget Elements & Branding */
+        /* PERMANENTLY HIDE GOOGLE TRANSLATE TOP BAR, IFRAMES & BRANDING */
         .goog-te-banner-frame.skiptranslate, .goog-te-gadget, .goog-logo-link, #google_translate_element { display: none !important; }
-        body { top: 0px !important; }
+        body { top: 0px !important; position: static !important; }
+        .skiptranslate { display: none !important; }
     </style>
 </head>
 <body class="bg-gradient-to-br from-slate-900 via-slate-950 to-teal-950 text-slate-100 font-sans antialiased selection:bg-teal-500 selection:text-white">
@@ -74,20 +75,21 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- HEADER & STICKY NAVBAR -->
-    <header class="sticky top-0 z-50 bg-slate-950/95 backdrop-blur-md border-b border-slate-800 shadow-xl">
-        <div class="bg-royal-900/90 text-slate-300 text-xs py-2 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+    <!-- FUTURISTIC STICKY NAVBAR WITH SUB-CATEGORY DROPDOWNS -->
+    <header class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-xl border-b border-teal-500/20 shadow-2xl">
+        <div class="bg-gradient-to-r from-royal-950 via-teal-950 to-royal-950 text-slate-300 text-xs py-2 px-4 sm:px-6 lg:px-8 border-b border-slate-800/80">
             <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
                 <div class="flex items-center space-x-4">
                     <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-emerald-400"></i> JCI & NABH Accredited Partner Network</span>
                 </div>
                 <div class="flex items-center space-x-4 font-medium text-teal-300">
-                    <span><i class="fa-solid fa-globe mr-1"></i> Founder: Karan Suthar | Global Concierge</span>
+                    <span><i class="fa-solid fa-crown mr-1 text-amber-400"></i> Founder: Karan Suthar | Global Concierge</span>
                 </div>
             </div>
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
             <a href="#" class="flex items-center space-x-3 group">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" class="w-12 h-12 group-hover:scale-105 transition-transform">
                     <defs>
@@ -111,16 +113,55 @@
                 </div>
             </a>
 
-            <!-- Desktop Navigation -->
+            <!-- Futuristic Desktop Navigation with Dropdowns -->
             <nav class="hidden xl:flex items-center space-x-1">
-                <a href="#" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Home</a>
-                <a href="#procedures" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Departments</a>
-                <a href="#destinations" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Hubs</a>
-                <a href="#estimator" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Calculator</a>
-                <a href="#tourism" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Tourism</a>
-                <a href="#medication" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Pharmacy</a>
-                <a href="#second-opinion" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Opinions</a>
-                <a href="#consultation" class="px-3 py-2 text-sm font-semibold text-slate-200 hover:text-teal-400 transition-colors rounded-lg">Inquire</a>
+                <a href="#" class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400 transition-colors rounded-xl hover:bg-slate-900">Home</a>
+
+                <!-- Clinical Departments Dropdown -->
+                <div class="relative group">
+                    <button class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400 transition-colors rounded-xl hover:bg-slate-900 flex items-center gap-1.5">
+                        Clinical Departments <i class="fa-solid fa-chevron-down text-[9px] text-teal-400"></i>
+                    </button>
+                    <div class="absolute top-full left-0 w-80 bg-slate-950/95 backdrop-blur-2xl border border-slate-800 rounded-2xl shadow-2xl py-3 hidden group-hover:block max-h-96 overflow-y-auto z-50">
+                        <div class="px-4 py-1 text-[10px] font-extrabold text-teal-400 uppercase tracking-widest border-b border-slate-800/80 mb-2">All 14 Specialized Departments</div>
+                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">1. Orthopedics & Joint Replacements</a>
+                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">2. Cardiology & CTVS (CABG)</a>
+                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">3. Oncology & Proton Beam</a>
+                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">4. Neurology & Neurosurgery</a>
+                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">5. Organ Transplants</a>
+                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">6. Plastic & Reconstructive Surgery</a>
+                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">7. Pediatrics & Neonatal Surgery</a>
+                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">8. Ophthalmology & LASIK</a>
+                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">9. Dental & Maxillofacial Surgery</a>
+                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">10. Gynecology & IVF Fertility</a>
+                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">11. Urology & Renal Surgery</a>
+                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">12. Pulmonology & Thoracic</a>
+                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">13. Bariatric & Weight Loss</a>
+                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">14. Endocrinology & Metabolic Care</a>
+                    </div>
+                </div>
+
+                <!-- Destination Hubs Dropdown -->
+                <div class="relative group">
+                    <button class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400 transition-colors rounded-xl hover:bg-slate-900 flex items-center gap-1.5">
+                        Destination Hubs <i class="fa-solid fa-chevron-down text-[9px] text-teal-400"></i>
+                    </button>
+                    <div class="absolute top-full left-0 w-64 bg-slate-950/95 backdrop-blur-2xl border border-slate-800 rounded-2xl shadow-2xl py-3 hidden group-hover:block z-50">
+                        <div class="px-4 py-1 text-[10px] font-extrabold text-teal-400 uppercase tracking-widest border-b border-slate-800/80 mb-2">All 6 Global Hubs</div>
+                        <a href="#destinations" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">🇮🇳 Hub 1: India Medical Super-Hub</a>
+                        <a href="#destinations" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">🇹🇷 Hub 2: Turkey Aesthetic Hub</a>
+                        <a href="#destinations" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">🇹🇭 Hub 3: Thailand Wellness Hub</a>
+                        <a href="#destinations" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">🇦🇪 Hub 4: UAE Luxury Medical Hub</a>
+                        <a href="#destinations" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">🇸🇬 Hub 5: Singapore Advanced Hub</a>
+                        <a href="#destinations" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">🇰🇷 Hub 6: South Korea Robotic Hub</a>
+                    </div>
+                </div>
+
+                <a href="#estimator" class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400 transition-colors rounded-xl hover:bg-slate-900">Calculator</a>
+                <a href="#tourism" class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400 transition-colors rounded-xl hover:bg-slate-900">Tourism</a>
+                <a href="#medication" class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400 transition-colors rounded-xl hover:bg-slate-900">Pharmacy</a>
+                <a href="#second-opinion" class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400 transition-colors rounded-xl hover:bg-slate-900">Opinions</a>
+                <a href="#consultation" class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider bg-teal-600 hover:bg-teal-500 text-white rounded-xl transition-all shadow-lg">Inquire</a>
             </nav>
 
             <!-- Mobile Hamburger Menu Toggle -->
@@ -132,15 +173,39 @@
         </div>
 
         <!-- Mobile Expandable Menu Drawer -->
-        <div id="mobile-menu" class="hidden bg-slate-950 border-t border-slate-800 px-6 py-6 space-y-4 xl:hidden">
-            <a href="#" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-200 hover:text-teal-400">Home</a>
-            <a href="#procedures" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-200 hover:text-teal-400">Clinical Departments</a>
-            <a href="#destinations" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-200 hover:text-teal-400">Destination Hubs</a>
-            <a href="#estimator" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-200 hover:text-teal-400">Cost Calculator</a>
-            <a href="#tourism" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-200 hover:text-teal-400">Tourism Packages</a>
-            <a href="#medication" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-200 hover:text-teal-400">Pharmacy & Medication</a>
-            <a href="#second-opinion" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-200 hover:text-teal-400">Expert Second Opinions</a>
-            <a href="#consultation" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-200 hover:text-teal-400">Contact & VIP Booking</a>
+        <div id="mobile-menu" class="hidden bg-slate-950 border-t border-slate-800 px-6 py-6 space-y-4 xl:hidden max-h-[80vh] overflow-y-auto">
+            <a href="#" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400">Home</a>
+            <div class="text-xs font-bold text-teal-400 uppercase tracking-widest pt-2">Clinical Departments (14)</div>
+            <div class="pl-4 space-y-2 text-xs text-slate-300">
+                <a href="#procedures" onclick="toggleMobileMenu()" class="block">1. Orthopedics & Joints</a>
+                <a href="#procedures" onclick="toggleMobileMenu()" class="block">2. Cardiology & CTVS (CABG)</a>
+                <a href="#procedures" onclick="toggleMobileMenu()" class="block">3. Oncology & Proton Beam</a>
+                <a href="#procedures" onclick="toggleMobileMenu()" class="block">4. Neurology & Neurosurgery</a>
+                <a href="#procedures" onclick="toggleMobileMenu()" class="block">5. Organ Transplants</a>
+                <a href="#procedures" onclick="toggleMobileMenu()" class="block">6. Plastic & Reconstructive</a>
+                <a href="#procedures" onclick="toggleMobileMenu()" class="block">7. Pediatrics & Neonatal</a>
+                <a href="#procedures" onclick="toggleMobileMenu()" class="block">8. Ophthalmology & LASIK</a>
+                <a href="#procedures" onclick="toggleMobileMenu()" class="block">9. Dental & Maxillofacial</a>
+                <a href="#procedures" onclick="toggleMobileMenu()" class="block">10. Gynecology & IVF Fertility</a>
+                <a href="#procedures" onclick="toggleMobileMenu()" class="block">11. Urology & Renal Surgery</a>
+                <a href="#procedures" onclick="toggleMobileMenu()" class="block">12. Pulmonology & Thoracic</a>
+                <a href="#procedures" onclick="toggleMobileMenu()" class="block">13. Bariatric & Weight Loss</a>
+                <a href="#procedures" onclick="toggleMobileMenu()" class="block">14. Endocrinology & Metabolic</a>
+            </div>
+            <div class="text-xs font-bold text-teal-400 uppercase tracking-widest pt-2">Destination Hubs (6)</div>
+            <div class="pl-4 space-y-2 text-xs text-slate-300">
+                <a href="#destinations" onclick="toggleMobileMenu()" class="block">🇮🇳 India Medical Super-Hub</a>
+                <a href="#destinations" onclick="toggleMobileMenu()" class="block">🇹🇷 Turkey Aesthetic Hub</a>
+                <a href="#destinations" onclick="toggleMobileMenu()" class="block">🇹🇭 Thailand Wellness Hub</a>
+                <a href="#destinations" onclick="toggleMobileMenu()" class="block">🇦🇪 UAE Luxury Medical Hub</a>
+                <a href="#destinations" onclick="toggleMobileMenu()" class="block">🇸🇬 Singapore Advanced Hub</a>
+                <a href="#destinations" onclick="toggleMobileMenu()" class="block">🇰🇷 South Korea Robotic Hub</a>
+            </div>
+            <a href="#estimator" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400 pt-2">Cost Estimator</a>
+            <a href="#tourism" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400">Tourism & Travelism</a>
+            <a href="#medication" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400">Pharmacy & Medication</a>
+            <a href="#second-opinion" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400">Expert Second Opinions</a>
+            <a href="#consultation" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-teal-400 font-extrabold pt-2">VIP Case Intake</a>
         </div>
     </header>
 
@@ -825,7 +890,7 @@
                 </div>
             </div>
 
-            <!-- CURRENCY & FULL GLOBAL LANGUAGE SELECTOR (WITH SEARCH & HELD GOOGLE API BACKEND) -->
+            <!-- CURRENCY & FULL GLOBAL LANGUAGE SELECTOR (HIDDEN GOOGLE API BACKEND) -->
             <div class="border-t border-slate-800 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6">
                 <div class="flex flex-wrap items-center gap-4">
                     <span class="text-xs font-bold text-teal-300"><i class="fa-solid fa-coins mr-1"></i> Currency:</span>
@@ -920,7 +985,7 @@
         </div>
     </footer>
 
-    <!-- GOOGLE TRANSLATE API SCRIPT & BRIDGE -->
+    <!-- GOOGLE TRANSLATE API SCRIPT & BANNER REMOVER BRIDGE -->
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
@@ -936,10 +1001,18 @@
                 frame.value = langCode;
                 frame.dispatchEvent(new Event('change'));
             } else {
-                // Retry if Google script is still loading
                 setTimeout(() => { changeWebsiteLanguage(langCode); }, 500);
             }
         }
+
+        // Continuously strip out Google Translate top banner iframes in real time
+        setInterval(() => {
+            const banner = document.querySelector('.goog-te-banner-frame');
+            if (banner) banner.remove();
+            if (document.body.style.top !== '0px') {
+                document.body.style.top = '0px';
+            }
+        }, 100);
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
@@ -1032,7 +1105,7 @@
         function handlePharmacyInquiry(event) {
             event.preventDefault();
             const name = document.getElementById('pharm-name').value;
-            const email = document.getElementById('pharm-email.value');
+            const email = document.getElementById('pharm-email').value;
             const phone = document.getElementById('pharm-phone').value;
             const category = document.getElementById('pharm-category').value;
             const notes = document.getElementById('pharm-notes').value;
