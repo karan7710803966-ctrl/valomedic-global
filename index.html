@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valomedic Global Medical Concierge | Elite International Healthcare</title>
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#0d9488">
+    <meta name="theme-color" content="#0284c7">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -20,16 +20,12 @@
                 extend: {
                     colors: {
                         brand: {
-                            teal: '#0d9488',
-                            dark: '#030814',
+                            cyan: '#0284c7',
+                            sky: '#38bdf8',
+                            dark: '#0f172a',
                             light: '#f8fafc',
-                            accent: '#00FF87',
+                            emerald: '#10b981',
                             gold: '#f59e0b'
-                        },
-                        royal: {
-                            850: '#1e3a8a',
-                            900: '#172554',
-                            950: '#030814'
                         }
                     },
                     fontFamily: {
@@ -49,23 +45,37 @@
             stroke-dasharray: 100 300;
             animation: pulseFlow 2.5s linear infinite;
         }
+        /* LIGHTER, VIBRANT COLOR PALETTE WITH GEOMETRIC MEDICAL PATTERNS */
+        body {
+            background-color: #0f1f38;
+            background-image: 
+                radial-gradient(rgba(56, 189, 248, 0.12) 1px, transparent 1px),
+                radial-gradient(rgba(2, 132, 199, 0.1) 1px, #0f1f38 1px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+            color: #f1f5f9;
+        }
         .gradient-hero {
-            background: linear-gradient(135deg, rgba(3, 8, 20, 0.94) 0%, rgba(30, 58, 138, 0.90) 50%, rgba(13, 148, 136, 0.88) 100%), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=2000&q=80');
+            background: linear-gradient(135deg, rgba(15, 31, 56, 0.90) 0%, rgba(30, 58, 138, 0.85) 50%, rgba(3, 105, 161, 0.88) 100%), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-innovation-bg {
+            background: linear-gradient(135deg, rgba(15, 31, 56, 0.92) 0%, rgba(30, 64, 175, 0.90) 100%), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
             background-position: center;
         }
         .section-tourism-bg {
-            background: linear-gradient(135deg, rgba(3, 8, 20, 0.95) 0%, rgba(30, 58, 138, 0.92) 100%), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80');
+            background: linear-gradient(135deg, rgba(15, 31, 56, 0.92) 0%, rgba(14, 116, 144, 0.90) 100%), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
             background-position: center;
         }
-        /* PERMANENTLY HIDE GOOGLE TRANSLATE TOP BAR, IFRAMES & BRANDING */
         .goog-te-banner-frame.skiptranslate, .goog-te-gadget, .goog-logo-link, #google_translate_element { display: none !important; }
         body { top: 0px !important; position: static !important; }
         .skiptranslate { display: none !important; }
     </style>
 </head>
-<body class="bg-gradient-to-br from-slate-900 via-slate-950 to-teal-950 text-slate-100 font-sans antialiased selection:bg-teal-500 selection:text-white">
+<body class="font-sans antialiased selection:bg-cyan-500 selection:text-white">
 
     <!-- HIDDEN GOOGLE TRANSLATE ENGINE CONTAINER -->
     <div id="google_translate_element" style="display:none;"></div>
@@ -75,31 +85,322 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- FUTURISTIC STICKY NAVBAR WITH SUB-CATEGORY DROPDOWNS -->
-    <header class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-xl border-b border-teal-500/20 shadow-2xl">
-        <div class="bg-gradient-to-r from-royal-950 via-teal-950 to-royal-950 text-slate-300 text-xs py-2 px-4 sm:px-6 lg:px-8 border-b border-slate-800/80">
-            <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+    <!-- STICKY NAVBAR WITH LIVE API CURRENCY & COMPREHENSIVE GOOGLE TRANSLATE -->
+    <header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl">
+        <div class="bg-gradient-to-r from-blue-950 via-slate-900 to-blue-950 text-slate-300 text-xs py-2 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+            <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3">
                 <div class="flex items-center space-x-4">
-                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-emerald-400"></i> JCI & NABH Accredited Partner Network</span>
+                    <span class="flex items-center gap-1.5 text-sky-300"><i class="fa-solid fa-shield-halved text-emerald-400"></i> JCI & NABH Accredited Partner Network</span>
                 </div>
-                <div class="flex items-center space-x-4 font-medium text-teal-300">
-                    <span><i class="fa-solid fa-crown mr-1 text-amber-400"></i> Founder: Karan Suthar | Global Concierge</span>
+
+                <div class="flex flex-wrap items-center gap-3">
+                    <!-- Complete World Currencies Selector (All Worldwide Currencies Loaded) -->
+                    <div class="flex items-center gap-1.5 bg-slate-800 border border-slate-700 rounded-lg px-2.5 py-1">
+                        <i class="fa-solid fa-coins text-sky-400 text-[10px]"></i>
+                        <select id="top-currency" onchange="syncCurrency(this.value)" class="bg-transparent text-[11px] text-white focus:outline-none cursor-pointer max-w-[180px]">
+                            <option value="USD" data-symbol="$" selected>USD - US Dollar ($)</option>
+                            <option value="EUR" data-symbol="€">EUR - Euro (€)</option>
+                            <option value="GBP" data-symbol="£">GBP - British Pound (£)</option>
+                            <option value="INR" data-symbol="₹">INR - Indian Rupee (₹)</option>
+                            <option value="AED" data-symbol="AED">AED - UAE Dirham</option>
+                            <option value="AUD" data-symbol="AU$">AUD - Australian Dollar</option>
+                            <option value="CAD" data-symbol="CA$">CAD - Canadian Dollar</option>
+                            <option value="SGD" data-symbol="S$">SGD - Singapore Dollar</option>
+                            <option value="JPY" data-symbol="¥">JPY - Japanese Yen (¥)</option>
+                            <option value="CHF" data-symbol="CHF">CHF - Swiss Franc</option>
+                            <option value="CNY" data-symbol="¥">CNY - Chinese Yuan</option>
+                            <option value="SAR" data-symbol="SAR">SAR - Saudi Riyal</option>
+                            <option value="QAR" data-symbol="QAR">QAR - Qatari Riyal</option>
+                            <option value="KWD" data-symbol="KWD">KWD - Kuwaiti Dinar</option>
+                            <option value="ZAR" data-symbol="R">ZAR - South African Rand</option>
+                            <option value="BRL" data-symbol="R$">BRL - Brazilian Real</option>
+                            <option value="MXN" data-symbol="Mex$">MXN - Mexican Peso</option>
+                            <option value="THB" data-symbol="฿">THB - Thai Baht</option>
+                            <option value="TRY" data-symbol="₺">TRY - Turkish Lira</option>
+                            <option value="KRW" data-symbol="₩">KRW - South Korean Won</option>
+                            <option value="AFN" data-symbol="؋">AFN - Afghan Afghani</option>
+                            <option value="ALL" data-symbol="L">ALL - Albanian Lek</option>
+                            <option value="DZD" data-symbol="دج">DZD - Algerian Dinar</option>
+                            <option value="ARS" data-symbol="$">ARS - Argentine Peso</option>
+                            <option value="AMD" data-symbol="֏">AMD - Armenian Dram</option>
+                            <option value="AZN" data-symbol="₼">AZN - Azerbaijani Manat</option>
+                            <option value="BSD" data-symbol="$">BSD - Bahamian Dollar</option>
+                            <option value="BHD" data-symbol=".د.ب">BHD - Bahraini Dinar</option>
+                            <option value="BDT" data-symbol="৳">BDT - Bangladeshi Taka</option>
+                            <option value="BBD" data-symbol="$">BBD - Barbadian Dollar</option>
+                            <option value="BYN" data-symbol="Br">BYN - Belarusian Ruble</option>
+                            <option value="BZD" data-symbol="BZ$">BZD - Belize Dollar</option>
+                            <option value="BMD" data-symbol="$">BMD - Bermudian Dollar</option>
+                            <option value="BTN" data-symbol="Nu.">BTN - Bhutanese Ngultrum</option>
+                            <option value="BOB" data-symbol="Bs.">BOB - Bolivian Boliviano</option>
+                            <option value="BAM" data-symbol="KM">BAM - Bosnia-Herzegovina Mark</option>
+                            <option value="BWP" data-symbol="P">BWP - Botswana Pula</option>
+                            <option value="BND" data-symbol="B$">BND - Brunei Dollar</option>
+                            <option value="BGN" data-symbol="лв">BGN - Bulgarian Lev</option>
+                            <option value="BIF" data-symbol="FBu">BIF - Burundian Franc</option>
+                            <option value="KHR" data-symbol="៛">KHR - Cambodian Riel</option>
+                            <option value="CVE" data-symbol="$">CVE - Cape Verdean Escudo</option>
+                            <option value="KYD" data-symbol="$">KYD - Cayman Islands Dollar</option>
+                            <option value="XAF" data-symbol="FCFA">XAF - Central African CFA Franc</option>
+                            <option value="CLP" data-symbol="$">CLP - Chilean Peso</option>
+                            <option value="COP" data-symbol="$">COP - Colombian Peso</option>
+                            <option value="KMF" data-symbol="CF">KMF - Comorian Franc</option>
+                            <option value="CRC" data-symbol="₡">CRC - Costa Rican Colón</option>
+                            <option value="HRK" data-symbol="kn">HRK - Croatian Kuna</option>
+                            <option value="CUP" data-symbol="$">CUP - Cuban Peso</option>
+                            <option value="CZK" data-symbol="Kč">CZK - Czech Koruna</option>
+                            <option value="DKK" data-symbol="kr">DKK - Danish Krone</option>
+                            <option value="DJF" data-symbol="Fdj">DJF - Djiboutian Franc</option>
+                            <option value="DOP" data-symbol="RD$">DOP - Dominican Peso</option>
+                            <option value="XCD" data-symbol="$">XCD - East Caribbean Dollar</option>
+                            <option value="EGP" data-symbol="£">EGP - Egyptian Pound</option>
+                            <option value="ERN" data-symbol="Nfk">ERN - Eritrean Nakfa</option>
+                            <option value="ETB" data-symbol="Br">ETB - Ethiopian Birr</option>
+                            <option value="FJD" data-symbol="FJ$">FJD - Fijian Dollar</option>
+                            <option value="GMD" data-symbol="D">GMD - Gambian Dalasi</option>
+                            <option value="GEL" data-symbol="₾">GEL - Georgian Lari</option>
+                            <option value="GHS" data-symbol="GH₵">GHS - Ghanaian Cedi</option>
+                            <option value="GIP" data-symbol="£">GIP - Gibraltar Pound</option>
+                            <option value="GTQ" data-symbol="Q">GTQ - Guatemalan Quetzal</option>
+                            <option value="GNF" data-symbol="FG">GNF - Guinean Franc</option>
+                            <option value="GYD" data-symbol="$">GYD - Guyanese Dollar</option>
+                            <option value="HTG" data-symbol="G">HTG - Haitian Gourde</option>
+                            <option value="HNL" data-symbol="L">HNL - Honduran Lempira</option>
+                            <option value="HKD" data-symbol="HK$">HKD - Hong Kong Dollar</option>
+                            <option value="HUF" data-symbol="Ft">HUF - Hungarian Forint</option>
+                            <option value="ISK" data-symbol="kr">ISK - Icelandic Króna</option>
+                            <option value="IDR" data-symbol="Rp">IDR - Indonesian Rupiah</option>
+                            <option value="IRR" data-symbol="﷼">IRR - Iranian Rial</option>
+                            <option value="IQD" data-symbol="ع.د">IQD - Iraqi Dinar</option>
+                            <option value="ILS" data-symbol="₪">ILS - Israeli New Shekel</option>
+                            <option value="JMD" data-symbol="J$">JMD - Jamaican Dollar</option>
+                            <option value="JOD" data-symbol="د.ا">JOD - Jordanian Dinar</option>
+                            <option value="KZT" data-symbol="₸">KZT - Kazakhstani Tenge</option>
+                            <option value="KES" data-symbol="KSh">KES - Kenyan Shilling</option>
+                            <option value="KGS" data-symbol="лв">KGS - Kyrgyzstani Som</option>
+                            <option value="LAK" data-symbol="₭">LAK - Lao Kip</option>
+                            <option value="LBP" data-symbol="£">LBP - Lebanese Pound</option>
+                            <option value="LSL" data-symbol="L">LSL - Lesotho Loti</option>
+                            <option value="LRD" data-symbol="$">LRD - Liberian Dollar</option>
+                            <option value="LYD" data-symbol="ل.د">LYD - Libyan Dinar</option>
+                            <option value="MOP" data-symbol="MOP$">MOP - Macanese Pataca</option>
+                            <option value="MKD" data-symbol="ден">MKD - Macedonian Denar</option>
+                            <option value="MGA" data-symbol="Ar">MGA - Malagasy Ariary</option>
+                            <option value="MWK" data-symbol="MK">MWK - Malawian Kwacha</option>
+                            <option value="MYR" data-symbol="RM">MYR - Malaysian Ringgit</option>
+                            <option value="MVR" data-symbol="Rf">MVR - Maldivian Rufiyaa</option>
+                            <option value="MRU" data-symbol="UM">MRU - Mauritanian Ouguiya</option>
+                            <option value="MUR" data-symbol="₨">MUR - Mauritian Rupee</option>
+                            <option value="MDL" data-symbol="L">MDL - Moldovan Leu</option>
+                            <option value="MNT" data-symbol="₮">MNT - Mongolian Tögrög</option>
+                            <option value="MAD" data-symbol="د.م.">MAD - Moroccan Dirham</option>
+                            <option value="MZN" data-symbol="MT">MZN - Mozambican Metical</option>
+                            <option value="MMK" data-symbol="K">MMK - Myanmar Kyat</option>
+                            <option value="NAD" data-symbol="$">NAD - Namibian Dollar</option>
+                            <option value="NPR" data-symbol="₨">NPR - Nepalese Rupee</option>
+                            <option value="ANG" data-symbol="ƒ">ANG - Netherlands Antillean Guilder</option>
+                            <option value="NZD" data-symbol="NZ$">NZD - New Zealand Dollar</option>
+                            <option value="NIO" data-symbol="C$">NIO - Nicaraguan Córdoba</option>
+                            <option value="NGN" data-symbol="₦">NGN - Nigerian Naira</option>
+                            <option value="NOK" data-symbol="kr">NOK - Norwegian Krone</option>
+                            <option value="OMR" data-symbol="ر.ع.">OMR - Omani Rial</option>
+                            <option value="PKR" data-symbol="₨">PKR - Pakistani Rupee</option>
+                            <option value="PAB" data-symbol="B/.">PAB - Panamanian Balboa</option>
+                            <option value="PGK" data-symbol="K">PGK - Papua New Guinean Kina</option>
+                            <option value="PYG" data-symbol="₲">PYG - Paraguayan Guaraní</option>
+                            <option value="PEN" data-symbol="S/.">PEN - Peruvian Sol</option>
+                            <option value="PHP" data-symbol="₱">PHP - Philippine Peso</option>
+                            <option value="PLN" data-symbol="zł">PLN - Polish Zloty</option>
+                            <option value="RON" data-symbol="lei">RON - Romanian Leu</option>
+                            <option value="RUB" data-symbol="₽">RUB - Russian Ruble</option>
+                            <option value="RWF" data-symbol="FRw">RWF - Rwandan Franc</option>
+                            <option value="WST" data-symbol="T">WST - Samoan Tālā</option>
+                            <option value="STN" data-symbol="Db">STN - São Tomé and Príncipe Dobra</option>
+                            <option value="RSD" data-symbol="дин.">RSD - Serbian Dinar</option>
+                            <option value="SCR" data-symbol="₨">SCR - Seychellois Rupee</option>
+                            <option value="SLL" data-symbol="Le">SLL - Sierra Leonean Leone</option>
+                            <option value="SBD" data-symbol="$">SBD - Solomon Islands Dollar</option>
+                            <option value="SOS" data-symbol="Sh.so.">SOS - Somali Shilling</option>
+                            <option value="LKR" data-symbol="Rs">LKR - Sri Lankan Rupee</option>
+                            <option value="SDG" data-symbol="ج.س.">SDG - Sudanese Pound</option>
+                            <option value="SRD" data-symbol="$">SRD - Surinamese Dollar</option>
+                            <option value="SEK" data-symbol="kr">SEK - Swedish Krona</option>
+                            <option value="SYP" data-symbol="£">SYP - Syrian Pound</option>
+                            <option value="TJS" data-symbol="ЅМ">TJS - Tajikistani Somoni</option>
+                            <option value="TZS" data-symbol="Sh">TZS - Tanzanian Shilling</option>
+                            <option value="THB" data-symbol="฿">THB - Thai Baht</option>
+                            <option value="TOP" data-symbol="T$">TOP - Tongan Paʻanga</option>
+                            <option value="TTD" data-symbol="TT$">TTD - Trinidad and Tobago Dollar</option>
+                            <option value="TND" data-symbol="د.ت">TND - Tunisian Dinar</option>
+                            <option value="TMT" data-symbol="m">TMT - Turkmenistani Manat</option>
+                            <option value="UGX" data-symbol="USh">UGX - Ugandan Shilling</option>
+                            <option value="UAH" data-symbol="₴">UAH - Ukrainian Hryvnia</option>
+                            <option value="UYU" data-symbol="$U">UYU - Uruguayan Peso</option>
+                            <option value="UZS" data-symbol="so'm">UZS - Uzbekistani So'm</option>
+                            <option value="VUV" data-symbol="VT">VUV - Vanuatu Vatu</option>
+                            <option value="VES" data-symbol="Bs.S">VES - Venezuelan Bolívar</option>
+                            <option value="VND" data-symbol="₫">VND - Vietnamese Dong</option>
+                            <option value="YER" data-symbol="﷼">YER - Yemeni Rial</option>
+                            <option value="ZMW" data-symbol="ZK">ZMW - Zambian Kwacha</option>
+                            <option value="ZWL" data-symbol="Z$">ZWL - Zimbabwean Dollar</option>
+                        </select>
+                    </div>
+
+                    <!-- Comprehensive Google Translate Selector -->
+                    <div class="flex items-center gap-1.5 bg-slate-800 border border-slate-700 rounded-lg px-2.5 py-1">
+                        <i class="fa-solid fa-language text-sky-400 text-[10px]"></i>
+                        <select id="custom-language-selector" onchange="changeWebsiteLanguage(this.value)" class="bg-transparent text-[11px] text-white focus:outline-none cursor-pointer max-w-[150px]">
+                            <option value="en" selected>English</option>
+                            <option value="af">Afrikaans</option>
+                            <option value="sq">Albanian</option>
+                            <option value="am">Amharic</option>
+                            <option value="ar">Arabic</option>
+                            <option value="hy">Armenian</option>
+                            <option value="as">Assamese</option>
+                            <option value="ay">Aymara</option>
+                            <option value="az">Azerbaijani</option>
+                            <option value="bm">Bambara</option>
+                            <option value="eu">Basque</option>
+                            <option value="be">Belarusian</option>
+                            <option value="bn">Bengali</option>
+                            <option value="bho">Bhojpuri</option>
+                            <option value="bs">Bosnian</option>
+                            <option value="bg">Bulgarian</option>
+                            <option value="ca">Catalan</option>
+                            <option value="ceb">Cebuano</option>
+                            <option value="ny">Chichewa</option>
+                            <option value="zh-CN">Chinese (Simplified)</option>
+                            <option value="zh-TW">Chinese (Traditional)</option>
+                            <option value="co">Corsican</option>
+                            <option value="hr">Croatian</option>
+                            <option value="cs">Czech</option>
+                            <option value="da">Danish</option>
+                            <option value="dv">Dhivehi</option>
+                            <option value="doi">Dogri</option>
+                            <option value="nl">Dutch</option>
+                            <option value="eo">Esperanto</option>
+                            <option value="et">Estonian</option>
+                            <option value="ee">Ewe</option>
+                            <option value="fil">Filipino (Tagalog)</option>
+                            <option value="fi">Finnish</option>
+                            <option value="fr">French</option>
+                            <option value="fy">Frisian</option>
+                            <option value="gl">Galician</option>
+                            <option value="ka">Georgian</option>
+                            <option value="de">German</option>
+                            <option value="el">Greek</option>
+                            <option value="gn">Guarani</option>
+                            <option value="gu">Gujarati</option>
+                            <option value="ht">Haitian Creole</option>
+                            <option value="ha">Hausa</option>
+                            <option value="haw">Hawaiian</option>
+                            <option value="he">Hebrew</option>
+                            <option value="hi">Hindi</option>
+                            <option value="hmn">Hmong</option>
+                            <option value="hu">Hungarian</option>
+                            <option value="is">Icelandic</option>
+                            <option value="ig">Igbo</option>
+                            <option value="ilo">Ilocano</option>
+                            <option value="id">Indonesian</option>
+                            <option value="ga">Irish</option>
+                            <option value="it">Italian</option>
+                            <option value="ja">Japanese</option>
+                            <option value="jw">Javanese</option>
+                            <option value="kn">Kannada</option>
+                            <option value="kk">Kazakh</option>
+                            <option value="km">Khmer</option>
+                            <option value="rw">Kinyarwanda</option>
+                            <option value="gom">Konkani</option>
+                            <option value="ko">Korean</option>
+                            <option value="kri">Krio</option>
+                            <option value="ku">Kurdish (Kurmanji)</option>
+                            <option value="ckb">Kurdish (Sorani)</option>
+                            <option value="ky">Kyrgyz</option>
+                            <option value="lo">Lao</option>
+                            <option value="la">Latin</option>
+                            <option value="lv">Latvian</option>
+                            <option value="ln">Lingala</option>
+                            <option value="lt">Lithuanian</option>
+                            <option value="lg">Luganda</option>
+                            <option value="lb">Luxembourgish</option>
+                            <option value="mk">Macedonian</option>
+                            <option value="mai">Maithili</option>
+                            <option value="mg">Malagasy</option>
+                            <option value="ms">Malay</option>
+                            <option value="ml">Malayalam</option>
+                            <option value="mt">Maltese</option>
+                            <option value="mi">Maori</option>
+                            <option value="mr">Marathi</option>
+                            <option value="mni-Mtei">Meiteilon (Manipuri)</option>
+                            <option value="lus">Mizo</option>
+                            <option value="mn">Mongolian</option>
+                            <option value="my">Myanmar (Burmese)</option>
+                            <option value="ne">Nepali</option>
+                            <option value="no">Norwegian</option>
+                            <option value="or">Odia (Oriya)</option>
+                            <option value="om">Oromo</option>
+                            <option value="ps">Pashto</option>
+                            <option value="fa">Persian</option>
+                            <option value="pl">Polish</option>
+                            <option value="pt">Portuguese</option>
+                            <option value="pa">Punjabi</option>
+                            <option value="qu">Quechua</option>
+                            <option value="ro">Romanian</option>
+                            <option value="ru">Russian</option>
+                            <option value="sm">Samoan</option>
+                            <option value="sa">Sanskrit</option>
+                            <option value="gd">Scots Gaelic</option>
+                            <option value="nso">Sepedi</option>
+                            <option value="sr">Serbian</option>
+                            <option value="st">Sesotho</option>
+                            <option value="sn">Shona</option>
+                            <option value="sd">Sindhi</option>
+                            <option value="si">Sinhala</option>
+                            <option value="sk">Slovak</option>
+                            <option value="sl">Slovenian</option>
+                            <option value="so">Somali</option>
+                            <option value="es">Spanish</option>
+                            <option value="su">Sundanese</option>
+                            <option value="sw">Swahili</option>
+                            <option value="sv">Swedish</option>
+                            <option value="tg">Tajik</option>
+                            <option value="ta">Tamil</option>
+                            <option value="tt">Tatar</option>
+                            <option value="te">Telugu</option>
+                            <option value="th">Thai</option>
+                            <option value="ti">Tigrinya</option>
+                            <option value="ts">Tsonga</option>
+                            <option value="tr">Turkish</option>
+                            <option value="tk">Turkmen</option>
+                            <option value="ak">Twi</option>
+                            <option value="uk">Ukrainian</option>
+                            <option value="ur">Urdu</option>
+                            <option value="ug">Uyghur</option>
+                            <option value="uz">Uzbek</option>
+                            <option value="vi">Vietnamese</option>
+                            <option value="cy">Welsh</option>
+                            <option value="xh">Xhosa</option>
+                            <option value="yi">Yiddish</option>
+                            <option value="yo">Yoruba</option>
+                            <option value="zu">Zulu</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
 
+        <!-- NAVBAR WITH INTERACTIVE DROPDOWN SLIDE-DOWN SUBMENUS -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand Logo -->
             <a href="#" class="flex items-center space-x-3 group">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" class="w-12 h-12 group-hover:scale-105 transition-transform">
                     <defs>
                         <linearGradient id="aeroGrad" x1="0%" y1="0%" x2="100%" y2="0%">
                             <stop offset="0%" stop-color="#00FF87"/>
-                            <stop offset="50%" stop-color="#60EFFF"/>
-                            <stop offset="100%" stop-color="#0052CC"/>
+                            <stop offset="50%" stop-color="#38bdf8"/>
+                            <stop offset="100%" stop-color="#0284c7"/>
                         </linearGradient>
                     </defs>
-                    <rect width="270" height="260" fill="#030814" rx="20"/>
+                    <rect width="270" height="260" fill="#0f172a" rx="20"/>
                     <g transform="translate(20, 10)">
                         <path d="M 50 180 L 110 70 L 140 70 L 80 180 Z" fill="url(#aeroGrad)"/>
                         <path d="M 170 180 L 110 70 L 80 70 L 140 180 Z" fill="#FFFFFF" opacity="0.9"/>
@@ -109,103 +410,109 @@
                 </svg>
                 <div>
                     <span class="text-lg sm:text-xl font-extrabold font-heading tracking-wider text-white block">VALOMEDIC</span>
-                    <span class="text-[10px] text-teal-400 font-bold uppercase tracking-widest block">Global Medical Concierge</span>
+                    <span class="text-[10px] text-sky-400 font-bold uppercase tracking-widest block">Global Medical Concierge</span>
                 </div>
             </a>
 
-            <!-- Futuristic Desktop Navigation with Dropdowns -->
-            <nav class="hidden xl:flex items-center space-x-1">
-                <a href="#" class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400 transition-colors rounded-xl hover:bg-slate-900">Home</a>
+            <!-- Desktop Navigation Menu -->
+            <nav class="hidden xl:flex items-center space-x-1.5 relative">
+                <a href="#" class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-sky-300 transition-colors rounded-xl hover:bg-slate-800">Home</a>
+                <a href="#about" class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-sky-300 transition-colors rounded-xl hover:bg-slate-800">About Us</a>
 
-                <!-- Clinical Departments Dropdown -->
-                <div class="relative group">
-                    <button class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400 transition-colors rounded-xl hover:bg-slate-900 flex items-center gap-1.5">
-                        Clinical Departments <i class="fa-solid fa-chevron-down text-[9px] text-teal-400"></i>
+                <!-- Category 1: Specialized Clinical Centers (Slide-down toggle menu) -->
+                <div class="relative">
+                    <button onclick="toggleDropdown('dept-dropdown')" class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-sky-300 transition-colors rounded-xl hover:bg-slate-800 flex items-center gap-2 focus:outline-none">
+                        <span>Specialized Clinical Centers</span>
+                        <i class="fa-solid fa-chevron-down text-[10px] text-sky-400 transition-transform duration-300" id="dept-chevron"></i>
                     </button>
-                    <div class="absolute top-full left-0 w-80 bg-slate-950/95 backdrop-blur-2xl border border-slate-800 rounded-2xl shadow-2xl py-3 hidden group-hover:block max-h-96 overflow-y-auto z-50">
-                        <div class="px-4 py-1 text-[10px] font-extrabold text-teal-400 uppercase tracking-widest border-b border-slate-800/80 mb-2">All 14 Specialized Departments</div>
-                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">1. Orthopedics & Joint Replacements</a>
-                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">2. Cardiology & CTVS (CABG)</a>
-                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">3. Oncology & Proton Beam</a>
-                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">4. Neurology & Neurosurgery</a>
-                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">5. Organ Transplants</a>
-                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">6. Plastic & Reconstructive Surgery</a>
-                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">7. Pediatrics & Neonatal Surgery</a>
-                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">8. Ophthalmology & LASIK</a>
-                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">9. Dental & Maxillofacial Surgery</a>
-                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">10. Gynecology & IVF Fertility</a>
-                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">11. Urology & Renal Surgery</a>
-                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">12. Pulmonology & Thoracic</a>
-                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">13. Bariatric & Weight Loss</a>
-                        <a href="#procedures" class="block px-4 py-2 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">14. Endocrinology & Metabolic Care</a>
+                    <div id="dept-dropdown" class="absolute top-full left-0 w-80 bg-slate-900/98 backdrop-blur-2xl border border-cyan-500/30 rounded-2xl shadow-2xl py-3 hidden max-h-96 overflow-y-auto z-50">
+                        <div class="px-4 py-1.5 text-[10px] font-extrabold text-sky-400 uppercase tracking-widest border-b border-slate-800 mb-2">Select Subcategory to Jump</div>
+                        <a href="#dept-1" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-sky-600/20 hover:text-sky-300 transition-colors">1. Orthopedics & Joint Replacements</a>
+                        <a href="#dept-2" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-sky-600/20 hover:text-sky-300 transition-colors">2. Cardiology & CTVS (CABG)</a>
+                        <a href="#dept-3" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-sky-600/20 hover:text-sky-300 transition-colors">3. Oncology & Proton Beam</a>
+                        <a href="#dept-4" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-sky-600/20 hover:text-sky-300 transition-colors">4. Neurology & Neurosurgery</a>
+                        <a href="#dept-5" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-sky-600/20 hover:text-sky-300 transition-colors">5. Organ Transplants</a>
+                        <a href="#dept-6" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-sky-600/20 hover:text-sky-300 transition-colors">6. Plastic & Reconstructive Surgery</a>
+                        <a href="#dept-7" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-sky-600/20 hover:text-sky-300 transition-colors">7. Pediatrics & Neonatal Surgery</a>
+                        <a href="#dept-8" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-sky-600/20 hover:text-sky-300 transition-colors">8. Ophthalmology & LASIK</a>
+                        <a href="#dept-9" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-sky-600/20 hover:text-sky-300 transition-colors">9. Dental & Maxillofacial Surgery</a>
+                        <a href="#dept-10" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-sky-600/20 hover:text-sky-300 transition-colors">10. Gynecology & IVF Fertility</a>
+                        <a href="#dept-11" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-sky-600/20 hover:text-sky-300 transition-colors">11. Urology & Renal Surgery</a>
+                        <a href="#dept-12" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-sky-600/20 hover:text-sky-300 transition-colors">12. Pulmonology & Thoracic</a>
+                        <a href="#dept-13" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-sky-600/20 hover:text-sky-300 transition-colors">13. Bariatric & Weight Loss</a>
+                        <a href="#dept-14" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-sky-600/20 hover:text-sky-300 transition-colors">14. Endocrinology & Metabolic Care</a>
                     </div>
                 </div>
 
-                <!-- Destination Hubs Dropdown -->
-                <div class="relative group">
-                    <button class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400 transition-colors rounded-xl hover:bg-slate-900 flex items-center gap-1.5">
-                        Destination Hubs <i class="fa-solid fa-chevron-down text-[9px] text-teal-400"></i>
+                <!-- Category 2: Global Medical Destination Hubs (Slide-down toggle menu) -->
+                <div class="relative">
+                    <button onclick="toggleDropdown('hub-dropdown')" class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-sky-300 transition-colors rounded-xl hover:bg-slate-800 flex items-center gap-2 focus:outline-none">
+                        <span>Global Medical Destination Hubs</span>
+                        <i class="fa-solid fa-chevron-down text-[10px] text-sky-400 transition-transform duration-300" id="hub-chevron"></i>
                     </button>
-                    <div class="absolute top-full left-0 w-64 bg-slate-950/95 backdrop-blur-2xl border border-slate-800 rounded-2xl shadow-2xl py-3 hidden group-hover:block z-50">
-                        <div class="px-4 py-1 text-[10px] font-extrabold text-teal-400 uppercase tracking-widest border-b border-slate-800/80 mb-2">All 6 Global Hubs</div>
-                        <a href="#destinations" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">🇮🇳 Hub 1: India Medical Super-Hub</a>
-                        <a href="#destinations" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">🇹🇷 Hub 2: Turkey Aesthetic Hub</a>
-                        <a href="#destinations" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">🇹🇭 Hub 3: Thailand Wellness Hub</a>
-                        <a href="#destinations" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">🇦🇪 Hub 4: UAE Luxury Medical Hub</a>
-                        <a href="#destinations" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">🇸🇬 Hub 5: Singapore Advanced Hub</a>
-                        <a href="#destinations" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-teal-600/20 hover:text-teal-300 transition-colors">🇰🇷 Hub 6: South Korea Robotic Hub</a>
+                    <div id="hub-dropdown" class="absolute top-full left-0 w-72 bg-slate-900/98 backdrop-blur-2xl border border-cyan-500/30 rounded-2xl shadow-2xl py-3 hidden z-50">
+                        <div class="px-4 py-1.5 text-[10px] font-extrabold text-sky-400 uppercase tracking-widest border-b border-slate-800 mb-2">Select Hub to Jump</div>
+                        <a href="#hub-india" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-sky-600/20 hover:text-sky-300 transition-colors">🇮🇳 Hub 1: India Medical Super-Hub</a>
+                        <a href="#hub-turkey" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-sky-600/20 hover:text-sky-300 transition-colors">🇹🇷 Hub 2: Turkey Aesthetic Hub</a>
+                        <a href="#hub-thailand" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-sky-600/20 hover:text-sky-300 transition-colors">🇹🇭 Hub 3: Thailand Wellness Hub</a>
+                        <a href="#hub-uae" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-sky-600/20 hover:text-sky-300 transition-colors">🇦🇪 Hub 4: UAE Luxury Medical Hub</a>
+                        <a href="#hub-singapore" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-sky-600/20 hover:text-sky-300 transition-colors">🇸🇬 Hub 5: Singapore Advanced Hub</a>
+                        <a href="#hub-korea" onclick="closeAllDropdowns()" class="block px-4 py-2.5 text-xs text-slate-300 hover:bg-sky-600/20 hover:text-sky-300 transition-colors">🇰🇷 Hub 6: South Korea Robotic Hub</a>
                     </div>
                 </div>
 
-                <a href="#estimator" class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400 transition-colors rounded-xl hover:bg-slate-900">Calculator</a>
-                <a href="#tourism" class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400 transition-colors rounded-xl hover:bg-slate-900">Tourism</a>
-                <a href="#medication" class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400 transition-colors rounded-xl hover:bg-slate-900">Pharmacy</a>
-                <a href="#second-opinion" class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400 transition-colors rounded-xl hover:bg-slate-900">Opinions</a>
-                <a href="#consultation" class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider bg-teal-600 hover:bg-teal-500 text-white rounded-xl transition-all shadow-lg">Inquire</a>
+                <a href="#estimator" class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-sky-300 transition-colors rounded-xl hover:bg-slate-800">Calculator</a>
+                <a href="#tourism" class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-sky-300 transition-colors rounded-xl hover:bg-slate-800">Tourism</a>
+                <a href="#medication" class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-sky-300 transition-colors rounded-xl hover:bg-slate-800">Pharmacy</a>
+                <a href="#second-opinion" class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-sky-300 transition-colors rounded-xl hover:bg-slate-800">Opinions</a>
+                <a href="#contact" class="px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-sky-300 transition-colors rounded-xl hover:bg-slate-800">Contact Us</a>
+                <a href="#consultation" class="px-4 py-2 text-xs font-bold uppercase tracking-wider bg-cyan-600 hover:bg-cyan-500 text-white rounded-xl transition-all shadow-lg">Inquire</a>
             </nav>
 
             <!-- Mobile Hamburger Menu Toggle -->
             <div class="flex xl:hidden items-center space-x-2">
-                <button onclick="toggleMobileMenu()" class="bg-teal-600 hover:bg-teal-500 text-white w-10 h-10 rounded-xl flex items-center justify-center text-lg shadow-lg transition-all" title="Menu">
+                <button onclick="toggleMobileMenu()" class="bg-cyan-600 hover:bg-cyan-500 text-white w-10 h-10 rounded-xl flex items-center justify-center text-lg shadow-lg transition-all" title="Menu">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Expandable Menu Drawer -->
-        <div id="mobile-menu" class="hidden bg-slate-950 border-t border-slate-800 px-6 py-6 space-y-4 xl:hidden max-h-[80vh] overflow-y-auto">
-            <a href="#" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400">Home</a>
-            <div class="text-xs font-bold text-teal-400 uppercase tracking-widest pt-2">Clinical Departments (14)</div>
+        <div id="mobile-menu" class="hidden bg-slate-900 border-t border-slate-800 px-6 py-6 space-y-4 xl:hidden max-h-[80vh] overflow-y-auto">
+            <a href="#" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-slate-200">Home</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-slate-200">About Us</a>
+            <div class="text-xs font-bold text-sky-400 uppercase tracking-widest pt-2">Specialized Clinical Centers (14)</div>
             <div class="pl-4 space-y-2 text-xs text-slate-300">
-                <a href="#procedures" onclick="toggleMobileMenu()" class="block">1. Orthopedics & Joints</a>
-                <a href="#procedures" onclick="toggleMobileMenu()" class="block">2. Cardiology & CTVS (CABG)</a>
-                <a href="#procedures" onclick="toggleMobileMenu()" class="block">3. Oncology & Proton Beam</a>
-                <a href="#procedures" onclick="toggleMobileMenu()" class="block">4. Neurology & Neurosurgery</a>
-                <a href="#procedures" onclick="toggleMobileMenu()" class="block">5. Organ Transplants</a>
-                <a href="#procedures" onclick="toggleMobileMenu()" class="block">6. Plastic & Reconstructive</a>
-                <a href="#procedures" onclick="toggleMobileMenu()" class="block">7. Pediatrics & Neonatal</a>
-                <a href="#procedures" onclick="toggleMobileMenu()" class="block">8. Ophthalmology & LASIK</a>
-                <a href="#procedures" onclick="toggleMobileMenu()" class="block">9. Dental & Maxillofacial</a>
-                <a href="#procedures" onclick="toggleMobileMenu()" class="block">10. Gynecology & IVF Fertility</a>
-                <a href="#procedures" onclick="toggleMobileMenu()" class="block">11. Urology & Renal Surgery</a>
-                <a href="#procedures" onclick="toggleMobileMenu()" class="block">12. Pulmonology & Thoracic</a>
-                <a href="#procedures" onclick="toggleMobileMenu()" class="block">13. Bariatric & Weight Loss</a>
-                <a href="#procedures" onclick="toggleMobileMenu()" class="block">14. Endocrinology & Metabolic</a>
+                <a href="#dept-1" onclick="toggleMobileMenu()" class="block">1. Orthopedics & Joints</a>
+                <a href="#dept-2" onclick="toggleMobileMenu()" class="block">2. Cardiology & CTVS (CABG)</a>
+                <a href="#dept-3" onclick="toggleMobileMenu()" class="block">3. Oncology & Proton Beam</a>
+                <a href="#dept-4" onclick="toggleMobileMenu()" class="block">4. Neurology & Neurosurgery</a>
+                <a href="#dept-5" onclick="toggleMobileMenu()" class="block">5. Organ Transplants</a>
+                <a href="#dept-6" onclick="toggleMobileMenu()" class="block">6. Plastic & Reconstructive</a>
+                <a href="#dept-7" onclick="toggleMobileMenu()" class="block">7. Pediatrics & Neonatal</a>
+                <a href="#dept-8" onclick="toggleMobileMenu()" class="block">8. Ophthalmology & LASIK</a>
+                <a href="#dept-9" onclick="toggleMobileMenu()" class="block">9. Dental & Maxillofacial</a>
+                <a href="#dept-10" onclick="toggleMobileMenu()" class="block">10. Gynecology & IVF Fertility</a>
+                <a href="#dept-11" onclick="toggleMobileMenu()" class="block">11. Urology & Renal Surgery</a>
+                <a href="#dept-12" onclick="toggleMobileMenu()" class="block">12. Pulmonology & Thoracic</a>
+                <a href="#dept-13" onclick="toggleMobileMenu()" class="block">13. Bariatric & Weight Loss</a>
+                <a href="#dept-14" onclick="toggleMobileMenu()" class="block">14. Endocrinology & Metabolic</a>
             </div>
-            <div class="text-xs font-bold text-teal-400 uppercase tracking-widest pt-2">Destination Hubs (6)</div>
+            <div class="text-xs font-bold text-sky-400 uppercase tracking-widest pt-2">Global Medical Destination Hubs (6)</div>
             <div class="pl-4 space-y-2 text-xs text-slate-300">
-                <a href="#destinations" onclick="toggleMobileMenu()" class="block">🇮🇳 India Medical Super-Hub</a>
-                <a href="#destinations" onclick="toggleMobileMenu()" class="block">🇹🇷 Turkey Aesthetic Hub</a>
-                <a href="#destinations" onclick="toggleMobileMenu()" class="block">🇹🇭 Thailand Wellness Hub</a>
-                <a href="#destinations" onclick="toggleMobileMenu()" class="block">🇦🇪 UAE Luxury Medical Hub</a>
-                <a href="#destinations" onclick="toggleMobileMenu()" class="block">🇸🇬 Singapore Advanced Hub</a>
-                <a href="#destinations" onclick="toggleMobileMenu()" class="block">🇰🇷 South Korea Robotic Hub</a>
+                <a href="#hub-india" onclick="toggleMobileMenu()" class="block">🇮🇳 India Medical Super-Hub</a>
+                <a href="#hub-turkey" onclick="toggleMobileMenu()" class="block">🇹🇷 Turkey Aesthetic Hub</a>
+                <a href="#hub-thailand" onclick="toggleMobileMenu()" class="block">🇹🇭 Thailand Wellness Hub</a>
+                <a href="#hub-uae" onclick="toggleMobileMenu()" class="block">🇦🇪 UAE Luxury Medical Hub</a>
+                <a href="#hub-singapore" onclick="toggleMobileMenu()" class="block">🇸🇬 Singapore Advanced Hub</a>
+                <a href="#hub-korea" onclick="toggleMobileMenu()" class="block">🇰🇷 South Korea Robotic Hub</a>
             </div>
-            <a href="#estimator" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400 pt-2">Cost Estimator</a>
-            <a href="#tourism" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400">Tourism & Travelism</a>
-            <a href="#medication" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400">Pharmacy & Medication</a>
-            <a href="#second-opinion" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-teal-400">Expert Second Opinions</a>
-            <a href="#consultation" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-teal-400 font-extrabold pt-2">VIP Case Intake</a>
+            <a href="#estimator" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-slate-200 pt-2">Cost Estimator</a>
+            <a href="#tourism" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-slate-200">Tourism & Travelism</a>
+            <a href="#medication" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-slate-200">Pharmacy & Medication</a>
+            <a href="#second-opinion" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-slate-200">Expert Second Opinions</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-slate-200">Contact Us</a>
+            <a href="#consultation" onclick="toggleMobileMenu()" class="block text-xs font-bold uppercase tracking-wider text-sky-400 font-extrabold pt-2">VIP Case Intake</a>
         </div>
     </header>
 
@@ -213,13 +520,13 @@
     <section class="gradient-hero text-white py-24 lg:py-32 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-3xl space-y-6">
-                <span class="inline-flex items-center gap-2 bg-teal-500/20 text-teal-300 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest border border-teal-500/30">
+                <span class="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-300 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest border border-cyan-500/30">
                     <i class="fa-solid fa-crown text-amber-400"></i> Elite International Medical Concierge & Travelism
                 </span>
                 <h1 class="text-4xl sm:text-6xl font-extrabold font-heading tracking-tight leading-tight">
                     Valomedic Global Medical Concierge. All-Inclusive Luxury & Surgery at 40%–50% Net Savings.
                 </h1>
-                <p class="text-slate-300 text-lg sm:text-xl font-normal leading-relaxed max-w-2xl">
+                <p class="text-slate-200 text-lg sm:text-xl font-normal leading-relaxed max-w-2xl">
                     While staying in America or Europe costs double for surgery alone, Valomedic bundles elite JCI surgery, luxury 5-star recovery villas, VIP airport transfers, private medical escorts, and complete travelism into one transparent all-inclusive price.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 pt-4">
@@ -234,155 +541,183 @@
         </div>
     </section>
 
+    <!-- ABOUT US SECTION -->
+    <section id="about" class="py-20 bg-slate-900/60 backdrop-blur-md border-b border-cyan-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-cyan-400 font-extrabold uppercase tracking-widest text-xs">About Valomedic Global</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">Redefining Cross-Border Healthcare & Luxury Medical Travel</h2>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Founded by <strong>Karan Suthar</strong>, Valomedic Global Medical Concierge is dedicated to bridging the gap between world-class medical excellence and affordable patient care. We coordinate seamless, end-to-end medical journeys across top-tier JCI and NABH accredited hospitals globally.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 pt-2">
+                        <div class="bg-slate-800/80 border border-slate-700 p-4 rounded-2xl">
+                            <span class="text-2xl font-extrabold text-cyan-400 block">40% - 50%</span>
+                            <span class="text-xs text-slate-300">Guaranteed Net Savings vs Western Care</span>
+                        </div>
+                        <div class="bg-slate-800/80 border border-slate-700 p-4 rounded-2xl">
+                            <span class="text-2xl font-extrabold text-emerald-400 block">100% All-Inclusive</span>
+                            <span class="text-xs text-slate-300">Surgery, Luxury Villa & Travelism Bundled</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-cyan-500/30">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1000&q=80" alt="Medical Team" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ORIGIN HIGH-COST HEALTHCARE COUNTRIES -->
-    <section class="py-16 bg-slate-900 border-b border-slate-800">
+    <section class="py-16 bg-blue-950/40 border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-teal-400 font-bold uppercase tracking-widest text-xs">High-Cost Healthcare Origin Countries</span>
+                <span class="text-cyan-400 font-bold uppercase tracking-widest text-xs">High-Cost Healthcare Origin Countries</span>
                 <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-white mt-2">Serving Patients From Exorbitant Domestic Healthcare Markets</h2>
             </div>
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 text-center">
-                <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-4 shadow-sm"><span class="text-3xl">🇺🇸</span><h4 class="font-bold text-xs text-white mt-2">United States</h4><span class="text-[10px] text-teal-400 font-bold">Save 40%-50%</span></div>
-                <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-4 shadow-sm"><span class="text-3xl">🇬🇧</span><h4 class="font-bold text-xs text-white mt-2">United Kingdom</h4><span class="text-[10px] text-teal-400 font-bold">Skip NHS Queues</span></div>
-                <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-4 shadow-sm"><span class="text-3xl">🇨🇦</span><h4 class="font-bold text-xs text-white mt-2">Canada</h4><span class="text-[10px] text-teal-400 font-bold">Fast-Track Surgery</span></div>
-                <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-4 shadow-sm"><span class="text-3xl">🇦🇺</span><h4 class="font-bold text-xs text-white mt-2">Australia</h4><span class="text-[10px] text-teal-400 font-bold">Save 40%-50%</span></div>
-                <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-4 shadow-sm"><span class="text-3xl">🇩🇪</span><h4 class="font-bold text-xs text-white mt-2">Germany</h4><span class="text-[10px] text-teal-400 font-bold">Elite Specialists</span></div>
-                <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-4 shadow-sm"><span class="text-3xl">🇨🇭</span><h4 class="font-bold text-xs text-white mt-2">Switzerland</h4><span class="text-[10px] text-teal-400 font-bold">Luxury Concierge</span></div>
-                <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-4 shadow-sm"><span class="text-3xl">🇯🇵</span><h4 class="font-bold text-xs text-white mt-2">Japan</h4><span class="text-[10px] text-teal-400 font-bold">Advanced Tech</span></div>
+                <div class="bg-slate-800/90 border border-cyan-500/30 rounded-2xl p-4 shadow-sm"><span class="text-3xl">🇺🇸</span><h4 class="font-bold text-xs text-white mt-2">United States</h4><span class="text-[10px] text-cyan-400 font-bold">Save 40%-50%</span></div>
+                <div class="bg-slate-800/90 border border-cyan-500/30 rounded-2xl p-4 shadow-sm"><span class="text-3xl">🇬🇧</span><h4 class="font-bold text-xs text-white mt-2">United Kingdom</h4><span class="text-[10px] text-cyan-400 font-bold">Skip NHS Queues</span></div>
+                <div class="bg-slate-800/90 border border-cyan-500/30 rounded-2xl p-4 shadow-sm"><span class="text-3xl">🇨🇦</span><h4 class="font-bold text-xs text-white mt-2">Canada</h4><span class="text-[10px] text-cyan-400 font-bold">Fast-Track Surgery</span></div>
+                <div class="bg-slate-800/90 border border-cyan-500/30 rounded-2xl p-4 shadow-sm"><span class="text-3xl">🇦🇺</span><h4 class="font-bold text-xs text-white mt-2">Australia</h4><span class="text-[10px] text-cyan-400 font-bold">Save 40%-50%</span></div>
+                <div class="bg-slate-800/90 border border-cyan-500/30 rounded-2xl p-4 shadow-sm"><span class="text-3xl">🇩🇪</span><h4 class="font-bold text-xs text-white mt-2">Germany</h4><span class="text-[10px] text-cyan-400 font-bold">Elite Specialists</span></div>
+                <div class="bg-slate-800/90 border border-cyan-500/30 rounded-2xl p-4 shadow-sm"><span class="text-3xl">🇨🇭</span><h4 class="font-bold text-xs text-white mt-2">Switzerland</h4><span class="text-[10px] text-cyan-400 font-bold">Luxury Concierge</span></div>
+                <div class="bg-slate-800/90 border border-cyan-500/30 rounded-2xl p-4 shadow-sm"><span class="text-3xl">🇯🇵</span><h4 class="font-bold text-xs text-white mt-2">Japan</h4><span class="text-[10px] text-cyan-400 font-bold">Advanced Tech</span></div>
             </div>
         </div>
     </section>
 
     <!-- 14 DETAILED CLINICAL DEPARTMENTS -->
-    <section id="procedures" class="py-20 bg-slate-950">
+    <section id="procedures" class="py-20 section-innovation-bg text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-teal-400 font-extrabold uppercase tracking-widest text-xs">Clinical Excellence</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-2">Explore All 14 Specialized Clinical Departments</h2>
+                <span class="text-cyan-400 font-extrabold uppercase tracking-widest text-xs">Clinical Excellence</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-2">Specialized Clinical Centers of Excellence</h2>
                 <p class="text-slate-300 text-sm mt-2">Comprehensive medical care delivered by world-renowned specialists across JCI-accredited global hospital networks.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Dept 1 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl space-y-4">
-                    <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-teal-500/20 text-teal-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-bone"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
+                <div id="dept-1" class="bg-slate-900/90 border border-cyan-500/30 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
+                    <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-bone"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
                     <h3 class="text-xl font-bold font-heading text-white">1. Orthopedics & Joint Replacements</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Advanced robotic knee/hip replacement, spinal deformity correction, arthroscopic ligament reconstruction, and geriatric orthopedics.</p>
-                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-teal-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
+                    <p class="text-xs text-slate-300 leading-relaxed">Advanced robotic knee/hip replacement, spinal deformity correction, arthroscopic ligament reconstruction, and geriatric orthopedics.</p>
+                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-cyan-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
                 </div>
                 <!-- Dept 2 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl space-y-4">
+                <div id="dept-2" class="bg-slate-900/90 border border-cyan-500/30 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
                     <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-red-500/20 text-red-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-heart-pulse"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
                     <h3 class="text-xl font-bold font-heading text-white">2. Cardiology & CTVS (CABG)</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Minimally invasive coronary artery bypass grafting (CABG), valvular heart surgery, pediatric congenital heart repairs, and electrophysiology.</p>
-                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-teal-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
+                    <p class="text-xs text-slate-300 leading-relaxed">Minimally invasive coronary artery bypass grafting (CABG), valvular heart surgery, pediatric congenital heart repairs, and electrophysiology.</p>
+                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-cyan-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
                 </div>
                 <!-- Dept 3 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl space-y-4">
+                <div id="dept-3" class="bg-slate-900/90 border border-cyan-500/30 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
                     <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-dna"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
                     <h3 class="text-xl font-bold font-heading text-white">3. Oncology & Proton Beam</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Precision proton beam radiation, bone marrow transplants, cyberknife radiosurgery, and personalized oncological tumor board treatments.</p>
-                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-teal-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
+                    <p class="text-xs text-slate-300 leading-relaxed">Precision proton beam radiation, bone marrow transplants, cyberknife radiosurgery, and personalized oncological tumor board treatments.</p>
+                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-cyan-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
                 </div>
                 <!-- Dept 4 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl space-y-4">
+                <div id="dept-4" class="bg-slate-900/90 border border-cyan-500/30 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
                     <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-brain"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
                     <h3 class="text-xl font-bold font-heading text-white">4. Neurology & Neurosurgery</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Deep brain stimulation for Parkinson's, skull-base tumor resections, epilepsy surgery, and advanced stroke intervention units.</p>
-                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-teal-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
+                    <p class="text-xs text-slate-300 leading-relaxed">Deep brain stimulation for Parkinson's, skull-base tumor resections, epilepsy surgery, and advanced stroke intervention units.</p>
+                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-cyan-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
                 </div>
                 <!-- Dept 5 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl space-y-4">
+                <div id="dept-5" class="bg-slate-900/90 border border-cyan-500/30 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
                     <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-hand-holding-medical"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
                     <h3 class="text-xl font-bold font-heading text-white">5. Organ Transplants</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Living and deceased donor programs for kidney, liver, heart, lung, and multi-organ transplants with high success rates.</p>
-                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-teal-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
+                    <p class="text-xs text-slate-300 leading-relaxed">Living and deceased donor programs for kidney, liver, heart, lung, and multi-organ transplants with high success rates.</p>
+                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-cyan-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
                 </div>
                 <!-- Dept 6 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl space-y-4">
+                <div id="dept-6" class="bg-slate-900/90 border border-cyan-500/30 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
                     <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-pink-500/20 text-pink-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-wand-magic-sparkles"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
                     <h3 class="text-xl font-bold font-heading text-white">6. Plastic & Reconstructive Surgery</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Post-traumatic microvascular reconstruction, aesthetic facial surgeries, burn care, and comprehensive body contouring packages.</p>
-                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-teal-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
+                    <p class="text-xs text-slate-300 leading-relaxed">Post-traumatic microvascular reconstruction, aesthetic facial surgeries, burn care, and comprehensive body contouring packages.</p>
+                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-cyan-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
                 </div>
                 <!-- Dept 7 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl space-y-4">
+                <div id="dept-7" class="bg-slate-900/90 border border-cyan-500/30 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
                     <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-child"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
                     <h3 class="text-xl font-bold font-heading text-white">7. Pediatrics & Neonatal Surgery</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Level III neonatal intensive care units, pediatric cardiac corrective surgery, and congenital anomaly corrections.</p>
-                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-teal-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
+                    <p class="text-xs text-slate-300 leading-relaxed">Level III neonatal intensive care units, pediatric cardiac corrective surgery, and congenital anomaly corrections.</p>
+                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-cyan-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
                 </div>
                 <!-- Dept 8 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl space-y-4">
+                <div id="dept-8" class="bg-slate-900/90 border border-cyan-500/30 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
                     <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-eye"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
                     <h3 class="text-xl font-bold font-heading text-white">8. Ophthalmology & LASIK</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Bladeless Femto-LASIK vision correction, complex cataract micro-surgery, glaucoma treatments, and corneal transplants.</p>
-                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-teal-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
+                    <p class="text-xs text-slate-300 leading-relaxed">Bladeless Femto-LASIK vision correction, complex cataract micro-surgery, glaucoma treatments, and corneal transplants.</p>
+                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-cyan-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
                 </div>
                 <!-- Dept 9 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl space-y-4">
+                <div id="dept-9" class="bg-slate-900/90 border border-cyan-500/30 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
                     <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-tooth"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
                     <h3 class="text-xl font-bold font-heading text-white">9. Dental & Maxillofacial Surgery</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">All-on-4 dental implants, full mouth smile design, orthognathic jaw reconstruction, and oral oncology surgery.</p>
-                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-teal-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
+                    <p class="text-xs text-slate-300 leading-relaxed">All-on-4 dental implants, full mouth smile design, orthognathic jaw reconstruction, and oral oncology surgery.</p>
+                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-cyan-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
                 </div>
                 <!-- Dept 10 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl space-y-4">
+                <div id="dept-10" class="bg-slate-900/90 border border-cyan-500/30 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
                     <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-rose-500/20 text-rose-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-venus"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
                     <h3 class="text-xl font-bold font-heading text-white">10. Gynecology & IVF Fertility</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Advanced ICSI/IVF fertility treatments, pre-implantation genetic diagnosis (PGD), and robotic laparoscopic myomectomy.</p>
-                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-teal-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
+                    <p class="text-xs text-slate-300 leading-relaxed">Advanced ICSI/IVF fertility treatments, pre-implantation genetic diagnosis (PGD), and robotic laparoscopic myomectomy.</p>
+                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-cyan-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
                 </div>
                 <!-- Dept 11 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl space-y-4">
+                <div id="dept-11" class="bg-slate-900/90 border border-cyan-500/30 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
                     <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-violet-500/20 text-violet-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-user-doctor"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
                     <h3 class="text-xl font-bold font-heading text-white">11. Urology & Renal Surgery</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Robotic radical prostatectomy, laser lithotripsy for complex kidney stones, and reconstructive urological procedures.</p>
-                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-teal-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
+                    <p class="text-xs text-slate-300 leading-relaxed">Robotic radical prostatectomy, laser lithotripsy for complex kidney stones, and reconstructive urological procedures.</p>
+                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-cyan-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
                 </div>
                 <!-- Dept 12 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl space-y-4">
+                <div id="dept-12" class="bg-slate-900/90 border border-cyan-500/30 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
                     <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-orange-500/20 text-orange-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-lungs"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
                     <h3 class="text-xl font-bold font-heading text-white">12. Pulmonology & Thoracic Surgery</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Video-assisted thoracoscopic surgery (VATS), interstitial lung disease management, and advanced respiratory critical care.</p>
-                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-teal-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
+                    <p class="text-xs text-slate-300 leading-relaxed">Video-assisted thoracoscopic surgery (VATS), interstitial lung disease management, and advanced respiratory critical care.</p>
+                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-cyan-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
                 </div>
                 <!-- Dept 13 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl space-y-4">
+                <div id="dept-13" class="bg-slate-900/90 border border-cyan-500/30 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
                     <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-yellow-500/20 text-yellow-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-utensils"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
                     <h3 class="text-xl font-bold font-heading text-white">13. Bariatric & Weight Loss Surgery</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Laparoscopic sleeve gastrectomy, Roux-en-Y gastric bypass, and metabolic syndrome reversal programs.</p>
-                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-teal-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
+                    <p class="text-xs text-slate-300 leading-relaxed">Laparoscopic sleeve gastrectomy, Roux-en-Y gastric bypass, and metabolic syndrome reversal programs.</p>
+                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-cyan-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
                 </div>
                 <!-- Dept 14 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl space-y-4">
+                <div id="dept-14" class="bg-slate-900/90 border border-cyan-500/30 rounded-3xl p-6 shadow-xl space-y-4 backdrop-blur-md">
                     <div class="flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-teal-500/20 text-teal-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-shield-heart"></i></div><span class="bg-emerald-500/20 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">Specialized</span></div>
                     <h3 class="text-xl font-bold font-heading text-white">14. Endocrinology & Metabolic Care</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Comprehensive diabetes reversal protocols, thyroid disorder management, adrenal gland surgeries, and hormonal balance.</p>
-                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-teal-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
+                    <p class="text-xs text-slate-300 leading-relaxed">Comprehensive diabetes reversal protocols, thyroid disorder management, adrenal gland surgeries, and hormonal balance.</p>
+                    <a href="#consultation" class="block w-full bg-slate-800 hover:bg-cyan-600 hover:text-white text-slate-200 font-bold py-2.5 rounded-xl text-xs transition-all text-center">Inquire Department</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 6 GLOBAL HUBS & 48 MEDICAL CITIES WITH EMBEDDED IMAGES -->
-    <section id="destinations" class="py-20 bg-slate-900 border-t border-b border-slate-800">
+    <section id="destinations" class="py-20 bg-blue-950/60 border-t border-b border-cyan-500/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-teal-400 font-extrabold uppercase tracking-widest text-xs">Global Infrastructure</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-2">All 6 Global Hubs & 48 Medical Cities</h2>
+                <span class="text-cyan-400 font-extrabold uppercase tracking-widest text-xs">Global Infrastructure</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-2">Global Medical Destination Hubs</h2>
                 <p class="text-slate-300 text-sm mt-2">Direct coordination with premier JCI & NABH accredited hospitals across international medical corridors.</p>
             </div>
 
             <div class="space-y-12">
                 <!-- Hub 1: India -->
-                <div class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden shadow-xl">
+                <div id="hub-india" class="bg-slate-900/90 border border-cyan-500/30 rounded-3xl overflow-hidden shadow-xl backdrop-blur-md">
                     <div class="h-64 relative">
                         <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1600&q=80" alt="India Hub" class="w-full h-full object-cover opacity-80">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
                         <div class="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                             <div>
-                                <span class="bg-teal-600 text-white font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">🇮🇳 Hub 1 of 6</span>
+                                <span class="bg-cyan-600 text-white font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">🇮🇳 Hub 1 of 6</span>
                                 <h3 class="text-2xl sm:text-3xl font-bold font-heading text-white mt-2">India Medical Super-Hub (8 Cities)</h3>
                             </div>
                             <a href="#consultation" class="bg-emerald-400 hover:bg-emerald-500 text-slate-950 font-extrabold px-6 py-3 rounded-xl text-xs uppercase tracking-wider shadow-lg">Inquire India Hub</a>
@@ -390,26 +725,26 @@
                     </div>
                     <div class="p-8">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-xs">
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">1. Mumbai</strong><span class="text-slate-400">Kokilaben Dhirubhai Ambani Hospital, Lilavati Hospital, Breach Candy, Asian Heart Institute, Hinduja Hospital.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">2. Delhi NCR</strong><span class="text-slate-400">Medanta - The Medcity, AIIMS New Delhi, Max Super Speciality Saket, Fortis Memorial Gurgaon, BLK-Max.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">3. Bengaluru</strong><span class="text-slate-400">Manipal Hospital HAL, Narayana Health City, Aster CMI, Sakra World Hospital, BGS Gleneagles Global.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">4. Chennai</strong><span class="text-slate-400">Apollo Hospitals Greams Road, MIOT International, Gleneagles Global Health City, Dr. Rela Institute.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">5. Hyderabad</strong><span class="text-slate-400">Yashoda Hospitals Somajiguda, KIMS Hospitals Secunderabad, Asian Institute of Gastroenterology, Care Hospitals.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">6. Ahmedabad</strong><span class="text-slate-400">Sterling Hospitals, CIMS Hospital, Apollo Hospitals Bhat, Zydus Hospitals Thaltej.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">7. Kochi</strong><span class="text-slate-400">Aster Medcity, Amrita Institute of Medical Sciences, Lakeshore Hospital, Rajagiri Hospital.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">8. Pune</strong><span class="text-slate-400">Ruby Hall Clinic, Jehangir Hospital, Sahyadri Super Speciality Hospital, Manipal Hospital Pune.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">1. Mumbai</strong><span class="text-slate-300">Kokilaben Dhirubhai Ambani Hospital, Lilavati Hospital, Breach Candy, Asian Heart Institute, Hinduja Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">2. Delhi NCR</strong><span class="text-slate-300">Medanta - The Medcity, AIIMS New Delhi, Max Super Speciality Saket, Fortis Memorial Gurgaon, BLK-Max.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">3. Bengaluru</strong><span class="text-slate-300">Manipal Hospital HAL, Narayana Health City, Aster CMI, Sakra World Hospital, BGS Gleneagles Global.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">4. Chennai</strong><span class="text-slate-300">Apollo Hospitals Greams Road, MIOT International, Gleneagles Global Health City, Dr. Rela Institute.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">5. Hyderabad</strong><span class="text-slate-300">Yashoda Hospitals Somajiguda, KIMS Hospitals Secunderabad, Asian Institute of Gastroenterology, Care Hospitals.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">6. Ahmedabad</strong><span class="text-slate-300">Sterling Hospitals, CIMS Hospital, Apollo Hospitals Bhat, Zydus Hospitals Thaltej.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">7. Kochi</strong><span class="text-slate-300">Aster Medcity, Amrita Institute of Medical Sciences, Lakeshore Hospital, Rajagiri Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">8. Pune</strong><span class="text-slate-300">Ruby Hall Clinic, Jehangir Hospital, Sahyadri Super Speciality Hospital, Manipal Hospital Pune.</span></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Hub 2: Turkey -->
-                <div class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden shadow-xl">
+                <div id="hub-turkey" class="bg-slate-900/90 border border-cyan-500/30 rounded-3xl overflow-hidden shadow-xl backdrop-blur-md">
                     <div class="h-64 relative">
                         <img src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=1600&q=80" alt="Turkey Hub" class="w-full h-full object-cover opacity-80">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
                         <div class="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                             <div>
-                                <span class="bg-teal-600 text-white font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">🇹🇷 Hub 2 of 6</span>
+                                <span class="bg-cyan-600 text-white font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">🇹🇷 Hub 2 of 6</span>
                                 <h3 class="text-2xl sm:text-3xl font-bold font-heading text-white mt-2">Turkey Aesthetic & Clinical Hub (8 Cities)</h3>
                             </div>
                             <a href="#consultation" class="bg-emerald-400 hover:bg-emerald-500 text-slate-950 font-extrabold px-6 py-3 rounded-xl text-xs uppercase tracking-wider shadow-lg">Inquire Turkey Hub</a>
@@ -417,26 +752,26 @@
                     </div>
                     <div class="p-8">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-xs">
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">1. Istanbul</strong><span class="text-slate-400">Acibadem Maslak Hospital, Memorial Şişli Hospital, American Hospital Istanbul, Florence Nightingale.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">2. Ankara</strong><span class="text-slate-400">Liv Hospital Ankara, Guven Hospital, Memorial Ankara, Baskent University Hospital.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">3. Izmir</strong><span class="text-slate-400">Medical Park Izmir, Kent Hospital, Ege University Hospital, Izmir University Hospital.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">4. Antalya</strong><span class="text-slate-400">Memorial Antalya Hospital, Medical Park Antalya, Akdeniz University Hospital.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">5. Bursa</strong><span class="text-slate-400">Bursa Acibadem Hospital, Medical Park Bursa, Doruk Hospitals.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">6. Adana</strong><span class="text-slate-400">Acibadem Adana Hospital, Baskent University Adana, Avicenna Hospital.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">7. Gaziantep</strong><span class="text-slate-400">Medical Park Gaziantep, Sanko University Hospital, Erdem Hospital.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">8. Bodrum</strong><span class="text-slate-400">Acibadem Bodrum Hospital, Bodrum Universal Hospital, Intermed Bodrum.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">1. Istanbul</strong><span class="text-slate-300">Acibadem Maslak Hospital, Memorial Şişli Hospital, American Hospital Istanbul, Florence Nightingale.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">2. Ankara</strong><span class="text-slate-300">Liv Hospital Ankara, Guven Hospital, Memorial Ankara, Baskent University Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">3. Izmir</strong><span class="text-slate-300">Medical Park Izmir, Kent Hospital, Ege University Hospital, Izmir University Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">4. Antalya</strong><span class="text-slate-300">Memorial Antalya Hospital, Medical Park Antalya, Akdeniz University Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">5. Bursa</strong><span class="text-slate-300">Bursa Acibadem Hospital, Medical Park Bursa, Doruk Hospitals.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">6. Adana</strong><span class="text-slate-300">Acibadem Adana Hospital, Baskent University Adana, Avicenna Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">7. Gaziantep</strong><span class="text-slate-300">Medical Park Gaziantep, Sanko University Hospital, Erdem Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">8. Bodrum</strong><span class="text-slate-300">Acibadem Bodrum Hospital, Bodrum Universal Hospital, Intermed Bodrum.</span></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Hub 3: Thailand -->
-                <div class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden shadow-xl">
+                <div id="hub-thailand" class="bg-slate-900/90 border border-cyan-500/30 rounded-3xl overflow-hidden shadow-xl backdrop-blur-md">
                     <div class="h-64 relative">
                         <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1600&q=80" alt="Thailand Hub" class="w-full h-full object-cover opacity-80">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
                         <div class="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                             <div>
-                                <span class="bg-teal-600 text-white font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">🇹🇭 Hub 3 of 6</span>
+                                <span class="bg-cyan-600 text-white font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">🇹🇭 Hub 3 of 6</span>
                                 <h3 class="text-2xl sm:text-3xl font-bold font-heading text-white mt-2">Thailand Wellness & Medical Hub (8 Cities)</h3>
                             </div>
                             <a href="#consultation" class="bg-emerald-400 hover:bg-emerald-500 text-slate-950 font-extrabold px-6 py-3 rounded-xl text-xs uppercase tracking-wider shadow-lg">Inquire Thailand Hub</a>
@@ -444,26 +779,26 @@
                     </div>
                     <div class="p-8">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-xs">
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">1. Bangkok</strong><span class="text-slate-400">Bumrungrad International Hospital, Bangkok Hospital, Samitivej Sukhumvit, Vejthani Hospital.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">2. Phuket</strong><span class="text-slate-400">Bangkok Hospital Phuket, Phuket International Hospital, Mission Hospital Phuket.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">3. Chiang Mai</strong><span class="text-slate-400">Bangkok Hospital Chiang Mai, Chiang Mai Ram Hospital, McCormick Hospital.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">4. Pattaya</strong><span class="text-slate-400">Bangkok Hospital Pattaya, Pattaya Memorial Hospital, Bangkok-Jomtien Hospital.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">5. Hua Hin</strong><span class="text-slate-400">Bangkok Hospital Hua Hin, San Paolo Hospital Hua Hin.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">6. Hat Yai</strong><span class="text-slate-400">Bangkok Hospital Hat Yai, Hat Yai International Hospital.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">7. Udon Thani</strong><span class="text-slate-400">Udon Thani General Hospital, Wattana Hospital Udon.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">8. Khon Kaen</strong><span class="text-slate-400">Rajpruek Hospital, Khon Kaen Ram Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">1. Bangkok</strong><span class="text-slate-300">Bumrungrad International Hospital, Bangkok Hospital, Samitivej Sukhumvit, Vejthani Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">2. Phuket</strong><span class="text-slate-300">Bangkok Hospital Phuket, Phuket International Hospital, Mission Hospital Phuket.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">3. Chiang Mai</strong><span class="text-slate-300">Bangkok Hospital Chiang Mai, Chiang Mai Ram Hospital, McCormick Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">4. Pattaya</strong><span class="text-slate-300">Bangkok Hospital Pattaya, Pattaya Memorial Hospital, Bangkok-Jomtien Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">5. Hua Hin</strong><span class="text-slate-300">Bangkok Hospital Hua Hin, San Paolo Hospital Hua Hin.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">6. Hat Yai</strong><span class="text-slate-300">Bangkok Hospital Hat Yai, Hat Yai International Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">7. Udon Thani</strong><span class="text-slate-300">Udon Thani General Hospital, Wattana Hospital Udon.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">8. Khon Kaen</strong><span class="text-slate-300">Rajpruek Hospital, Khon Kaen Ram Hospital.</span></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Hub 4: UAE -->
-                <div class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden shadow-xl">
+                <div id="hub-uae" class="bg-slate-900/90 border border-cyan-500/30 rounded-3xl overflow-hidden shadow-xl backdrop-blur-md">
                     <div class="h-64 relative">
                         <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600&q=80" alt="UAE Hub" class="w-full h-full object-cover opacity-80">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
                         <div class="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                             <div>
-                                <span class="bg-teal-600 text-white font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">🇦🇪 Hub 4 of 6</span>
+                                <span class="bg-cyan-600 text-white font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">🇦🇪 Hub 4 of 6</span>
                                 <h3 class="text-2xl sm:text-3xl font-bold font-heading text-white mt-2">UAE Luxury Medical Hub (8 Cities)</h3>
                             </div>
                             <a href="#consultation" class="bg-emerald-400 hover:bg-emerald-500 text-slate-950 font-extrabold px-6 py-3 rounded-xl text-xs uppercase tracking-wider shadow-lg">Inquire UAE Hub</a>
@@ -471,26 +806,26 @@
                     </div>
                     <div class="p-8">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-xs">
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">1. Dubai</strong><span class="text-slate-400">Cleveland Clinic Dubai partner, American Hospital Dubai, Mediclinic City Hospital, Saudi German Dubai.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">2. Abu Dhabi</strong><span class="text-slate-400">Cleveland Clinic Abu Dhabi, Burjeel Medical City, Sheikh Shakhbout Medical City (SSMC).</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">3. Sharjah</strong><span class="text-slate-400">Zulekha Hospital Sharjah, Thumbay Hospital Sharjah, University Hospital Sharjah.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">4. Ajman</strong><span class="text-slate-400">Thumbay University Hospital Ajman, Amina Hospital.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">5. Ras Al Khaimah</strong><span class="text-slate-400">RAK Hospital, Sheikh Khalifa Specialist Hospital.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">6. Fujairah</strong><span class="text-slate-400">Fujairah Hospital, Thumbay Clinic Fujairah.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">7. Al Ain</strong><span class="text-slate-400">Tawam Hospital, Mediclinic Al Ain Hospital.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">8. Khor Fakkan</strong><span class="text-slate-400">Khor Fakkan Hospital, Al Amal Medical Center.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">1. Dubai</strong><span class="text-slate-300">Cleveland Clinic Dubai partner, American Hospital Dubai, Mediclinic City Hospital, Saudi German Dubai.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">2. Abu Dhabi</strong><span class="text-slate-300">Cleveland Clinic Abu Dhabi, Burjeel Medical City, Sheikh Shakhbout Medical City (SSMC).</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">3. Sharjah</strong><span class="text-slate-300">Zulekha Hospital Sharjah, Thumbay Hospital Sharjah, University Hospital Sharjah.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">4. Ajman</strong><span class="text-slate-300">Thumbay University Hospital Ajman, Amina Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">5. Ras Al Khaimah</strong><span class="text-slate-300">RAK Hospital, Sheikh Khalifa Specialist Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">6. Fujairah</strong><span class="text-slate-300">Fujairah Hospital, Thumbay Clinic Fujairah.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">7. Al Ain</strong><span class="text-slate-300">Tawam Hospital, Mediclinic Al Ain Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">8. Khor Fakkan</strong><span class="text-slate-300">Khor Fakkan Hospital, Al Amal Medical Center.</span></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Hub 5: Singapore -->
-                <div class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden shadow-xl">
+                <div id="hub-singapore" class="bg-slate-900/90 border border-cyan-500/30 rounded-3xl overflow-hidden shadow-xl backdrop-blur-md">
                     <div class="h-64 relative">
                         <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1600&q=80" alt="Singapore Hub" class="w-full h-full object-cover opacity-80">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
                         <div class="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                             <div>
-                                <span class="bg-teal-600 text-white font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">🇸🇬 Hub 5 of 6</span>
+                                <span class="bg-cyan-600 text-white font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">🇸🇬 Hub 5 of 6</span>
                                 <h3 class="text-2xl sm:text-3xl font-bold font-heading text-white mt-2">Singapore Advanced Clinical Hub (8 Regions)</h3>
                             </div>
                             <a href="#consultation" class="bg-emerald-400 hover:bg-emerald-500 text-slate-950 font-extrabold px-6 py-3 rounded-xl text-xs uppercase tracking-wider shadow-lg">Inquire Singapore Hub</a>
@@ -498,26 +833,26 @@
                     </div>
                     <div class="p-8">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-xs">
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">1. Orchard</strong><span class="text-slate-400">Mount Elizabeth Hospital Orchard, Gleneagles Hospital Singapore.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">2. Novena</strong><span class="text-slate-400">Tan Tock Seng Hospital, Mount Elizabeth Novena, Novena Medical Center.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">3. Outram</strong><span class="text-slate-400">Singapore General Hospital (SGH), National Heart Centre Singapore.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">4. Changi</strong><span class="text-slate-400">Changi General Hospital, St. Andrew's Community Hospital.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">5. Queenstown</strong><span class="text-slate-400">National University Hospital (NUH), Alexandra Hospital.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">6. Jurong</strong><span class="text-slate-400">Ng Teng Fong General Hospital, Jurong Community Hospital.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">7. Woodlands</strong><span class="text-slate-400">Woodlands Health Campus, Admiralty Medical Centre.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">8. Tampines</strong><span class="text-slate-400">Raffles Medical Tampines, SingHealth Polyclinics.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">1. Orchard</strong><span class="text-slate-300">Mount Elizabeth Hospital Orchard, Gleneagles Hospital Singapore.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">2. Novena</strong><span class="text-slate-300">Tan Tock Seng Hospital, Mount Elizabeth Novena, Novena Medical Center.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">3. Outram</strong><span class="text-slate-300">Singapore General Hospital (SGH), National Heart Centre Singapore.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">4. Changi</strong><span class="text-slate-300">Changi General Hospital, St. Andrew's Community Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">5. Queenstown</strong><span class="text-slate-300">National University Hospital (NUH), Alexandra Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">6. Jurong</strong><span class="text-slate-300">Ng Teng Fong General Hospital, Jurong Community Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">7. Woodlands</strong><span class="text-slate-300">Woodlands Health Campus, Admiralty Medical Centre.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">8. Tampines</strong><span class="text-slate-300">Raffles Medical Tampines, SingHealth Polyclinics.</span></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Hub 6: South Korea -->
-                <div class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden shadow-xl">
+                <div id="hub-korea" class="bg-slate-900/90 border border-cyan-500/30 rounded-3xl overflow-hidden shadow-xl backdrop-blur-md">
                     <div class="h-64 relative">
                         <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=1600&q=80" alt="South Korea Hub" class="w-full h-full object-cover opacity-80">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
                         <div class="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                             <div>
-                                <span class="bg-teal-600 text-white font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">🇰🇷 Hub 6 of 6</span>
+                                <span class="bg-cyan-600 text-white font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">🇰🇷 Hub 6 of 6</span>
                                 <h3 class="text-2xl sm:text-3xl font-bold font-heading text-white mt-2">South Korea Robotic & Plastic Hub (8 Cities)</h3>
                             </div>
                             <a href="#consultation" class="bg-emerald-400 hover:bg-emerald-500 text-slate-950 font-extrabold px-6 py-3 rounded-xl text-xs uppercase tracking-wider shadow-lg">Inquire Korea Hub</a>
@@ -525,14 +860,14 @@
                     </div>
                     <div class="p-8">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-xs">
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">1. Seoul</strong><span class="text-slate-400">Asan Medical Center, Samsung Medical Center, Seoul National University Hospital, Severance Hospital.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">2. Busan</strong><span class="text-slate-400">Pusan National University Hospital, Busan St. Mary's Hospital, Haeundae Paik Hospital.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">3. Incheon</strong><span class="text-slate-400">Inha University Hospital, Gil Medical Center, Catholic University Incheon St. Mary's.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">4. Daegu</strong><span class="text-slate-400">Kyungpook National University Hospital, Keimyung University Dongsan Hospital.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">5. Daejeon</strong><span class="text-slate-400">Chungnam National University Hospital, Eulji University Hospital.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">6. Gwangju</strong><span class="text-slate-400">Chonnam National University Hospital, Chosun University Hospital.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">7. Suwon</strong><span class="text-slate-400">Ajou University Hospital, St. Vincent's Hospital Suwon.</span></div>
-                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800"><strong class="text-teal-300 block mb-1">8. Ulsan</strong><span class="text-slate-400">Ulsan University Hospital, Ulsan Dong-In Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">1. Seoul</strong><span class="text-slate-300">Asan Medical Center, Samsung Medical Center, Seoul National University Hospital, Severance Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">2. Busan</strong><span class="text-slate-300">Pusan National University Hospital, Busan St. Mary's Hospital, Haeundae Paik Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">3. Incheon</strong><span class="text-slate-300">Inha University Hospital, Gil Medical Center, Catholic University Incheon St. Mary's.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">4. Daegu</strong><span class="text-slate-300">Kyungpook National University Hospital, Keimyung University Dongsan Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">5. Daejeon</strong><span class="text-slate-300">Chungnam National University Hospital, Eulji University Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">6. Gwangju</strong><span class="text-slate-300">Chonnam National University Hospital, Chosun University Hospital.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">7. Suwon</strong><span class="text-slate-300">Ajou University Hospital, St. Vincent's Hospital Suwon.</span></div>
+                            <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700"><strong class="text-cyan-300 block mb-1">8. Ulsan</strong><span class="text-slate-300">Ulsan University Hospital, Ulsan Dong-In Hospital.</span></div>
                         </div>
                     </div>
                 </div>
@@ -544,44 +879,44 @@
     <section id="tourism" class="py-20 section-tourism-bg text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-teal-400 font-bold uppercase tracking-widest text-xs">Medical Tourism & Travelism Recovery Packages</span>
+                <span class="text-cyan-400 font-bold uppercase tracking-widest text-xs">Medical Tourism & Travelism Recovery Packages</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-2">Blend Healing with Unforgettable Cultural Journeys</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-8 space-y-4">
-                    <div class="w-12 h-12 rounded-2xl bg-teal-500/20 text-teal-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-umbrella-beach"></i></div>
+                <div class="bg-slate-900/90 border border-cyan-500/30 rounded-3xl p-8 space-y-4 backdrop-blur-md">
+                    <div class="w-12 h-12 rounded-2xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-umbrella-beach"></i></div>
                     <h3 class="text-xl font-bold font-heading">Coastal Wellness & Recovery</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Relax post-surgery in private beachside villas in Phuket, Goa, or Antalya with daily physiotherapy and meditation sessions.</p>
+                    <p class="text-xs text-slate-300 leading-relaxed">Relax post-surgery in private beachside villas in Phuket, Goa, or Antalya with daily physiotherapy and meditation sessions.</p>
                 </div>
-                <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-8 space-y-4">
-                    <div class="w-12 h-12 rounded-2xl bg-teal-500/20 text-teal-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-landmark"></i></div>
+                <div class="bg-slate-900/90 border border-cyan-500/30 rounded-3xl p-8 space-y-4 backdrop-blur-md">
+                    <div class="w-12 h-12 rounded-2xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-landmark"></i></div>
                     <h3 class="text-xl font-bold font-heading">Cultural Heritage Itineraries</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Private guided tours of historical monuments, palaces, and museums with a dedicated medical escort and luxury air-conditioned vehicle.</p>
+                    <p class="text-xs text-slate-300 leading-relaxed">Private guided tours of historical monuments, palaces, and museums with a dedicated medical escort and luxury air-conditioned vehicle.</p>
                 </div>
-                <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-8 space-y-4">
-                    <div class="w-12 h-12 rounded-2xl bg-teal-500/20 text-teal-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-spa"></i></div>
+                <div class="bg-slate-900/90 border border-cyan-500/30 rounded-3xl p-8 space-y-4 backdrop-blur-md">
+                    <div class="w-12 h-12 rounded-2xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-spa"></i></div>
                     <h3 class="text-xl font-bold font-heading">Rejuvenation & Spa Retreats</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Ayurvedic, traditional, and modern spa therapies designed to accelerate healing, reduce stress, and restore complete vitality.</p>
+                    <p class="text-xs text-slate-300 leading-relaxed">Ayurvedic, traditional, and modern spa therapies designed to accelerate healing, reduce stress, and restore complete vitality.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- REAL-TIME 10-CURRENCY & 40%-50% SAVINGS ESTIMATOR -->
-    <section id="estimator" class="py-20 bg-slate-950">
+    <!-- REAL-TIME LIVE API CURRENCY & SAVINGS ESTIMATOR -->
+    <section id="estimator" class="py-20 bg-slate-900/70 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-teal-400 font-extrabold uppercase tracking-widest text-xs">Real-Time Cost Estimator</span>
+                <span class="text-cyan-400 font-extrabold uppercase tracking-widest text-xs">Real-Time Cost Estimator</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-2">Transparent Pricing with 40%–50% Guaranteed Savings</h2>
             </div>
 
-            <div class="bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl p-8 lg:p-12 max-w-4xl mx-auto">
+            <div class="bg-slate-900 border border-cyan-500/30 rounded-3xl shadow-2xl p-8 lg:p-12 max-w-4xl mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="space-y-6">
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Select Specialty Procedure</label>
-                            <select id="calc-procedure" onchange="calculateEstimate()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-sm font-semibold text-white focus:ring-2 focus:ring-teal-500">
+                            <select id="calc-procedure" onchange="calculateEstimate()" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-sm font-semibold text-white focus:ring-2 focus:ring-cyan-500">
                                 <option value="150000" data-saving="0.45">Coronary Artery Bypass Graft (CABG - $150k US | Save 45%)</option>
                                 <option value="120000" data-saving="0.42">Robotic Total Knee Replacement ($120k US | Save 42%)</option>
                                 <option value="200000" data-saving="0.50">Proton Beam Cancer Therapy ($200k US | Save 50%)</option>
@@ -592,7 +927,7 @@
 
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Select Destination Hub</label>
-                            <select id="calc-hub" onchange="calculateEstimate()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-sm font-semibold text-white focus:ring-2 focus:ring-teal-500">
+                            <select id="calc-hub" onchange="calculateEstimate()" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-sm font-semibold text-white focus:ring-2 focus:ring-cyan-500">
                                 <option value="1.0">🇮🇳 India Hub (Mumbai / Delhi)</option>
                                 <option value="1.05">🇹🇷 Turkey Hub (Istanbul / Antalya)</option>
                                 <option value="1.02">🇹🇭 Thailand Hub (Bangkok / Phuket)</option>
@@ -604,7 +939,7 @@
 
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Recovery Hotel Tier</label>
-                            <select id="calc-hotel" onchange="calculateEstimate()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-sm font-semibold text-white focus:ring-2 focus:ring-teal-500">
+                            <select id="calc-hotel" onchange="calculateEstimate()" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-sm font-semibold text-white focus:ring-2 focus:ring-cyan-500">
                                 <option value="350">3-Star Recovery Hotel ($350 USD)</option>
                                 <option value="850">4-Star Recovery Hotel ($850 USD)</option>
                                 <option value="1600" selected>5-Star Luxury Recovery Villa ($1,600 USD)</option>
@@ -613,7 +948,7 @@
 
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Multi-Companion Escort System</label>
-                            <select id="calc-companions" onchange="calculateEstimate()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-sm font-semibold text-white focus:ring-2 focus:ring-teal-500">
+                            <select id="calc-companions" onchange="calculateEstimate()" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-sm font-semibold text-white focus:ring-2 focus:ring-cyan-500">
                                 <option value="0">Solo Patient (0 Companions)</option>
                                 <option value="500" selected>1 Companion Escort (+ $500 USD)</option>
                                 <option value="950">2 Family Companions (+ $950 USD)</option>
@@ -622,9 +957,9 @@
                         </div>
                     </div>
 
-                    <div class="bg-royal-950 text-white rounded-3xl p-8 flex flex-col justify-between space-y-6 border border-slate-800">
+                    <div class="bg-blue-950 text-white rounded-3xl p-8 flex flex-col justify-between space-y-6 border border-cyan-500/30">
                         <div>
-                            <span class="text-teal-400 font-bold uppercase tracking-widest text-xs">Cost Estimation Summary</span>
+                            <span class="text-cyan-400 font-bold uppercase tracking-widest text-xs">Cost Estimation Summary (Live Exchange Rates)</span>
                             <h3 class="text-2xl font-extrabold font-heading mt-1">Valomedic Concierge Package</h3>
                         </div>
 
@@ -635,7 +970,7 @@
                             </div>
                             <div class="flex justify-between items-center text-sm">
                                 <span class="text-slate-400">Valomedic Package Cost:</span>
-                                <span id="out-package" class="font-extrabold text-2xl text-teal-300">$83,000</span>
+                                <span id="out-package" class="font-extrabold text-2xl text-cyan-300">$83,000</span>
                             </div>
                             <div class="flex justify-between items-center text-sm">
                                 <span class="text-slate-400">Net Financial Savings:</span>
@@ -653,29 +988,29 @@
     </section>
 
     <!-- SECTION 1: EXPERT SECOND OPINION FORM -->
-    <section id="second-opinion" class="py-20 bg-slate-900 border-t border-b border-slate-800">
+    <section id="second-opinion" class="py-20 bg-blue-950/40 border-t border-b border-cyan-500/20">
         <div class="max-w-4xl mx-auto px-4">
-            <div class="bg-slate-950 border border-slate-800 rounded-3xl p-8 lg:p-12 shadow-2xl space-y-6">
+            <div class="bg-slate-900 border border-cyan-500/30 rounded-3xl p-8 lg:p-12 shadow-2xl space-y-6">
                 <div>
-                    <span class="text-teal-400 font-extrabold uppercase tracking-widest text-xs">Expert Clinical Review</span>
+                    <span class="text-cyan-400 font-extrabold uppercase tracking-widest text-xs">Expert Clinical Review</span>
                     <h2 class="text-2xl font-extrabold font-heading text-white mt-1">Request an Expert Second Opinion</h2>
-                    <p class="text-xs text-slate-400 mt-1">Submit your case details to route a formal ready draft straight to <strong>valomedic.care@gmail.com</strong>.</p>
+                    <p class="text-xs text-slate-300 mt-1">Submit your case details to route a formal ready draft straight to <strong>valomedic.care@gmail.com</strong>.</p>
                 </div>
                 <form onsubmit="handleSecondOpinion(event)" class="space-y-4">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Patient Full Name</label>
-                            <input type="text" id="so-name" required placeholder="Patient Full Name" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
+                            <input type="text" id="so-name" required placeholder="Patient Full Name" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
                         </div>
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Your Email Address</label>
-                            <input type="email" id="so-email" required placeholder="your.email@example.com" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
+                            <input type="email" id="so-email" required placeholder="your.email@example.com" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
                         </div>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Clinical Objective / Category</label>
-                            <select id="so-category" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
+                            <select id="so-category" required class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
                                 <option value="" disabled selected>Select Objective / Category</option>
                                 <option value="Surgical Second Opinion">Surgical Second Opinion</option>
                                 <option value="Oncology / Tumor Board Review">Oncology / Tumor Board Review</option>
@@ -686,7 +1021,7 @@
                         </div>
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Target Destination Hub</label>
-                            <select id="so-hub" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
+                            <select id="so-hub" required class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
                                 <option value="" disabled selected>Select Preferred Hub</option>
                                 <option value="India Hub">India Hub (Mumbai/Delhi)</option>
                                 <option value="Turkey Hub">Turkey Hub (Istanbul)</option>
@@ -698,43 +1033,53 @@
                         </div>
                     </div>
                     <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Diagnosis & Case Notes</label>
-                        <textarea id="so-notes" rows="3" required placeholder="Describe diagnosis, current treatment, or specific questions for the review board..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white"></textarea>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Phone / WhatsApp Number (All Worldwide Country Codes Loaded)</label>
+                        <div class="flex gap-2">
+                            <select id="so-code" class="w-48 bg-slate-800 border border-slate-700 rounded-xl px-3 py-3 text-xs text-white country-codes-select"></select>
+                            <input type="tel" id="so-phone" required placeholder="7710803966" class="flex-1 bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
+                        </div>
                     </div>
-                    <button type="submit" class="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider shadow-lg">Submit Second Opinion to valomedic.care@gmail.com 📋</button>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Diagnosis & Case Notes</label>
+                        <textarea id="so-notes" rows="3" required placeholder="Describe diagnosis, current treatment, or specific questions for the review board..." class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider shadow-lg">Submit Second Opinion to valomedic.care@gmail.com 📋</button>
                 </form>
             </div>
         </div>
     </section>
 
     <!-- SECTION 2: CROSS-BORDER PHARMACY & MEDICATION SUBMISSION -->
-    <section id="medication" class="py-20 bg-slate-900 border-t border-slate-800">
+    <section id="medication" class="py-20 bg-slate-900/40 border-t border-cyan-500/20">
         <div class="max-w-4xl mx-auto px-4">
-            <div class="bg-slate-950 border border-slate-800 rounded-3xl p-8 lg:p-12 shadow-2xl space-y-6">
+            <div class="bg-slate-900 border border-cyan-500/30 rounded-3xl p-8 lg:p-12 shadow-2xl space-y-6">
                 <div>
-                    <span class="text-teal-400 font-extrabold uppercase tracking-widest text-xs">Cross-Border Pharmacy Solutions</span>
+                    <span class="text-cyan-400 font-extrabold uppercase tracking-widest text-xs">Cross-Border Pharmacy Solutions</span>
                     <h2 class="text-2xl font-extrabold font-heading text-white mt-1">Specialty Medication & Prescription Order Form</h2>
-                    <p class="text-xs text-slate-400 mt-1">Submit your prescription requirements for cold-chain compliant delivery directly to <strong>valomedic.care@gmail.com</strong>.</p>
+                    <p class="text-xs text-slate-300 mt-1">Submit your prescription requirements for cold-chain compliant delivery directly to <strong>valomedic.care@gmail.com</strong>.</p>
                 </div>
                 <form onsubmit="handlePharmacyInquiry(event)" class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Patient Full Name</label>
-                            <input type="text" id="pharm-name" required placeholder="e.g. Jane Smith" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
+                            <input type="text" id="pharm-name" required placeholder="e.g. Jane Smith" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
                         </div>
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Email Address</label>
-                            <input type="email" id="pharm-email" required placeholder="patient@example.com" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
+                            <input type="email" id="pharm-email" required placeholder="patient@example.com" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
                         </div>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Phone / WhatsApp Number</label>
-                            <input type="tel" id="pharm-phone" required placeholder="+1 (555) 019-2834" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Phone / WhatsApp Number (All Worldwide Country Codes Loaded)</label>
+                            <div class="flex gap-2">
+                                <select id="pharm-code" class="w-48 bg-slate-800 border border-slate-700 rounded-xl px-3 py-3 text-xs text-white country-codes-select"></select>
+                                <input type="tel" id="pharm-phone" required placeholder="7710803966" class="flex-1 bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
+                            </div>
                         </div>
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Medication Objective / Category</label>
-                            <select id="pharm-category" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
+                            <select id="pharm-category" required class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
                                 <option value="" disabled selected>Select Medication Category</option>
                                 <option value="Oncology Specialty Drugs">Oncology Specialty Drugs</option>
                                 <option value="Rare Disease Treatments">Rare Disease Treatments</option>
@@ -746,9 +1091,9 @@
                     </div>
                     <div>
                         <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Prescription Details & Specific Drug Names</label>
-                        <textarea id="pharm-notes" rows="4" placeholder="List exact medicine names, dosage, quantity required, and delivery shipping address..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white"></textarea>
+                        <textarea id="pharm-notes" rows="4" placeholder="List exact medicine names, dosage, quantity required, and delivery shipping address..." class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white"></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold py-4 rounded-xl text-xs uppercase tracking-wider shadow-xl transition-all">
+                    <button type="submit" class="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-4 rounded-xl text-xs uppercase tracking-wider shadow-xl transition-all">
                         Submit Pharmacy Order to valomedic.care@gmail.com 💊
                     </button>
                 </form>
@@ -757,35 +1102,38 @@
     </section>
 
     <!-- SECTION 3: DIRECT PATIENT INQUIRY & SUBMIT FORM -->
-    <section id="consultation" class="py-20 bg-slate-950 border-t border-slate-800">
+    <section id="consultation" class="py-20 bg-blue-950/40 border-t border-cyan-500/20">
         <div class="max-w-4xl mx-auto px-4">
-            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 lg:p-12 shadow-2xl space-y-6">
+            <div id="contact" class="bg-slate-900 border border-cyan-500/30 rounded-3xl p-8 lg:p-12 shadow-2xl space-y-6">
                 <div>
-                    <span class="text-teal-400 font-extrabold uppercase tracking-widest text-xs">Official Case Intake</span>
-                    <h2 class="text-2xl font-extrabold font-heading text-white mt-1">Patient Procedure Inquiry Form</h2>
-                    <p class="text-xs text-slate-400 mt-1">Fill out your clinical objective, procedure category, and destination hub. Clicking submit will instantly generate a ready email to <strong>valomedic.care@gmail.com</strong>.</p>
+                    <span class="text-cyan-400 font-extrabold uppercase tracking-widest text-xs">Official Case Intake & Contact Us</span>
+                    <h2 class="text-2xl font-extrabold font-heading text-white mt-1">Patient Procedure Inquiry & Contact Form</h2>
+                    <p class="text-xs text-slate-300 mt-1">Fill out your clinical objective, procedure category, and destination hub. Clicking submit will instantly generate a ready email to <strong>valomedic.care@gmail.com</strong>.</p>
                 </div>
 
                 <form onsubmit="handlePatientInquiry(event)" class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Patient Full Name</label>
-                            <input type="text" id="inquiry-name" required placeholder="e.g. John Doe" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
+                            <input type="text" id="inquiry-name" required placeholder="e.g. John Doe" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
                         </div>
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Email Address</label>
-                            <input type="email" id="inquiry-email" required placeholder="patient@example.com" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
+                            <input type="email" id="inquiry-email" required placeholder="patient@example.com" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Phone / WhatsApp</label>
-                            <input type="tel" id="inquiry-phone" required placeholder="+1 (555) 019-2834" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Phone / WhatsApp (All Worldwide Country Codes Loaded)</label>
+                            <div class="flex gap-2">
+                                <select id="inquiry-code" class="w-48 bg-slate-800 border border-slate-700 rounded-xl px-3 py-3 text-xs text-white country-codes-select"></select>
+                                <input type="tel" id="inquiry-phone" required placeholder="7710803966" class="flex-1 bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
+                            </div>
                         </div>
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Procedure Category</label>
-                            <select id="inquiry-procedure" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
+                            <select id="inquiry-procedure" required class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
                                 <option value="" disabled selected>Select Clinical Department</option>
                                 <option value="Orthopedics & Joints">1. Orthopedics & Joints</option>
                                 <option value="Cardiology & CTVS (CABG)">2. Cardiology & CTVS (CABG)</option>
@@ -801,7 +1149,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Exploration Objective</label>
-                            <select id="inquiry-objective" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
+                            <select id="inquiry-objective" required class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
                                 <option value="" disabled selected>Select Primary Objective</option>
                                 <option value="Complete Surgery & Travel Package">Complete Surgery & Travel Package</option>
                                 <option value="Cost Estimate & Financial Breakdown">Cost Estimate & Financial Breakdown</option>
@@ -811,7 +1159,7 @@
                         </div>
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Preferred Destination Hub</label>
-                            <select id="inquiry-hub" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
+                            <select id="inquiry-hub" required class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white">
                                 <option value="" disabled selected>Select Destination Hub</option>
                                 <option value="India Hub (Mumbai/Delhi)">India Hub (Mumbai/Delhi)</option>
                                 <option value="Turkey Hub (Istanbul)">Turkey Hub (Istanbul)</option>
@@ -825,7 +1173,7 @@
 
                     <div>
                         <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Medical History & Condition Notes</label>
-                        <textarea id="inquiry-notes" rows="4" placeholder="Briefly describe symptoms, diagnosis, or required treatment..." class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white"></textarea>
+                        <textarea id="inquiry-notes" rows="4" placeholder="Briefly describe symptoms, diagnosis, or required treatment..." class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white"></textarea>
                     </div>
 
                     <button type="submit" class="w-full bg-emerald-400 hover:bg-emerald-500 text-slate-950 font-extrabold py-4 rounded-xl text-xs uppercase tracking-wider shadow-xl transition-all">
@@ -837,7 +1185,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-slate-950 text-slate-400 text-xs py-16 border-t border-slate-800">
+    <footer class="bg-slate-950 text-slate-400 text-xs py-16 border-t border-cyan-500/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="space-y-4">
@@ -846,11 +1194,11 @@
                             <defs>
                                 <linearGradient id="aeroGradFooter" x1="0%" y1="0%" x2="100%" y2="0%">
                                     <stop offset="0%" stop-color="#00FF87"/>
-                                    <stop offset="50%" stop-color="#60EFFF"/>
-                                    <stop offset="100%" stop-color="#0052CC"/>
+                                    <stop offset="50%" stop-color="#38bdf8"/>
+                                    <stop offset="100%" stop-color="#0284c7"/>
                                 </linearGradient>
                             </defs>
-                            <rect width="270" height="260" fill="#030814" rx="20"/>
+                            <rect width="270" height="260" fill="#0f172a" rx="20"/>
                             <g transform="translate(20, 10)">
                                 <path d="M 50 180 L 110 70 L 140 70 L 80 180 Z" fill="url(#aeroGradFooter)"/>
                                 <path d="M 170 180 L 110 70 L 80 70 L 140 180 Z" fill="#FFFFFF" opacity="0.9"/>
@@ -860,10 +1208,10 @@
                         </svg>
                         <span class="text-lg font-extrabold font-heading text-white">VALOMEDIC</span>
                     </div>
-                    <p class="text-slate-400 leading-relaxed text-xs">Global leader in cross-border medical concierge, JCI hospital coordination, and luxury medical tourism. Founder: Karan Suthar.</p>
+                    <p class="text-slate-400 leading-relaxed text-xs">Global leader in cross-border medical concierge, JCI hospital coordination, and luxury medical tourism.</p>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold text-sm mb-4">Clinical Departments</h4>
+                    <h4 class="text-white font-bold text-sm mb-4">Specialized Centers</h4>
                     <ul class="space-y-2 text-xs">
                         <li><a href="#procedures" class="hover:text-white transition-colors">Orthopedics & Joints</a></li>
                         <li><a href="#procedures" class="hover:text-white transition-colors">Cardiology & CTVS (CABG)</a></li>
@@ -882,115 +1230,230 @@
                 </div>
                 <div>
                     <h4 class="text-white font-bold text-sm mb-4">Strict Regulatory Compliance</h4>
-                    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-2">
+                    <div class="bg-slate-900 border border-cyan-500/30 rounded-2xl p-4 space-y-2">
                         <div class="text-emerald-400 font-bold">Udyam MSME Certified</div>
-                        <div class="text-teal-400 font-bold">Zero-GST Export of Services</div>
-                        <p class="text-[10px] text-slate-400">Founder: Karan Suthar. Compliant with international cross-border export regulations.</p>
+                        <div class="text-cyan-400 font-bold">Zero-GST Export of Services</div>
+                        <p class="text-[10px] text-slate-400">Compliant with international cross-border export regulations.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- CURRENCY & FULL GLOBAL LANGUAGE SELECTOR (HIDDEN GOOGLE API BACKEND) -->
-            <div class="border-t border-slate-800 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6">
-                <div class="flex flex-wrap items-center gap-4">
-                    <span class="text-xs font-bold text-teal-300"><i class="fa-solid fa-coins mr-1"></i> Currency:</span>
-                    <select id="bottom-currency" onchange="calculateEstimate()" class="bg-slate-900 border border-slate-700 text-xs text-white rounded-lg px-3 py-1.5 focus:outline-none">
-                        <option value="1.0" data-symbol="$" selected>USD ($)</option>
-                        <option value="0.75" data-symbol="£">GBP (£)</option>
-                        <option value="0.91" data-symbol="€">EUR (€)</option>
-                        <option value="1.39" data-symbol="CA$">CAD (CA$)</option>
-                        <option value="1.53" data-symbol="AU$">AUD (AU$)</option>
-                        <option value="0.87" data-symbol="CHF">CHF (CHF)</option>
-                        <option value="153.5" data-symbol="¥">JPY (¥)</option>
-                        <option value="3.67" data-symbol="AED">AED (AED)</option>
-                        <option value="1.34" data-symbol="S$">SGD (S$)</option>
-                        <option value="94.91" data-symbol="₹">INR (₹)</option>
-                    </select>
-
-                    <span class="text-xs font-bold text-teal-300 ml-4"><i class="fa-solid fa-language mr-1"></i> Global Language:</span>
-                    <!-- Custom Clean Dropdown containing ALL world languages supported by Google Translate -->
-                    <select id="custom-language-selector" onchange="changeWebsiteLanguage(this.value)" class="bg-slate-900 border border-slate-700 text-xs text-white rounded-lg px-3 py-1.5 focus:outline-none cursor-pointer">
-                        <option value="en" selected>English (Global)</option>
-                        <option value="ar">Arabic (العربية)</option>
-                        <option value="hi">Hindi (हिन्दी)</option>
-                        <option value="es">Spanish (Español)</option>
-                        <option value="fr">French (Français)</option>
-                        <option value="de">German (Deutsch)</option>
-                        <option value="zh-CN">Mandarin Chinese (中文)</option>
-                        <option value="ru">Russian (Русский)</option>
-                        <option value="ja">Japanese (日本語)</option>
-                        <option value="pt">Portuguese (Português)</option>
-                        <option value="af">Afrikaans</option>
-                        <option value="sq">Albanian (Shqip)</option>
-                        <option value="am">Amharic (አማርኛ)</option>
-                        <option value="hy">Armenian (Հայերեն)</option>
-                        <option value="az">Azerbaijani (Azərbaycan)</option>
-                        <option value="bn">Bengali (বাংলা)</option>
-                        <option value="bs">Bosnian (Bosanski)</option>
-                        <option value="bg">Bulgarian (Български)</option>
-                        <option value="my">Burmese (မြန်မာ)</option>
-                        <option value="ca">Catalan (Català)</option>
-                        <option value="hr">Croatian (Hrvatski)</option>
-                        <option value="cs">Czech (Čeština)</option>
-                        <option value="da">Danish (Dansk)</option>
-                        <option value="nl">Dutch (Nederlands)</option>
-                        <option value="et">Estonian (Eesti)</option>
-                        <option value="fi">Finnish (Suomi)</option>
-                        <option value="ka">Georgian (ქართული)</option>
-                        <option value="el">Greek (Ελληνικά)</option>
-                        <option value="gu">Gujarati (ગુજરાતી)</option>
-                        <option value="he">Hebrew (עברית)</option>
-                        <option value="hu">Hungarian (Magyar)</option>
-                        <option value="is">Icelandic (Íslenska)</option>
-                        <option value="id">Indonesian (Bahasa)</option>
-                        <option value="ga">Irish (Gaeilge)</option>
-                        <option value="it">Italian (Italiano)</option>
-                        <option value="kn">Kannada (ಕನ್ನಡ)</option>
-                        <option value="kk">Kazakh (Қазақ)</option>
-                        <option value="km">Khmer (ខ្មែរ)</option>
-                        <option value="ko">Korean (한국어)</option>
-                        <option value="lv">Latvian (Latviešu)</option>
-                        <option value="lt">Lithuanian (Lietuvių)</option>
-                        <option value="mk">Macedonian (Македонски)</option>
-                        <option value="ms">Malay (Melayu)</option>
-                        <option value="ml">Malayalam (മലയാളം)</option>
-                        <option value="mr">Marathi (मराठी)</option>
-                        <option value="mn">Mongolian (Монгол)</option>
-                        <option value="ne">Nepali (नेपाली)</option>
-                        <option value="no">Norwegian (Norsk)</option>
-                        <option value="fa">Persian (فارسی)</option>
-                        <option value="pl">Polish (Polski)</option>
-                        <option value="pa">Punjabi (ਪੰਜਾਬੀ)</option>
-                        <option value="ro">Romanian (Română)</option>
-                        <option value="sr">Serbian (Српски)</option>
-                        <option value="si">Sinhala (සිංහල)</option>
-                        <option value="sk">Slovak (Slovenčina)</option>
-                        <option value="sl">Slovenian (Slovenščina)</option>
-                        <option value="so">Somali (Soomaali)</option>
-                        <option value="sw">Swahili (Kiswahili)</option>
-                        <option value="sv">Swedish (Svenska)</option>
-                        <option value="ta">Tamil (தமிழ்)</option>
-                        <option value="te">Telugu (తెలుగు)</option>
-                        <option value="th">Thai (ไทย)</option>
-                        <option value="tr">Turkish (Türkçe)</option>
-                        <option value="uk">Ukrainian (Українська)</option>
-                        <option value="ur">Urdu (اردو)</option>
-                        <option value="uz">Uzbek (O'zbek)</option>
-                        <option value="vi">Vietnamese (Tiếng Việt)</option>
-                        <option value="cy">Welsh (Cymraeg)</option>
-                    </select>
-                </div>
-                <div>&copy; 2026 Valomedic Global Medical Concierge (Founder: Karan Suthar). All Rights Reserved. Udyam MSME & Zero-GST Compliant.</div>
+            <!-- FOOTER COPYRIGHT & FOUNDER BADGE -->
+            <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div>&copy; 2026 Valomedic Global Medical Concierge. All Rights Reserved. Udyam MSME & Zero-GST Compliant.</div>
+                <div class="text-cyan-300 font-medium"><i class="fa-solid fa-crown text-amber-400 mr-1"></i> Founder & Director: Karan Suthar</div>
             </div>
         </div>
     </footer>
 
-    <!-- GOOGLE TRANSLATE API SCRIPT & BANNER REMOVER BRIDGE -->
+    <!-- GOOGLE TRANSLATE API SCRIPT & MASTER SCRIPT ENGINE -->
     <script type="text/javascript">
+        // Comprehensive Worldwide Country Calling Codes Database
+        const allCountryCodes = [
+            {name: "India", code: "+91", flag: "🇮🇳"},
+            {name: "United States", code: "+1", flag: "🇺🇸"},
+            {name: "United Kingdom", code: "+44", flag: "🇬🇧"},
+            {name: "United Arab Emirates", code: "+971", flag: "🇦🇪"},
+            {name: "Singapore", code: "+65", flag: "🇸🇬"},
+            {name: "South Korea", code: "+82", flag: "🇰🇷"},
+            {name: "Turkey", code: "+90", flag: "🇹🇷"},
+            {name: "Thailand", code: "+66", flag: "🇹🇭"},
+            {name: "Afghanistan", code: "+93", flag: "🇦🇫"},
+            {name: "Albania", code: "+355", flag: "🇦🇱"},
+            {name: "Algeria", code: "+213", flag: "🇩🇿"},
+            {name: "Andorra", code: "+376", flag: "🇦🇩"},
+            {name: "Angola", code: "+244", flag: "🇦🇴"},
+            {name: "Antigua and Barbuda", code: "+1-268", flag: "🇦🇬"},
+            {name: "Argentina", code: "+54", flag: "🇦🇷"},
+            {name: "Armenia", code: "+374", flag: "🇦🇲"},
+            {name: "Australia", code: "+61", flag: "🇦🇺"},
+            {name: "Austria", code: "+43", flag: "🇦🇹"},
+            {name: "Azerbaijan", code: "+994", flag: "🇦🇿"},
+            {name: "Bahamas", code: "+1-242", flag: "🇧🇸"},
+            {name: "Bahrain", code: "+973", flag: "🇧🇭"},
+            {name: "Bangladesh", code: "+880", flag: "🇧🇩"},
+            {name: "Barbados", code: "+1-246", flag: "🇧🇧"},
+            {name: "Belarus", code: "+375", flag: "🇧🇾"},
+            {name: "Belgium", code: "+32", flag: "🇧🇪"},
+            {name: "Belize", code: "+501", flag: "🇧🇿"},
+            {name: "Benin", code: "+229", flag: "🇧🇯"},
+            {name: "Bhutan", code: "+975", flag: "🇧🇹"},
+            {name: "Bolivia", code: "+591", flag: "🇧🇴"},
+            {name: "Bosnia and Herzegovina", code: "+387", flag: "🇧🇦"},
+            {name: "Botswana", code: "+267", flag: "🇧🇼"},
+            {name: "Brazil", code: "+55", flag: "🇧🇷"},
+            {name: "Brunei", code: "+673", flag: "🇧🇳"},
+            {name: "Bulgaria", code: "+359", flag: "🇧🇬"},
+            {name: "Burkina Faso", code: "+226", flag: "🇧🇫"},
+            {name: "Burundi", code: "+257", flag: "🇧🇮"},
+            {name: "Cambodia", code: "+855", flag: "🇰🇭"},
+            {name: "Cameroon", code: "+237", flag: "🇨🇲"},
+            {name: "Canada", code: "+1", flag: "🇨🇦"},
+            {name: "Cape Verde", code: "+238", flag: "🇨🇻"},
+            {name: "Central African Republic", code: "+236", flag: "🇨🇫"},
+            {name: "Chad", code: "+235", flag: "🇹🇩"},
+            {name: "Chile", code: "+56", flag: "🇨🇱"},
+            {name: "China", code: "+86", flag: "🇨🇳"},
+            {name: "Colombia", code: "+57", flag: "🇨🇴"},
+            {name: "Comoros", code: "+269", flag: "🇰🇲"},
+            {name: "Congo", code: "+242", flag: "🇨🇬"},
+            {name: "Costa Rica", code: "+506", flag: "🇨🇷"},
+            {name: "Croatia", code: "+385", flag: "🇭🇷"},
+            {name: "Cuba", code: "+53", flag: "🇨🇺"},
+            {name: "Cyprus", code: "+357", flag: "🇨🇾"},
+            {name: "Czech Republic", code: "+420", flag: "🇨🇿"},
+            {name: "Denmark", code: "+45", flag: "🇩🇰"},
+            {name: "Djibouti", code: "+253", flag: "🇩🇯"},
+            {name: "Dominica", code: "+1-767", flag: "🇩🇲"},
+            {name: "Dominican Republic", code: "+1-809", flag: "🇩🇴"},
+            {name: "Ecuador", code: "+593", flag: "🇪🇨"},
+            {name: "Egypt", code: "+20", flag: "🇪🇬"},
+            {name: "El Salvador", code: "+503", flag: "🇸🇻"},
+            {name: "Equatorial Guinea", code: "+240", flag: "🇬🇶"},
+            {name: "Eritrea", code: "+291", flag: "🇪🇷"},
+            {name: "Estonia", code: "+372", flag: "🇪🇪"},
+            {name: "Eswatini", code: "+268", flag: "🇸🇿"},
+            {name: "Ethiopia", code: "+251", flag: "🇪🇹"},
+            {name: "Fiji", code: "+679", flag: "🇫🇯"},
+            {name: "Finland", code: "+358", flag: "🇫🇮"},
+            {name: "France", code: "+33", flag: "🇫🇷"},
+            {name: "Gabon", code: "+241", flag: "🇬🇦"},
+            {name: "Gambia", code: "+220", flag: "🇬🇲"},
+            {name: "Georgia", code: "+995", flag: "🇬🇪"},
+            {name: "Germany", code: "+49", flag: "🇩🇪"},
+            {name: "Ghana", code: "+233", flag: "🇬🇭"},
+            {name: "Greece", code: "+30", flag: "🇬🇷"},
+            {name: "Grenada", code: "+1-473", flag: "🇬🇩"},
+            {name: "Guatemala", code: "+502", flag: "🇬🇹"},
+            {name: "Guinea", code: "+224", flag: "🇬🇳"},
+            {name: "Guyana", code: "+592", flag: "🇬🇾"},
+            {name: "Haiti", code: "+509", flag: "🇭🇹"},
+            {name: "Honduras", code: "+504", flag: "🇭🇳"},
+            {name: "Hong Kong", code: "+852", flag: "🇭🇰"},
+            {name: "Hungary", code: "+36", flag: "🇭🇺"},
+            {name: "Iceland", code: "+354", flag: "🇮🇸"},
+            {name: "Indonesia", code: "+62", flag: "🇮🇩"},
+            {name: "Iran", code: "+98", flag: "🇮🇷"},
+            {name: "Iraq", code: "+964", flag: "🇮🇶"},
+            {name: "Ireland", code: "+353", flag: "🇮🇪"},
+            {name: "Israel", code: "+972", flag: "🇮🇱"},
+            {name: "Italy", code: "+39", flag: "🇮🇹"},
+            {name: "Jamaica", code: "+1-876", flag: "🇯🇲"},
+            {name: "Japan", code: "+81", flag: "🇯🇵"},
+            {name: "Jordan", code: "+962", flag: "🇯🇴"},
+            {name: "Kazakhstan", code: "+7", flag: "🇰🇿"},
+            {name: "Kenya", code: "+254", flag: "🇰🇪"},
+            {name: "Kuwait", code: "+965", flag: "🇰🇼"},
+            {name: "Kyrgyzstan", code: "+996", flag: "🇰🇬"},
+            {name: "Laos", code: "+856", flag: "🇱🇦"},
+            {name: "Latvia", code: "+371", flag: "🇱🇻"},
+            {name: "Lebanon", code: "+961", flag: "🇱🇧"},
+            {name: "Lesotho", code: "+266", flag: "🇱🇸"},
+            {name: "Liberia", code: "+231", flag: "🇱🇷"},
+            {name: "Libya", code: "+218", flag: "🇱🇾"},
+            {name: "Liechtenstein", code: "+423", flag: "🇱🇮"},
+            {name: "Lithuania", code: "+370", flag: "🇱🇹"},
+            {name: "Luxembourg", code: "+352", flag: "🇱🇺"},
+            {name: "Macau", code: "+853", flag: "🇲🇴"},
+            {name: "Madagascar", code: "+261", flag: "🇲🇬"},
+            {name: "Malawi", code: "+265", flag: "🇲🇼"},
+            {name: "Malaysia", code: "+60", flag: "🇲🇾"},
+            {name: "Maldives", code: "+960", flag: "🇲🇻"},
+            {name: "Mali", code: "+223", flag: "🇲🇱"},
+            {name: "Malta", code: "+356", flag: "🇲🇹"},
+            {name: "Mauritania", code: "+222", flag: "🇲🇷"},
+            {name: "Mauritius", code: "+230", flag: "🇲🇺"},
+            {name: "Mexico", code: "+52", flag: "🇲🇽"},
+            {name: "Moldova", code: "+373", flag: "🇲🇩"},
+            {name: "Monaco", code: "+377", flag: "🇲🇨"},
+            {name: "Mongolia", code: "+976", flag: "🇲🇳"},
+            {name: "Montenegro", code: "+382", flag: "🇲🇪"},
+            {name: "Morocco", code: "+212", flag: "🇲🇦"},
+            {name: "Mozambique", code: "+258", flag: "🇲🇿"},
+            {name: "Myanmar", code: "+95", flag: "🇲🇲"},
+            {name: "Namibia", code: "+264", flag: "🇳🇦"},
+            {name: "Nepal", code: "+977", flag: "🇳🇵"},
+            {name: "Netherlands", code: "+31", flag: "🇳🇱"},
+            {name: "New Zealand", code: "+64", flag: "🇳🇿"},
+            {name: "Nicaragua", code: "+505", flag: "🇳🇮"},
+            {name: "Niger", code: "+227", flag: "🇳🇪"},
+            {name: "Nigeria", code: "+234", flag: "🇳🇬"},
+            {name: "Norway", code: "+47", flag: "🇳🇴"},
+            {name: "Oman", code: "+968", flag: "🇴🇲"},
+            {name: "Pakistan", code: "+92", flag: "🇵🇰"},
+            {name: "Palestine", code: "+970", flag: "🇵🇸"},
+            {name: "Panama", code: "+507", flag: "🇵🇦"},
+            {name: "Papua New Guinea", code: "+675", flag: "🇵🇬"},
+            {name: "Paraguay", code: "+595", flag: "🇵🇾"},
+            {name: "Peru", code: "+51", flag: "🇵🇪"},
+            {name: "Philippines", code: "+63", flag: "🇵🇭"},
+            {name: "Poland", code: "+48", flag: "🇵🇱"},
+            {name: "Portugal", code: "+351", flag: "🇵🇹"},
+            {name: "Qatar", code: "+974", flag: "🇶🇦"},
+            {name: "Romania", code: "+40", flag: "🇷🇴"},
+            {name: "Russia", code: "+7", flag: "🇷🇺"},
+            {name: "Rwanda", code: "+250", flag: "🇷🇼"},
+            {name: "Saudi Arabia", code: "+966", flag: "🇸🇦"},
+            {name: "Senegal", code: "+221", flag: "🇸🇳"},
+            {name: "Serbia", code: "+381", flag: "🇷🇸"},
+            {name: "Seychelles", code: "+248", flag: "🇸🇨"},
+            {name: "Sierra Leone", code: "+232", flag: "🇸🇱"},
+            {name: "Slovakia", code: "+421", flag: "🇸🇰"},
+            {name: "Slovenia", code: "+386", flag: "🇸🇮"},
+            {name: "South Africa", code: "+27", flag: "🇿🇦"},
+            {name: "Spain", code: "+34", flag: "🇪🇸"},
+            {name: "Sri Lanka", code: "+94", flag: "🇱🇰"},
+            {name: "Sudan", code: "+249", flag: "🇸🇩"},
+            {name: "Sweden", code: "+46", flag: "🇸🇪"},
+            {name: "Switzerland", code: "+41", flag: "🇨🇭"},
+            {name: "Syria", code: "+963", flag: "🇸🇾"},
+            {name: "Taiwan", code: "+886", flag: "🇹🇼"},
+            {name: "Tajikistan", code: "+992", flag: "🇹🇯"},
+            {name: "Tanzania", code: "+255", flag: "🇹🇿"},
+            {name: "Tunisia", code: "+216", flag: "🇹🇳"},
+            {name: "Turkmenistan", code: "+993", flag: "🇹🇲"},
+            {name: "Uganda", code: "+256", flag: "🇺🇬"},
+            {name: "Ukraine", code: "+380", flag: "🇺🇦"},
+            {name: "Uruguay", code: "+598", flag: "🇺🇾"},
+            {name: "Uzbekistan", code: "+998", flag: "🇺🇿"},
+            {name: "Venezuela", code: "+58", flag: "🇻🇪"},
+            {name: "Vietnam", code: "+84", flag: "🇻🇳"},
+            {name: "Yemen", code: "+967", flag: "🇾🇪"},
+            {name: "Zambia", code: "+260", flag: "🇿🇲"},
+            {name: "Zimbabwe", code: "+263", flag: "🇿🇼"}
+        ];
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const selects = document.querySelectorAll('.country-codes-select');
+            selects.forEach(select => {
+                allCountryCodes.forEach(c => {
+                    const opt = document.createElement('option');
+                    opt.value = c.code;
+                    opt.textContent = `${c.flag} ${c.name} (${c.code})`;
+                    if(c.code === "+91") opt.selected = true;
+                    select.appendChild(opt);
+                });
+            });
+            fetchLiveExchangeRates();
+        });
+
+        let liveRates = {};
+        async function fetchLiveExchangeRates() {
+            try {
+                const response = await fetch('https://open.er-api.com/v6/latest/USD');
+                const data = await response.json();
+                if(data && data.rates) {
+                    liveRates = data.rates;
+                    calculateEstimate();
+                }
+            } catch(e) {
+                console.error("Live currency API fetch error, fallback rates active.", e);
+            }
+        }
+
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'en',
-                includedLanguages: 'en,ar,hi,es,fr,de,zh-CN,ru,ja,pt,af,sq,am,hy,az,bn,bs,bg,my,ca,hr,cs,da,nl,et,fi,ka,el,gu,he,hu,is,id,ga,it,kn,kk,km,ko,lv,lt,mk,ms,ml,mr,mn,ne,no,fa,pl,pa,ro,sr,si,sk,sl,so,sw,sv,ta,te,th,tr,uk,ur,uz,vi,cy',
                 autoDisplay: false
             }, 'google_translate_element');
         }
@@ -1005,7 +1468,38 @@
             }
         }
 
-        // Continuously strip out Google Translate top banner iframes in real time
+        function syncCurrency(val) {
+            const topCurr = document.getElementById('top-currency');
+            if(topCurr) topCurr.value = val;
+            calculateEstimate();
+        }
+
+        function toggleDropdown(id) {
+            const dropdown = document.getElementById(id);
+            const isHidden = dropdown.classList.contains('hidden');
+            closeAllDropdowns();
+            if (isHidden) {
+                dropdown.classList.remove('hidden');
+                const chevron = document.getElementById(id.replace('-dropdown', '-chevron'));
+                if(chevron) chevron.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        function closeAllDropdowns() {
+            document.querySelectorAll('[id$="-dropdown"]').forEach(el => {
+                el.classList.add('hidden');
+            });
+            document.querySelectorAll('[id$="-chevron"]').forEach(el => {
+                el.style.transform = 'rotate(0deg)';
+            });
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.closest('nav')) {
+                closeAllDropdowns();
+            }
+        }
+
         setInterval(() => {
             const banner = document.querySelector('.goog-te-banner-frame');
             if (banner) banner.remove();
@@ -1016,7 +1510,7 @@
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-    <!-- JAVASCRIPT LOGIC -->
+    <!-- FORM HANDLERS & LIVE CURRENCY CALCULATOR SCRIPT -->
     <script>
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
@@ -1031,17 +1525,24 @@
             const hotelCostUSD = parseFloat(document.getElementById('calc-hotel').value);
             const companionCostUSD = parseFloat(document.getElementById('calc-companions').value);
 
-            const currencySelect = document.getElementById('bottom-currency');
-            const currencyRate = parseFloat(currencySelect.value);
-            const currencySymbol = currencySelect.options[currencySelect.selectedIndex].getAttribute('data-symbol');
+            const currencySelect = document.getElementById('top-currency');
+            const targetCurrency = currencySelect.value;
+            const currencySymbol = currencySelect.options[currencySelect.selectedIndex].getAttribute('data-symbol') || targetCurrency;
+            
+            let conversionRate = 1.0;
+            if (liveRates[targetCurrency]) {
+                conversionRate = liveRates[targetCurrency];
+            } else if (targetCurrency === 'INR') { conversionRate = 83.5; }
+              else if (targetCurrency === 'EUR') { conversionRate = 0.92; }
+              else if (targetCurrency === 'GBP') { conversionRate = 0.79; }
 
             const basePackageUSD = (westernBenchmarkUSD * (1.0 - savingRate) * hubMultiplier) + hotelCostUSD + companionCostUSD;
             const moneySavedUSD = westernBenchmarkUSD - basePackageUSD;
             const actualSavingsPercent = Math.round((moneySavedUSD / westernBenchmarkUSD) * 100);
 
-            const convertedWestern = westernBenchmarkUSD * currencyRate;
-            const convertedPackage = basePackageUSD * currencyRate;
-            const convertedSaved = moneySavedUSD * currencyRate;
+            const convertedWestern = westernBenchmarkUSD * conversionRate;
+            const convertedPackage = basePackageUSD * conversionRate;
+            const convertedSaved = moneySavedUSD * conversionRate;
 
             document.getElementById('out-western').innerText = currencySymbol + Math.round(convertedWestern).toLocaleString();
             document.getElementById('out-package').innerText = currencySymbol + Math.round(convertedPackage).toLocaleString();
@@ -1052,7 +1553,9 @@
             event.preventDefault();
             const name = document.getElementById('inquiry-name').value;
             const email = document.getElementById('inquiry-email').value;
-            const phone = document.getElementById('inquiry-phone').value;
+            const code = document.getElementById('inquiry-code').value;
+            const rawPhone = document.getElementById('inquiry-phone').value;
+            const phone = code + " " + rawPhone;
             const procedure = document.getElementById('inquiry-procedure').value;
             const objective = document.getElementById('inquiry-objective').value;
             const hub = document.getElementById('inquiry-hub').value;
@@ -1084,6 +1587,9 @@
             const email = document.getElementById('so-email').value;
             const category = document.getElementById('so-category').value;
             const hub = document.getElementById('so-hub').value;
+            const code = document.getElementById('so-code').value;
+            const rawPhone = document.getElementById('so-phone').value;
+            const phone = code + " " + rawPhone;
             const notes = document.getElementById('so-notes').value;
 
             const recipientEmail = "valomedic.care@gmail.com";
@@ -1093,6 +1599,7 @@
                 "A formal Second Opinion request has been submitted:\n\n" +
                 "• Patient Name: " + name + "\n" +
                 "• Contact Email: " + email + "\n" +
+                "• Phone / WhatsApp: " + phone + "\n" +
                 "• Clinical Category: " + category + "\n" +
                 "• Target Hub: " + hub + "\n\n" +
                 "=== CASE / DIAGNOSIS NOTES ===\n" +
@@ -1106,7 +1613,9 @@
             event.preventDefault();
             const name = document.getElementById('pharm-name').value;
             const email = document.getElementById('pharm-email').value;
-            const phone = document.getElementById('pharm-phone').value;
+            const code = document.getElementById('pharm-code').value;
+            const rawPhone = document.getElementById('pharm-phone').value;
+            const phone = code + " " + rawPhone;
             const category = document.getElementById('pharm-category').value;
             const notes = document.getElementById('pharm-notes').value;
 
@@ -1125,10 +1634,6 @@
             );
             window.location.href = `mailto:${recipientEmail}?subject=${emailSubject}&body=${emailBody}`;
         }
-
-        window.onload = function() {
-            calculateEstimate();
-        };
     </script>
 </body>
 </html>
