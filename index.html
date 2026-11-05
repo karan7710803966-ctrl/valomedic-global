@@ -4,50 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valomedic Global Medical Concierge | Elite International Healthcare & Travelism</title>
-            <!-- PWA Manifest & Mobile Styling -->
+    <!-- PWA Manifest & Safe Service Worker Registration -->
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#0d9488">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Valomedic">
-
-    <!-- Stylesheets & Fonts (Fixes Menu & Icons) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Service Worker & 1-Click PWA Install Script -->
+    <meta name="theme-color" content="#0a2540">
     <script>
-      // 1. Service Worker Registration
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
-            .then((reg) => console.log('SW Active:', reg.scope))
-            .catch((err) => console.error('SW Error:', err));
+          navigator.serviceWorker.register('/sw.js').catch(() => {});
         });
       }
-
-      // 2. Automated 1-Click Install Button Handler (Android / Desktop Chrome)
-      let deferredPrompt;
-      window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault();
-        deferredPrompt = e;
-        const installBtn = document.getElementById('pwa-install-btn');
-        if (installBtn) {
-          installBtn.style.display = 'block';
-          installBtn.addEventListener('click', () => {
-            installBtn.style.display = 'none';
-            deferredPrompt.prompt();
-            deferredPrompt.userChoice.then((choiceResult) => {
-              deferredPrompt = null;
-            });
-          });
-        }
-      });
     </script>
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
