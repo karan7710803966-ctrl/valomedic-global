@@ -163,11 +163,11 @@
                 <div id="nav-hub-accordion" class="hidden mt-2 space-y-2 pl-3 border-l-2 border-teal-700 max-h-80 overflow-y-auto"></div>
             </div>
 
+            <a href="#offers" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">Offers & Cashback</a>
             <a href="#estimator" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">Cost Estimator</a>
             <a href="#tourism" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">Tourism & Travelism</a>
             <a href="#medication" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">Pharmacy & Medication</a>
-            <a href="#second-opinion" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">Expert Second Opinions</a>
-            <a href="#contact" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">Contact Us</a>
+            <a href="#second-opinion" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">Valomedic Expert Opinion & Consultation ($9.99)</a>
         </div>
     </div>
 
@@ -194,8 +194,8 @@
                     Navigating global healthcare requires surgical precision, uncompromised safety, and total transparency. Valomedic coordinates end-to-end medical journeys by integrating tier-one JCI-accredited surgical care, robotic surgical suites, private tarmac ambulance transfers, dedicated multilingual medical escorts, and 5-star recovery suites—guaranteeing 40% to 50% net savings compared to Western healthcare costs.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                    <a href="#consultation" class="bg-emerald-400 hover:bg-emerald-500 text-teal-950 font-extrabold px-8 py-4 rounded-2xl shadow-2xl transition-all text-center text-sm uppercase tracking-wider">
-                        Initiate Confidential Patient Case Intake 🌟
+                    <a href="#second-opinion" class="bg-emerald-400 hover:bg-emerald-500 text-teal-950 font-extrabold px-8 py-4 rounded-2xl shadow-2xl transition-all text-center text-sm uppercase tracking-wider">
+                        Book Expert Consultation ($9.99 USD) 🌟
                     </a>
                     <a href="#estimator" class="bg-teal-800/80 hover:bg-teal-800 text-white border border-teal-600 font-bold px-8 py-4 rounded-2xl transition-all text-center text-sm shadow-sm">
                         Calculate Real-Time Financial Savings ↓
@@ -449,8 +449,8 @@
                             </div>
                         </div>
 
-                        <a href="#consultation" class="bg-emerald-400 hover:bg-emerald-500 text-teal-950 font-extrabold py-4 rounded-2xl text-center text-xs uppercase tracking-wider shadow-xl transition-all block">
-                            Lock In Estimate & Book Consultation ↓
+                        <a href="#second-opinion" class="bg-emerald-400 hover:bg-emerald-500 text-teal-950 font-extrabold py-4 rounded-2xl text-center text-xs uppercase tracking-wider shadow-xl transition-all block">
+                            Lock In Estimate & Book Consultation ($9.99 USD) ↓
                         </a>
                     </div>
                 </div>
@@ -458,14 +458,75 @@
         </div>
     </section>
 
-    <!-- EXPERT SECOND OPINION FORM -->
-    <section id="second-opinion" class="py-20 bg-teal-950/50 border-t border-b border-teal-900">
+    <!-- PROFESSIONAL OFFERS & CASHBACK SECTION (PLACED BETWEEN ESTIMATOR AND EXPERT OPINION) -->
+    <section id="offers" class="py-16 bg-teal-900/60 border-t border-b border-teal-500/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="text-amber-300 font-bold uppercase tracking-widest text-xs">Exclusive Patient Incentives & Rewards</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-white mt-2">Valomedic Annual Treatment Cashback & Promotional Vouchers</h2>
+                <p class="text-xs text-teal-200 mt-2">Enhance your clinical expedition with verified promotional discount codes or enter our annual global healthcare scholarship program.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Tile 1 -->
+                <div class="bg-gradient-to-br from-teal-950 to-teal-900 border border-amber-500/50 rounded-3xl p-6 shadow-xl space-y-4 relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 bg-amber-500 text-teal-950 font-black text-[10px] uppercase px-3 py-1 rounded-bl-xl">Grand Scholarship</div>
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-300 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-trophy"></i></div>
+                        <h3 class="text-lg font-bold text-white">Annual 100% Treatment Cashback</h3>
+                        <p class="text-xs text-teal-100 leading-relaxed">
+                            One selected international patient wins <strong>100% reimbursement of surgical and hospital charges</strong> annually. Note: Excludes travel itinerary and lodging costs.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-teal-800 flex items-center justify-between">
+                        <span class="text-[11px] text-teal-300 font-semibold">Voucher Code:</span>
+                        <code class="bg-teal-950 px-3 py-1 rounded-lg text-amber-300 font-mono font-bold text-xs border border-amber-500/40">LUCKY100</code>
+                    </div>
+                </div>
+
+                <!-- Tile 2 -->
+                <div class="bg-gradient-to-br from-teal-950 to-teal-900 border border-emerald-500/50 rounded-3xl p-6 shadow-xl space-y-4 relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 bg-emerald-500 text-teal-950 font-black text-[10px] uppercase px-3 py-1 rounded-bl-xl">Excellence Benefit</div>
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-percent"></i></div>
+                        <h3 class="text-lg font-bold text-white">7% Excellence Package Discount</h3>
+                        <p class="text-xs text-teal-100 leading-relaxed">
+                            Enjoy an instant 7% reduction on all comprehensive surgical and medical travel packages when applying our verified promotional code during case intake.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-teal-800 flex items-center justify-between">
+                        <span class="text-[11px] text-teal-300 font-semibold">Voucher Code:</span>
+                        <code class="bg-teal-950 px-3 py-1 rounded-lg text-emerald-300 font-mono font-bold text-xs border border-emerald-500/40">VALO7OFF</code>
+                    </div>
+                </div>
+
+                <!-- Tile 3 -->
+                <div class="bg-gradient-to-br from-teal-950 to-teal-900 border border-cyan-500/50 rounded-3xl p-6 shadow-xl space-y-4 relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 bg-cyan-500 text-teal-950 font-black text-[10px] uppercase px-3 py-1 rounded-bl-xl">Care Credit</div>
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-cyan-500/20 text-cyan-300 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-shield-heart"></i></div>
+                        <h3 class="text-lg font-bold text-white">5% Patient Care Credit</h3>
+                        <p class="text-xs text-teal-100 leading-relaxed">
+                            Receive 5% additional credit towards post-operative physical therapy sessions, specialized pharmaceutical care, and nursing assistance.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-teal-800 flex items-center justify-between">
+                        <span class="text-[11px] text-teal-300 font-semibold">Voucher Code:</span>
+                        <code class="bg-teal-950 px-3 py-1 rounded-lg text-cyan-300 font-mono font-bold text-xs border border-cyan-500/40">VALO5OFF</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERT OPINION & CONSULTATION FORM ($9.99 EXPERT CONSULTATION FEE) -->
+    <section id="second-opinion" class="py-20 bg-teal-950/50 border-b border-teal-900">
         <div class="max-w-4xl mx-auto px-4">
             <div class="bg-teal-950 border border-teal-500/40 rounded-3xl p-8 lg:p-12 shadow-2xl space-y-6">
                 <div>
-                    <span class="text-teal-300 font-extrabold uppercase tracking-widest text-xs">Expert Clinical Review</span>
-                    <h2 class="text-2xl font-extrabold font-heading text-white mt-1">Request an Expert Surgical Second Opinion</h2>
-                    <p class="text-xs text-teal-200 mt-1">Submit your case details to route a formal draft straight to <strong>valomedic.care@gmail.com</strong>.</p>
+                    <span class="text-teal-300 font-extrabold uppercase tracking-widest text-xs">Valomedic Expert Opinion & Consultation</span>
+                    <h2 class="text-2xl font-extrabold font-heading text-white mt-1">Request Expert Medical Consultation ($9.99 USD Fee)</h2>
+                    <p class="text-xs text-teal-200 mt-1">Submit your case details and complete the $9.99 USD expert consultation fee to generate a professionally structured executive medical inquiry to <strong>valomedic.care@gmail.com</strong>.</p>
                 </div>
                 <form onsubmit="handleSecondOpinion(event)" class="space-y-4">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -483,7 +544,7 @@
                             <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Clinical Category</label>
                             <select id="so-category" required class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
                                 <option value="" disabled selected>Select Objective / Category</option>
-                                <option value="Surgical Second Opinion">Surgical Second Opinion</option>
+                                <option value="Expert Second Opinion">Expert Second Opinion</option>
                                 <option value="Oncology / Tumor Board Review">Oncology / Tumor Board Review</option>
                                 <option value="Cardiology Case Review">Cardiology Case Review</option>
                                 <option value="Orthopedic Treatment Plan Review">Orthopedic Treatment Plan Review</option>
@@ -494,10 +555,10 @@
                             <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Target Destination Hub</label>
                             <select id="so-hub" required class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
                                 <option value="" disabled selected>Select Preferred Hub</option>
-                                <option value="India Hub">India Hub (Mumbai/Delhi)</option>
-                                <option value="Turkey Hub">Turkey Hub (Istanbul)</option>
-                                <option value="Thailand Hub">Thailand Hub (Bangkok)</option>
-                                <option value="UAE Hub">UAE Hub (Dubai/Abu Dhabi)</option>
+                                <option value="India Hub (Mumbai/Delhi)">India Hub (Mumbai/Delhi)</option>
+                                <option value="Turkey Hub (Istanbul)">Turkey Hub (Istanbul)</option>
+                                <option value="Thailand Hub (Bangkok)">Thailand Hub (Bangkok)</option>
+                                <option value="UAE Hub (Dubai/Abu Dhabi)">UAE Hub (Dubai/Abu Dhabi)</option>
                                 <option value="Singapore Hub">Singapore Hub</option>
                                 <option value="South Korea Hub">South Korea Hub</option>
                             </select>
@@ -514,7 +575,19 @@
                         <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Diagnosis & Case Notes</label>
                         <textarea id="so-notes" rows="3" required placeholder="Describe diagnosis, current treatment, or specific questions..." class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white"></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider shadow-lg cursor-pointer">Submit Second Opinion to valomedic.care@gmail.com 📋</button>
+
+                    <!-- COUPON SELECTION DROPDOWN PLACED RIGHT BELOW NOTES AND ABOVE SUBMIT -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Apply Promotional Voucher / Cashback Code</label>
+                        <select id="so-coupon" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white font-semibold">
+                            <option value="None Applied">-- Select Available Promotional Code (Optional) --</option>
+                            <option value="LUCKY100 (Annual 100% Treatment Cashback)">LUCKY100 - Annual 100% Treatment Cashback</option>
+                            <option value="VALO7OFF (7% Excellence Package Discount)">VALO7OFF - 7% Excellence Package Discount</option>
+                            <option value="VALO5OFF (5% Patient Care Credit)">VALO5OFF - 5% Patient Care Credit</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider shadow-lg cursor-pointer">Proceed to $9.99 Consultation & Draft Professional Email 📋</button>
                 </form>
             </div>
         </div>
@@ -571,95 +644,6 @@
         </div>
     </section>
 
-    <!-- DIRECT PATIENT INQUIRY FORM -->
-    <section id="consultation" class="py-20 bg-teal-950/50 border-t border-teal-500/30">
-        <div class="max-w-4xl mx-auto px-4">
-            <div id="contact" class="bg-teal-950 border border-teal-500/40 rounded-3xl p-8 lg:p-12 shadow-2xl space-y-6">
-                <div>
-                    <span class="text-teal-300 font-extrabold uppercase tracking-widest text-xs">Official Case Intake & Contact Us</span>
-                    <h2 class="text-2xl font-extrabold font-heading text-white mt-1">Patient Procedure Inquiry & Contact Form</h2>
-                    <p class="text-xs text-teal-200 mt-1">Fill out your details to generate a direct email to <strong>valomedic.care@gmail.com</strong>.</p>
-                </div>
-
-                <form onsubmit="handlePatientInquiry(event)" class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Patient Full Name</label>
-                            <input type="text" id="inquiry-name" required placeholder="e.g. John Doe" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Email Address</label>
-                            <input type="email" id="inquiry-email" required placeholder="patient@example.com" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Phone / WhatsApp (All 195+ World Codes)</label>
-                            <div class="flex gap-2">
-                                <select id="inquiry-code" class="w-20 sm:w-24 shrink-0 bg-teal-900 border border-teal-700 rounded-xl px-1.5 py-3 text-xs text-white truncate country-codes-select focus:ring-2 focus:ring-teal-400 font-semibold"></select>
-                                <input type="tel" id="inquiry-phone" required placeholder="7710803966" class="flex-1 bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Procedure Category</label>
-                            <select id="inquiry-procedure" required class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
-                                <option value="" disabled selected>Select Clinical Department</option>
-                                <option value="Orthopedics & Joints">1. Orthopedics & Joints</option>
-                                <option value="Cardiology & CTVS (CABG)">2. Cardiology & CTVS (CABG)</option>
-                                <option value="Oncology & Proton Beam">3. Oncology & Proton Beam</option>
-                                <option value="Neurology & Neurosurgery">4. Neurology & Neurosurgery</option>
-                                <option value="Organ Transplants">5. Organ Transplants</option>
-                                <option value="Plastic & Reconstructive">6. Plastic & Reconstructive</option>
-                                <option value="Pediatrics & Neonatal Surgery">7. Pediatrics & Neonatal Surgery</option>
-                                <option value="Ophthalmology & LASIK">8. Ophthalmology & LASIK</option>
-                                <option value="Dental & Maxillofacial">9. Dental & Maxillofacial</option>
-                                <option value="Gynecology & IVF Fertility">10. Gynecology & IVF Fertility</option>
-                                <option value="Urology & Renal Surgery">11. Urology & Renal Surgery</option>
-                                <option value="Pulmonology & Thoracic">12. Pulmonology & Thoracic</option>
-                                <option value="Bariatric & Weight Loss">13. Bariatric & Weight Loss</option>
-                                <option value="Endocrinology & Metabolic">14. Endocrinology & Metabolic</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Exploration Objective</label>
-                            <select id="inquiry-objective" required class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
-                                <option value="" disabled selected>Select Primary Objective</option>
-                                <option value="Complete Surgery & Travel Package">Complete Surgery & Travel Package</option>
-                                <option value="Cost Estimate & Financial Breakdown">Cost Estimate & Financial Breakdown</option>
-                                <option value="Hospital & Surgeon Matching">Hospital & Surgeon Matching</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Preferred Destination Hub</label>
-                            <select id="inquiry-hub" required class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
-                                <option value="" disabled selected>Select Destination Hub</option>
-                                <option value="India Hub (Mumbai/Delhi)">India Hub (Mumbai/Delhi)</option>
-                                <option value="Turkey Hub (Istanbul)">Turkey Hub (Istanbul)</option>
-                                <option value="Thailand Hub (Bangkok)">Thailand Hub (Bangkok)</option>
-                                <option value="UAE Hub (Dubai/Abu Dhabi)">UAE Hub (Dubai/Abu Dhabi)</option>
-                                <option value="Singapore Hub">Singapore Hub</option>
-                                <option value="South Korea Hub">South Korea Hub</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Medical History & Condition Notes</label>
-                        <textarea id="inquiry-notes" rows="4" placeholder="Briefly describe symptoms or diagnosis..." class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white"></textarea>
-                    </div>
-
-                    <button type="submit" class="w-full bg-emerald-400 hover:bg-emerald-500 text-teal-950 font-extrabold py-4 rounded-xl text-xs uppercase tracking-wider shadow-xl transition-all cursor-pointer">
-                        Submit Intake Form to valomedic.care@gmail.com ✉️
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
     <!-- FOOTER -->
     <footer class="bg-teal-950 text-teal-200 text-xs py-16 border-t border-teal-500/40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -696,13 +680,13 @@
                     <ul id="footer-quick-nav" class="space-y-2 text-xs">
                         <li><a href="#" class="hover:text-white transition-colors">• Home</a></li>
                         <li><a href="#about" class="hover:text-white transition-colors">• About Us & Advantages</a></li>
+                        <li><a href="#offers" class="hover:text-white transition-colors">• Offers & Cashback</a></li>
                         <li><a href="#procedures" class="hover:text-white transition-colors">• 350+ Surgery Departments</a></li>
                         <li><a href="#destinations" class="hover:text-white transition-colors">• Medical Destination Hubs</a></li>
                         <li><a href="#estimator" class="hover:text-white transition-colors">• Cost Estimator</a></li>
                         <li><a href="#tourism" class="hover:text-white transition-colors">• Tourism & Travelism</a></li>
                         <li><a href="#medication" class="hover:text-white transition-colors">• Pharmacy & Medication</a></li>
-                        <li><a href="#second-opinion" class="hover:text-white transition-colors">• Second Opinion</a></li>
-                        <li><a href="#contact" class="hover:text-white transition-colors">• Contact Us</a></li>
+                        <li><a href="#second-opinion" class="hover:text-white transition-colors">• Expert Consultation ($9.99)</a></li>
                     </ul>
                 </div>
 
@@ -734,7 +718,6 @@
 
     <!-- MASTER DYNAMIC JAVASCRIPT ENGINE -->
     <script type="text/javascript">
-        // EXHAUSTIVE 195+ WORLD TELEPHONE DIAL CODES LIST
         const allCountryCodes = [
             {name: "India", code: "+91", flag: "🇮🇳"},
             {name: "United States", code: "+1", flag: "🇺🇸"},
@@ -854,7 +837,6 @@
             {name: "Zimbabwe", code: "+263", flag: "🇿🇼"}
         ];
 
-        // EXHAUSTIVE WORLD CURRENCIES (ISO 4217)
         const allCurrencies = [
             {code: "USD", symbol: "$", name: "USD - US Dollar"},
             {code: "INR", symbol: "₹", name: "INR - Indian Rupee"},
@@ -903,7 +885,6 @@
             {code: "ARS", symbol: "ARS$", name: "ARS - Argentine Peso"}
         ];
 
-        // 100+ GOOGLE TRANSLATE LANGUAGES ARRAY
         const allLanguages = [
             {code: "en", name: "English"},
             {code: "es", name: "Spanish (Español)"},
@@ -967,7 +948,6 @@
             {code: "my", name: "Burmese (မြန်မာ)"}
         ];
 
-        // COMPLETE DATA FOR ALL 14 DEPARTMENTS
         const departmentsData = [
             {
                 id: "dept-1",
@@ -1311,7 +1291,7 @@
                     "Robotic Radical Cystectomy with Neobladder Creation",
                     "Complex Urethral Stricture Urethroplasty",
                     "Microscopic Varicocelectomy for Male Infertility",
-                    "Penile Prosthesis Malleable & Inflatable Implantation",
+                    "Penetrating & Inflatable Prosthesis Malleable Implantation",
                     "Pediatric Hypospadias & Epispadias Repair",
                     "Percutaneous Nephrolithotomy (PCNL) for Staghorn Stones",
                     "Testicular Cancer Radical Orchiectomy",
@@ -1401,7 +1381,6 @@
             }
         ];
 
-        // COMPLETE DATA FOR ALL 6 GLOBAL HUBS (UPDATED WITH EXACT 8 IMAGES EACH)
         const hubsData = [
             {
                 id: "hub-india",
@@ -1439,14 +1418,14 @@
                 title: "Turkey Aesthetic & Clinical Hub (8 Cities)",
                 desc: "Europe's leading destination for hair transplantation, cosmetic surgery, dental veneers, and bariatrics.",
                 gallery: [
-                    "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=800&q=80", // 1. Istanbul
-                    "https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=800&q=80", // 2. Antalya
-                    "https://upload.wikimedia.org/wikipedia/commons/0/07/ANKARA_KALESI.jpg", // 3. Ankara
-                    "https://images.unsplash.com/photo-1609856878074-cf31e21ccb6b?auto=format&fit=crop&w=800&q=80", // 4. Izmir
-                    "https://images.unsplash.com/photo-1584646098378-0874589d76b1?auto=format&fit=crop&w=800&q=80", // 5. Bursa
-                    "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=800&q=80", // 6. Bodrum
-                    "https://images.pexels.com/photos/38556257/pexels-photo-38556257.jpeg?cs=srgb&dl=pexels-mov-frame-288922282-38556257.jpg&fm=jpg", // 7. Adana
-                    "https://upload.wikimedia.org/wikipedia/commons/d/db/Sumela_From_Across_Valley.JPG"  // 8. Trabzon
+                    "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=800&q=80",
+                    "https://upload.wikimedia.org/wikipedia/commons/0/07/ANKARA_KALESI.jpg",
+                    "https://images.unsplash.com/photo-1609856878074-cf31e21ccb6b?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1584646098378-0874589d76b1?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=800&q=80",
+                    "https://images.pexels.com/photos/38556257/pexels-photo-38556257.jpeg?cs=srgb&dl=pexels-mov-frame-288922282-38556257.jpg&fm=jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/d/db/Sumela_From_Across_Valley.JPG"
                 ],
                 cities: [
                     { name: "Istanbul", desc: "Global Capital of Aesthetics", image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=800&q=80", hospitals: ["Acibadem Maslak Hospital", "Memorial Sisli Hospital", "Liv Hospital Ulus", "American Hospital Istanbul", "Medipol Mega University Hospital", "Florence Nightingale Hospital", "Medical Park Goztepe", "Hisar Hospital Intercontinental", "Koc University Hospital", "Anadolu Medical Center", "BHT Clinic Istanbul", "Estethica Levent", "Memorial Bahcelievler", "Acibadem Atakent", "Yedi Tepe University Hospital"] },
@@ -1467,14 +1446,14 @@
                 title: "Thailand Wellness & Medical Hub (8 Cities)",
                 desc: "Asia's premier destination for holistic spa retreats, gender affirmation, cosmetic surgery, and bariatrics.",
                 gallery: [
-                    "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80", // 1. Bangkok
-                    "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80", // 2. Phuket
-                    "https://images.unsplash.com/photo-1513415756790-2ac1db1297d0?auto=format&fit=crop&w=800&q=80", // 3. Chiang Mai
-                    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80", // 4. Pattaya
-                    "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=800&q=80", // 5. Hua Hin
-                    "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80", // 6. Koh Samui
-                    "https://images.unsplash.com/photo-1563492065599-3520f775eeed?auto=format&fit=crop&w=800&q=80", // 7. Nonthaburi
-                    "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&w=800&q=80"  // 8. Chonburi
+                    "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1513415756790-2ac1db1297d0?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1563492065599-3520f775eeed?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&w=800&q=80"
                 ],
                 cities: [
                     { name: "Bangkok", desc: "Pioneer Medical Tourism Hub", image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80", hospitals: ["Bumrungrad International Hospital", "Bangkok Hospital Head Office", "Samitivej Sukhumvit Hospital", "Vejthani Hospital", "Phyathai 2 International Hospital", "Siriraj Piyamaharajkarun", "BNS International Hospital", "King Chulalongkorn Memorial", "MedPark Hospital", "Praram 9 Hospital", "Yanhee International Hospital", "Piyavate Hospital", "Kluaynamthai Hospital", "BCH World Medical Center", "Central General Hospital"] },
@@ -1495,14 +1474,14 @@
                 title: "UAE Luxury Medical Hub (8 Cities)",
                 desc: "Middle East's flagship center for ultra-luxury private medical suites, robotic surgery, and wellness.",
                 gallery: [
-                    "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80", // 1. Dubai
-                    "https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&w=800&q=80", // 2. Abu Dhabi
-                    "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?auto=format&fit=crop&w=800&q=80", // 3. Sharjah
-                    "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&w=800&q=80", // 4. Al Ain
-                    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80", // 5. Ras Al Khaimah
-                    "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80", // 6. Fujairah
-                    "https://images.pexels.com/photos/2404843/pexels-photo-2404843.jpeg?auto=compress&cs=tinysrgb&w=800", // 7. Ajman
-                    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"  // 8. Umm Al Quwain
+                    "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80",
+                    "https://images.pexels.com/photos/2404843/pexels-photo-2404843.jpeg?auto=compress&cs=tinysrgb&w=800",
+                    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
                 ],
                 cities: [
                     { name: "Dubai", desc: "Ultra-Luxury Healthcare Capital", image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80", hospitals: ["American Hospital Dubai", "Mediclinic City Hospital", "Saudi German Hospital Dubai", "Fakeeh University Hospital", "King's College Hospital London Dubai", "Zulekha Hospital Dubai", "Aster Hospital Mankhool", "Prime Hospital Dubai", "Al Zahra Hospital Dubai", "NMC Royal Hospital DIP", "Dubai Hospital", "Rashid Hospital Quaternary", "Latifa Women & Children Hospital", "Gargash Hospital", "Clemenceau Medical Center Dubai"] },
@@ -1523,14 +1502,14 @@
                 title: "Singapore Advanced Hub (8 Regions)",
                 desc: "Southeast Asia's gold standard for complex oncology, proton beam radiation, and pediatric transplants.",
                 gallery: [
-                    "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=800&q=80", // 1. Orchard
-                    "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80", // 2. Novena
-                    "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=80", // 3. Buona Vista
-                    "https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&fit=crop&w=800&q=80", // 4. Outram
-                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80", // 5. Jurong
-                    "https://images.unsplash.com/photo-1565967511849-76a60a516170?auto=format&fit=crop&w=800&q=80", // 6. Tampines
-                    "https://images.unsplash.com/photo-1508964942454-1a56651d54ac?auto=format&fit=crop&w=800&q=80", // 7. Yishun
-                    "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=800&q=80"  // 8. Farrer Park
+                    "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1565967511849-76a60a516170?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1508964942454-1a56651d54ac?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=800&q=80"
                 ],
                 cities: [
                     { name: "Orchard", desc: "Premier Private Medical Hub", image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=800&q=80", hospitals: ["Mount Elizabeth Hospital (Orchard)", "Gleneagles Hospital Singapore", "Paragon Medical Centre", "Camden Medical Centre", "Orchard Plastic Surgery Center", "Orchard Dental Hub", "Orchard Eye Institute", "Singapore Aesthetic Center", "Orchard Heart Specialist Group", "Orchard Cancer Center", "Pacific Healthcare Specialist Centre", "Supreme Health Specialists", "Asia Medic Specialist Centre", "Orchard IVF Centre", "Orchard Orthopedic Group"] },
@@ -1551,14 +1530,14 @@
                 title: "South Korea Robotic & Plastic Hub (8 Cities)",
                 desc: "Global leader in robotic surgery, facial reconstruction, stem cell therapies, and cancer care.",
                 gallery: [
-                    "https://images.unsplash.com/photo-1546874177-9e664107314e?auto=format&fit=crop&w=800&q=80", // 1. Seoul
-                    "https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format&fit=crop&w=800&q=80", // 2. Busan
-                    "https://images.unsplash.com/photo-1578637387939-43c525550085?auto=format&fit=crop&w=800&q=80", // 3. Incheon
-                    "https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=800&q=80", // 4. Daegu
-                    "https://images.unsplash.com/photo-1617653202545-931490e8d7e7?auto=format&fit=crop&w=800&q=80", // 5. Daejeon
-                    "https://images.pexels.com/photos/2034335/pexels-photo-2034335.jpeg?auto=compress&cs=tinysrgb&w=800", // 6. Gwangju
-                    "https://images.unsplash.com/photo-1548115184-bc6544d06a58?auto=format&fit=crop&w=800&q=80", // 7. Jeju Island
-                    "https://images.pexels.com/photos/1486785/pexels-photo-1486785.jpeg?auto=compress&cs=tinysrgb&w=800"  // 8. Gyeonggi
+                    "https://images.unsplash.com/photo-1546874177-9e664107314e?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1578637387939-43c525550085?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1617653202545-931490e8d7e7?auto=format&fit=crop&w=800&q=80",
+                    "https://images.pexels.com/photos/2034335/pexels-photo-2034335.jpeg?auto=compress&cs=tinysrgb&w=800",
+                    "https://images.unsplash.com/photo-1548115184-bc6544d06a58?auto=format&fit=crop&w=800&q=80",
+                    "https://images.pexels.com/photos/1486785/pexels-photo-1486785.jpeg?auto=compress&cs=tinysrgb&w=800"
                 ],
                 cities: [
                     { name: "Seoul", desc: "World Capital of Plastic & Robotics", image: "https://images.unsplash.com/photo-1546874177-9e664107314e?auto=format&fit=crop&w=800&q=80", hospitals: ["Asan Medical Center", "Samsung Medical Center", "Severance Hospital (Yonsai University)", "Seoul National University Hospital (SNUH)", "Seoul St. Mary's Hospital", "Gangnam Severance Hospital", "ID Hospital Gangnam", "Banobagi Plastic Surgery", "JK Plastic Surgery Center", "VIP International Plastic Surgery", "JW Plastic Surgery Seoul", "Korea University Anam Hospital", "Ewha Womans University Medical Center", "Kyung Hee University Medical Center", "Hanyang University Medical Center"] },
@@ -1573,7 +1552,6 @@
             }
         ];
 
-        // DOM INITIALIZER
         window.addEventListener('DOMContentLoaded', () => {
             renderCountryCodes();
             renderCurrencies();
@@ -1586,16 +1564,13 @@
             fetchLiveExchangeRates();
         });
 
-        // UNIVERSAL JUMP-TO-TARGET FUNCTION FOR DIRECT ANCHOR JUMPS
         function jumpToTarget(targetId, hubIdToExpand = null) {
-            // 1. Close mobile drawer if open
             const drawer = document.getElementById('app-menu-drawer');
             const overlay = document.getElementById('app-menu-overlay');
             if (drawer && !drawer.classList.contains('translate-x-full')) {
                 toggleAppMenu();
             }
 
-            // 2. If target is a hidden department (departments 5 to 14), expand all departments
             if (targetId.startsWith('dept-')) {
                 const targetCard = document.getElementById(targetId);
                 if (targetCard && targetCard.classList.contains('hidden')) {
@@ -1605,7 +1580,6 @@
                 }
             }
 
-            // 3. If a hub needs expanding to reveal cities
             if (hubIdToExpand) {
                 const citiesEl = document.getElementById('cities-' + hubIdToExpand);
                 if (citiesEl && citiesEl.classList.contains('hidden')) {
@@ -1613,7 +1587,6 @@
                 }
             }
 
-            // 4. Smooth scroll to target element
             setTimeout(() => {
                 const el = document.getElementById(targetId);
                 if (el) {
@@ -1624,7 +1597,6 @@
             }, 120);
         }
 
-        // POPULATE ALL 195+ WORLD TELEPHONE CODES
         function renderCountryCodes() {
             document.querySelectorAll('.country-codes-select').forEach(select => {
                 select.innerHTML = '';
@@ -1638,7 +1610,6 @@
             });
         }
 
-        // POPULATE ALL ISO CURRENCIES
         function renderCurrencies() {
             const topCurr = document.getElementById('top-currency');
             const mobileCurr = document.getElementById('mobile-currency');
@@ -1656,7 +1627,6 @@
             });
         }
 
-        // POPULATE ALL 100+ TRANSLATION LANGUAGES
         function renderLanguages() {
             const topLang = document.getElementById('custom-language-selector');
             const mobileLang = document.getElementById('mobile-language');
@@ -1673,7 +1643,6 @@
             });
         }
 
-        // RENDER DEPARTMENTS GRID
         let showAllDepartmentsFlag = false;
         function renderDepartmentsGrid() {
             const container = document.getElementById('departments-dynamic-grid');
@@ -1733,7 +1702,6 @@
             }
         }
 
-        // RENDER GLOBAL HUBS WITH 8-IMAGE SLIDERS & CITY ANCHOR IDS
         function renderHubsContainer() {
             const container = document.getElementById('hubs-dynamic-container');
             container.innerHTML = '';
@@ -1788,7 +1756,6 @@
                         </button>
                     </div>
 
-                    <!-- Hub City Image Sliding Gallery (8 Images) -->
                     <div class="px-6 pt-6 flex gap-4 overflow-x-auto no-scrollbar pb-2">
                         ${galleryHTML}
                     </div>
@@ -1804,14 +1771,12 @@
             });
         }
 
-        // RENDER MENU DRAWER ACCORDIONS WITH DIRECT ANCHOR ROUTING JUMPS
         function renderMenuDrawerSubcategories() {
             const deptContainer = document.getElementById('nav-dept-accordion');
             const hubContainer = document.getElementById('nav-hub-accordion');
             deptContainer.innerHTML = '';
             hubContainer.innerHTML = '';
 
-            // Populate Departments in Menu Drawer with Direct Jump Links
             departmentsData.forEach(dept => {
                 const subId = `menu-dept-${dept.id}`;
                 const item = document.createElement('div');
@@ -1835,7 +1800,6 @@
                 deptContainer.appendChild(item);
             });
 
-            // Populate Hubs & Cities in Menu Drawer with Direct Jump Links
             hubsData.forEach(hub => {
                 const subId = `menu-hub-${hub.id}`;
                 const item = document.createElement('div');
@@ -1865,14 +1829,12 @@
             });
         }
 
-        // RENDER FOOTER SUB-ACCORDIONS WITH DIRECT ANCHOR JUMPS
         function renderFooterSubcategories() {
             const footerDeptContainer = document.getElementById('footer-dept-list');
             const footerHubContainer = document.getElementById('footer-hub-list');
             footerDeptContainer.innerHTML = '';
             footerHubContainer.innerHTML = '';
 
-            // Render all 14 Depts in Footer with Direct Jumps
             departmentsData.forEach(dept => {
                 const subId = `footer-sub-dept-${dept.id}`;
                 const item = document.createElement('div');
@@ -1894,7 +1856,6 @@
                 footerDeptContainer.appendChild(item);
             });
 
-            // Render all 6 Hubs & Cities in Footer with Direct Jumps
             hubsData.forEach(hub => {
                 const subId = `footer-sub-hub-${hub.id}`;
                 const item = document.createElement('div');
@@ -1920,7 +1881,6 @@
             });
         }
 
-        // TOGGLE HELPERS
         function toggleSurgeryList(listId) {
             const listEl = document.getElementById(listId);
             const iconEl = document.getElementById('icon-' + listId);
@@ -1963,7 +1923,6 @@
             if(icon) icon.style.transform = acc.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
         }
 
-        // REAL TIME EXCHANGE RATES FETCH
         let liveRates = {};
         async function fetchLiveExchangeRates() {
             try {
@@ -1976,7 +1935,6 @@
             } catch(e) { console.error("Exchange API Error", e); }
         }
 
-        // GOOGLE TRANSLATION ENGINE
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element');
         }
@@ -2050,18 +2008,6 @@
             document.getElementById('out-savings').innerText = actualSavingsPercent + '% (~' + currencySymbol + Math.round(moneySavedUSD * conversionRate).toLocaleString() + ' Saved)';
         }
 
-        function handlePatientInquiry(event) {
-            event.preventDefault();
-            const name = document.getElementById('inquiry-name').value;
-            const email = document.getElementById('inquiry-email').value;
-            const phone = document.getElementById('inquiry-code').value + " " + document.getElementById('inquiry-phone').value;
-            const procedure = document.getElementById('inquiry-procedure').value;
-            const objective = document.getElementById('inquiry-objective').value;
-            const hub = document.getElementById('inquiry-hub').value;
-            const notes = document.getElementById('inquiry-notes').value;
-            window.location.href = `mailto:valomedic.care@gmail.com?subject=${encodeURIComponent("Valomedic Inquiry: " + procedure)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nPhone: " + phone + "\nHub: " + hub + "\nObjective: " + objective + "\nNotes: " + notes)}`;
-        }
-
         function handleSecondOpinion(event) {
             event.preventDefault();
             const name = document.getElementById('so-name').value;
@@ -2070,7 +2016,41 @@
             const hub = document.getElementById('so-hub').value;
             const phone = document.getElementById('so-code').value + " " + document.getElementById('so-phone').value;
             const notes = document.getElementById('so-notes').value;
-            window.location.href = `mailto:valomedic.care@gmail.com?subject=${encodeURIComponent("Second Opinion: " + category)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nPhone: " + phone + "\nHub: " + hub + "\nNotes: " + notes)}`;
+            const coupon = document.getElementById('so-coupon').value;
+            
+            alert("Redirecting to secure $9.99 USD Expert Consultation Payment Gateway...\nUpon completion, your professionally structured consultation dossier will be dispatched to valomedic.care@gmail.com.");
+
+            const emailSubject = `[EXECUTIVE CASE INTAKE] Valomedic Expert Consultation - ${name} (${category})`;
+            const emailBody = `====================================================
+VALOMEDIC GLOBAL MEDICAL CONCIERGE
+EXECUTIVE CONSULTATION DOSSIER
+====================================================
+
+1. PATIENT IDENTIFICATION & CONTACT:
+----------------------------------------------------
+• Patient Full Name : ${name}
+• Email Address     : ${email}
+• Phone / WhatsApp  : ${phone}
+
+2. CLINICAL INQUIRY PARAMETERS:
+----------------------------------------------------
+• Inquiry Category  : ${category}
+• Target Destination: ${hub}
+• Consultation Fee  : $9.99 USD (Paid & Secured)
+
+3. PROMOTIONAL VOUCHER / CASHBACK APPLIED:
+----------------------------------------------------
+• Selected Coupon   : ${coupon}
+
+4. CLINICAL HISTORY & CASE NOTES:
+----------------------------------------------------
+${notes}
+
+----------------------------------------------------
+CONFIDENTIALITY NOTICE: This communication contains privileged patient health information intended solely for the Valomedic Medical Board and JCI-accredited hospital coordinators at valomedic.care@gmail.com.
+====================================================`;
+
+            window.location.href = `mailto:valomedic.care@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
         }
 
         function handlePharmacyInquiry(event) {
