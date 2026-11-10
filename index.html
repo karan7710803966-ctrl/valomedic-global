@@ -532,7 +532,7 @@
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-teal-300 font-extrabold uppercase tracking-widest text-xs">Global Clinical Infrastructure</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-2">Medical Destination Hubs & Accredited Hospital Network (8 Global Hubs & 85 Cities)</h2>
-                <p class="text-teal-100 text-sm mt-2">Direct agreements with top-tier JCI and NABH accredited hospitals across 85 premier medical cities featuring full-width edge-to-edge sliding photo galleries for every hub and city.</p>
+                <p class="text-teal-100 text-sm mt-2">Direct agreements with top-tier JCI and NABH accredited hospitals across 85 premier medical cities featuring full-width landmark showcase images for every hub.</p>
             </div>
 
             <!-- FULL GRID CONTAINER FOR 8 HUBS -->
@@ -1462,38 +1462,13 @@
             }
         ];
 
-        let imageCounter = 1;
-        const landmarkPools = [
-            "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1598880940371-c756e01541fb?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1592635196222-29efa6bc891f?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1512632578888-169bb051fab3?auto=format&fit=crop&w=800&q=80"
-        ];
-
-        function getUniqueImages(count = 7) {
-            let imgs = [];
-            for(let i=0; i<count; i++) {
-                let poolIndex = (imageCounter++) % landmarkPools.length;
-                imgs.push(landmarkPools[poolIndex] + "&sig=" + imageCounter);
-            }
-            return imgs;
-        }
-
+        // Unique single landmark image for each hub tile header
         const hubsData = [
             {
                 id: "hub-india", num: 1, flag: "🇮🇳", country: "India",
                 title: "India Medical Super-Hub (15 Cities)",
                 desc: "World's primary capital for high-complexity organ transplants, cardiac CABG, and proton oncology at 80% lower cost.",
-                gallery: getUniqueImages(7),
+                hubImage: "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1200&q=80",
                 cities: [
                     { name: "Mumbai", desc: "Commercial & Surgical Hub", hospitals: ["Kokilaben Ambani Hospital", "Lilavati Hospital", "Asian Heart Institute", "PD Hinduja Hospital", "Breach Candy Hospital", "Jaslok Hospital", "Nanavati Max", "Sir HN Reliance Foundation", "Tata Memorial", "SL Raheja Fortis", "Global Hospitals Parel", "Hiranandani Hospital", "Wockhardt Central", "Apollo Navi Mumbai", "KEM Hospital Quaternary"] },
                     { name: "Delhi NCR", desc: "Organ Transplant Capital", hospitals: ["Medanta Gurugram", "Max Saket", "Fortis Memorial Research", "Apollo Indraprastha", "BLK-Max Super Speciality", "Sir Ganga Ram", "Artemis Gurugram", "Paras Health", "Manipal Dwarka", "Venkateshwar Hospital", "Marengo Asia", "Sanar International", "Aakash Healthcare", "Metro Hospital", "AIIMS Premier Referral"] },
@@ -1516,7 +1491,7 @@
                 id: "hub-turkey", num: 2, flag: "🇹🇷", country: "Turkey",
                 title: "Turkey Aesthetic & Clinical Hub (10 Cities)",
                 desc: "Europe's leading destination for hair transplantation, cosmetic surgery, dental veneers, and bariatrics.",
-                gallery: getUniqueImages(7),
+                hubImage: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=1200&q=80",
                 cities: [
                     { name: "Istanbul", desc: "Global Capital of Aesthetics", hospitals: ["Acibadem Maslak", "Memorial Sisli", "Liv Hospital Ulus", "American Hospital", "Medipol Mega", "Florence Nightingale", "Medical Park Goztepe", "Hisar Hospital", "Koc University", "Anadolu Medical", "BHT Clinic", "Estethica Levent", "Memorial Bahcelievler", "Acibadem Atakent", "Yeditepe University"] },
                     { name: "Antalya", desc: "Dental & Beach Tourism", hospitals: ["Akdeniz University", "Medical Park Antalya", "Memorial Antalya", "Anadolu Antalya", "OFA Antalya", "Antalya Life", "Opera Life", "Uncali Meydan", "Antalya Dental", "Cosmetic Antalya", "Lara Anadolu", "Side Anadolu", "Vitale Hospital", "Zeltus Center", "Kemer Anadolu"] },
@@ -1534,7 +1509,7 @@
                 id: "hub-thailand", num: 3, flag: "🇹🇭", country: "Thailand",
                 title: "Thailand Wellness & Medical Hub (10 Cities)",
                 desc: "Asia's premier destination for holistic spa retreats, gender affirmation, cosmetic surgery, and bariatrics.",
-                gallery: getUniqueImages(7),
+                hubImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1200&q=80",
                 cities: [
                     { name: "Bangkok", desc: "Pioneer Medical Tourism Hub", hospitals: ["Bumrungrad International", "Bangkok Hospital Head Office", "Samitivej Sukhumvit", "Vejthani Hospital", "Phyathai 2", "Siriraj Piyamaharajkarun", "BNS International", "King Chulalongkorn", "MedPark Hospital", "Praram 9 Hospital", "Yanhee International", "Piyavate Hospital", "Kluaynamthai", "BCH World Medical", "Central General"] },
                     { name: "Phuket", desc: "Island Recovery Sanctuary", hospitals: ["Bangkok Hospital Phuket", "Phuket International", "Mission Hospital", "Dibuk Hospital", "Patong Hospital", "Provincial Hospital", "Vachira Phuket", "Plastic Surgery Institute", "Dental Signature", "International Dental", "Thalang Hospital", "Chalong Hospital", "Rawai Health", "Aesthetic Center", "Wellness Resort"] },
@@ -1552,7 +1527,7 @@
                 id: "hub-uae", num: 4, flag: "🇦🇪", country: "UAE",
                 title: "UAE Luxury Medical Hub (10 Cities)",
                 desc: "Middle East's flagship center for ultra-luxury private medical suites, robotic surgery, and wellness.",
-                gallery: getUniqueImages(7),
+                hubImage: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80",
                 cities: [
                     { name: "Dubai", desc: "Ultra-Luxury Healthcare Capital", hospitals: ["American Hospital Dubai", "Mediclinic City Hospital", "Saudi German Dubai", "Fakeeh University", "King's College London", "Zulekha Hospital Dubai", "Aster Mankhool", "Prime Hospital", "Al Zahra Dubai", "NMC Royal DIP", "Dubai Hospital", "Rashid Hospital", "Latifa Hospital", "Gargash Hospital", "Clemenceau Medical"] },
                     { name: "Abu Dhabi", desc: "Capital Quaternary Center", hospitals: ["Cleveland Clinic Abu Dhabi", "Sheikh Shakhbout Medical", "Burjeel Hospital", "NMC Royal Khalifa City", "Mediclinic Airport Road", "Danat Al Emarat", "LLH Hospital", "Lifecare Musaffah", "Police Hospital", "SKMC", "Al Corniche", "Bareen International", "Phoenix Hospital", "Reem Hospital", "Medeor 24x7"] },
@@ -1570,7 +1545,7 @@
                 id: "hub-singapore", num: 5, flag: "🇸🇬", country: "Singapore",
                 title: "Singapore Advanced Hub (10 Regions)",
                 desc: "Southeast Asia's gold standard for complex oncology, proton beam radiation, and pediatric transplants.",
-                gallery: getUniqueImages(7),
+                hubImage: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1200&q=80",
                 cities: [
                     { name: "Orchard", desc: "Premier Private Medical Hub", hospitals: ["Mount Elizabeth Orchard", "Gleneagles Singapore", "Paragon Medical", "Camden Medical", "Orchard Plastic Surgery", "Orchard Dental Hub", "Orchard Eye Institute", "Singapore Aesthetic", "Orchard Heart Group", "Orchard Cancer Center", "Pacific Healthcare", "Supreme Health", "Asia Medic Centre", "Orchard IVF", "Orchard Orthopedic"] },
                     { name: "Novena", desc: "Singapore Health City Hub", hospitals: ["Mount Elizabeth Novena", "Tan Tock Seng Hospital", "Novena Specialist Center", "Royal Square Novena", "National Skin Centre", "National Neuroscience", "RenalLife Dialysis", "Novena Pain Management", "Novena Heart Centre", "Novena Surgical Center", "Novena Dental Specialist", "Novena Eye Centre", "Novena Cancer Specialist", "Novena Orthopedic", "Novena IVF Fertility"] },
@@ -1588,7 +1563,7 @@
                 id: "hub-korea", num: 6, flag: "🇰🇷", country: "South Korea",
                 title: "South Korea Robotic & Plastic Hub (10 Cities)",
                 desc: "Global leader in robotic surgery, facial reconstruction, stem cell therapies, and cancer care.",
-                gallery: getUniqueImages(7),
+                hubImage: "https://cdn.sanity.io/images/nxpteyfv/goguides/44249958588fc406d673c715d8e1bb3894e09e67-1600x1066.jpg",
                 cities: [
                     { name: "Seoul", desc: "World Capital of Plastic & Robotics", hospitals: ["Asan Medical Center", "Samsung Medical Center", "Severance Hospital", "Seoul National University (SNUH)", "Seoul St. Mary's Hospital", "Gangnam Severance", "ID Hospital Gangnam", "Banobagi Plastic Surgery", "JK Plastic Surgery", "VIP Plastic Surgery", "JW Plastic Surgery Seoul", "Korea University Anam", "Ewha Womans University", "Kyung Hee University", "Hanyang University"] },
                     { name: "Busan", desc: "Maritime Medical Tourism Hub", hospitals: ["Pusan National University", "Haeundae Paik Hospital", "Dong-A University Hospital", "Kosin University Gospel", "Busan St. Mary's", "ABC Plastic Surgery", "Noblesse Plastic Surgery", "Centum General Hospital", "BHS Hanseo Hospital", "Good Moonhwa Hospital", "Busan Paik Hospital", "Busan Cancer Center", "Busan Eye Institute", "Busan Dental Hub", "Haeundae Grand Medical"] },
@@ -1606,7 +1581,7 @@
                 id: "hub-mexico", num: 7, flag: "🇲🇽", country: "Mexico",
                 title: "Mexico Low-Cost Medical Hub (10 Cities)",
                 desc: "North America's premier value-driven healthcare corridor for bariatric surgery, dental restorations, and orthopedic procedures.",
-                gallery: getUniqueImages(7),
+                hubImage: "https://media.solosholidays.com/wp-content/uploads/2022/01/Agua_Azul_Waterfalls_in_Mexico.jpg",
                 cities: [
                     { name: "Tijuana", desc: "Bariatric & Dental Capital", hospitals: ["Hospital Angeles Tijuana", "Almater Hospital", "Florence Hospital Tijuana", "Baja Hospital", "CER Medical Center", "San Javier Tijuana", "Tijuana Bariatric Center", "Dental Brush Tijuana", "Advanced Dental Solutions", "Implanted Dental Tijuana", "Tijuana Plastic Surgery Hub", "Medical City Tijuana", "St. Jude Medical Center", "New City Medical Plaza", "Omni Hospital Tijuana"] },
                     { name: "Monterrey", desc: "Advanced Northern Surgical Hub", hospitals: ["Hospital Zambrano Hellion", "Hospital Metropolitano Monterrey", "Hospital San Jose TecSalud", "Christus Muguerza Alta Especialidad", "Hospital Angeles Monterrey", "Doctors Hospital Monterrey", "OCA Hospital Monterrey", "Monterrey Heart Institute", "Centro Medico Hidalgo", "San Lucas Hospital Monterrey", "Monterrey Bariatric Group", "Monterrey Spine Center", "Monterrey Eye Institute", "Monterrey Oncology Wing", "Nova Hospital Monterrey"] },
@@ -1624,7 +1599,7 @@
                 id: "hub-costarica", num: 8, flag: "🇨🇷", country: "Costa Rica",
                 title: "Costa Rica Low-Cost Medical Hub (10 Cities)",
                 desc: "Central America's premier value-driven medical tourism paradise specializing in dentistry, plastic surgery, and orthopedics.",
-                gallery: getUniqueImages(7),
+                hubImage: "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?auto=format&fit=crop&w=1200&q=80",
                 cities: [
                     { name: "San Jose", desc: "Capital Dental & Surgical Hub", hospitals: ["Hospital CIMA San Jose", "Clinica Biblica Hospital", "Hospital Metropolitano", "Clinica Catolica San Jose", "Hospital La Catolica", "Costa Rica Dental Team", "Goodness Dental San Jose", "Flavio Restrepo Dental", "San Jose Plastic Surgery", "Aesthetic Costa Rica", "San Jose Orthopedic Hub", "San Jose Eye Institute", "San Jose Heart Center", "San Jose Rehabilitation", "San Jose Pediatric Wing"] },
                     { name: "Liberia", desc: "Guanacaste Medical Gateway", hospitals: ["Hospital San Rafael Arcangel", "Clinica Biblica Guanacaste", "Hospital Metropolitano Liberia", "Liberia Dental Specialists", "Guanacaste Plastic Surgery", "Liberia Eye Institute", "Liberia Orthopedic Clinic", "Liberia Rehabilitation Hub", "Liberia Heart Unit", "Liberia Skin Clinic", "Liberia Pediatric Wing", "Papagayo Medical Center", "Liberia Wellness Hospital", "Liberia Aesthetic Center", "Liberia Urgent Care"] },
@@ -1948,22 +1923,9 @@
                 hubEl.className = "bg-teal-950/90 border border-teal-500/40 rounded-3xl overflow-hidden shadow-2xl transition-all duration-300";
                 hubEl.id = hub.id;
 
-                let galleryHTML = hub.gallery.map((img, imgIdx) => `
-                    <div class="w-72 h-44 rounded-2xl overflow-hidden shrink-0 border border-teal-600/60 shadow-lg">
-                        <img src="${img}" alt="${hub.country} Landmark ${imgIdx+1}" class="w-full h-full object-cover hover:scale-105 transition-transform" loading="lazy">
-                    </div>
-                `).join('');
-
                 let citiesGridHTML = hub.cities.map((city, cIdx) => {
                     const citySlug = `city-${city.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`;
                     const cityAccId = `${hub.id}-city-${cIdx}`;
-
-                    let cityGalleryImages = getUniqueImages(7);
-                    let cityGalleryHTML = cityGalleryImages.map((cImg, gIdx) => `
-                        <div class="w-56 h-36 rounded-xl overflow-hidden shrink-0 border border-teal-700/80 shadow-md">
-                            <img src="${cImg}" alt="${city.name} Landmark ${gIdx+1}" class="w-full h-full object-cover hover:scale-105 transition-transform" loading="lazy">
-                        </div>
-                    `).join('');
 
                     let hospitalsListHTML = city.hospitals.map((h, hIdx) => `
                         <div class="p-2 bg-teal-950 rounded border border-teal-800 text-[11px] text-teal-200">
@@ -1972,27 +1934,18 @@
                     `).join('');
 
                     return `
-                        <div id="${citySlug}" class="bg-teal-900/90 rounded-2xl border border-teal-700/80 overflow-hidden shadow-lg transition-all duration-300 flex flex-col">
-                            
-                            <div class="w-full bg-teal-950/80 p-3 border-b border-teal-800">
-                                <div class="flex gap-3 overflow-x-auto no-scrollbar py-1 cursor-grab active:cursor-grabbing">
-                                    ${cityGalleryHTML}
-                                </div>
+                        <div id="${citySlug}" class="bg-teal-900/90 rounded-2xl border border-teal-700/80 overflow-hidden shadow-lg transition-all duration-300 flex flex-col justify-between p-5 space-y-4">
+                            <div>
+                                <strong class="text-white block text-base font-heading">${cIdx + 1}. ${city.name}</strong>
+                                <span class="text-teal-200 block text-xs mt-0.5">${city.desc}</span>
                             </div>
 
-                            <div class="p-5 space-y-3 flex-1 flex flex-col justify-between">
-                                <div>
-                                    <strong class="text-white block text-base font-heading">${cIdx + 1}. ${city.name}</strong>
-                                    <span class="text-teal-200 block text-xs mt-0.5">${city.desc}</span>
-                                </div>
-
-                                <button onclick="toggleCityHospitals('${cityAccId}')" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-xl text-[11px] flex items-center justify-between px-4 cursor-pointer transition-all shadow">
-                                    <span>Top Accredited Hospitals (${city.hospitals.length})</span>
-                                    <i class="fa-solid fa-chevron-down text-[10px]" id="icon-${cityAccId}"></i>
-                                </button>
-                                <div id="${cityAccId}" class="hidden space-y-2 pt-2 text-[11px] text-teal-200 border-t border-teal-800 max-h-52 overflow-y-auto">
-                                    ${hospitalsListHTML}
-                                </div>
+                            <button onclick="toggleCityHospitals('${cityAccId}')" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-xl text-[11px] flex items-center justify-between px-4 cursor-pointer transition-all shadow">
+                                <span>Top Accredited Hospitals (${city.hospitals.length})</span>
+                                <i class="fa-solid fa-chevron-down text-[10px]" id="icon-${cityAccId}"></i>
+                            </button>
+                            <div id="${cityAccId}" class="hidden space-y-2 pt-2 text-[11px] text-teal-200 border-t border-teal-800 max-h-52 overflow-y-auto">
+                                ${hospitalsListHTML}
                             </div>
                         </div>
                     `;
@@ -2011,9 +1964,12 @@
                         </button>
                     </div>
 
-                    <div class="w-full bg-teal-950/80 p-4 border-b border-teal-900">
-                        <div class="flex gap-4 overflow-x-auto no-scrollbar py-1">
-                            ${galleryHTML}
+                    <!-- Single Clean Full-Width Landmark Image for the Hub Tile -->
+                    <div class="w-full h-64 sm:h-80 overflow-hidden relative border-b border-teal-900">
+                        <img src="${hub.hubImage}" alt="${hub.title} Showcase Landmark" class="w-full h-full object-cover" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-teal-950 via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute bottom-4 left-6 bg-teal-950/80 backdrop-blur-md px-4 py-2 rounded-xl border border-teal-600 text-xs font-bold text-white shadow-lg">
+                            ${hub.flag} ${hub.country} Sovereign Clinical Network & Destination Hub
                         </div>
                     </div>
 
