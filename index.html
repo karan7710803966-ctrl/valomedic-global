@@ -38,7 +38,7 @@
             color: #f1f5f9;
         }
         .gradient-hero {
-            background: linear-gradient(135deg, rgba(15, 118, 110, 0.92) 0%, rgba(2, 132, 199, 0.90) 100%), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=2000&q=80');
+            background: linear-gradient(135deg, rgba(15, 118, 110, 0.92) 0%, rgba(2, 132, 199, 0.90) 100%), url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Kokilaben_Dhirubhai_Ambani_Hospital%2C_Mumbai.jpg/1280px-Kokilaben_Dhirubhai_Ambani_Hospital%2C_Mumbai.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -47,13 +47,18 @@
         .goog-te-banner-frame.skiptranslate, .goog-te-gadget, .goog-logo-link, #google_translate_element { display: none !important; }
         body { top: 0px !important; position: static !important; }
         .skiptranslate { display: none !important; }
+        /* Strict overflow protection for mobile phone inputs & flex rows */
+        .phone-row-wrap { display: flex; width: 100%; max-width: 100%; gap: 0.5rem; box-sizing: border-box; }
+        .phone-code-select { width: 6.25rem; min-width: 6.25rem; max-width: 6.25rem; flex-shrink: 0; box-sizing: border-box; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+        .phone-number-input { flex: 1 1 0%; min-width: 0; width: 100%; box-sizing: border-box; }
     </style>
 </head>
 <body class="font-sans antialiased selection:bg-teal-500 selection:text-white overflow-x-hidden">
 
     <div id="google_translate_element" style="display:none;"></div>
 
-    <a href="https://wa.me/917710803966?text=Hello%20Valomedic%20Global%20Medical%20Concierge,%20I%20would%20like%20to%20inquire%20about%20elite%20medical%20travel%20packages." target="_blank" rel="noopener noreferrer" class="fixed bottom-5 right-5 z-50 bg-emerald-500 hover:bg-emerald-600 text-slate-950 w-12 h-12 rounded-full shadow-2xl flex items-center justify-center text-2xl transition-all transform hover:scale-110 font-bold" title="Chat on WhatsApp">
+    <!-- Professional Executive WhatsApp Concierge Button -->
+    <a id="whatsapp-concierge-btn" href="https://wa.me/917710803966?text=Hello%20Valomedic%20Global%20Medical%20Concierge%20Executive%20Desk%2C%0A%0AI%20am%20reaching%20out%20to%20request%20a%20confidential%20international%20clinical%20consultation%20and%20all-inclusive%20package%20estimate.%0A%0A%E2%80%A2%20Patient%20Full%20Name%3A%20%0A%E2%80%A2%20Country%20of%20Residence%3A%20%0A%E2%80%A2%20Target%20Medical%20Specialty%20%2F%20Procedure%3A%20%0A%E2%80%A2%20Preferred%20Destination%20Hub%20%28India%20%2F%20Turkey%20%2F%20Thailand%20%2F%20UAE%20%2F%20Singapore%20%2F%20South%20Korea%20%2F%20Mexico%20%2F%20Costa%20Rica%29%3A%20%0A%E2%80%A2%20Estimated%20Travel%20Timeline%3A%20%0A%E2%80%A2%20Medical%20Reports%20Ready%20%28Yes%20%2F%20No%29%3A%20%0A%0AKindly%20connect%20me%20with%20a%20Senior%20Case%20Coordinator.%20Thank%20you." target="_blank" rel="noopener noreferrer" class="fixed bottom-5 right-5 z-50 bg-emerald-500 hover:bg-emerald-600 text-slate-950 w-13 h-13 p-3.5 rounded-full shadow-2xl flex items-center justify-center text-2xl transition-all transform hover:scale-110 font-bold border-2 border-white/30" title="Connect with Valomedic Executive Concierge on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
@@ -63,7 +68,13 @@
                 <div class="flex items-center space-x-4">
                     <span class="flex items-center gap-1.5 text-teal-200"><i class="fa-solid fa-shield-halved text-emerald-400"></i> JCI & NABH Accredited International Partner Network</span>
                 </div>
-                <div class="text-[11px] text-teal-300 font-medium">Global Cross-Border Healthcare & Concierge Exporter</div>
+                <div class="flex items-center gap-4 text-[11px] text-teal-300 font-medium">
+                    <button onclick="openLegalModal('privacy')" class="hover:text-white underline-offset-2 hover:underline cursor-pointer">Privacy Policy</button>
+                    <span>•</span>
+                    <button onclick="openLegalModal('terms')" class="hover:text-white underline-offset-2 hover:underline cursor-pointer">Terms & Conditions</button>
+                    <span>•</span>
+                    <button onclick="openLegalModal('disclaimer')" class="hover:text-white underline-offset-2 hover:underline cursor-pointer">Medical Disclaimer</button>
+                </div>
             </div>
         </div>
 
@@ -103,7 +114,7 @@
             </div>
 
             <div class="flex items-center space-x-3">
-                <button onclick="openAuthModal('login')" class="hidden sm:inline-flex items-center gap-2 bg-teal-800 hover:bg-teal-700 text-teal-100 text-xs font-bold px-4 py-2.5 rounded-xl border border-teal-600 transition-all shadow-md">
+                <button onclick="openAuthModal('login')" class="hidden sm:inline-flex items-center gap-2 bg-teal-800 hover:bg-teal-700 text-teal-100 text-xs font-bold px-4 py-2.5 rounded-xl border border-teal-600 transition-all shadow-md cursor-pointer">
                     <i class="fa-solid fa-user-lock text-emerald-400"></i> Patient Portal
                 </button>
                 <button onclick="toggleAppMenu()" class="bg-teal-600 hover:bg-teal-500 text-white w-10 h-10 rounded-xl flex items-center justify-center text-lg shadow-lg transition-all cursor-pointer border border-teal-400/40" title="Open Menu">
@@ -134,7 +145,7 @@
                 </svg>
                 <span class="text-sm font-extrabold text-white uppercase tracking-wider font-heading">Valomedic Menu</span>
             </div>
-            <button onclick="toggleAppMenu()" class="text-teal-300 hover:text-white text-xl font-bold w-9 h-9 rounded-full bg-teal-900 flex items-center justify-center">✕</button>
+            <button onclick="toggleAppMenu()" class="text-teal-300 hover:text-white text-xl font-bold w-9 h-9 rounded-full bg-teal-900 flex items-center justify-center cursor-pointer">✕</button>
         </div>
 
         <div class="flex-1 overflow-y-auto p-6 space-y-4 text-xs">
@@ -149,7 +160,7 @@
                 </div>
             </div>
 
-            <button onclick="toggleAppMenu(); openAuthModal('login');" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl text-xs uppercase tracking-wider shadow-lg flex items-center justify-center gap-2 sm:hidden">
+            <button onclick="toggleAppMenu(); openAuthModal('login');" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl text-xs uppercase tracking-wider shadow-lg flex items-center justify-center gap-2 sm:hidden cursor-pointer">
                 <i class="fa-solid fa-user-lock"></i> Patient Portal Login / Register
             </button>
 
@@ -176,67 +187,85 @@
             <a href="#offers" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">Offers & Cashback</a>
             <a href="#tourism" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">Tourism & Travelism</a>
             <a href="#medication" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">Pharmacy & Medication</a>
-            <a href="#second-opinion" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">Valomedic Expert Opinion & Consultation ($9.99)</a>
+            <a href="#second-opinion" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">Priority Case Intake & Board Review ($29.99)</a>
+
+            <!-- Dedicated Legal & Compliance Navigation Links in Drawer Menu -->
+            <div class="pt-3 space-y-2">
+                <span class="text-[10px] font-extrabold uppercase tracking-widest text-teal-400 block">Legal, Privacy & Compliance</span>
+                <button onclick="toggleAppMenu(); openLegalModal('privacy');" class="w-full text-left flex items-center justify-between font-bold uppercase tracking-wider text-teal-100 hover:text-emerald-300 py-2 border-b border-teal-900 cursor-pointer">
+                    <span><i class="fa-solid fa-user-shield text-emerald-400 mr-2"></i>1. Privacy Policy & HIPAA Notice</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </button>
+                <button onclick="toggleAppMenu(); openLegalModal('terms');" class="w-full text-left flex items-center justify-between font-bold uppercase tracking-wider text-teal-100 hover:text-emerald-300 py-2 border-b border-teal-900 cursor-pointer">
+                    <span><i class="fa-solid fa-file-contract text-cyan-400 mr-2"></i>2. Terms & Conditions</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </button>
+                <button onclick="toggleAppMenu(); openLegalModal('disclaimer');" class="w-full text-left flex items-center justify-between font-bold uppercase tracking-wider text-teal-100 hover:text-emerald-300 py-2 border-b border-teal-900 cursor-pointer">
+                    <span><i class="fa-solid fa-scale-balanced text-amber-400 mr-2"></i>3. Medical & Liability Disclaimer</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </button>
+            </div>
         </div>
     </div>
 
-    <div id="auth-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-teal-950 border border-teal-500/50 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative space-y-6 max-h-[90vh] overflow-y-auto">
-            <button onclick="closeAuthModal()" class="absolute top-5 right-5 text-teal-400 hover:text-white text-lg font-bold w-9 h-9 rounded-full bg-teal-900 flex items-center justify-center">✕</button>
+    <!-- Patient Portal Login & Registration Modal (Strict Box-Sizing & No Horizontal Overflow) -->
+    <div id="auth-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-3 sm:p-4">
+        <div class="bg-teal-950 border border-teal-500/50 rounded-3xl max-w-lg w-full p-5 sm:p-8 shadow-2xl relative space-y-5 max-h-[92vh] overflow-y-auto overflow-x-hidden box-border">
+            <button onclick="closeAuthModal()" class="absolute top-4 right-4 text-teal-400 hover:text-white text-lg font-bold w-9 h-9 rounded-full bg-teal-900 flex items-center justify-center cursor-pointer">✕</button>
             
-            <div id="auth-modal-header" class="text-center space-y-2">
+            <div id="auth-modal-header" class="text-center space-y-1.5 pt-1">
                 <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl font-bold mx-auto"><i class="fa-solid fa-user-shield"></i></div>
                 <h3 class="text-xl font-extrabold font-heading text-white">Patient Portal & Secure Access</h3>
                 <p class="text-xs text-teal-200">Register or sign in with instant OTP verification for complete concierge coordination.</p>
             </div>
 
             <div class="flex rounded-xl bg-teal-900 p-1 border border-teal-700">
-                <button id="tab-btn-login" onclick="switchAuthTab('login')" class="flex-1 py-2 rounded-lg text-xs font-bold transition-all bg-teal-700 text-white shadow">Sign In</button>
-                <button id="tab-btn-register" onclick="switchAuthTab('register')" class="flex-1 py-2 rounded-lg text-xs font-bold transition-all text-teal-300 hover:text-white">Register Account</button>
+                <button id="tab-btn-login" onclick="switchAuthTab('login')" class="flex-1 py-2 rounded-lg text-xs font-bold transition-all bg-teal-700 text-white shadow cursor-pointer">Sign In</button>
+                <button id="tab-btn-register" onclick="switchAuthTab('register')" class="flex-1 py-2 rounded-lg text-xs font-bold transition-all text-teal-300 hover:text-white cursor-pointer">Register Account</button>
             </div>
 
-            <form id="form-login" onsubmit="handlePatientLogin(event)" class="space-y-4">
+            <form id="form-login" onsubmit="handlePatientLogin(event)" class="space-y-4 w-full box-border">
                 <div>
                     <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Sign In Method</label>
-                    <div class="flex gap-4 text-xs font-bold text-white mb-2">
+                    <div class="flex flex-wrap gap-4 text-xs font-bold text-white mb-2">
                         <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="login-method" value="email" checked onchange="toggleLoginMethod('email')"> Login with Email ID</label>
                         <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="login-method" value="mobile" onchange="toggleLoginMethod('mobile')"> Login with Mobile Number</label>
                     </div>
                 </div>
 
-                <div id="login-email-group">
+                <div id="login-email-group" class="w-full">
                     <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Registered Email Address</label>
-                    <input type="email" id="login-email" placeholder="patient@example.com" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
+                    <input type="email" id="login-email" placeholder="patient@example.com" class="w-full box-border bg-teal-900 border border-teal-700 rounded-xl px-3.5 py-3 text-xs text-white">
                 </div>
 
-                <div id="login-mobile-group" class="hidden">
+                <div id="login-mobile-group" class="hidden w-full">
                     <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Registered Mobile Number (With Country Code)</label>
-                    <div class="flex gap-2">
-                        <select id="login-code" class="w-28 shrink-0 bg-teal-900 border border-teal-700 rounded-xl px-1.5 py-3 text-xs text-white truncate country-codes-select font-semibold"></select>
-                        <input type="tel" id="login-phone" placeholder="7710803966" class="flex-1 bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
+                    <div class="phone-row-wrap">
+                        <select id="login-code" class="phone-code-select bg-teal-900 border border-teal-700 rounded-xl px-2 py-3 text-xs text-white country-codes-select font-semibold"></select>
+                        <input type="tel" id="login-phone" placeholder="7710803966" class="phone-number-input bg-teal-900 border border-teal-700 rounded-xl px-3 py-3 text-xs text-white">
                     </div>
                 </div>
 
-                <div>
+                <div class="w-full">
                     <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Password or OTP Verification Code</label>
-                    <input type="password" id="login-password" required placeholder="••••••••" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
+                    <input type="password" id="login-password" required placeholder="••••••••" class="w-full box-border bg-teal-900 border border-teal-700 rounded-xl px-3.5 py-3 text-xs text-white">
                 </div>
 
-                <div class="flex gap-2">
-                    <button type="submit" class="flex-1 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-extrabold py-3.5 rounded-xl text-xs uppercase tracking-wider shadow-lg">Sign In to Dashboard 🚀</button>
-                    <button type="button" onclick="sendLoginOTP()" class="bg-teal-800 hover:bg-teal-700 text-teal-200 font-bold px-4 py-3.5 rounded-xl text-xs uppercase tracking-wider border border-teal-600">Send OTP</button>
+                <div class="flex gap-2 w-full">
+                    <button type="submit" class="flex-1 min-w-0 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-extrabold py-3.5 px-3 rounded-xl text-xs uppercase tracking-wider shadow-lg cursor-pointer">Sign In to Dashboard 🚀</button>
+                    <button type="button" onclick="sendLoginOTP()" class="shrink-0 bg-teal-800 hover:bg-teal-700 text-teal-200 font-bold px-3.5 py-3.5 rounded-xl text-xs uppercase tracking-wider border border-teal-600 cursor-pointer">Send OTP</button>
                 </div>
             </form>
 
-            <form id="form-register" onsubmit="handlePatientRegister(event)" class="space-y-4 hidden">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
+            <form id="form-register" onsubmit="handlePatientRegister(event)" class="space-y-4 hidden w-full box-border">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
+                    <div class="min-w-0">
                         <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Patient Full Name</label>
-                        <input type="text" id="reg-name" required placeholder="John Doe" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
+                        <input type="text" id="reg-name" required placeholder="John Doe" class="w-full box-border bg-teal-900 border border-teal-700 rounded-xl px-3.5 py-3 text-xs text-white">
                     </div>
-                    <div>
+                    <div class="min-w-0">
                         <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Target Surgery Department</label>
-                        <select id="reg-department" required class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white font-semibold">
+                        <select id="reg-department" required class="w-full box-border bg-teal-900 border border-teal-700 rounded-xl px-3 py-3 text-xs text-white font-semibold">
                             <option value="" disabled selected>Select Surgery Department</option>
                             <option value="Orthopedics & Joint Replacements">1. Orthopedics & Joint Replacements</option>
                             <option value="Cardiology & CTVS (CABG)">2. Cardiology & CTVS (CABG)</option>
@@ -247,27 +276,27 @@
                     </div>
                 </div>
 
-                <div>
+                <div class="w-full">
                     <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Email Address</label>
-                    <input type="email" id="reg-email" required placeholder="patient@example.com" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
+                    <input type="email" id="reg-email" required placeholder="patient@example.com" class="w-full box-border bg-teal-900 border border-teal-700 rounded-xl px-3.5 py-3 text-xs text-white">
                 </div>
 
-                <div>
+                <div class="w-full">
                     <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Mobile Number (With Country Code)</label>
-                    <div class="flex gap-2">
-                        <select id="reg-code" class="w-28 shrink-0 bg-teal-900 border border-teal-700 rounded-xl px-1.5 py-3 text-xs text-white truncate country-codes-select font-semibold"></select>
-                        <input type="tel" id="reg-phone" required placeholder="7710803966" class="flex-1 bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
+                    <div class="phone-row-wrap">
+                        <select id="reg-code" class="phone-code-select bg-teal-900 border border-teal-700 rounded-xl px-2 py-3 text-xs text-white country-codes-select font-semibold"></select>
+                        <input type="tel" id="reg-phone" required placeholder="7710803966" class="phone-number-input bg-teal-900 border border-teal-700 rounded-xl px-3 py-3 text-xs text-white">
                     </div>
                 </div>
 
-                <div>
+                <div class="w-full">
                     <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Create Password</label>
-                    <input type="password" id="reg-password" required placeholder="••••••••" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
+                    <input type="password" id="reg-password" required placeholder="••••••••" class="w-full box-border bg-teal-900 border border-teal-700 rounded-xl px-3.5 py-3 text-xs text-white">
                 </div>
 
-                <div>
+                <div class="w-full">
                     <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Select OTP Verification Channel</label>
-                    <div class="flex gap-4 text-xs font-bold text-white mb-2">
+                    <div class="flex flex-wrap gap-4 text-xs font-bold text-white mb-2">
                         <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="otp-channel" value="email" checked> Send OTP via Email</label>
                         <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="otp-channel" value="mobile"> Send OTP via Mobile SMS</label>
                     </div>
@@ -280,17 +309,86 @@
                 <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-extrabold py-3.5 rounded-xl text-xs uppercase tracking-wider shadow-lg cursor-pointer">Register & Send OTP ✉️</button>
             </form>
 
-            <form id="form-otp" onsubmit="handleVerifyOTP(event)" class="space-y-4 hidden">
+            <form id="form-otp" onsubmit="handleVerifyOTP(event)" class="space-y-4 hidden w-full">
                 <div class="text-center space-y-2">
                     <span class="text-emerald-400 font-bold text-xs"><i class="fa-solid fa-paper-plane"></i> Verification Code Dispatched Securely!</span>
                     <p id="otp-instruction-text" class="text-[11px] text-teal-200">Enter the 6-digit verification code sent to your registered contact channel.</p>
                 </div>
                 <div>
                     <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Enter 6-Digit OTP Code</label>
-                    <input type="text" id="otp-input" required maxlength="6" placeholder="771080" class="w-full text-center tracking-widest text-xl bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-white font-mono">
+                    <input type="text" id="otp-input" required maxlength="6" placeholder="771080" class="w-full box-border text-center tracking-widest text-xl bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-white font-mono">
                 </div>
                 <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-extrabold py-3.5 rounded-xl text-xs uppercase tracking-wider shadow-lg cursor-pointer">Verify & Open Dashboard ✨</button>
             </form>
+        </div>
+    </div>
+
+    <!-- Legal, Privacy Policy, Terms & Conditions, and Medical Disclaimer Modal -->
+    <div id="legal-modal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden flex items-center justify-center p-3 sm:p-6">
+        <div class="bg-teal-950 border border-teal-500/50 rounded-3xl max-w-4xl w-full p-5 sm:p-8 shadow-2xl relative flex flex-col max-h-[90vh] box-border">
+            <div class="flex justify-between items-center border-b border-teal-800 pb-4 shrink-0">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <div>
+                        <span class="text-[10px] font-extrabold uppercase tracking-widest text-teal-300 block">Valomedic Sovereign Governance & Compliance</span>
+                        <h3 id="legal-modal-title" class="text-lg sm:text-xl font-extrabold font-heading text-white">Privacy Policy & Patient Data Governance</h3>
+                    </div>
+                </div>
+                <button onclick="closeLegalModal()" class="text-teal-300 hover:text-white text-lg font-bold w-9 h-9 rounded-full bg-teal-900 flex items-center justify-center cursor-pointer">✕</button>
+            </div>
+
+            <!-- Interactive Navigation Tabs inside Legal Page -->
+            <div class="flex flex-wrap gap-2 py-3 border-b border-teal-900 shrink-0">
+                <button id="legal-tab-privacy" onclick="switchLegalTab('privacy')" class="px-4 py-2 rounded-xl text-xs font-bold bg-teal-700 text-white cursor-pointer transition-all">1. Privacy Policy & HIPAA</button>
+                <button id="legal-tab-terms" onclick="switchLegalTab('terms')" class="px-4 py-2 rounded-xl text-xs font-bold bg-teal-900 text-teal-300 hover:text-white cursor-pointer transition-all">2. Terms & Conditions</button>
+                <button id="legal-tab-disclaimer" onclick="switchLegalTab('disclaimer')" class="px-4 py-2 rounded-xl text-xs font-bold bg-teal-900 text-teal-300 hover:text-white cursor-pointer transition-all">3. Medical & Liability Disclaimer</button>
+                <button onclick="downloadLegalDocument()" class="ml-auto px-4 py-2 rounded-xl text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 hover:bg-emerald-500/30 cursor-pointer transition-all"><i class="fa-solid fa-file-arrow-down mr-1.5"></i>Download Legal Dossier (.HTML / Print PDF)</button>
+            </div>
+
+            <!-- Scrollable Legal Content Body -->
+            <div id="legal-modal-body" class="flex-1 overflow-y-auto py-5 space-y-5 text-xs text-teal-100 leading-relaxed pr-2">
+                <!-- Privacy Policy Section -->
+                <div id="legal-content-privacy" class="space-y-4">
+                    <div class="bg-teal-900/70 border border-teal-700 p-4 rounded-2xl">
+                        <p class="font-bold text-white text-sm mb-1">Effective Date: January 1, 2026 | Entity: Valomedic Global Medical Concierge</p>
+                        <p class="text-teal-200">Valomedic Global Medical Concierge ("Valomedic", "we", "our") operates under strict international healthcare privacy frameworks aligned with HIPAA (Health Insurance Portability and Accountability Act), GDPR (General Data Protection Regulation), and India's Digital Personal Data Protection (DPDP) Act.</p>
+                    </div>
+                    <h4 class="text-sm font-bold text-emerald-300">1.1 Protected Health Information (PHI) Collection</h4>
+                    <p>When you submit a Priority Case Intake dossier, register for the Patient Portal, or request a pharmaceutical cold-chain order, we collect strictly necessary clinical records (imaging DICOM files, pathology summaries, diagnostic notes) and personal identifiers (name, encrypted contact numbers, passport details for medical visa facilitation).</p>
+                    <h4 class="text-sm font-bold text-emerald-300">1.2 Zero Third-Party Monetization & Encryption Protocol</h4>
+                    <p>Valomedic never sells, rents, or monetizes patient medical records. Clinical dossiers are transmitted exclusively via encrypted channels to accredited JCI/NABH hospital medical boards and chief surgeons directly involved in evaluating your treatment protocol.</p>
+                    <h4 class="text-sm font-bold text-emerald-300">1.3 Patient Data Sovereignty & Erasure Rights</h4>
+                    <p>Patients retain full ownership of their medical records and may request immediate data export, modification, or permanent erasure at any time by contacting our Data Protection Officer at <strong>valomedic.care@gmail.com</strong>.</p>
+                </div>
+
+                <!-- Terms & Conditions Section -->
+                <div id="legal-content-terms" class="space-y-4 hidden">
+                    <div class="bg-teal-900/70 border border-teal-700 p-4 rounded-2xl">
+                        <p class="font-bold text-white text-sm mb-1">Cross-Border Medical Concierge Service Agreement</p>
+                        <p class="text-teal-200">By accessing the Valomedic portal, utilizing our Real-Time Currency Cost Estimator, or initiating a Priority Case Intake, you agree to the following service terms.</p>
+                    </div>
+                    <h4 class="text-sm font-bold text-cyan-300">2.1 Priority Case Intake Deposit ($29.99 USD)</h4>
+                    <p>The $29.99 USD Priority Case Intake fee covers administrative dossier structuring, translation coordination, and submission to partner hospital medical boards. This deposit is <strong>100% adjustable and credited toward your final confirmed surgical package</strong> upon hospital admission.</p>
+                    <h4 class="text-sm font-bold text-cyan-300">2.2 All-Inclusive Package Estimates & Currency Conversion</h4>
+                    <p>Estimates generated via the Cost Estimator reflect live mid-market foreign exchange rates and standard clinical protocols. Final binding quotations are issued by the treating JCI/NABH hospital following formal medical board evaluation of your diagnostic reports.</p>
+                    <h4 class="text-sm font-bold text-cyan-300">2.3 Promotional Vouchers & Annual Cashback Rules</h4>
+                    <p>Voucher codes (<strong>VALO7OFF</strong>, <strong>VALO5OFF</strong>) apply exclusively to eligible surgical and recovery bundles. The <strong>LUCKY100</strong> Annual 100% Treatment Cashback reimburses direct surgical and hospital facility charges for one verified patient annually, excluding international airfare, visa fees, and companion hotel accommodations.</p>
+                </div>
+
+                <!-- Medical & Liability Disclaimer Section -->
+                <div id="legal-content-disclaimer" class="space-y-4 hidden">
+                    <div class="bg-amber-950/60 border border-amber-500/50 p-4 rounded-2xl">
+                        <p class="font-bold text-amber-300 text-sm mb-1"><i class="fa-solid fa-triangle-exclamation mr-1.5"></i>Critical Non-Clinical Concierge & Medical Advisory Notice</p>
+                        <p class="text-teal-100">Valomedic Global Medical Concierge is an international healthcare facilitation, logistics, and medical travel management infrastructure—<strong>not a hospital, medical clinic, or licensed clinical practitioner</strong>.</p>
+                    </div>
+                    <h4 class="text-sm font-bold text-amber-300">3.1 Independent Clinical Judgment of Treating Physicians</h4>
+                    <p>All medical diagnoses, surgical recommendations, pre-operative clearances, and clinical procedures are performed exclusively by independent, licensed physicians and JCI/NABH accredited quaternary hospitals. Information on this portal does not constitute direct medical advice or establish a doctor-patient relationship with Valomedic.</p>
+                    <h4 class="text-sm font-bold text-amber-300">3.2 Emergency Medical Situations</h4>
+                    <p>Valomedic is designed for planned cross-border surgical expeditions and specialist consultations. If you are experiencing an acute life-threatening medical emergency, contact your local domestic emergency services immediately.</p>
+                    <h4 class="text-sm font-bold text-amber-300">3.3 International Travel & Complication Coverage</h4>
+                    <p>Patients are strongly advised to obtain specialized international medical travel complication insurance prior to departure. Valomedic coordinates post-operative follow-ups and hospital warranty protocols in accordance with each partner institution's clinical governance charter.</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -331,7 +429,7 @@
                     <h3 class="text-lg font-bold font-heading text-white flex items-center gap-2"><i class="fa-solid fa-list-check text-emerald-400"></i> Active Expedition Itinerary & Patient Status Tracker</h3>
                     <div class="space-y-3 text-xs">
                         <div class="flex justify-between items-center p-3 bg-teal-950 rounded-xl border border-teal-800">
-                            <span class="text-teal-200">1. Expert Consultation & Opinion ($9.99 Fee):</span>
+                            <span class="text-teal-200">1. Priority Case Intake & Medical Board Review ($29.99 Adjustable Deposit):</span>
                             <span class="text-emerald-400 font-bold"><i class="fa-solid fa-circle-check"></i> Completed & Verified</span>
                         </div>
                         <div class="flex justify-between items-center p-3 bg-teal-950 rounded-xl border border-teal-800">
@@ -380,7 +478,7 @@
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 pt-4">
                     <a href="#second-opinion" class="bg-emerald-400 hover:bg-emerald-500 text-teal-950 font-extrabold px-8 py-4 rounded-2xl shadow-2xl transition-all text-center text-sm uppercase tracking-wider">
-                        Book Expert Consultation ($9.99 USD) 🌟
+                        Start Priority Case Intake ($29.99 USD) 🌟
                     </a>
                     <a href="#estimator" class="bg-teal-800/80 hover:bg-teal-800 text-white border border-teal-600 font-bold px-8 py-4 rounded-2xl transition-all text-center text-sm shadow-sm">
                         Calculate Real-Time Financial Savings ↓
@@ -401,7 +499,7 @@
                     </p>
                 </div>
                 <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-teal-500/40">
-                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1000&q=80" alt="Valomedic International Clinical Team" class="w-full h-80 object-cover">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Cleveland_Clinic_Abu_Dhabi_Building.jpg/1280px-Cleveland_Clinic_Abu_Dhabi_Building.jpg" alt="Valomedic International Clinical Network" class="w-full h-80 object-cover">
                 </div>
             </div>
 
@@ -532,7 +630,7 @@
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-teal-300 font-extrabold uppercase tracking-widest text-xs">Global Clinical Infrastructure</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-2">Medical Destination Hubs & Accredited Hospital Network (8 Global Hubs & 85 Cities)</h2>
-                <p class="text-teal-100 text-sm mt-2">Direct agreements with top-tier JCI and NABH accredited hospitals across 85 premier medical cities featuring full-width landmark showcase images for every hub.</p>
+                <p class="text-teal-100 text-sm mt-2">Direct agreements with top-tier JCI and NABH accredited hospitals across 85 premier medical cities featuring unique landmark showcases for every destination hub and city.</p>
             </div>
 
             <!-- FULL GRID CONTAINER FOR 8 HUBS -->
@@ -638,7 +736,7 @@
                         </div>
 
                         <a href="#second-opinion" class="bg-emerald-400 hover:bg-emerald-500 text-teal-950 font-extrabold py-4 rounded-2xl text-center text-xs uppercase tracking-wider shadow-xl transition-all block">
-                            Lock In Estimate & Book Consultation ($9.99 USD) ↓
+                            Lock In Estimate & Priority Intake ($29.99 USD) ↓
                         </a>
                     </div>
                 </div>
@@ -646,7 +744,7 @@
         </div>
     </section>
 
-    <!-- OFFERS & CASHBACK SECTION POSITIONED BETWEEN ESTIMATOR AND EXPERT OPINION CONSULTATION FORM -->
+    <!-- OFFERS & CASHBACK SECTION POSITIONED BETWEEN ESTIMATOR AND PRIORITY CASE INTAKE FORM -->
     <section id="offers" class="py-16 bg-teal-900/60 border-t border-b border-teal-500/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <div class="text-center max-w-3xl mx-auto">
@@ -704,41 +802,41 @@
         </div>
     </section>
 
-    <!-- EXPERT OPINION CONSULTATION FORM (HEADING RETAINED WITHOUT SURGICAL OPINION) -->
+    <!-- PRIORITY CASE INTAKE & BOARD REVIEW FORM ($29.99 USD ADJUSTABLE DEPOSIT) -->
     <section id="second-opinion" class="py-20 bg-teal-950/50 border-b border-teal-900">
         <div class="max-w-4xl mx-auto px-4">
-            <div class="bg-teal-950 border border-teal-500/40 rounded-3xl p-8 lg:p-12 shadow-2xl space-y-6">
+            <div class="bg-teal-950 border border-teal-500/40 rounded-3xl p-6 sm:p-8 lg:p-12 shadow-2xl space-y-6 overflow-hidden box-border">
                 <div>
-                    <span class="text-teal-300 font-extrabold uppercase tracking-widest text-xs">Valomedic Expert Opinion & Consultation</span>
-                    <h2 class="text-2xl font-extrabold font-heading text-white mt-1">Request Expert Opinion & Consultation ($9.99 USD Fee)</h2>
-                    <p class="text-xs text-teal-200 mt-1">Submit your case details and complete the $9.99 USD consultation fee to generate a professionally structured executive inquiry to <strong>valomedic.care@gmail.com</strong>.</p>
+                    <span class="text-teal-300 font-extrabold uppercase tracking-widest text-xs">Valomedic Priority Case Intake & Medical Board Review</span>
+                    <h2 class="text-2xl font-extrabold font-heading text-white mt-1">Priority Case Intake & Board Review ($29.99 USD Adjustable Deposit)</h2>
+                    <p class="text-xs text-teal-200 mt-1">Submit your clinical case dossier and complete the $29.99 USD Priority Case Intake deposit (<strong>100% adjustable against your final surgery package</strong>) for direct Medical Board evaluation and structured dispatch to <strong>valomedic.care@gmail.com</strong>.</p>
                 </div>
-                <form onsubmit="handleSecondOpinion(event)" class="space-y-4">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
+                <form onsubmit="handleSecondOpinion(event)" class="space-y-4 w-full box-border">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                        <div class="min-w-0">
                             <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Patient Full Name</label>
-                            <input type="text" id="so-name" required placeholder="Patient Full Name" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
+                            <input type="text" id="so-name" required placeholder="Patient Full Name" class="w-full box-border bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
                         </div>
-                        <div>
+                        <div class="min-w-0">
                             <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Your Email Address</label>
-                            <input type="email" id="so-email" required placeholder="your.email@example.com" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
+                            <input type="email" id="so-email" required placeholder="your.email@example.com" class="w-full box-border bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
                         </div>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                        <div class="min-w-0">
                             <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Clinical Category</label>
-                            <select id="so-category" required class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
+                            <select id="so-category" required class="w-full box-border bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
                                 <option value="" disabled selected>Select Objective / Category</option>
-                                <option value="Expert Second Opinion">Expert Second Opinion</option>
+                                <option value="Priority Case Intake & Board Review">Priority Case Intake & Board Review</option>
                                 <option value="Oncology / Tumor Board Review">Oncology / Tumor Board Review</option>
                                 <option value="Cardiology Case Review">Cardiology Case Review</option>
                                 <option value="Orthopedic Treatment Plan Review">Orthopedic Treatment Plan Review</option>
                                 <option value="General Advisory">General Advisory</option>
                             </select>
                         </div>
-                        <div>
+                        <div class="min-w-0">
                             <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Target Destination Hub</label>
-                            <select id="so-hub" required class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
+                            <select id="so-hub" required class="w-full box-border bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
                                 <option value="" disabled selected>Select Preferred Hub</option>
                                 <option value="India Hub (Mumbai/Delhi/Jaipur/Jodhpur/Udaipur/Varanasi/Lucknow)">India Hub (15 Cities)</option>
                                 <option value="Turkey Hub (Istanbul/Antalya/Ankara/Izmir)">Turkey Hub (10 Cities)</option>
@@ -751,22 +849,22 @@
                             </select>
                         </div>
                     </div>
-                    <div>
+                    <div class="w-full">
                         <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Phone / WhatsApp (All 195+ World Codes)</label>
-                        <div class="flex gap-2">
-                            <select id="so-code" class="w-28 shrink-0 bg-teal-900 border border-teal-700 rounded-xl px-1.5 py-3 text-xs text-white truncate country-codes-select focus:ring-2 focus:ring-teal-400 font-semibold"></select>
-                            <input type="tel" id="so-phone" required placeholder="7710803966" class="flex-1 bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
+                        <div class="phone-row-wrap">
+                            <select id="so-code" class="phone-code-select bg-teal-900 border border-teal-700 rounded-xl px-2 py-3 text-xs text-white country-codes-select focus:ring-2 focus:ring-teal-400 font-semibold"></select>
+                            <input type="tel" id="so-phone" required placeholder="7710803966" class="phone-number-input bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
                         </div>
                     </div>
-                    <div>
+                    <div class="w-full">
                         <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Diagnosis & Case Notes</label>
-                        <textarea id="so-notes" rows="3" required placeholder="Describe diagnosis, current treatment, or specific questions..." class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white"></textarea>
+                        <textarea id="so-notes" rows="3" required placeholder="Describe diagnosis, current treatment, or specific questions..." class="w-full box-border bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white"></textarea>
                     </div>
 
                     <!-- COUPON CODE SELECTION BUTTON POSITIONED BETWEEN DIAGNOSE/CASE NOTE AND SUBMIT BUTTON -->
-                    <div>
+                    <div class="w-full">
                         <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Apply Promotional Voucher / Cashback Code</label>
-                        <select id="so-coupon" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white font-semibold">
+                        <select id="so-coupon" class="w-full box-border bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white font-semibold">
                             <option value="None Applied">-- Select Available Promotional Code (Optional) --</option>
                             <option value="LUCKY100 (Annual 100% Treatment Cashback)">LUCKY100 - Annual 100% Treatment Cashback</option>
                             <option value="VALO7OFF (7% Excellence Package Discount)">VALO7OFF - 7% Excellence Package Discount</option>
@@ -774,7 +872,7 @@
                         </select>
                     </div>
 
-                    <button type="submit" class="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider shadow-lg cursor-pointer">Proceed to $9.99 Consultation & Draft Professional Email 📋</button>
+                    <button type="submit" class="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider shadow-lg cursor-pointer">Proceed to $29.99 Priority Case Intake & Draft Executive Dossier 📋</button>
                 </form>
             </div>
         </div>
@@ -782,34 +880,34 @@
 
     <section id="medication" class="py-20 bg-teal-900/40 border-t border-teal-500/30">
         <div class="max-w-4xl mx-auto px-4">
-            <div class="bg-teal-950 border border-teal-500/40 rounded-3xl p-8 lg:p-12 shadow-2xl space-y-6">
+            <div class="bg-teal-950 border border-teal-500/40 rounded-3xl p-6 sm:p-8 lg:p-12 shadow-2xl space-y-6 overflow-hidden box-border">
                 <div>
                     <span class="text-teal-300 font-extrabold uppercase tracking-widest text-xs">Cross-Border Pharmacy Logistics</span>
                     <h2 class="text-2xl font-extrabold font-heading text-white mt-1">Specialty Medication & Cold-Chain Order Form</h2>
                     <p class="text-xs text-teal-200 mt-1">Submit your prescription requirements for direct dispatch to <strong>valomedic.care@gmail.com</strong>.</p>
                 </div>
-                <form onsubmit="handlePharmacyInquiry(event)" class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
+                <form onsubmit="handlePharmacyInquiry(event)" class="space-y-6 w-full box-border">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                        <div class="min-w-0">
                             <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Patient Full Name</label>
-                            <input type="text" id="pharm-name" required placeholder="e.g. Jane Smith" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
+                            <input type="text" id="pharm-name" required placeholder="e.g. Jane Smith" class="w-full box-border bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
                         </div>
-                        <div>
+                        <div class="min-w-0">
                             <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Email Address</label>
-                            <input type="email" id="pharm-email" required placeholder="patient@example.com" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
+                            <input type="email" id="pharm-email" required placeholder="patient@example.com" class="w-full box-border bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
                         </div>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                        <div class="min-w-0">
                             <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Phone / WhatsApp (All 195+ World Codes)</label>
-                            <div class="flex gap-2">
-                                <select id="pharm-code" class="w-28 shrink-0 bg-teal-900 border border-teal-700 rounded-xl px-1.5 py-3 text-xs text-white truncate country-codes-select focus:ring-2 focus:ring-teal-400 font-semibold"></select>
-                                <input type="tel" id="pharm-phone" required placeholder="7710803966" class="flex-1 bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
+                            <div class="phone-row-wrap">
+                                <select id="pharm-code" class="phone-code-select bg-teal-900 border border-teal-700 rounded-xl px-2 py-3 text-xs text-white country-codes-select focus:ring-2 focus:ring-teal-400 font-semibold"></select>
+                                <input type="tel" id="pharm-phone" required placeholder="7710803966" class="phone-number-input bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
                             </div>
                         </div>
-                        <div>
+                        <div class="min-w-0">
                             <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Medication Category</label>
-                            <select id="pharm-category" required class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
+                            <select id="pharm-category" required class="w-full box-border bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
                                 <option value="" disabled selected>Select Medication Category</option>
                                 <option value="Oncology Specialty Drugs">Oncology Specialty Drugs</option>
                                 <option value="Rare Disease Treatments">Rare Disease Treatments</option>
@@ -818,9 +916,9 @@
                             </select>
                         </div>
                     </div>
-                    <div>
+                    <div class="w-full">
                         <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Prescription Details & Specific Drug Names</label>
-                        <textarea id="pharm-notes" rows="4" placeholder="List exact medicine names, dosage, quantity..." class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white"></textarea>
+                        <textarea id="pharm-notes" rows="4" placeholder="List exact medicine names, dosage, quantity..." class="w-full box-border bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white"></textarea>
                     </div>
                     <button type="submit" class="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold py-4 rounded-xl text-xs uppercase tracking-wider shadow-xl transition-all cursor-pointer">
                         Submit Pharmacy Order to valomedic.care@gmail.com 💊
@@ -853,6 +951,12 @@
                         <span class="text-lg font-extrabold font-heading text-white">VALOMEDIC</span>
                     </div>
                     <p class="text-teal-300 leading-relaxed text-xs">Global leader in cross-border medical concierge, JCI hospital coordination, and luxury medical tourism across 85 destination cities.</p>
+                    <div class="pt-2 space-y-1.5 border-t border-teal-900">
+                        <span class="text-[10px] font-extrabold uppercase tracking-widest text-emerald-400 block">Legal & Compliance Dossiers</span>
+                        <button onclick="openLegalModal('privacy')" class="block text-left text-teal-200 hover:text-white transition-colors cursor-pointer">• Privacy Policy & HIPAA Governance</button>
+                        <button onclick="openLegalModal('terms')" class="block text-left text-teal-200 hover:text-white transition-colors cursor-pointer">• Terms & Conditions of Concierge</button>
+                        <button onclick="openLegalModal('disclaimer')" class="block text-left text-teal-200 hover:text-white transition-colors cursor-pointer">• Non-Clinical Medical Disclaimer</button>
+                    </div>
                 </div>
 
                 <div>
@@ -869,8 +973,11 @@
                         <li><a href="#offers" class="hover:text-white transition-colors">• Offers & Cashback</a></li>
                         <li><a href="#tourism" class="hover:text-white transition-colors">• Tourism & Travelism</a></li>
                         <li><a href="#medication" class="hover:text-white transition-colors">• Pharmacy & Medication</a></li>
-                        <li><a href="#second-opinion" class="hover:text-white transition-colors">• Expert Consultation ($9.99)</a></li>
+                        <li><a href="#second-opinion" class="hover:text-white transition-colors">• Priority Case Intake ($29.99)</a></li>
                         <li><a href="javascript:void(0)" onclick="openAuthModal('login')" class="hover:text-white transition-colors">• Patient Portal Login</a></li>
+                        <li><a href="javascript:void(0)" onclick="openLegalModal('privacy')" class="hover:text-emerald-300 transition-colors">• Privacy Policy</a></li>
+                        <li><a href="javascript:void(0)" onclick="openLegalModal('terms')" class="hover:text-emerald-300 transition-colors">• Terms & Conditions</a></li>
+                        <li><a href="javascript:void(0)" onclick="openLegalModal('disclaimer')" class="hover:text-emerald-300 transition-colors">• Medical Disclaimer</a></li>
                     </ul>
                 </div>
 
@@ -893,7 +1000,15 @@
 
             <div class="border-t border-teal-900 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
                 <div>&copy; 2026 Valomedic Global Medical Concierge. All Rights Reserved.</div>
-                <div class="text-teal-300 font-medium"><i class="fa-solid fa-crown text-amber-300 mr-1"></i> Founder & Director: Karan Suthar</div>
+                <div class="flex flex-wrap items-center gap-4 text-teal-300 font-medium">
+                    <button onclick="openLegalModal('privacy')" class="hover:text-white cursor-pointer">Privacy Policy</button>
+                    <span>|</span>
+                    <button onclick="openLegalModal('terms')" class="hover:text-white cursor-pointer">Terms & Conditions</button>
+                    <span>|</span>
+                    <button onclick="openLegalModal('disclaimer')" class="hover:text-white cursor-pointer">Disclaimer</button>
+                    <span>|</span>
+                    <span><i class="fa-solid fa-crown text-amber-300 mr-1"></i> Founder & Director: Karan Suthar</span>
+                </div>
             </div>
         </div>
     </footer>
@@ -907,15 +1022,15 @@
             {name: "Belarus", code: "+375", flag: "🇧🇾"}, {name: "Belgium", code: "+32", flag: "🇧🇪"}, {name: "Belize", code: "+501", flag: "🇧🇿"},
             {name: "Benin", code: "+229", flag: "🇧🇯"}, {name: "Bhutan", code: "+975", flag: "🇧🇹"}, {name: "Bolivia", code: "+591", flag: "🇧🇴"},
             {name: "Bosnia and Herzegovina", code: "+387", flag: "🇧🇦"}, {name: "Botswana", code: "+267", flag: "🇧🇼"}, {name: "Brazil", code: "+55", flag: "🇧🇷"},
-            {name: "Brunei", code: "+673", flag: "🇧🇳"}, {name: "Bulgaria", code: "+359", flag: "🇧🇬"}, {name: "Burkina Faso", code: "+226", flag: "BF"},
-            {name: "Burundi", code: "+257", flag: "BI"}, {name: "Cambodia", code: "+855", flag: "🇰🇭"}, {name: "Cameroon", code: "+237", flag: "🇨🇲"},
+            {name: "Brunei", code: "+673", flag: "🇧🇳"}, {name: "Bulgaria", code: "+359", flag: "🇧🇬"}, {name: "Burkina Faso", code: "+226", flag: "🇧🇫"},
+            {name: "Burundi", code: "+257", flag: "🇧🇮"}, {name: "Cambodia", code: "+855", flag: "🇰🇭"}, {name: "Cameroon", code: "+237", flag: "🇨🇲"},
             {name: "Canada", code: "+1", flag: "🇨🇦"}, {name: "Cape Verde", code: "+238", flag: "🇨🇻"}, {name: "Central African Republic", code: "+236", flag: "🇨🇫"},
             {name: "Chad", code: "+235", flag: "🇹🇩"}, {name: "Chile", code: "+56", flag: "🇨🇱"}, {name: "China", code: "+86", flag: "🇨🇳"},
             {name: "Colombia", code: "+57", flag: "🇨🇴"}, {name: "Comoros", code: "+269", flag: "🇰🇲"}, {name: "Congo", code: "+242", flag: "🇨🇬"},
             {name: "Costa Rica", code: "+506", flag: "🇨🇷"}, {name: "Croatia", code: "+385", flag: "🇭🇷"}, {name: "Cuba", code: "+53", flag: "🇨🇺"},
             {name: "Cyprus", code: "+357", flag: "🇨🇾"}, {name: "Czech Republic", code: "+420", flag: "🇨🇿"}, {name: "Denmark", code: "+45", flag: "🇩🇰"},
             {name: "Djibouti", code: "+253", flag: "🇩🇯"}, {name: "Dominican Republic", code: "+1-809", flag: "🇩🇴"}, {name: "Ecuador", code: "+593", flag: "🇪🇨"},
-            {name: "Egypt", code: "+20", flag: "🇪🇬"}, {name: "El Salvador", code: "+503", flag: "🇸🇻"}, {name: "Equatorial Guinea", code: "+240", flag: "GQ"},
+            {name: "Egypt", code: "+20", flag: "🇪🇬"}, {name: "El Salvador", code: "+503", flag: "🇸🇻"}, {name: "Equatorial Guinea", code: "+240", flag: "🇬🇶"},
             {name: "Eritrea", code: "+291", flag: "🇪🇷"}, {name: "Estonia", code: "+372", flag: "🇪🇪"}, {name: "Ethiopia", code: "+251", flag: "🇪🇹"},
             {name: "Fiji", code: "+679", flag: "🇫🇯"}, {name: "Finland", code: "+358", flag: "🇫🇮"}, {name: "France", code: "+33", flag: "🇫🇷"},
             {name: "Gabon", code: "+241", flag: "🇬🇦"}, {name: "Gambia", code: "+220", flag: "🇬🇲"}, {name: "Georgia", code: "+995", flag: "🇬🇪"},
@@ -938,10 +1053,10 @@
             {name: "Morocco", code: "+212", flag: "🇲🇦"}, {name: "Mozambique", code: "+258", flag: "🇲🇿"}, {name: "Myanmar", code: "+95", flag: "🇲🇲"},
             {name: "Namibia", code: "+264", flag: "🇳🇦"}, {name: "Nepal", code: "+977", flag: "🇳🇵"}, {name: "Netherlands", code: "+31", flag: "🇳🇱"},
             {name: "New Zealand", code: "+64", flag: "🇳🇿"}, {name: "Nicaragua", code: "+505", flag: "🇳🇮"}, {name: "Niger", code: "+227", flag: "🇳🇪"},
-            {name: "Nigeria", code: "+234", flag: "🇳🇬"}, {name: "North Korea", code: "+850", flag: "KP"}, {name: "Norway", code: "+47", flag: "🇳🇴"},
+            {name: "Nigeria", code: "+234", flag: "🇳🇬"}, {name: "North Korea", code: "+850", flag: "🇰🇵"}, {name: "Norway", code: "+47", flag: "🇳🇴"},
             {name: "Oman", code: "+968", flag: "🇴🇲"}, {name: "Pakistan", code: "+92", flag: "🇵🇰"}, {name: "Palestine", code: "+970", flag: "🇵🇸"},
             {name: "Panama", code: "+507", flag: "🇵🇦"}, {name: "Papua New Guinea", code: "+675", flag: "🇵🇬"}, {name: "Paraguay", code: "+595", flag: "🇵🇾"},
-            {name: "Peru", code: "+51", flag: "🇵🇪"}, {name: "Philippines", code: "+63", flag: "PH"}, {name: "Poland", code: "+48", flag: "🇵🇱"},
+            {name: "Peru", code: "+51", flag: "🇵🇪"}, {name: "Philippines", code: "+63", flag: "🇵🇭"}, {name: "Poland", code: "+48", flag: "🇵🇱"},
             {name: "Portugal", code: "+351", flag: "🇵🇹"}, {name: "Qatar", code: "+974", flag: "🇶🇦"}, {name: "Romania", code: "+40", flag: "🇷🇴"},
             {name: "Russia", code: "+7", flag: "🇷🇺"}, {name: "Rwanda", code: "+250", flag: "🇷🇼"}, {name: "Saudi Arabia", code: "+966", flag: "🇸🇦"},
             {name: "Senegal", code: "+221", flag: "🇸🇳"}, {name: "Serbia", code: "+381", flag: "🇷🇸"}, {name: "Singapore", code: "+65", flag: "🇸🇬"},
@@ -1008,7 +1123,7 @@
             {code: "TWD", symbol: "NT$", name: "TWD - New Taiwan Dollar"}, {code: "TZS", symbol: "TSh", name: "TZS - Tanzanian Shilling"}, {code: "UAH", symbol: "₴", name: "UAH - Ukrainian Hryvnia"},
             {code: "UGX", symbol: "USh", name: "UGX - Ugandan Shilling"}, {code: "UYU", symbol: "$U", name: "UYU - Uruguayan Peso"}, {code: "UZS", symbol: "лв", name: "UZS - Uzbekistan Som"},
             {code: "VES", symbol: "Bs", name: "VES - Venezuelan Bolívar Soberano"}, {code: "VND", symbol: "₫", name: "VND - Vietnamese Dong"}, {code: "VUV", symbol: "VT", name: "VUV - Vatu"},
-            {code: "WST", symbol: "WS$", name: "WST - Samoan Tala"}, {code: "XAF", symbol: "FCFA", name: "XAF - CFA Franc BEAC"}, {code: "XCD", symbol: "$", name: "XCD - East Caribbean Dollar"},
+            {name: "Samoan Tala", code: "WST", symbol: "WS$"}, {code: "XAF", symbol: "FCFA", name: "XAF - CFA Franc BEAC"}, {code: "XCD", symbol: "$", name: "XCD - East Caribbean Dollar"},
             {code: "XOF", symbol: "CFA", name: "XOF - CFA Franc BCEAO"}, {code: "XPF", symbol: "₣", name: "XPF - CFP Franc"}, {code: "YER", symbol: "﷼", name: "YER - Yemeni Rial"},
             {code: "ZAR", symbol: "R", name: "ZAR - South African Rand"}, {code: "ZMW", symbol: "ZK", name: "ZMW - Zambian Kwacha"}, {code: "ZWL", symbol: "Z$", name: "ZWL - Zimbabwean Dollar"}
         ];
@@ -1462,155 +1577,155 @@
             }
         ];
 
-        // Unique single landmark image for each hub tile header
+        // 8 Global Hubs & 85 Cities — Each Hub AND Every Single City has a 100% unique, non-repeating iconic Wikimedia Commons landmark photograph with ZERO text overlay
         const hubsData = [
             {
                 id: "hub-india", num: 1, flag: "🇮🇳", country: "India",
                 title: "India Medical Super-Hub (15 Cities)",
                 desc: "World's primary capital for high-complexity organ transplants, cardiac CABG, and proton oncology at 80% lower cost.",
-                hubImage: "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1200&q=80",
+                hubImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Taj_Mahal_%28Edited%29.jpeg/1280px-Taj_Mahal_%28Edited%29.jpeg",
                 cities: [
-                    { name: "Mumbai", desc: "Commercial & Surgical Hub", hospitals: ["Kokilaben Ambani Hospital", "Lilavati Hospital", "Asian Heart Institute", "PD Hinduja Hospital", "Breach Candy Hospital", "Jaslok Hospital", "Nanavati Max", "Sir HN Reliance Foundation", "Tata Memorial", "SL Raheja Fortis", "Global Hospitals Parel", "Hiranandani Hospital", "Wockhardt Central", "Apollo Navi Mumbai", "KEM Hospital Quaternary"] },
-                    { name: "Delhi NCR", desc: "Organ Transplant Capital", hospitals: ["Medanta Gurugram", "Max Saket", "Fortis Memorial Research", "Apollo Indraprastha", "BLK-Max Super Speciality", "Sir Ganga Ram", "Artemis Gurugram", "Paras Health", "Manipal Dwarka", "Venkateshwar Hospital", "Marengo Asia", "Sanar International", "Aakash Healthcare", "Metro Hospital", "AIIMS Premier Referral"] },
-                    { name: "Bengaluru", desc: "Tech & Cardiac Hub", hospitals: ["Narayana Health City", "Manipal Old Airport Rd", "Fortis Bannerghatta", "Aster CMI Hospital", "Apollo Jayanagar", "Gleneagles Global", "Sparsh Hospital", "Sakra World Hospital", "Vydehi Institute", "Mazumdar Shaw Cancer", "Columbia Asia Whitefield", "St. John's Medical", "HCG Cancer Centre", "Command Hospital", "Ramaiah Memorial"] },
-                    { name: "Chennai", desc: "Healthcare Hub of South Asia", hospitals: ["Apollo Greams Road", "MIOT International", "Rela Institute", "MGM Healthcare", "Fortis Malar", "Gleneagles Health City", "SIMS Vadapalani", "Kauvery Hospital", "Sri Ramachandra", "Chettinad Health City", "Vijaya Hospital", "Billroth Hospitals", "Kamakshi Memorial", "Hindu Mission", "Frontier Lifeline"] },
-                    { name: "Hyderabad", desc: "Robotic Surgery Corridor", hospitals: ["Yashoda Hitec City", "KIMS Secunderabad", "Apollo Jubilee Hills", "Continental Hospitals", "Citizens Specialty", "AIG Gachibowli", "Sunshine Hospitals", "TX Hospitals", "Star Hospitals", "Medicover Hospitals", "Pranaam Hospital", "Virinchi Hospitals", "Aware Global", "CARE Banjara Hills", "OMNI Hospitals"] },
-                    { name: "Kolkata", desc: "Eastern India Quaternary Hub", hospitals: ["Apollo Multispecialty", "Fortis Anandapur", "AMRI Dhakuria", "Medica Supersalty", "Peerless Hospital", "Woodlands Hospital", "Desun Hospital", "Ruby General", "RN Tagore International", "Chittaranjan National", "SSKM Hospital", "KPC Medical College", "ILS Hospitals", "Tata Medical Center", "Iris Hospital"] },
-                    { name: "Ahmedabad", desc: "West India Surgical Center", hospitals: ["Marengo CIMS", "Apollo Ahmedabad", "Zydus Hospital", "KD Hospital", "Shalby Hospital", "Sterling Hospitals", "HCG Ahmedabad", "SVP Hospital", "Civil Hospital Wing", "Care India Medical", "SAL Hospital", "Sanjeevani Hospital", "Bodyline Hospital", "Apex Heart Institute", "Siddhraj Hospital"] },
-                    { name: "Kochi", desc: "Kerala Medical Tourism Hub", hospitals: ["Amrita Institute", "Aster Medcity", "VPS Lakeshore", "Rajagiri Hospital", "Medical Trust", "Sunrise Hospital", "Lourdes Hospital", "Renai Medicity", "Caritas Hospital", "Mar Sleeva Medicity", "Ernakulam Medical", "Lisie Hospital", "KIMS Health Kochi", "Little Flower", "Apollo Adlux"] },
-                    { name: "Pune", desc: "Maharashtra Advanced Medical Hub", hospitals: ["Ruby Hall Clinic", "Jehangir Hospital", "Sahyadri Hospital", "Deenanath Mangeshkar", "Manipal Pune", "Columbia Asia Pune", "Noble Hospital", "KEM Pune", "Inlaks Budhrani", "Aditya Birla Memorial", "Sancheti Hospital", "Jupiter Hospital", "Symbiosis Hospital", "Hardikar Hospital", "Jehangir Apollo"] },
-                    { name: "Chandigarh", desc: "North India Quaternary Center", hospitals: ["PGIMER Chandigarh", "Fortis Mohali", "Max Mohali", "Ivy Hospital", "Clever Multispecialty", "Indus International", "Shalby Mohali", "Healing Hospital", "Care Hospital", "Alchemist Panchkula", "Santokh Hospital", "Medihope Hospital", "Chaitanya Hospital", "Bansal Hospital", "GMCH Sector 32"] },
-                    { name: "Jaipur", desc: "Pink City Advanced Healthcare", hospitals: ["Fortis Escorts Jaipur", "Manipal Hospital Jaipur", "Eternal Hospital (EHCC)", "CK Birla RBH", "Narayana Multispeciality", "Shalby Jaipur", "Apex Hospitals", "Santokba Durlabhji (SDMH)", "Mahatma Gandhi Medical", "BMCHRC Cancer Center", "Rungta Hospital", "Swasthya Hospital", "Imperial Hospital", "Sms Hospital", "Diya Hospital"] },
-                    { name: "Jodhpur", desc: "Blue City Quaternary Care", hospitals: ["Medipulse Hospital", "Trinay Hospital", "AIIMS Jodhpur", "Mathura Das Mathur Hospital", "MG Hospital Jodhpur", "Jodhpur National Hospital", "Apex Hospital Jodhpur", "Salvation Hospital", "Shree Ram Hospital", "Raj Hospital Jodhpur", "Narayan Hospital", "Om Hospital", "Chirayu Hospital", "Marwar Hospital", "Khetan Hospital"] },
-                    { name: "Udaipur", desc: "Lake City Specialized Healthcare", hospitals: ["Geetanjali Medical College", "American Hospital Udaipur", "GBH American Hospital", "Pacific Medical College", "Aravali Hospital", "Integral Hospital", "Lake City Hospital", "Udaipur Hospital", "Ananta Hospital", "R N T Medical College", "Shree Sanwaria Hospital", "Vardan Hospital", "Mewar Hospital", "Chordia Hospital", "City Hospital Udaipur"] },
-                    { name: "Varanasi", desc: "Spiritual Heritage Medical Hub", hospitals: ["Apex Hospital Varanasi", "Heritage Hospitals", "Sir Sunderlal Hospital (IMS BHU)", "Medwin Hospital", "Galaxy Hospital", "Varanasi Hospital", "Sun Beam Hospital", "Dwarkadheesh Hospital", "Jeevan Jyoti Hospital", "Kashi Hospital", "Ramakrishna Mission", "Shanti Hospital", "Popular Hospital", "Trident Hospital", "Ayush Hospital"] },
-                    { name: "Lucknow", desc: "Uttar Pradesh Medical Capital", hospitals: ["SGPGI Lucknow", "King George's Medical University", "Medanta Lucknow", "Sahara Hospital", "Apollo Medics Super Speciality", "Max Super Speciality Lucknow", "Era's Lucknow Medical", "Integral Institute", "Integral Hospital", "RML Institute", "Mayo Hospital", "Shanti Hospital", "Charak Hospital", "Avadh Hospital", "Integral Heart Center"] }
+                    { name: "Mumbai", desc: "Commercial & Surgical Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Mumbai_03-2016_30_Gateway_of_India.jpg/1024px-Mumbai_03-2016_30_Gateway_of_India.jpg", hospitals: ["Kokilaben Ambani Hospital", "Lilavati Hospital", "Asian Heart Institute", "PD Hinduja Hospital", "Breach Candy Hospital", "Jaslok Hospital", "Nanavati Max", "Sir HN Reliance Foundation", "Tata Memorial", "SL Raheja Fortis", "Global Hospitals Parel", "Hiranandani Hospital", "Wockhardt Central", "Apollo Navi Mumbai", "KEM Hospital Quaternary"] },
+                    { name: "Delhi NCR", desc: "Organ Transplant Capital", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/India_Gate_in_New_Delhi_03-2016.jpg/1024px-India_Gate_in_New_Delhi_03-2016.jpg", hospitals: ["Medanta Gurugram", "Max Saket", "Fortis Memorial Research", "Apollo Indraprastha", "BLK-Max Super Speciality", "Sir Ganga Ram", "Artemis Gurugram", "Paras Health", "Manipal Dwarka", "Venkateshwar Hospital", "Marengo Asia", "Sanar International", "Aakash Healthcare", "Metro Hospital", "AIIMS Premier Referral"] },
+                    { name: "Bengaluru", desc: "Tech & Cardiac Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Vidhana_Soudha_Sunset.jpg/1024px-Vidhana_Soudha_Sunset.jpg", hospitals: ["Narayana Health City", "Manipal Old Airport Rd", "Fortis Bannerghatta", "Aster CMI Hospital", "Apollo Jayanagar", "Gleneagles Global", "Sparsh Hospital", "Sakra World Hospital", "Vydehi Institute", "Mazumdar Shaw Cancer", "Columbia Asia Whitefield", "St. John's Medical", "HCG Cancer Centre", "Command Hospital", "Ramaiah Memorial"] },
+                    { name: "Chennai", desc: "Healthcare Hub of South Asia", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Kapaleeshwarar_Temple_Gopuram.jpg/1024px-Kapaleeshwarar_Temple_Gopuram.jpg", hospitals: ["Apollo Greams Road", "MIOT International", "Rela Institute", "MGM Healthcare", "Fortis Malar", "Gleneagles Health City", "SIMS Vadapalani", "Kauvery Hospital", "Sri Ramachandra", "Chettinad Health City", "Vijaya Hospital", "Billroth Hospitals", "Kamakshi Memorial", "Hindu Mission", "Frontier Lifeline"] },
+                    { name: "Hyderabad", desc: "Robotic Surgery Corridor", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Charminar_Hyderabad_1.jpg/1024px-Charminar_Hyderabad_1.jpg", hospitals: ["Yashoda Hitec City", "KIMS Secunderabad", "Apollo Jubilee Hills", "Continental Hospitals", "Citizens Specialty", "AIG Gachibowli", "Sunshine Hospitals", "TX Hospitals", "Star Hospitals", "Medicover Hospitals", "Pranaam Hospital", "Virinchi Hospitals", "Aware Global", "CARE Banjara Hills", "OMNI Hospitals"] },
+                    { name: "Kolkata", desc: "Eastern India Quaternary Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Victoria_Memorial_situated_in_Kolkata.jpg/1024px-Victoria_Memorial_situated_in_Kolkata.jpg", hospitals: ["Apollo Multispecialty", "Fortis Anandapur", "AMRI Dhakuria", "Medica Supersalty", "Peerless Hospital", "Woodlands Hospital", "Desun Hospital", "Ruby General", "RN Tagore International", "Chittaranjan National", "SSKM Hospital", "KPC Medical College", "ILS Hospitals", "Tata Medical Center", "Iris Hospital"] },
+                    { name: "Ahmedabad", desc: "West India Surgical Center", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Adalaj_Stepwell%2C_Gujarat.jpg/1024px-Adalaj_Stepwell%2C_Gujarat.jpg", hospitals: ["Marengo CIMS", "Apollo Ahmedabad", "Zydus Hospital", "KD Hospital", "Shalby Hospital", "Sterling Hospitals", "HCG Ahmedabad", "SVP Hospital", "Civil Hospital Wing", "Care India Medical", "SAL Hospital", "Sanjeevani Hospital", "Bodyline Hospital", "Apex Heart Institute", "Siddhraj Hospital"] },
+                    { name: "Kochi", desc: "Kerala Medical Tourism Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Chinese_fishing_nets_at_sunset%2C_Fort_Kochi.jpg/1024px-Chinese_fishing_nets_at_sunset%2C_Fort_Kochi.jpg", hospitals: ["Amrita Institute", "Aster Medcity", "VPS Lakeshore", "Rajagiri Hospital", "Medical Trust", "Sunrise Hospital", "Lourdes Hospital", "Renai Medicity", "Caritas Hospital", "Mar Sleeva Medicity", "Ernakulam Medical", "Lisie Hospital", "KIMS Health Kochi", "Little Flower", "Apollo Adlux"] },
+                    { name: "Pune", desc: "Maharashtra Advanced Medical Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Shaniwar_Wada_gate.jpg/1024px-Shaniwar_Wada_gate.jpg", hospitals: ["Ruby Hall Clinic", "Jehangir Hospital", "Sahyadri Hospital", "Deenanath Mangeshkar", "Manipal Pune", "Columbia Asia Pune", "Noble Hospital", "KEM Pune", "Inlaks Budhrani", "Aditya Birla Memorial", "Sancheti Hospital", "Jupiter Hospital", "Symbiosis Hospital", "Hardikar Hospital", "Jehangir Apollo"] },
+                    { name: "Chandigarh", desc: "North India Quaternary Center", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Open_Hand_Monument%2C_Chandigarh.jpg/1024px-Open_Hand_Monument%2C_Chandigarh.jpg", hospitals: ["PGIMER Chandigarh", "Fortis Mohali", "Max Mohali", "Ivy Hospital", "Clever Multispecialty", "Indus International", "Shalby Mohali", "Healing Hospital", "Care Hospital", "Alchemist Panchkula", "Santokh Hospital", "Medihope Hospital", "Chaitanya Hospital", "Bansal Hospital", "GMCH Sector 32"] },
+                    { name: "Jaipur", desc: "Pink City Advanced Healthcare", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/East_facade_Hawa_Mahal_Jaipur_from_ground_level_%28July_2022%29_-_img_01.jpg/1024px-East_facade_Hawa_Mahal_Jaipur_from_ground_level_%28July_2022%29_-_img_01.jpg", hospitals: ["Fortis Escorts Jaipur", "Manipal Hospital Jaipur", "Eternal Hospital (EHCC)", "CK Birla RBH", "Narayana Multispeciality", "Shalby Jaipur", "Apex Hospitals", "Santokba Durlabhji (SDMH)", "Mahatma Gandhi Medical", "BMCHRC Cancer Center", "Rungta Hospital", "Swasthya Hospital", "Imperial Hospital", "Sms Hospital", "Diya Hospital"] },
+                    { name: "Jodhpur", desc: "Blue City Quaternary Care", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Mehrangarh_Fort_sanhita.jpg/1024px-Mehrangarh_Fort_sanhita.jpg", hospitals: ["Medipulse Hospital", "Trinay Hospital", "AIIMS Jodhpur", "Mathura Das Mathur Hospital", "MG Hospital Jodhpur", "Jodhpur National Hospital", "Apex Hospital Jodhpur", "Salvation Hospital", "Shree Ram Hospital", "Raj Hospital Jodhpur", "Narayan Hospital", "Om Hospital", "Chirayu Hospital", "Marwar Hospital", "Khetan Hospital"] },
+                    { name: "Udaipur", desc: "Lake City Specialized Healthcare", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Evening_view%2C_City_Palace%2C_Udaipur.jpg/1024px-Evening_view%2C_City_Palace%2C_Udaipur.jpg", hospitals: ["Geetanjali Medical College", "American Hospital Udaipur", "GBH American Hospital", "Pacific Medical College", "Aravali Hospital", "Integral Hospital", "Lake City Hospital", "Udaipur Hospital", "Ananta Hospital", "R N T Medical College", "Shree Sanwaria Hospital", "Vardan Hospital", "Mewar Hospital", "Chordia Hospital", "City Hospital Udaipur"] },
+                    { name: "Varanasi", desc: "Spiritual Heritage Medical Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Ahilya_Ghat_by_the_Ganges%2C_Varanasi.jpg/1024px-Ahilya_Ghat_by_the_Ganges%2C_Varanasi.jpg", hospitals: ["Apex Hospital Varanasi", "Heritage Hospitals", "Sir Sunderlal Hospital (IMS BHU)", "Medwin Hospital", "Galaxy Hospital", "Varanasi Hospital", "Sun Beam Hospital", "Dwarkadheesh Hospital", "Jeevan Jyoti Hospital", "Kashi Hospital", "Ramakrishna Mission", "Shanti Hospital", "Popular Hospital", "Trident Hospital", "Ayush Hospital"] },
+                    { name: "Lucknow", desc: "Uttar Pradesh Medical Capital", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Rumi_Darwaza_Lucknow.jpg/1024px-Rumi_Darwaza_Lucknow.jpg", hospitals: ["SGPGI Lucknow", "King George's Medical University", "Medanta Lucknow", "Sahara Hospital", "Apollo Medics Super Speciality", "Max Super Speciality Lucknow", "Era's Lucknow Medical", "Integral Institute", "Integral Hospital", "RML Institute", "Mayo Hospital", "Shanti Hospital", "Charak Hospital", "Avadh Hospital", "Integral Heart Center"] }
                 ]
             },
             {
                 id: "hub-turkey", num: 2, flag: "🇹🇷", country: "Turkey",
                 title: "Turkey Aesthetic & Clinical Hub (10 Cities)",
                 desc: "Europe's leading destination for hair transplantation, cosmetic surgery, dental veneers, and bariatrics.",
-                hubImage: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=1200&q=80",
+                hubImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Hagia_Sophia_Mars_2013.jpg/1280px-Hagia_Sophia_Mars_2013.jpg",
                 cities: [
-                    { name: "Istanbul", desc: "Global Capital of Aesthetics", hospitals: ["Acibadem Maslak", "Memorial Sisli", "Liv Hospital Ulus", "American Hospital", "Medipol Mega", "Florence Nightingale", "Medical Park Goztepe", "Hisar Hospital", "Koc University", "Anadolu Medical", "BHT Clinic", "Estethica Levent", "Memorial Bahcelievler", "Acibadem Atakent", "Yeditepe University"] },
-                    { name: "Antalya", desc: "Dental & Beach Tourism", hospitals: ["Akdeniz University", "Medical Park Antalya", "Memorial Antalya", "Anadolu Antalya", "OFA Antalya", "Antalya Life", "Opera Life", "Uncali Meydan", "Antalya Dental", "Cosmetic Antalya", "Lara Anadolu", "Side Anadolu", "Vitale Hospital", "Zeltus Center", "Kemer Anadolu"] },
-                    { name: "Ankara", desc: "Capital Surgical Center", hospitals: ["Hacettepe University", "Bilkent City Hospital", "Memorial Ankara", "Guven Hospital", "Medicana Ankara", "Koru Ankara", "TOBB ETU Hospital", "Acibadem Ankara", "Ankara University", "Bayindir Hospital", "Liv Ankara", "Cankaya Hospital", "Medical Park Ankara", "100. Yil Hospital", "Loca Hospital"] },
-                    { name: "Izmir", desc: "Aegean Clinical Corridor", hospitals: ["Ege University", "Dokuz Eylul", "Medical Park Izmir", "Medicana Izmir", "Ekol Hospital", "Izmir City Hospital", "Tinaztepe Hospital", "KENT Hospital", "Acibadem Kent", "Gazi Hospital", "Can Hospital", "Karatas Hospital", "Su Hospital", "Batigoz Eye", "Central Hospital"] },
-                    { name: "Bursa", desc: "Thermal & Clinical Hub", hospitals: ["Uludag University", "Acibadem Bursa", "Medical Park Bursa", "Medicana Bursa", "Bursa City Hospital", "Hayat Hospital", "Cekirge Heart", "Jimer Hospital", "Doruk Health", "Bursa Anadolu", "Nev FSM", "Aritmi Bursa", "Bursa Dental", "VM Medical Park", "Bursa Eye"] },
-                    { name: "Bodrum", desc: "Luxury Retreat Medical Hub", hospitals: ["Acibadem Bodrum", "American Hospital Bodrum", "Universal Bodrum", "Bodrum State", "Private Bodrum", "Bodrum Cosmetic", "Bodrum Dental", "Yalıkavak Center", "Turgutreis Clinic", "Gumbet Health", "Bodrum Aesthetic", "Bitez Clinic", "Bodrum Eye", "Milas State", "Bodrum Thermal"] },
-                    { name: "Adana", desc: "Southern Anatolian Center", hospitals: ["Cukurova University", "Adana City Hospital", "Acibadem Adana", "Medical Park Adana", "Medline Adana", "Ortadogu Hospital", "Adana Algomed", "Metro Hospital", "Sezar Hospital", "Guzelyali Hospital", "Adana Eye", "Adana Dental", "Eski Numune", "Adana Heart", "EPC Hospital"] },
-                    { name: "Trabzon", desc: "Black Sea Medical Destination", hospitals: ["Karadeniz Technical", "Medical Park Trabzon", "Imperial Hospital", "Kanuni Hospital", "Trabzon City", "7 Yildizli", "Ahiska Center", "Trabzon Dental", "Vakfikebir Hospital", "Akcaabat State", "Karadeniz Eye", "Trabzon Aesthetic", "Surmene Hospital", "Of State", "Trabzon Heart"] },
-                    { name: "Gaziantep", desc: "Southeast Clinical Hub", hospitals: ["Gaziantep University", "Sanko University", "Medical Park Gaziantep", "Medicana Gaziantep", "Gaziantep City", "Erk Hospital", "Sev Hospital", "Dag Havasi", "Gaziantep Dental", "Gaziantep Eye", "Anka Hospital", "Defne Hospital", "Aesthetic Hub", "Nizip State", "Kocatepe Hospital"] },
-                    { name: "Konya", desc: "Central Anatolian Health Center", hospitals: ["Selcuk University", "Necmettin Erbakan", "Konya City Hospital", "Medicana Konya", "Baskent Konya", "Karatay University", "Konya Farabi", "Konya Universal", "Konya Dental", "Konya Eye", "Aesthetic Hub", "Ozel Konya", "Beyhekim State", "Kulu State", "Konya Heart"] }
+                    { name: "Istanbul", desc: "Global Capital of Aesthetics", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Blue_Mosque_Courtyard_Dusk_Wikimedia_Commons.jpg/1024px-Blue_Mosque_Courtyard_Dusk_Wikimedia_Commons.jpg", hospitals: ["Acibadem Maslak", "Memorial Sisli", "Liv Hospital Ulus", "American Hospital", "Medipol Mega", "Florence Nightingale", "Medical Park Goztepe", "Hisar Hospital", "Koc University", "Anadolu Medical", "BHT Clinic", "Estethica Levent", "Memorial Bahcelievler", "Acibadem Atakent", "Yeditepe University"] },
+                    { name: "Antalya", desc: "Dental & Beach Tourism", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Antalya_Kaleici_Marina.jpg/1024px-Antalya_Kaleici_Marina.jpg", hospitals: ["Akdeniz University", "Medical Park Antalya", "Memorial Antalya", "Anadolu Antalya", "OFA Antalya", "Antalya Life", "Opera Life", "Uncali Meydan", "Antalya Dental", "Cosmetic Antalya", "Lara Anadolu", "Side Anadolu", "Vitale Hospital", "Zeltus Center", "Kemer Anadolu"] },
+                    { name: "Ankara", desc: "Capital Surgical Center", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Anitkabir_Ankara.jpg/1024px-Anitkabir_Ankara.jpg", hospitals: ["Hacettepe University", "Bilkent City Hospital", "Memorial Ankara", "Guven Hospital", "Medicana Ankara", "Koru Ankara", "TOBB ETU Hospital", "Acibadem Ankara", "Ankara University", "Bayindir Hospital", "Liv Ankara", "Cankaya Hospital", "Medical Park Ankara", "100. Yil Hospital", "Loca Hospital"] },
+                    { name: "Izmir", desc: "Aegean Clinical Corridor", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Izmir_Clock_Tower.jpg/1024px-Izmir_Clock_Tower.jpg", hospitals: ["Ege University", "Dokuz Eylul", "Medical Park Izmir", "Medicana Izmir", "Ekol Hospital", "Izmir City Hospital", "Tinaztepe Hospital", "KENT Hospital", "Acibadem Kent", "Gazi Hospital", "Can Hospital", "Karatas Hospital", "Su Hospital", "Batigoz Eye", "Central Hospital"] },
+                    { name: "Bursa", desc: "Thermal & Clinical Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Ulu_Cami_Bursa.jpg/1024px-Ulu_Cami_Bursa.jpg", hospitals: ["Uludag University", "Acibadem Bursa", "Medical Park Bursa", "Medicana Bursa", "Bursa City Hospital", "Hayat Hospital", "Cekirge Heart", "Jimer Hospital", "Doruk Health", "Bursa Anadolu", "Nev FSM", "Aritmi Bursa", "Bursa Dental", "VM Medical Park", "Bursa Eye"] },
+                    { name: "Bodrum", desc: "Luxury Retreat Medical Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Bodrum_Castle_and_Harbor.jpg/1024px-Bodrum_Castle_and_Harbor.jpg", hospitals: ["Acibadem Bodrum", "American Hospital Bodrum", "Universal Bodrum", "Bodrum State", "Private Bodrum", "Bodrum Cosmetic", "Bodrum Dental", "Yalıkavak Center", "Turgutreis Clinic", "Gumbet Health", "Bodrum Aesthetic", "Bitez Clinic", "Bodrum Eye", "Milas State", "Bodrum Thermal"] },
+                    { name: "Adana", desc: "Southern Anatolian Center", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Sabanci_Merkez_Camii_Adana.jpg/1024px-Sabanci_Merkez_Camii_Adana.jpg", hospitals: ["Cukurova University", "Adana City Hospital", "Acibadem Adana", "Medical Park Adana", "Medline Adana", "Ortadogu Hospital", "Adana Algomed", "Metro Hospital", "Sezar Hospital", "Guzelyali Hospital", "Adana Eye", "Adana Dental", "Eski Numune", "Adana Heart", "EPC Hospital"] },
+                    { name: "Trabzon", desc: "Black Sea Medical Destination", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Sumela_Monastery_Trabzon.jpg/1024px-Sumela_Monastery_Trabzon.jpg", hospitals: ["Karadeniz Technical", "Medical Park Trabzon", "Imperial Hospital", "Kanuni Hospital", "Trabzon City", "7 Yildizli", "Ahiska Center", "Trabzon Dental", "Vakfikebir Hospital", "Akcaabat State", "Karadeniz Eye", "Trabzon Aesthetic", "Surmene Hospital", "Of State", "Trabzon Heart"] },
+                    { name: "Gaziantep", desc: "Southeast Clinical Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Gaziantep_Castle.jpg/1024px-Gaziantep_Castle.jpg", hospitals: ["Gaziantep University", "Sanko University", "Medical Park Gaziantep", "Medicana Gaziantep", "Gaziantep City", "Erk Hospital", "Sev Hospital", "Dag Havasi", "Gaziantep Dental", "Gaziantep Eye", "Anka Hospital", "Defne Hospital", "Aesthetic Hub", "Nizip State", "Kocatepe Hospital"] },
+                    { name: "Konya", desc: "Central Anatolian Health Center", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Mevlana_Museum_Konya.jpg/1024px-Mevlana_Museum_Konya.jpg", hospitals: ["Selcuk University", "Necmettin Erbakan", "Konya City Hospital", "Medicana Konya", "Baskent Konya", "Karatay University", "Konya Farabi", "Konya Universal", "Konya Dental", "Konya Eye", "Aesthetic Hub", "Ozel Konya", "Beyhekim State", "Kulu State", "Konya Heart"] }
                 ]
             },
             {
                 id: "hub-thailand", num: 3, flag: "🇹🇭", country: "Thailand",
                 title: "Thailand Wellness & Medical Hub (10 Cities)",
                 desc: "Asia's premier destination for holistic spa retreats, gender affirmation, cosmetic surgery, and bariatrics.",
-                hubImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1200&q=80",
+                hubImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Wat_Arun_Bangkok_Thailand.jpg/1280px-Wat_Arun_Bangkok_Thailand.jpg",
                 cities: [
-                    { name: "Bangkok", desc: "Pioneer Medical Tourism Hub", hospitals: ["Bumrungrad International", "Bangkok Hospital Head Office", "Samitivej Sukhumvit", "Vejthani Hospital", "Phyathai 2", "Siriraj Piyamaharajkarun", "BNS International", "King Chulalongkorn", "MedPark Hospital", "Praram 9 Hospital", "Yanhee International", "Piyavate Hospital", "Kluaynamthai", "BCH World Medical", "Central General"] },
-                    { name: "Phuket", desc: "Island Recovery Sanctuary", hospitals: ["Bangkok Hospital Phuket", "Phuket International", "Mission Hospital", "Dibuk Hospital", "Patong Hospital", "Provincial Hospital", "Vachira Phuket", "Plastic Surgery Institute", "Dental Signature", "International Dental", "Thalang Hospital", "Chalong Hospital", "Rawai Health", "Aesthetic Center", "Wellness Resort"] },
-                    { name: "Chiang Mai", desc: "Northern Wellness Corridor", hospitals: ["Chiang Mai Ram", "Bangkok Hospital Chiang Mai", "McCormick Hospital", "Lanna Hospital", "Maharaj Nakorn", "Rajavej Chiang Mai", "Central Memorial", "Overbrook Hospital", "Neurological Hospital", "Chiang Mai Dental", "Klaimor Hospital", "Saint Mary", "Hang Dong", "Aesthetic Center", "San Sai Hospital"] },
-                    { name: "Pattaya", desc: "Eastern Seaboard Healthcare", hospitals: ["Bangkok Hospital Pattaya", "Pattaya International", "Pattaya Memorial", "Jomtien Hospital", "Banglamung Hospital", "Phyathai Sriracha", "Samitivej Chonburi", "Chonburi Hospital", "Beauty Clinic", "Dental Center", "Vana Nava Wellness", "Queen Sirikit Naval", "Aesthetic Hub", "Somdej Hospital", "Eye Center"] },
-                    { name: "Hua Hin", desc: "Royal Beachside Recovery", hospitals: ["Bangkok Hospital Hua Hin", "San Paulo Hua Hin", "Hua Hin Hospital", "Chiva-Som Resort", "International Dental", "Pranburi Hospital", "Wellness Center", "Aesthetic Hub", "Cha-Am Hospital", "Petcharat Hospital", "Eye Clinic", "Queen's Heart", "Skin Clinic", "Rehabilitation Center", "Orthopedic Clinic"] },
-                    { name: "Koh Samui", desc: "Island Wellness Retreat", hospitals: ["Bangkok Hospital Samui", "Samui International", "Bandon International", "Thai International", "Koh Samui Hospital", "Samui Dental Home", "Beauty Aesthetic", "Lamai Medical", "Chaweng Center", "Wellness Sanctuary", "Maenam Health", "Eye Clinic", "Nathon Hospital", "Rehabilitation Center", "Holistic Spa"] },
-                    { name: "Nonthaburi", desc: "Advanced Suburban Healthcare", hospitals: ["World Medical Hospital", "Nonthavej Hospital", "Srithanya Hospital", "Chest Disease Institute", "Central Chest Institute", "Chonprathan Hospital", "Bang Bua Thong", "Pak Kret Hospital", "Sai Noi Hospital", "Phra Nang Klao", "Dental Center", "Krungthai Hospital", "Aesthetic Center", "Kasemrad Rattanatibeth", "Mongkutwattana"] },
-                    { name: "Chonburi", desc: "Industrial & Quaternary Hub", hospitals: ["Samitivej Chonburi", "Chonburi Hospital", "Phyathai Sriracha", "Aikchol Hospital", "Aikchol Hospital 2", "Vibharam Laemchabang", "Phan Thong", "Ban Bueng", "Sattahip KM.10", "Cancer Hospital", "Dental Center", "Eastern Seaboard", "Eye Center", "Boromarajonani", "Aesthetic Center"] },
-                    { name: "Hat Yai", desc: "Southern Medical Gateway", hospitals: ["Bangkok Hospital Hatyai", "Hatyai Hospital", "Songklanagarind", "Prince of Songkla", "Rat Burana", "Mittraphap Hospital", "International Dental", "Eye Center", "Songkhla Hospital", "Aesthetic Hub", "Sadao Hospital", "Padang Besar", "Rehabilitation Center", "Southern Cardiac", "Skin Clinic"] },
-                    { name: "Khon Kaen", desc: "Northeastern Medical Center", hospitals: ["Srinagarind Hospital", "Khon Kaen Ram", "Bangkok Hospital Khon Kaen", "Khon Kaen University", "Ratchaphruek Hospital", "Rajavej Khon Kaen", "Dental Center", "Eye Institute", "E-San Medical", "Aesthetic Hub", "Chum Phae", "Phu Wiang", "Rehabilitation Center", "Northeastern Cardiac", "Skin Clinic"] }
+                    { name: "Bangkok", desc: "Pioneer Medical Tourism Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Grand_Palace_Bangkok_Thailand.jpg/1024px-Grand_Palace_Bangkok_Thailand.jpg", hospitals: ["Bumrungrad International", "Bangkok Hospital Head Office", "Samitivej Sukhumvit", "Vejthani Hospital", "Phyathai 2", "Siriraj Piyamaharajkarun", "BNS International", "King Chulalongkorn", "MedPark Hospital", "Praram 9 Hospital", "Yanhee International", "Piyavate Hospital", "Kluaynamthai", "BCH World Medical", "Central General"] },
+                    { name: "Phuket", desc: "Island Recovery Sanctuary", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Promthep_Cape_Phuket.jpg/1024px-Promthep_Cape_Phuket.jpg", hospitals: ["Bangkok Hospital Phuket", "Phuket International", "Mission Hospital", "Dibuk Hospital", "Patong Hospital", "Provincial Hospital", "Vachira Phuket", "Plastic Surgery Institute", "Dental Signature", "International Dental", "Thalang Hospital", "Chalong Hospital", "Rawai Health", "Aesthetic Center", "Wellness Resort"] },
+                    { name: "Chiang Mai", desc: "Northern Wellness Corridor", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Wat_Phra_That_Doi_Suthep_Chiang_Mai.jpg/1024px-Wat_Phra_That_Doi_Suthep_Chiang_Mai.jpg", hospitals: ["Chiang Mai Ram", "Bangkok Hospital Chiang Mai", "McCormick Hospital", "Lanna Hospital", "Maharaj Nakorn", "Rajavej Chiang Mai", "Central Memorial", "Overbrook Hospital", "Neurological Hospital", "Chiang Mai Dental", "Klaimor Hospital", "Saint Mary", "Hang Dong", "Aesthetic Center", "San Sai Hospital"] },
+                    { name: "Pattaya", desc: "Eastern Seaboard Healthcare", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Sanctuary_of_Truth_Pattaya.jpg/1024px-Sanctuary_of_Truth_Pattaya.jpg", hospitals: ["Bangkok Hospital Pattaya", "Pattaya International", "Pattaya Memorial", "Jomtien Hospital", "Banglamung Hospital", "Phyathai Sriracha", "Samitivej Chonburi", "Chonburi Hospital", "Beauty Clinic", "Dental Center", "Vana Nava Wellness", "Queen Sirikit Naval", "Aesthetic Hub", "Somdej Hospital", "Eye Center"] },
+                    { name: "Hua Hin", desc: "Royal Beachside Recovery", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Hua_Hin_Railway_Station.jpg/1024px-Hua_Hin_Railway_Station.jpg", hospitals: ["Bangkok Hospital Hua Hin", "San Paulo Hua Hin", "Hua Hin Hospital", "Chiva-Som Resort", "International Dental", "Pranburi Hospital", "Wellness Center", "Aesthetic Hub", "Cha-Am Hospital", "Petcharat Hospital", "Eye Clinic", "Queen's Heart", "Skin Clinic", "Rehabilitation Center", "Orthopedic Clinic"] },
+                    { name: "Koh Samui", desc: "Island Wellness Retreat", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Big_Buddha_Koh_Samui.jpg/1024px-Big_Buddha_Koh_Samui.jpg", hospitals: ["Bangkok Hospital Samui", "Samui International", "Bandon International", "Thai International", "Koh Samui Hospital", "Samui Dental Home", "Beauty Aesthetic", "Lamai Medical", "Chaweng Center", "Wellness Sanctuary", "Maenam Health", "Eye Clinic", "Nathon Hospital", "Rehabilitation Center", "Holistic Spa"] },
+                    { name: "Nonthaburi", desc: "Advanced Suburban Healthcare", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Wat_Chaloem_Phra_Kiat_Nonthaburi.jpg/1024px-Wat_Chaloem_Phra_Kiat_Nonthaburi.jpg", hospitals: ["World Medical Hospital", "Nonthavej Hospital", "Srithanya Hospital", "Chest Disease Institute", "Central Chest Institute", "Chonprathan Hospital", "Bang Bua Thong", "Pak Kret Hospital", "Sai Noi Hospital", "Phra Nang Klao", "Dental Center", "Krungthai Hospital", "Aesthetic Center", "Kasemrad Rattanatibeth", "Mongkutwattana"] },
+                    { name: "Chonburi", desc: "Industrial & Quaternary Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Bang_Saen_Beach_Chonburi.jpg/1024px-Bang_Saen_Beach_Chonburi.jpg", hospitals: ["Samitivej Chonburi", "Chonburi Hospital", "Phyathai Sriracha", "Aikchol Hospital", "Aikchol Hospital 2", "Vibharam Laemchabang", "Phan Thong", "Ban Bueng", "Sattahip KM.10", "Cancer Hospital", "Dental Center", "Eastern Seaboard", "Eye Center", "Boromarajonani", "Aesthetic Center"] },
+                    { name: "Hat Yai", desc: "Southern Medical Gateway", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Phra_Maha_Chedi_Tripob_Trimongkol_Hat_Yai.jpg/1024px-Phra_Maha_Chedi_Tripob_Trimongkol_Hat_Yai.jpg", hospitals: ["Bangkok Hospital Hatyai", "Hatyai Hospital", "Songklanagarind", "Prince of Songkla", "Rat Burana", "Mittraphap Hospital", "International Dental", "Eye Center", "Songkhla Hospital", "Aesthetic Hub", "Sadao Hospital", "Padang Besar", "Rehabilitation Center", "Southern Cardiac", "Skin Clinic"] },
+                    { name: "Khon Kaen", desc: "Northeastern Medical Center", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Phra_Mahathat_Kaen_Nakhon_Khon_Kaen.jpg/1024px-Phra_Mahathat_Kaen_Nakhon_Khon_Kaen.jpg", hospitals: ["Srinagarind Hospital", "Khon Kaen Ram", "Bangkok Hospital Khon Kaen", "Khon Kaen University", "Ratchaphruek Hospital", "Rajavej Khon Kaen", "Dental Center", "Eye Institute", "E-San Medical", "Aesthetic Hub", "Chum Phae", "Phu Wiang", "Rehabilitation Center", "Northeastern Cardiac", "Skin Clinic"] }
                 ]
             },
             {
                 id: "hub-uae", num: 4, flag: "🇦🇪", country: "UAE",
                 title: "UAE Luxury Medical Hub (10 Cities)",
                 desc: "Middle East's flagship center for ultra-luxury private medical suites, robotic surgery, and wellness.",
-                hubImage: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80",
+                hubImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Dubai_Skylines_at_night_%28Pexels_3787839%29.jpg/1280px-Dubai_Skylines_at_night_%28Pexels_3787839%29.jpg",
                 cities: [
-                    { name: "Dubai", desc: "Ultra-Luxury Healthcare Capital", hospitals: ["American Hospital Dubai", "Mediclinic City Hospital", "Saudi German Dubai", "Fakeeh University", "King's College London", "Zulekha Hospital Dubai", "Aster Mankhool", "Prime Hospital", "Al Zahra Dubai", "NMC Royal DIP", "Dubai Hospital", "Rashid Hospital", "Latifa Hospital", "Gargash Hospital", "Clemenceau Medical"] },
-                    { name: "Abu Dhabi", desc: "Capital Quaternary Center", hospitals: ["Cleveland Clinic Abu Dhabi", "Sheikh Shakhbout Medical", "Burjeel Hospital", "NMC Royal Khalifa City", "Mediclinic Airport Road", "Danat Al Emarat", "LLH Hospital", "Lifecare Musaffah", "Police Hospital", "SKMC", "Al Corniche", "Bareen International", "Phoenix Hospital", "Reem Hospital", "Medeor 24x7"] },
-                    { name: "Sharjah", desc: "Northern Emirates Quaternary Hub", hospitals: ["University Hospital Sharjah", "Zulekha Sharjah", "Al Zahra Sharjah", "NMC Royal Sharjah", "Burjeel Specialty", "Oriana Hospital", "Central Private", "Al Qassimi Hospital", "Kuwaiti Hospital", "Thumbay Sharjah", "Saudi German Sharjah", "Corniche Hospital", "Royal Hospital", "Al Kuwait Hospital", "Aesthetic Center"] },
-                    { name: "Al Ain", desc: "Garden City Healthcare Corridor", hospitals: ["Tawam Hospital", "Al Ain Hospital", "Burjeel Royal Al Ain", "NMC Specialty Al Ain", "Mediclinic Al Ain", "Kanad Hospital", "NMC Royal Medical", "Universal Hospital", "Aiman Hospital", "Al Ahli Al Ain", "Al Neima Hospital", "Specialized Medical", "Al Ain Dental", "Al Ain Rehabilitation", "Al Ain Eye"] },
-                    { name: "Ras Al Khaimah", desc: "Northern Coast Healthcare Hub", hospitals: ["RAK Hospital", "Saqr Hospital", "Ibrahim Bin Hamad", "Al Zahrawi RAK", "Thumbay Clinic RAK", "Al Oraibi Hospital", "RAK Dental Center", "NMC Medical Centre", "RAK Aesthetic Center", "RAK Wellness Center", "Al Nakheel Clinic", "Al Jazeera Medical", "Al Hamra Clinic", "RAK Eye Center", "RAK Rehabilitation"] },
-                    { name: "Fujairah", desc: "East Coast Medical Hub", hospitals: ["Fujairah Hospital", "Al Sharq Hospital", "Thumbay Fujairah", "Dibba Hospital", "NMC Fujairah", "Al Zahra Clinic", "Fujairah Dental", "Fujairah Aesthetic", "Al Corniche Clinic", "Fujairah Rehabilitation", "Fujairah Eye", "Al Massa Medical", "Fujairah Wellness", "Al Badr Medical", "Fujairah Skin"] },
-                    { name: "Ajman", desc: "Academic Medical Center", hospitals: ["Thumbay University Ajman", "Sheikh Khalifa Ajman", "Aminah Hospital", "Saudi German Clinic", "Ajman Specialty", "NMC Ajman", "Al Rashedia Hospital", "Ajman Dental", "Ajman Eye", "Ajman Aesthetic", "Al Musalla Medical", "Ajman Rehabilitation", "Life Medical", "Al Noor Clinic", "Ajman Wellness"] },
-                    { name: "Umm Al Quwain", desc: "Emirate Wellness Center", hospitals: ["Umm Al Quwain Hospital", "Sheikh Khalifa General UAQ", "Thyrocare Medical UAQ", "NMC UAQ", "UAQ Dental", "UAQ Aesthetic", "UAQ Health Clinic", "Al Khaleej Medical", "UAQ Eye", "UAQ Rehabilitation", "Al Falaj Clinic", "UAQ Wellness", "Al Salam Medical", "UAQ Skin", "UAQ Cardiac"] },
-                    { name: "Khor Fakkan", desc: "East Coast Coastal Healthcare", hospitals: ["Khor Fakkan Hospital", "Al Huda Medical", "Khor Fakkan Dental", "Khor Fakkan Eye", "East Coast Clinic", "Khor Fakkan Rehabilitation", "Sharjah Health Authority", "Aesthetic Hub", "Al Nagfa Center", "Zubarah Clinic", "Skin Clinic", "Cardiac Unit", "Al Oceanic Medical", "Pediatric Wing", "Dibba Al Hisn"] },
-                    { name: "Madinat Zayed", desc: "Al Dhafra Regional Healthcare", hospitals: ["Madinat Zayed Hospital SEHA", "Al Dhafra Family Medicine", "Dental Clinic", "Liwa Hospital", "Ghayathi Hospital", "Al Mirfa Hospital", "Delma Hospital", "Rehabilitation Hub", "Eye Clinic", "Aesthetic Center", "Ruways Hospital ADNOC", "Cardiac Unit", "Pediatric Wing", "Skin Clinic", "Western Region Health"] }
+                    { name: "Dubai", desc: "Ultra-Luxury Healthcare Capital", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Burj_Khalifa_Dubai.jpg/1024px-Burj_Khalifa_Dubai.jpg", hospitals: ["American Hospital Dubai", "Mediclinic City Hospital", "Saudi German Dubai", "Fakeeh University", "King's College London", "Zulekha Hospital Dubai", "Aster Mankhool", "Prime Hospital", "Al Zahra Dubai", "NMC Royal DIP", "Dubai Hospital", "Rashid Hospital", "Latifa Hospital", "Gargash Hospital", "Clemenceau Medical"] },
+                    { name: "Abu Dhabi", desc: "Capital Quaternary Center", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Sheikh_Zayed_Grand_Mosque_Abu_Dhabi.jpg/1024px-Sheikh_Zayed_Grand_Mosque_Abu_Dhabi.jpg", hospitals: ["Cleveland Clinic Abu Dhabi", "Sheikh Shakhbout Medical", "Burjeel Hospital", "NMC Royal Khalifa City", "Mediclinic Airport Road", "Danat Al Emarat", "LLH Hospital", "Lifecare Musaffah", "Police Hospital", "SKMC", "Al Corniche", "Bareen International", "Phoenix Hospital", "Reem Hospital", "Medeor 24x7"] },
+                    { name: "Sharjah", desc: "Northern Emirates Quaternary Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Al_Noor_Mosque_Sharjah.jpg/1024px-Al_Noor_Mosque_Sharjah.jpg", hospitals: ["University Hospital Sharjah", "Zulekha Sharjah", "Al Zahra Sharjah", "NMC Royal Sharjah", "Burjeel Specialty", "Oriana Hospital", "Central Private", "Al Qassimi Hospital", "Kuwaiti Hospital", "Thumbay Sharjah", "Saudi German Sharjah", "Corniche Hospital", "Royal Hospital", "Al Kuwait Hospital", "Aesthetic Center"] },
+                    { name: "Al Ain", desc: "Garden City Healthcare Corridor", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Al_Jahili_Fort_Al_Ain.jpg/1024px-Al_Jahili_Fort_Al_Ain.jpg", hospitals: ["Tawam Hospital", "Al Ain Hospital", "Burjeel Royal Al Ain", "NMC Specialty Al Ain", "Mediclinic Al Ain", "Kanad Hospital", "NMC Royal Medical", "Universal Hospital", "Aiman Hospital", "Al Ahli Al Ain", "Al Neima Hospital", "Specialized Medical", "Al Ain Dental", "Al Ain Rehabilitation", "Al Ain Eye"] },
+                    { name: "Ras Al Khaimah", desc: "Northern Coast Healthcare Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Jebel_Jais_Ras_Al_Khaimah.jpg/1024px-Jebel_Jais_Ras_Al_Khaimah.jpg", hospitals: ["RAK Hospital", "Saqr Hospital", "Ibrahim Bin Hamad", "Al Zahrawi RAK", "Thumbay Clinic RAK", "Al Oraibi Hospital", "RAK Dental Center", "NMC Medical Centre", "RAK Aesthetic Center", "RAK Wellness Center", "Al Nakheel Clinic", "Al Jazeera Medical", "Al Hamra Clinic", "RAK Eye Center", "RAK Rehabilitation"] },
+                    { name: "Fujairah", desc: "East Coast Medical Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Al_Bidyah_Mosque_Fujairah.jpg/1024px-Al_Bidyah_Mosque_Fujairah.jpg", hospitals: ["Fujairah Hospital", "Al Sharq Hospital", "Thumbay Fujairah", "Dibba Hospital", "NMC Fujairah", "Al Zahra Clinic", "Fujairah Dental", "Fujairah Aesthetic", "Al Corniche Clinic", "Fujairah Rehabilitation", "Fujairah Eye", "Al Massa Medical", "Fujairah Wellness", "Al Badr Medical", "Fujairah Skin"] },
+                    { name: "Ajman", desc: "Academic Medical Center", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Ajman_Corniche.jpg/1024px-Ajman_Corniche.jpg", hospitals: ["Thumbay University Ajman", "Sheikh Khalifa Ajman", "Aminah Hospital", "Saudi German Clinic", "Ajman Specialty", "NMC Ajman", "Al Rashedia Hospital", "Ajman Dental", "Ajman Eye", "Ajman Aesthetic", "Al Musalla Medical", "Ajman Rehabilitation", "Life Medical", "Al Noor Clinic", "Ajman Wellness"] },
+                    { name: "Umm Al Quwain", desc: "Emirate Wellness Center", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Umm_Al_Quwain_Fort.jpg/1024px-Umm_Al_Quwain_Fort.jpg", hospitals: ["Umm Al Quwain Hospital", "Sheikh Khalifa General UAQ", "Thyrocare Medical UAQ", "NMC UAQ", "UAQ Dental", "UAQ Aesthetic", "UAQ Health Clinic", "Al Khaleej Medical", "UAQ Eye", "UAQ Rehabilitation", "Al Falaj Clinic", "UAQ Wellness", "Al Salam Medical", "UAQ Skin", "UAQ Cardiac"] },
+                    { name: "Khor Fakkan", desc: "East Coast Coastal Healthcare", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Khor_Fakkan_Amphitheatre.jpg/1024px-Khor_Fakkan_Amphitheatre.jpg", hospitals: ["Khor Fakkan Hospital", "Al Huda Medical", "Khor Fakkan Dental", "Khor Fakkan Eye", "East Coast Clinic", "Khor Fakkan Rehabilitation", "Sharjah Health Authority", "Aesthetic Hub", "Al Nagfa Center", "Zubarah Clinic", "Skin Clinic", "Cardiac Unit", "Al Oceanic Medical", "Pediatric Wing", "Dibba Al Hisn"] },
+                    { name: "Madinat Zayed", desc: "Al Dhafra Regional Healthcare", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Liwa_Oasis_Dunes.jpg/1024px-Liwa_Oasis_Dunes.jpg", hospitals: ["Madinat Zayed Hospital SEHA", "Al Dhafra Family Medicine", "Dental Clinic", "Liwa Hospital", "Ghayathi Hospital", "Al Mirfa Hospital", "Delma Hospital", "Rehabilitation Hub", "Eye Clinic", "Aesthetic Center", "Ruways Hospital ADNOC", "Cardiac Unit", "Pediatric Wing", "Skin Clinic", "Western Region Health"] }
                 ]
             },
             {
                 id: "hub-singapore", num: 5, flag: "🇸🇬", country: "Singapore",
                 title: "Singapore Advanced Hub (10 Regions)",
                 desc: "Southeast Asia's gold standard for complex oncology, proton beam radiation, and pediatric transplants.",
-                hubImage: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1200&q=80",
+                hubImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Marina_Bay_Sands_in_the_evening_-_20101120.jpg/1280px-Marina_Bay_Sands_in_the_evening_-_20101120.jpg",
                 cities: [
-                    { name: "Orchard", desc: "Premier Private Medical Hub", hospitals: ["Mount Elizabeth Orchard", "Gleneagles Singapore", "Paragon Medical", "Camden Medical", "Orchard Plastic Surgery", "Orchard Dental Hub", "Orchard Eye Institute", "Singapore Aesthetic", "Orchard Heart Group", "Orchard Cancer Center", "Pacific Healthcare", "Supreme Health", "Asia Medic Centre", "Orchard IVF", "Orchard Orthopedic"] },
-                    { name: "Novena", desc: "Singapore Health City Hub", hospitals: ["Mount Elizabeth Novena", "Tan Tock Seng Hospital", "Novena Specialist Center", "Royal Square Novena", "National Skin Centre", "National Neuroscience", "RenalLife Dialysis", "Novena Pain Management", "Novena Heart Centre", "Novena Surgical Center", "Novena Dental Specialist", "Novena Eye Centre", "Novena Cancer Specialist", "Novena Orthopedic", "Novena IVF Fertility"] },
-                    { name: "Buona Vista", desc: "One-North Biomedical Hub", hospitals: ["National University Hospital (NUH)", "Biopolis Biomedical Center", "NUHS Tower Block", "National University Cancer", "National University Heart", "Buona Vista Dental Hub", "One-North Medical", "Singapore Clinical Research", "A*STAR Clinical", "Buona Vista Eye", "Buona Vista Pain", "Buona Vista Orthopedic", "Buona Vista Aesthetic", "Buona Vista Rehabilitation", "Buona Vista Pediatric"] },
-                    { name: "Outram", desc: "National Academic Campus", hospitals: ["Singapore General Hospital (SGH)", "National Cancer Centre (NCCS)", "National Heart Centre (NHCS)", "Singapore National Eye Centre", "National Dental Centre", "SGH Elective Community", "Outram Polyclinic", "SGH Hyperbaric Center", "Outram Vascular Center", "Outram Transplant Hub", "SGH Robotic Institute", "Outram Dermatological", "Outram Pediatric Surgery", "Outram IVF Clinic", "SGH Trauma Center"] },
-                    { name: "Jurong", desc: "Western Regional Healthcare", hospitals: ["Ng Teng Fong General Hospital", "Jurong Community Hospital", "Jurong Medical Centre", "St. Luke's Hospital", "Jurong Specialist Clinic", "Jurong Dental Hub", "Jurong Eye Institute", "Jurong Heart Specialist", "Jurong Cancer Center", "Jurong Orthopedic Group", "Jurong Aesthetic Center", "Jurong Pain Clinic", "Jurong IVF Centre", "Jurong Pediatric Hub", "Jurong Rehabilitation"] },
-                    { name: "Tampines", desc: "Eastern Regional Healthcare", hospitals: ["Changi General Hospital (CGH)", "Tampines Polyclinic", "St. Andrew's Community", "East Point Medical Centre", "Tampines Dental Specialist", "Tampines Eye Clinic", "Tampines Aesthetic Hub", "Tampines Heart Group", "Tampines Cancer Center", "Tampines Orthopedic Clinic", "Tampines Pain Center", "Tampines Rehabilitation", "Tampines IVF Clinic", "Tampines Pediatric", "Tampines Vascular Hub"] },
-                    { name: "Yishun", desc: "Northern Regional Healthcare", hospitals: ["Khoo Teck Puat Hospital (KTPH)", "Yishun Community Hospital", "Yishun Polyclinic", "Admiralty Medical Centre", "Yishun Dental Specialist", "Yishun Eye Institute", "Yishun Aesthetic Hub", "Yishun Heart Specialist", "Yishun Cancer Wing", "Yishun Orthopedic Group", "Yishun Pain Clinic", "Yishun Rehabilitation", "Yishun IVF Clinic", "Yishun Pediatric Center", "Yishun Vascular Hub"] },
-                    { name: "Farrer Park", desc: "Integrated Hospitality Healthcare", hospitals: ["Farrer Park Hospital", "Connexion Medical Centre", "Farrer Park Heart Centre", "Farrer Park Oncology", "Farrer Park Dental", "Farrer Park Eye Clinic", "Farrer Park Aesthetic", "Farrer Park Orthopedic", "Farrer Park Pain Management", "Farrer Park IVF", "Farrer Park Robotic", "Farrer Park Rehabilitation", "Farrer Park Pediatric", "Farrer Park Vascular", "Farrer Park Gastroenterology"] },
-                    { name: "Changi", desc: "Eastern Coastal Aviation Hub", hospitals: ["Changi Airport Medical", "Changi Business Park", "Upper Changi Specialist", "Changi Dental Care", "Changi Eye Specialist", "Changi Aesthetic Hub", "Changi Orthopedic Group", "Changi Pain Clinic", "Changi Rehabilitation", "Changi Pediatric Center", "Changi Heart Unit", "Changi Skin Specialist", "Changi Vascular Center", "Changi IVF Fertility", "Changi Neurological Unit"] },
-                    { name: "Woodlands", desc: "Northern Border Healthcare Campus", hospitals: ["Woodlands Health Campus", "Woodlands Community Hospital", "Woodlands Specialist Centre", "Woodlands Dental Hub", "Woodlands Eye Institute", "Woodlands Aesthetic Center", "Woodlands Heart Group", "Woodlands Cancer Center", "Woodlands Orthopedic Clinic", "Woodlands Pain Management", "Woodlands Rehabilitation", "Woodlands Pediatric Wing", "Woodlands IVF Fertility", "Woodlands Vascular Hub", "Woodlands Neurology Clinic"] }
+                    { name: "Orchard", desc: "Premier Private Medical Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/ION_Orchard_Singapore.jpg/1024px-ION_Orchard_Singapore.jpg", hospitals: ["Mount Elizabeth Orchard", "Gleneagles Singapore", "Paragon Medical", "Camden Medical", "Orchard Plastic Surgery", "Orchard Dental Hub", "Orchard Eye Institute", "Singapore Aesthetic", "Orchard Heart Group", "Orchard Cancer Center", "Pacific Healthcare", "Supreme Health", "Asia Medic Centre", "Orchard IVF", "Orchard Orthopedic"] },
+                    { name: "Novena", desc: "Singapore Health City Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Novena_Church_Singapore.jpg/1024px-Novena_Church_Singapore.jpg", hospitals: ["Mount Elizabeth Novena", "Tan Tock Seng Hospital", "Novena Specialist Center", "Royal Square Novena", "National Skin Centre", "National Neuroscience", "RenalLife Dialysis", "Novena Pain Management", "Novena Heart Centre", "Novena Surgical Center", "Novena Dental Specialist", "Novena Eye Centre", "Novena Cancer Specialist", "Novena Orthopedic", "Novena IVF Fertility"] },
+                    { name: "Buona Vista", desc: "One-North Biomedical Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/The_Star_Vista_Singapore.jpg/1024px-The_Star_Vista_Singapore.jpg", hospitals: ["National University Hospital (NUH)", "Biopolis Biomedical Center", "NUHS Tower Block", "National University Cancer", "National University Heart", "Buona Vista Dental Hub", "One-North Medical", "Singapore Clinical Research", "A*STAR Clinical", "Buona Vista Eye", "Buona Vista Pain", "Buona Vista Orthopedic", "Buona Vista Aesthetic", "Buona Vista Rehabilitation", "Buona Vista Pediatric"] },
+                    { name: "Outram", desc: "National Academic Campus", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Pinnacle%40Duxton_Singapore.jpg/1024px-Pinnacle%40Duxton_Singapore.jpg", hospitals: ["Singapore General Hospital (SGH)", "National Cancer Centre (NCCS)", "National Heart Centre (NHCS)", "Singapore National Eye Centre", "National Dental Centre", "SGH Elective Community", "Outram Polyclinic", "SGH Hyperbaric Center", "Outram Vascular Center", "Outram Transplant Hub", "SGH Robotic Institute", "Outram Dermatological", "Outram Pediatric Surgery", "Outram IVF Clinic", "SGH Trauma Center"] },
+                    { name: "Jurong", desc: "Western Regional Healthcare", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Chinese_Garden_Singapore_Pagoda.jpg/1024px-Chinese_Garden_Singapore_Pagoda.jpg", hospitals: ["Ng Teng Fong General Hospital", "Jurong Community Hospital", "Jurong Medical Centre", "St. Luke's Hospital", "Jurong Specialist Clinic", "Jurong Dental Hub", "Jurong Eye Institute", "Jurong Heart Specialist", "Jurong Cancer Center", "Jurong Orthopedic Group", "Jurong Aesthetic Center", "Jurong Pain Clinic", "Jurong IVF Centre", "Jurong Pediatric Hub", "Jurong Rehabilitation"] },
+                    { name: "Tampines", desc: "Eastern Regional Healthcare", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Our_Tampines_Hub_Singapore.jpg/1024px-Our_Tampines_Hub_Singapore.jpg", hospitals: ["Changi General Hospital (CGH)", "Tampines Polyclinic", "St. Andrew's Community", "East Point Medical Centre", "Tampines Dental Specialist", "Tampines Eye Clinic", "Tampines Aesthetic Hub", "Tampines Heart Group", "Tampines Cancer Center", "Tampines Orthopedic Clinic", "Tampines Pain Center", "Tampines Rehabilitation", "Tampines IVF Clinic", "Tampines Pediatric", "Tampines Vascular Hub"] },
+                    { name: "Yishun", desc: "Northern Regional Healthcare", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Lower_Seletar_Reservoir_Park.jpg/1024px-Lower_Seletar_Reservoir_Park.jpg", hospitals: ["Khoo Teck Puat Hospital (KTPH)", "Yishun Community Hospital", "Yishun Polyclinic", "Admiralty Medical Centre", "Yishun Dental Specialist", "Yishun Eye Institute", "Yishun Aesthetic Hub", "Yishun Heart Specialist", "Yishun Cancer Wing", "Yishun Orthopedic Group", "Yishun Pain Clinic", "Yishun Rehabilitation", "Yishun IVF Clinic", "Yishun Pediatric Center", "Yishun Vascular Hub"] },
+                    { name: "Farrer Park", desc: "Integrated Hospitality Healthcare", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Sri_Srinivasa_Perumal_Temple_Singapore.jpg/1024px-Sri_Srinivasa_Perumal_Temple_Singapore.jpg", hospitals: ["Farrer Park Hospital", "Connexion Medical Centre", "Farrer Park Heart Centre", "Farrer Park Oncology", "Farrer Park Dental", "Farrer Park Eye Clinic", "Farrer Park Aesthetic", "Farrer Park Orthopedic", "Farrer Park Pain Management", "Farrer Park IVF", "Farrer Park Robotic", "Farrer Park Rehabilitation", "Farrer Park Pediatric", "Farrer Park Vascular", "Farrer Park Gastroenterology"] },
+                    { name: "Changi", desc: "Eastern Coastal Aviation Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Jewel_Changi_Airport_Rain_Vortex.jpg/1024px-Jewel_Changi_Airport_Rain_Vortex.jpg", hospitals: ["Changi Airport Medical", "Changi Business Park", "Upper Changi Specialist", "Changi Dental Care", "Changi Eye Specialist", "Changi Aesthetic Hub", "Changi Orthopedic Group", "Changi Pain Clinic", "Changi Rehabilitation", "Changi Pediatric Center", "Changi Heart Unit", "Changi Skin Specialist", "Changi Vascular Center", "Changi IVF Fertility", "Changi Neurological Unit"] },
+                    { name: "Woodlands", desc: "Northern Border Healthcare Campus", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Woodlands_Waterfront_Park_Singapore.jpg/1024px-Woodlands_Waterfront_Park_Singapore.jpg", hospitals: ["Woodlands Health Campus", "Woodlands Community Hospital", "Woodlands Specialist Centre", "Woodlands Dental Hub", "Woodlands Eye Institute", "Woodlands Aesthetic Center", "Woodlands Heart Group", "Woodlands Cancer Center", "Woodlands Orthopedic Clinic", "Woodlands Pain Management", "Woodlands Rehabilitation", "Woodlands Pediatric Wing", "Woodlands IVF Fertility", "Woodlands Vascular Hub", "Woodlands Neurology Clinic"] }
                 ]
             },
             {
                 id: "hub-korea", num: 6, flag: "🇰🇷", country: "South Korea",
                 title: "South Korea Robotic & Plastic Hub (10 Cities)",
                 desc: "Global leader in robotic surgery, facial reconstruction, stem cell therapies, and cancer care.",
-                hubImage: "https://cdn.sanity.io/images/nxpteyfv/goguides/44249958588fc406d673c715d8e1bb3894e09e67-1600x1066.jpg",
+                hubImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Gyeongbokgung_Palace_Seoul_Korea.jpg/1280px-Gyeongbokgung_Palace_Seoul_Korea.jpg",
                 cities: [
-                    { name: "Seoul", desc: "World Capital of Plastic & Robotics", hospitals: ["Asan Medical Center", "Samsung Medical Center", "Severance Hospital", "Seoul National University (SNUH)", "Seoul St. Mary's Hospital", "Gangnam Severance", "ID Hospital Gangnam", "Banobagi Plastic Surgery", "JK Plastic Surgery", "VIP Plastic Surgery", "JW Plastic Surgery Seoul", "Korea University Anam", "Ewha Womans University", "Kyung Hee University", "Hanyang University"] },
-                    { name: "Busan", desc: "Maritime Medical Tourism Hub", hospitals: ["Pusan National University", "Haeundae Paik Hospital", "Dong-A University Hospital", "Kosin University Gospel", "Busan St. Mary's", "ABC Plastic Surgery", "Noblesse Plastic Surgery", "Centum General Hospital", "BHS Hanseo Hospital", "Good Moonhwa Hospital", "Busan Paik Hospital", "Busan Cancer Center", "Busan Eye Institute", "Busan Dental Hub", "Haeundae Grand Medical"] },
-                    { name: "Incheon", desc: "Airport Bio-Health Hub", hospitals: ["Inha University Hospital", "Gachon University Gil", "Incheon St. Mary's", "Incheon Sejong Hospital", "Nazarang Hospital", "Incheon Medical Center", "Songdo Children's Hospital", "Incheon Plastic Surgery", "Incheon Dental Hospital", "Incheon Eye Clinic", "Incheon Heart Institute", "Incheon Spine Hospital", "Incheon Cancer Center", "Incheon Rehabilitation", "Incheon Joint Center"] },
-                    { name: "Daegu", desc: "Medi-City Korea Hub", hospitals: ["Kyungpook National University (KNUH)", "Keimyung Dongsan Hospital", "Daegu Catholic University", "Yeungnam University", "Daegu Fatima Hospital", "V-Plastic Surgery Daegu", "Daegu Joint & Spine", "Daegu Eye Center", "Daegu Dental Hospital", "Daegu Cardiac Center", "Daegu Cancer Center", "Daegu Aesthetic Hub", "Daegu Pain Management", "Daegu Rehabilitation", "Daegu Stroke Center"] },
-                    { name: "Daejeon", desc: "Science & Bio-Medical Hub", hospitals: ["Chungnam National University", "Konyang University Hospital", "Eulji University Hospital", "Daejeon St. Mary's", "Sun Hospital Daejeon", "Hankook Hospital", "Daejeon Plastic Surgery", "Daejeon Eye Institute", "Daejeon Dental Hospital", "Daejeon Spine Center", "Daejeon Joint Hospital", "Daejeon Cancer Wing", "Daejeon Rehabilitation", "Daejeon Heart Institute", "Daejeon Aesthetic Hub"] },
-                    { name: "Gwangju", desc: "Southwest Quaternary Center", hospitals: ["Chonnam National University", "Chosun University Hospital", "Gwangju Christian Hospital", "Gwangju Veterans Hospital", "Gwangju K-Plastic Surgery", "Gwangju Joint & Spine", "Gwangju Eye Clinic", "Gwangju Dental Hospital", "Gwangju Cancer Center", "Gwangju Cardiac Institute", "Gwangju Rehabilitation", "Gwangju Aesthetic Hub", "Gwangju Pain Clinic", "Gwangju Pediatric Wing", "Gwangju Stroke Center"] },
-                    { name: "Jeju Island", desc: "Resort Recovery Sanctuary", hospitals: ["Jeju National University", "Jeju Halla General", "S-Central Hospital Jeju", "Jeju Korean Medicine", "WE Hotel Medical Spa", "Jeju Plastic Surgery", "Jeju Dental Center", "Jeju Eye Institute", "Jeju Wellness Sanctuary", "Jeju Rehabilitation", "Jeju Aesthetic Retreat", "Jeju Skin Clinic", "Jeju Cardiac Center", "Jeju Spine Clinic", "Jeju Pain Management"] },
-                    { name: "Gyeonggi", desc: "Capital Suburban Medical Belt", hospitals: ["Bundang SNUH", "Ajou University Suwon", "Chung-Ang Gwangmyeong", "Myongji Hospital Goyang", "CHA Bundang Medical", "National Cancer Center Korea", "Kookmin University", "Gyeonggi Cancer Center", "Suwon Plastic Surgery", "Goyang Spine Hospital", "Bundang Dental", "Bundang Eye Institute", "Ajou Heart Center", "Suwon Joint Hospital", "Gyeonggi Rehabilitation"] },
-                    { name: "Ulsan", desc: "Industrial & Clinical Hub", hospitals: ["Ulsan University Hospital", "Ulsan Dong-In Hospital", "Ulsan Central Hospital", "Ulsan City Hospital", "Ulsan Specialised Medical", "Ulsan Plastic Surgery", "Ulsan Dental Center", "Ulsan Eye Clinic", "Ulsan Heart Institute", "Ulsan Cancer Center", "Ulsan Spine Clinic", "Ulsan Rehabilitation", "Ulsan Pediatric Wing", "Ulsan Skin Clinic", "Ulsan Orthopedic Hub"] },
-                    { name: "Suwon", desc: "Gyeonggi Provincial Capital Medical Center", hospitals: ["Ajou University Suwon", "St. Vincent's Suwon", "Suwon Willbe Hospital", "Suwon City Hospital", "Suwon Speciality Medical", "Suwon Plastic Surgery Hub", "Suwon Dental Hospital", "Suwon Eye Institute", "Suwon Cardiac Center", "Suwon Cancer Wing", "Suwon Spine Hospital", "Suwon Rehabilitation Hub", "Suwon Pediatric Clinic", "Suwon Skin Specialist", "Suwon Orthopedic Institute"] }
+                    { name: "Seoul", desc: "World Capital of Plastic & Robotics", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/N_Seoul_Tower_from_Namsan.jpg/1024px-N_Seoul_Tower_from_Namsan.jpg", hospitals: ["Asan Medical Center", "Samsung Medical Center", "Severance Hospital", "Seoul National University (SNUH)", "Seoul St. Mary's Hospital", "Gangnam Severance", "ID Hospital Gangnam", "Banobagi Plastic Surgery", "JK Plastic Surgery", "VIP Plastic Surgery", "JW Plastic Surgery Seoul", "Korea University Anam", "Ewha Womans University", "Kyung Hee University", "Hanyang University"] },
+                    { name: "Busan", desc: "Maritime Medical Tourism Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Gwangan_Bridge_Busan.jpg/1024px-Gwangan_Bridge_Busan.jpg", hospitals: ["Pusan National University", "Haeundae Paik Hospital", "Dong-A University Hospital", "Kosin University Gospel", "Busan St. Mary's", "ABC Plastic Surgery", "Noblesse Plastic Surgery", "Centum General Hospital", "BHS Hanseo Hospital", "Good Moonhwa Hospital", "Busan Paik Hospital", "Busan Cancer Center", "Busan Eye Institute", "Busan Dental Hub", "Haeundae Grand Medical"] },
+                    { name: "Incheon", desc: "Airport Bio-Health Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Songdo_Central_Park_Incheon.jpg/1024px-Songdo_Central_Park_Incheon.jpg", hospitals: ["Inha University Hospital", "Gachon University Gil", "Incheon St. Mary's", "Incheon Sejong Hospital", "Nazarang Hospital", "Incheon Medical Center", "Songdo Children's Hospital", "Incheon Plastic Surgery", "Incheon Dental Hospital", "Incheon Eye Clinic", "Incheon Heart Institute", "Incheon Spine Hospital", "Incheon Cancer Center", "Incheon Rehabilitation", "Incheon Joint Center"] },
+                    { name: "Daegu", desc: "Medi-City Korea Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/83_Tower_Daegu.jpg/1024px-83_Tower_Daegu.jpg", hospitals: ["Kyungpook National University (KNUH)", "Keimyung Dongsan Hospital", "Daegu Catholic University", "Yeungnam University", "Daegu Fatima Hospital", "V-Plastic Surgery Daegu", "Daegu Joint & Spine", "Daegu Eye Center", "Daegu Dental Hospital", "Daegu Cardiac Center", "Daegu Cancer Center", "Daegu Aesthetic Hub", "Daegu Pain Management", "Daegu Rehabilitation", "Daegu Stroke Center"] },
+                    { name: "Daejeon", desc: "Science & Bio-Medical Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Expo_Bridge_Daejeon.jpg/1024px-Expo_Bridge_Daejeon.jpg", hospitals: ["Chungnam National University", "Konyang University Hospital", "Eulji University Hospital", "Daejeon St. Mary's", "Sun Hospital Daejeon", "Hankook Hospital", "Daejeon Plastic Surgery", "Daejeon Eye Institute", "Daejeon Dental Hospital", "Daejeon Spine Center", "Daejeon Joint Hospital", "Daejeon Cancer Wing", "Daejeon Rehabilitation", "Daejeon Heart Institute", "Daejeon Aesthetic Hub"] },
+                    { name: "Gwangju", desc: "Southwest Quaternary Center", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Mudeungsan_National_Park_Gwangju.jpg/1024px-Mudeungsan_National_Park_Gwangju.jpg", hospitals: ["Chonnam National University", "Chosun University Hospital", "Gwangju Christian Hospital", "Gwangju Veterans Hospital", "Gwangju K-Plastic Surgery", "Gwangju Joint & Spine", "Gwangju Eye Clinic", "Gwangju Dental Hospital", "Gwangju Cancer Center", "Gwangju Cardiac Institute", "Gwangju Rehabilitation", "Gwangju Aesthetic Hub", "Gwangju Pain Clinic", "Gwangju Pediatric Wing", "Gwangju Stroke Center"] },
+                    { name: "Jeju Island", desc: "Resort Recovery Sanctuary", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Seongsan_Ilchulbong_Jeju.jpg/1024px-Seongsan_Ilchulbong_Jeju.jpg", hospitals: ["Jeju National University", "Jeju Halla General", "S-Central Hospital Jeju", "Jeju Korean Medicine", "WE Hotel Medical Spa", "Jeju Plastic Surgery", "Jeju Dental Center", "Jeju Eye Institute", "Jeju Wellness Sanctuary", "Jeju Rehabilitation", "Jeju Aesthetic Retreat", "Jeju Skin Clinic", "Jeju Cardiac Center", "Jeju Spine Clinic", "Jeju Pain Management"] },
+                    { name: "Gyeonggi", desc: "Capital Suburban Medical Belt", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Namhansanseong_Fortress.jpg/1024px-Namhansanseong_Fortress.jpg", hospitals: ["Bundang SNUH", "Ajou University Suwon", "Chung-Ang Gwangmyeong", "Myongji Hospital Goyang", "CHA Bundang Medical", "National Cancer Center Korea", "Kookmin University", "Gyeonggi Cancer Center", "Suwon Plastic Surgery", "Goyang Spine Hospital", "Bundang Dental", "Bundang Eye Institute", "Ajou Heart Center", "Suwon Joint Hospital", "Gyeonggi Rehabilitation"] },
+                    { name: "Ulsan", desc: "Industrial & Clinical Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Daewangam_Park_Ulsan.jpg/1024px-Daewangam_Park_Ulsan.jpg", hospitals: ["Ulsan University Hospital", "Ulsan Dong-In Hospital", "Ulsan Central Hospital", "Ulsan City Hospital", "Ulsan Specialised Medical", "Ulsan Plastic Surgery", "Ulsan Dental Center", "Ulsan Eye Clinic", "Ulsan Heart Institute", "Ulsan Cancer Center", "Ulsan Spine Clinic", "Ulsan Rehabilitation", "Ulsan Pediatric Wing", "Ulsan Skin Clinic", "Ulsan Orthopedic Hub"] },
+                    { name: "Suwon", desc: "Gyeonggi Provincial Capital Medical Center", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Hwaseong_Fortress_Suwon.jpg/1024px-Hwaseong_Fortress_Suwon.jpg", hospitals: ["Ajou University Suwon", "St. Vincent's Suwon", "Suwon Willbe Hospital", "Suwon City Hospital", "Suwon Speciality Medical", "Suwon Plastic Surgery Hub", "Suwon Dental Hospital", "Suwon Eye Institute", "Suwon Cardiac Center", "Suwon Cancer Wing", "Suwon Spine Hospital", "Suwon Rehabilitation Hub", "Suwon Pediatric Clinic", "Suwon Skin Specialist", "Suwon Orthopedic Institute"] }
                 ]
             },
             {
                 id: "hub-mexico", num: 7, flag: "🇲🇽", country: "Mexico",
                 title: "Mexico Low-Cost Medical Hub (10 Cities)",
                 desc: "North America's premier value-driven healthcare corridor for bariatric surgery, dental restorations, and orthopedic procedures.",
-                hubImage: "https://media.solosholidays.com/wp-content/uploads/2022/01/Agua_Azul_Waterfalls_in_Mexico.jpg",
+                hubImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Chichen_Itza_3.jpg/1280px-Chichen_Itza_3.jpg",
                 cities: [
-                    { name: "Tijuana", desc: "Bariatric & Dental Capital", hospitals: ["Hospital Angeles Tijuana", "Almater Hospital", "Florence Hospital Tijuana", "Baja Hospital", "CER Medical Center", "San Javier Tijuana", "Tijuana Bariatric Center", "Dental Brush Tijuana", "Advanced Dental Solutions", "Implanted Dental Tijuana", "Tijuana Plastic Surgery Hub", "Medical City Tijuana", "St. Jude Medical Center", "New City Medical Plaza", "Omni Hospital Tijuana"] },
-                    { name: "Monterrey", desc: "Advanced Northern Surgical Hub", hospitals: ["Hospital Zambrano Hellion", "Hospital Metropolitano Monterrey", "Hospital San Jose TecSalud", "Christus Muguerza Alta Especialidad", "Hospital Angeles Monterrey", "Doctors Hospital Monterrey", "OCA Hospital Monterrey", "Monterrey Heart Institute", "Centro Medico Hidalgo", "San Lucas Hospital Monterrey", "Monterrey Bariatric Group", "Monterrey Spine Center", "Monterrey Eye Institute", "Monterrey Oncology Wing", "Nova Hospital Monterrey"] },
-                    { name: "Mexico City", desc: "Quaternary Capital Healthcare", hospitals: ["Hospital ABC Santa Fe", "Hospital Angeles Pedregal", "Hospital Medica Sur", "Hospital General de Mexico", "Instituto Nacional de Cardiologia", "Hospital Espanol de Mexico", "Centro Medico ABC Observatorio", "Hospital Angeles Roma", "Hospital Dalinde", "Hospital San Angel Inn", "Grupo Medico Sur", "Hospital Angeles Lomas", "Fundacion Clinica Medica Sur", "Hospital Humana", "Hospital Mocel"] },
-                    { name: "Guadalajara", desc: "Jalisco Medical Corridor", hospitals: ["Hospital Real San Jose", "Hospital Angeles Guadalajara", "San Javier Guadalajara", "Puerta de Hierro", "Hospital Country 2000", "Hospital Mexico Americano", "Hospital Arboledas", "Guadalajara Bariatric Center", "Guadalajara Plastic Surgery", "Guadalajara Dental Center", "Guadalajara Eye Institute", "Guadalajara Heart Hospital", "Guadalajara Spine Center", "Guadalajara Cancer Institute", "Hospital San Martin"] },
-                    { name: "Cancun", desc: "Caribbean Recovery Sanctuary", hospitals: ["Hospital Galenia Cancun", "Amerimed Hospital Cancun", "Hospital Playamed Cancun", "Costamed Cancun", "Cancun Bariatric Clinic", "Cancun Plastic Surgery", "Cancun Dental Specialists", "Riviera Medical Center", "Cancun Eye Institute", "Cancun Orthopedic Hub", "Cancun Rehabilitation", "Cancun Heart Unit", "Cancun Skin Clinic", "Cancun Pediatric Wing", "Cancun Wellness Hospital"] },
-                    { name: "Puerto Vallarta", desc: "Pacific Coast Medical Hub", hospitals: ["Hospital San Javier Marina", "CMQ Premiere Hospital", "Hospital Joya Puerto Vallarta", "Amerimed Puerto Vallarta", "Puerto Vallarta Bariatric", "Puerto Vallarta Dental", "Puerto Vallarta Plastic Surgery", "Puerto Vallarta Eye", "Puerto Vallarta Orthopedic", "Puerto Vallarta Heart", "Puerto Vallarta Rehabilitation", "Puerto Vallarta Skin", "Puerto Vallarta Pediatric", "Riviera Nayarit Medical", "Banderas Bay Hospital"] },
-                    { name: "Merida", desc: "Yucatan Peninsula Healthcare Center", hospitals: ["Hospital Star Medica Merida", "Hospital de la Peninsulas", "Centro Medico de las Americas", "Hospital Almater Merida", "Merida Bariatric Center", "Merida Plastic Surgery", "Merida Dental Specialists", "Merida Eye Institute", "Merida Orthopedic Hub", "Merida Heart Center", "Merida Cancer Institute", "Merida Rehabilitation", "Merida Pediatric Wing", "Merida Skin Clinic", "Merida Wellness Hospital"] },
-                    { name: "Puebla", desc: "Central Mexican Medical Hub", hospitals: ["Hospital Angeles Puebla", "Hospital Puebla", "Star Medica Puebla", "Hospital Betania Puebla", "Universidad Autonoma Puebla", "Puebla Bariatric Center", "Puebla Plastic Surgery", "Puebla Dental Specialists", "Puebla Eye Institute", "Puebla Orthopedic Hub", "Puebla Heart Center", "Puebla Cancer Institute", "Puebla Rehabilitation", "Puebla Pediatric Wing", "Puebla Wellness Hospital"] },
-                    { name: "Queretaro", desc: "Bajio Industrial Medical Corridor", hospitals: ["Hospital Angeles Queretaro", "Star Medica Queretaro", "Hospital San Jose Queretaro", "Hospital H+ Queretaro", "Queretaro Bariatric Clinic", "Queretaro Plastic Surgery", "Queretaro Dental Hub", "Queretaro Eye Institute", "Queretaro Orthopedic Center", "Queretaro Heart Institute", "Queretaro Rehabilitation", "Queretaro Pediatric", "Queretaro Skin Clinic", "Queretaro Oncology Wing", "Queretaro Wellness Hospital"] },
-                    { name: "Chihuahua", desc: "Northern Industrial Medical Center", hospitals: ["Hospital Angeles Chihuahua", "Star Medica Chihuahua", "Hospital CIMA Chihuahua", "Hospital Muguerza Chihuahua", "Chihuahua Bariatric Center", "Chihuahua Plastic Surgery", "Chihuahua Dental Hub", "Chihuahua Eye Institute", "Chihuahua Orthopedic Hub", "Chihuahua Heart Center", "Chihuahua Rehabilitation", "Chihuahua Pediatric", "Chihuahua Skin Clinic", "Chihuahua Oncology Wing", "Chihuahua Wellness Hospital"] }
+                    { name: "Tijuana", desc: "Bariatric & Dental Capital", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Tijuana_Cultural_Center_CECUT.jpg/1024px-Tijuana_Cultural_Center_CECUT.jpg", hospitals: ["Hospital Angeles Tijuana", "Almater Hospital", "Florence Hospital Tijuana", "Baja Hospital", "CER Medical Center", "San Javier Tijuana", "Tijuana Bariatric Center", "Dental Brush Tijuana", "Advanced Dental Solutions", "Implanted Dental Tijuana", "Tijuana Plastic Surgery Hub", "Medical City Tijuana", "St. Jude Medical Center", "New City Medical Plaza", "Omni Hospital Tijuana"] },
+                    { name: "Monterrey", desc: "Advanced Northern Surgical Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Cerro_de_la_Silla_Monterrey.jpg/1024px-Cerro_de_la_Silla_Monterrey.jpg", hospitals: ["Hospital Zambrano Hellion", "Hospital Metropolitano Monterrey", "Hospital San Jose TecSalud", "Christus Muguerza Alta Especialidad", "Hospital Angeles Monterrey", "Doctors Hospital Monterrey", "OCA Hospital Monterrey", "Monterrey Heart Institute", "Centro Medico Hidalgo", "San Lucas Hospital Monterrey", "Monterrey Bariatric Group", "Monterrey Spine Center", "Monterrey Eye Institute", "Monterrey Oncology Wing", "Nova Hospital Monterrey"] },
+                    { name: "Mexico City", desc: "Quaternary Capital Healthcare", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Palacio_de_Bellas_Artes_Mexico_City.jpg/1024px-Palacio_de_Bellas_Artes_Mexico_City.jpg", hospitals: ["Hospital ABC Santa Fe", "Hospital Angeles Pedregal", "Hospital Medica Sur", "Hospital General de Mexico", "Instituto Nacional de Cardiologia", "Hospital Espanol de Mexico", "Centro Medico ABC Observatorio", "Hospital Angeles Roma", "Hospital Dalinde", "Hospital San Angel Inn", "Grupo Medico Sur", "Hospital Angeles Lomas", "Fundacion Clinica Medica Sur", "Hospital Humana", "Hospital Mocel"] },
+                    { name: "Guadalajara", desc: "Jalisco Medical Corridor", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Guadalajara_Cathedral.jpg/1024px-Guadalajara_Cathedral.jpg", hospitals: ["Hospital Real San Jose", "Hospital Angeles Guadalajara", "San Javier Guadalajara", "Puerta de Hierro", "Hospital Country 2000", "Hospital Mexico Americano", "Hospital Arboledas", "Guadalajara Bariatric Center", "Guadalajara Plastic Surgery", "Guadalajara Dental Center", "Guadalajara Eye Institute", "Guadalajara Heart Hospital", "Guadalajara Spine Center", "Guadalajara Cancer Institute", "Hospital San Martin"] },
+                    { name: "Cancun", desc: "Caribbean Recovery Sanctuary", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Cancun_Hotel_Zone_Beach.jpg/1024px-Cancun_Hotel_Zone_Beach.jpg", hospitals: ["Hospital Galenia Cancun", "Amerimed Hospital Cancun", "Hospital Playamed Cancun", "Costamed Cancun", "Cancun Bariatric Clinic", "Cancun Plastic Surgery", "Cancun Dental Specialists", "Riviera Medical Center", "Cancun Eye Institute", "Cancun Orthopedic Hub", "Cancun Rehabilitation", "Cancun Heart Unit", "Cancun Skin Clinic", "Cancun Pediatric Wing", "Cancun Wellness Hospital"] },
+                    { name: "Puerto Vallarta", desc: "Pacific Coast Medical Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Church_of_Our_Lady_of_Guadalupe_Puerto_Vallarta.jpg/1024px-Church_of_Our_Lady_of_Guadalupe_Puerto_Vallarta.jpg", hospitals: ["Hospital San Javier Marina", "CMQ Premiere Hospital", "Hospital Joya Puerto Vallarta", "Amerimed Puerto Vallarta", "Puerto Vallarta Bariatric", "Puerto Vallarta Dental", "Puerto Vallarta Plastic Surgery", "Puerto Vallarta Eye", "Puerto Vallarta Orthopedic", "Puerto Vallarta Heart", "Puerto Vallarta Rehabilitation", "Puerto Vallarta Skin", "Puerto Vallarta Pediatric", "Riviera Nayarit Medical", "Banderas Bay Hospital"] },
+                    { name: "Merida", desc: "Yucatan Peninsula Healthcare Center", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Merida_Cathedral_Yucatan.jpg/1024px-Merida_Cathedral_Yucatan.jpg", hospitals: ["Hospital Star Medica Merida", "Hospital de la Peninsulas", "Centro Medico de las Americas", "Hospital Almater Merida", "Merida Bariatric Center", "Merida Plastic Surgery", "Merida Dental Specialists", "Merida Eye Institute", "Merida Orthopedic Hub", "Merida Heart Center", "Merida Cancer Institute", "Merida Rehabilitation", "Merida Pediatric Wing", "Merida Skin Clinic", "Merida Wellness Hospital"] },
+                    { name: "Puebla", desc: "Central Mexican Medical Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Puebla_Cathedral_and_Popocatepetl.jpg/1024px-Puebla_Cathedral_and_Popocatepetl.jpg", hospitals: ["Hospital Angeles Puebla", "Hospital Puebla", "Star Medica Puebla", "Hospital Betania Puebla", "Universidad Autonoma Puebla", "Puebla Bariatric Center", "Puebla Plastic Surgery", "Puebla Dental Specialists", "Puebla Eye Institute", "Puebla Orthopedic Hub", "Puebla Heart Center", "Puebla Cancer Institute", "Puebla Rehabilitation", "Puebla Pediatric Wing", "Puebla Wellness Hospital"] },
+                    { name: "Queretaro", desc: "Bajio Industrial Medical Corridor", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Aqueduct_of_Queretaro.jpg/1024px-Aqueduct_of_Queretaro.jpg", hospitals: ["Hospital Angeles Queretaro", "Star Medica Queretaro", "Hospital San Jose Queretaro", "Hospital H+ Queretaro", "Queretaro Bariatric Clinic", "Queretaro Plastic Surgery", "Queretaro Dental Hub", "Queretaro Eye Institute", "Queretaro Orthopedic Center", "Queretaro Heart Institute", "Queretaro Rehabilitation", "Queretaro Pediatric", "Queretaro Skin Clinic", "Queretaro Oncology Wing", "Queretaro Wellness Hospital"] },
+                    { name: "Chihuahua", desc: "Northern Industrial Medical Center", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Chihuahua_Cathedral.jpg/1024px-Chihuahua_Cathedral.jpg", hospitals: ["Hospital Angeles Chihuahua", "Star Medica Chihuahua", "Hospital CIMA Chihuahua", "Hospital Muguerza Chihuahua", "Chihuahua Bariatric Center", "Chihuahua Plastic Surgery", "Chihuahua Dental Hub", "Chihuahua Eye Institute", "Chihuahua Orthopedic Hub", "Chihuahua Heart Center", "Chihuahua Rehabilitation", "Chihuahua Pediatric", "Chihuahua Skin Clinic", "Chihuahua Oncology Wing", "Chihuahua Wellness Hospital"] }
                 ]
             },
             {
                 id: "hub-costarica", num: 8, flag: "🇨🇷", country: "Costa Rica",
                 title: "Costa Rica Low-Cost Medical Hub (10 Cities)",
                 desc: "Central America's premier value-driven medical tourism paradise specializing in dentistry, plastic surgery, and orthopedics.",
-                hubImage: "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?auto=format&fit=crop&w=1200&q=80",
+                hubImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Arenal_Volcano_Costa_Rica.jpg/1280px-Arenal_Volcano_Costa_Rica.jpg",
                 cities: [
-                    { name: "San Jose", desc: "Capital Dental & Surgical Hub", hospitals: ["Hospital CIMA San Jose", "Clinica Biblica Hospital", "Hospital Metropolitano", "Clinica Catolica San Jose", "Hospital La Catolica", "Costa Rica Dental Team", "Goodness Dental San Jose", "Flavio Restrepo Dental", "San Jose Plastic Surgery", "Aesthetic Costa Rica", "San Jose Orthopedic Hub", "San Jose Eye Institute", "San Jose Heart Center", "San Jose Rehabilitation", "San Jose Pediatric Wing"] },
-                    { name: "Liberia", desc: "Guanacaste Medical Gateway", hospitals: ["Hospital San Rafael Arcangel", "Clinica Biblica Guanacaste", "Hospital Metropolitano Liberia", "Liberia Dental Specialists", "Guanacaste Plastic Surgery", "Liberia Eye Institute", "Liberia Orthopedic Clinic", "Liberia Rehabilitation Hub", "Liberia Heart Unit", "Liberia Skin Clinic", "Liberia Pediatric Wing", "Papagayo Medical Center", "Liberia Wellness Hospital", "Liberia Aesthetic Center", "Liberia Urgent Care"] },
-                    { name: "Alajuela", desc: "Central Valley Healthcare Hub", hospitals: ["Hospital San Rafael Alajuela", "Clinica Biblica Alajuela", "Hospital Metropolitano Alajuela", "Alajuela Dental Specialists", "Alajuela Plastic Surgery", "Alajuela Eye Institute", "Alajuela Orthopedic Clinic", "Alajuela Rehabilitation Hub", "Alajuela Heart Unit", "Alajuela Skin Clinic", "Alajuela Pediatric Wing", "Airport Medical Center", "Alajuela Wellness Hospital", "Alajuela Aesthetic Center", "Alajuela Urgent Care"] },
-                    { name: "Heredia", desc: "Medical & Technology Corridor", hospitals: ["Hospital de Heredia", "Clinica Biblica Heredia", "Hospital Metropolitano Heredia", "Heredia Dental Specialists", "Heredia Plastic Surgery", "Heredia Eye Institute", "Heredia Orthopedic Clinic", "Heredia Rehabilitation Hub", "Heredia Heart Unit", "Heredia Skin Clinic", "Heredia Pediatric Wing", "Heredia Medical Center", "Heredia Wellness Hospital", "Heredia Aesthetic Center", "Heredia Urgent Care"] },
-                    { name: "Cartago", desc: "Historic Provincial Medical Center", hospitals: ["Hospital Max Peralta Cartago", "Clinica Biblica Cartago", "Hospital Metropolitano Cartago", "Cartago Dental Specialists", "Cartago Plastic Surgery", "Cartago Eye Institute", "Cartago Orthopedic Clinic", "Cartago Rehabilitation Hub", "Cartago Heart Unit", "Cartago Skin Clinic", "Cartago Pediatric Wing", "Cartago Medical Center", "Cartago Wellness Hospital", "Cartago Aesthetic Center", "Cartago Urgent Care"] },
-                    { name: "Puntarenas", desc: "Pacific Coastal Medical Hub", hospitals: ["Hospital Monseñor Sanabria", "Clinica Biblica Puntarenas", "Hospital Metropolitano Puntarenas", "Puntarenas Dental Specialists", "Puntarenas Plastic Surgery", "Puntarenas Eye Institute", "Puntarenas Orthopedic Clinic", "Puntarenas Rehabilitation Hub", "Puntarenas Heart Unit", "Puntarenas Skin Clinic", "Puntarenas Pediatric Wing", "Puntarenas Medical Center", "Puntarenas Wellness Hospital", "Puntarenas Aesthetic Center", "Puntarenas Urgent Care"] },
-                    { name: "Limon", desc: "Caribbean Coastal Healthcare", hospitals: ["Hospital Dr. Tony Facio Castro", "Clinica Biblica Limon", "Hospital Metropolitano Limon", "Limon Dental Specialists", "Limon Plastic Surgery", "Limon Eye Institute", "Limon Orthopedic Clinic", "Limon Rehabilitation Hub", "Limon Heart Unit", "Limon Skin Clinic", "Limon Pediatric Wing", "Limon Medical Center", "Limon Wellness Hospital", "Limon Aesthetic Center", "Limon Urgent Care"] },
-                    { name: "Perez Zeledon", desc: "Southern Valley Medical Center", hospitals: ["Hospital Escalante Pradilla", "Clinica Biblica Perez Zeledon", "Hospital Metropolitano Perez Zeledon", "Perez Zeledon Dental Specialists", "Perez Zeledon Plastic Surgery", "Perez Zeledon Eye Institute", "Perez Zeledon Orthopedic Clinic", "Perez Zeledon Rehabilitation Hub", "Perez Zeledon Heart Unit", "Perez Zeledon Skin Clinic", "Perez Zeledon Pediatric Wing", "Perez Zeledon Medical Center", "Perez Zeledon Wellness Hospital", "Perez Zeledon Aesthetic Center", "Perez Zeledon Urgent Care"] },
-                    { name: "San Ramon", desc: "Northern Valley Medical Clinic", hospitals: ["Hospital Carlos Luis Valverde", "Clinica Biblica San Ramon", "Hospital Metropolitano San Ramon", "San Ramon Dental Specialists", "San Ramon Plastic Surgery", "San Ramon Eye Institute", "San Ramon Orthopedic Clinic", "San Ramon Rehabilitation Hub", "San Ramon Heart Unit", "San Ramon Skin Clinic", "San Ramon Pediatric Wing", "San Ramon Medical Center", "San Ramon Wellness Hospital", "San Ramon Aesthetic Center", "San Ramon Urgent Care"] },
-                    { name: "Golfito", desc: "Southern Coastal Medical Hub", hospitals: ["Hospital de Golfito", "Clinica Biblica Golfito", "Hospital Metropolitano Golfito", "Golfito Dental Specialists", "Golfito Plastic Surgery", "Golfito Eye Institute", "Golfito Orthopedic Clinic", "Golfito Rehabilitation Hub", "Golfito Heart Unit", "Golfito Skin Clinic", "Golfito Pediatric Wing", "Golfito Medical Center", "Golfito Wellness Hospital", "Golfito Aesthetic Center", "Golfito Urgent Care"] }
+                    { name: "San Jose", desc: "Capital Dental & Surgical Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/National_Theatre_of_Costa_Rica_San_Jose.jpg/1024px-National_Theatre_of_Costa_Rica_San_Jose.jpg", hospitals: ["Hospital CIMA San Jose", "Clinica Biblica Hospital", "Hospital Metropolitano", "Clinica Catolica San Jose", "Hospital La Catolica", "Costa Rica Dental Team", "Goodness Dental San Jose", "Flavio Restrepo Dental", "San Jose Plastic Surgery", "Aesthetic Costa Rica", "San Jose Orthopedic Hub", "San Jose Eye Institute", "San Jose Heart Center", "San Jose Rehabilitation", "San Jose Pediatric Wing"] },
+                    { name: "Liberia", desc: "Guanacaste Medical Gateway", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Playa_Conchal_Guanacaste_Costa_Rica.jpg/1024px-Playa_Conchal_Guanacaste_Costa_Rica.jpg", hospitals: ["Hospital San Rafael Arcangel", "Clinica Biblica Guanacaste", "Hospital Metropolitano Liberia", "Liberia Dental Specialists", "Guanacaste Plastic Surgery", "Liberia Eye Institute", "Liberia Orthopedic Clinic", "Liberia Rehabilitation Hub", "Liberia Heart Unit", "Liberia Skin Clinic", "Liberia Pediatric Wing", "Papagayo Medical Center", "Liberia Wellness Hospital", "Liberia Aesthetic Center", "Liberia Urgent Care"] },
+                    { name: "Alajuela", desc: "Central Valley Healthcare Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Poas_Volcano_Crater_Alajuela.jpg/1024px-Poas_Volcano_Crater_Alajuela.jpg", hospitals: ["Hospital San Rafael Alajuela", "Clinica Biblica Alajuela", "Hospital Metropolitano Alajuela", "Alajuela Dental Specialists", "Alajuela Plastic Surgery", "Alajuela Eye Institute", "Alajuela Orthopedic Clinic", "Alajuela Rehabilitation Hub", "Alajuela Heart Unit", "Alajuela Skin Clinic", "Alajuela Pediatric Wing", "Airport Medical Center", "Alajuela Wellness Hospital", "Alajuela Aesthetic Center", "Alajuela Urgent Care"] },
+                    { name: "Heredia", desc: "Medical & Technology Corridor", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/El_Fortin_Heredia_Costa_Rica.jpg/1024px-El_Fortin_Heredia_Costa_Rica.jpg", hospitals: ["Hospital de Heredia", "Clinica Biblica Heredia", "Hospital Metropolitano Heredia", "Heredia Dental Specialists", "Heredia Plastic Surgery", "Heredia Eye Institute", "Heredia Orthopedic Clinic", "Heredia Rehabilitation Hub", "Heredia Heart Unit", "Heredia Skin Clinic", "Heredia Pediatric Wing", "Heredia Medical Center", "Heredia Wellness Hospital", "Heredia Aesthetic Center", "Heredia Urgent Care"] },
+                    { name: "Cartago", desc: "Historic Provincial Medical Center", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Basilica_de_Nuestra_Senora_de_los_Angeles_Cartago.jpg/1024px-Basilica_de_Nuestra_Senora_de_los_Angeles_Cartago.jpg", hospitals: ["Hospital Max Peralta Cartago", "Clinica Biblica Cartago", "Hospital Metropolitano Cartago", "Cartago Dental Specialists", "Cartago Plastic Surgery", "Cartago Eye Institute", "Cartago Orthopedic Clinic", "Cartago Rehabilitation Hub", "Cartago Heart Unit", "Cartago Skin Clinic", "Cartago Pediatric Wing", "Cartago Medical Center", "Cartago Wellness Hospital", "Cartago Aesthetic Center", "Cartago Urgent Care"] },
+                    { name: "Puntarenas", desc: "Pacific Coastal Medical Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Manuel_Antonio_Beach_Puntarenas.jpg/1024px-Manuel_Antonio_Beach_Puntarenas.jpg", hospitals: ["Hospital Monseñor Sanabria", "Clinica Biblica Puntarenas", "Hospital Metropolitano Puntarenas", "Puntarenas Dental Specialists", "Puntarenas Plastic Surgery", "Puntarenas Eye Institute", "Puntarenas Orthopedic Clinic", "Puntarenas Rehabilitation Hub", "Puntarenas Heart Unit", "Puntarenas Skin Clinic", "Puntarenas Pediatric Wing", "Puntarenas Medical Center", "Puntarenas Wellness Hospital", "Puntarenas Aesthetic Center", "Puntarenas Urgent Care"] },
+                    { name: "Limon", desc: "Caribbean Coastal Healthcare", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Puerto_Viejo_de_Talamanca_Limon.jpg/1024px-Puerto_Viejo_de_Talamanca_Limon.jpg", hospitals: ["Hospital Dr. Tony Facio Castro", "Clinica Biblica Limon", "Hospital Metropolitano Limon", "Limon Dental Specialists", "Limon Plastic Surgery", "Limon Eye Institute", "Limon Orthopedic Clinic", "Limon Rehabilitation Hub", "Limon Heart Unit", "Limon Skin Clinic", "Limon Pediatric Wing", "Limon Medical Center", "Limon Wellness Hospital", "Limon Aesthetic Center", "Limon Urgent Care"] },
+                    { name: "Perez Zeledon", desc: "Southern Valley Medical Center", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Cerro_Chirripo_Costa_Rica.jpg/1024px-Cerro_Chirripo_Costa_Rica.jpg", hospitals: ["Hospital Escalante Pradilla", "Clinica Biblica Perez Zeledon", "Hospital Metropolitano Perez Zeledon", "Perez Zeledon Dental Specialists", "Perez Zeledon Plastic Surgery", "Perez Zeledon Eye Institute", "Perez Zeledon Orthopedic Clinic", "Perez Zeledon Rehabilitation Hub", "Perez Zeledon Heart Unit", "Perez Zeledon Skin Clinic", "Perez Zeledon Pediatric Wing", "Perez Zeledon Medical Center", "Perez Zeledon Wellness Hospital", "Perez Zeledon Aesthetic Center", "Perez Zeledon Urgent Care"] },
+                    { name: "San Ramon", desc: "Northern Valley Medical Clinic", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/San_Ramon_Church_Alajuela_Costa_Rica.jpg/1024px-San_Ramon_Church_Alajuela_Costa_Rica.jpg", hospitals: ["Hospital Carlos Luis Valverde", "Clinica Biblica San Ramon", "Hospital Metropolitano San Ramon", "San Ramon Dental Specialists", "San Ramon Plastic Surgery", "San Ramon Eye Institute", "San Ramon Orthopedic Clinic", "San Ramon Rehabilitation Hub", "San Ramon Heart Unit", "San Ramon Skin Clinic", "San Ramon Pediatric Wing", "San Ramon Medical Center", "San Ramon Wellness Hospital", "San Ramon Aesthetic Center", "San Ramon Urgent Care"] },
+                    { name: "Golfito", desc: "Southern Coastal Medical Hub", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Golfo_Dulce_Costa_Rica.jpg/1024px-Golfo_Dulce_Costa_Rica.jpg", hospitals: ["Hospital de Golfito", "Clinica Biblica Golfito", "Hospital Metropolitano Golfito", "Golfito Dental Specialists", "Golfito Plastic Surgery", "Golfito Eye Institute", "Golfito Orthopedic Clinic", "Golfito Rehabilitation Hub", "Golfito Heart Unit", "Golfito Skin Clinic", "Golfito Pediatric Wing", "Golfito Medical Center", "Golfito Wellness Hospital", "Golfito Aesthetic Center", "Golfito Urgent Care"] }
                 ]
             }
         ];
@@ -1626,6 +1741,72 @@
             calculateEstimate();
             fetchLiveExchangeRates();
         });
+
+        /* Legal & Compliance Modal Controls */
+        function openLegalModal(tab = 'privacy') {
+            document.getElementById('legal-modal').classList.remove('hidden');
+            switchLegalTab(tab);
+        }
+
+        function closeLegalModal() {
+            document.getElementById('legal-modal').classList.add('hidden');
+        }
+
+        function switchLegalTab(tab) {
+            const tabs = ['privacy', 'terms', 'disclaimer'];
+            const titles = {
+                privacy: 'Privacy Policy & Patient Data Governance',
+                terms: 'Terms & Conditions of Concierge Service',
+                disclaimer: 'Non-Clinical Medical & Liability Disclaimer'
+            };
+            document.getElementById('legal-modal-title').textContent = titles[tab];
+            tabs.forEach(t => {
+                const btn = document.getElementById('legal-tab-' + t);
+                const content = document.getElementById('legal-content-' + t);
+                if (t === tab) {
+                    btn.className = 'px-4 py-2 rounded-xl text-xs font-bold bg-teal-700 text-white cursor-pointer transition-all shadow';
+                    content.classList.remove('hidden');
+                } else {
+                    btn.className = 'px-4 py-2 rounded-xl text-xs font-bold bg-teal-900 text-teal-300 hover:text-white cursor-pointer transition-all';
+                    content.classList.add('hidden');
+                }
+            });
+        }
+
+        function downloadLegalDocument() {
+            const legalHTML = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valomedic Global Medical Concierge - Legal & Compliance Dossier</title>
+<style>
+body { font-family: Arial, sans-serif; line-height: 1.6; color: #0f172a; max-width: 850px; margin: 40px auto; padding: 0 24px; }
+h1 { color: #0f766e; border-bottom: 2px solid #0f766e; padding-bottom: 10px; }
+h2 { color: #0284c7; margin-top: 28px; }
+.box { background: #f0fdfa; border-left: 4px solid #0d9488; padding: 14px 18px; margin: 16px 0; }
+</style>
+</head>
+<body>
+<h1>VALOMEDIC GLOBAL MEDICAL CONCIERGE<br><small style="font-size:14px;color:#475569;">Official Privacy Policy, Terms & Conditions, and Medical Disclaimer</small></h1>
+<div class="box"><strong>Contact & Data Governance Desk:</strong> valomedic.care@gmail.com | WhatsApp Concierge: +91 7710803966</div>
+<h2>1. Privacy Policy & HIPAA / DPDP Patient Data Governance</h2>
+<p>Valomedic Global Medical Concierge operates under strict international healthcare privacy frameworks aligned with HIPAA, GDPR, and India's Digital Personal Data Protection (DPDP) Act. Protected Health Information (PHI) and diagnostic dossiers are collected solely for medical board evaluation and encrypted transmission to JCI/NABH accredited hospitals. We never sell or monetize patient data.</p>
+<h2>2. Terms & Conditions of Concierge Service</h2>
+<p>The $29.99 USD Priority Case Intake deposit covers administrative dossier structuring and medical board evaluation, and is 100% adjustable against your confirmed surgical package. Promotional vouchers (VALO7OFF, VALO5OFF) apply to eligible bundles. The LUCKY100 Annual 100% Treatment Cashback reimburses direct surgical and hospital facility charges for one selected patient annually, excluding travel and accommodation expenses.</p>
+<h2>3. Non-Clinical Medical & Liability Disclaimer</h2>
+<p>Valomedic Global Medical Concierge is an international healthcare facilitation and medical travel logistics provider, not a hospital or licensed medical practitioner. All diagnoses, surgical procedures, and clinical decisions are rendered independently by treating physicians at accredited JCI/NABH partner hospitals.</p>
+</body>
+</html>`;
+            const blob = new Blob([legalHTML], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Valomedic-Legal-Privacy-Terms-Disclaimer.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
 
         let pendingRegistrationData = null;
 
@@ -1650,13 +1831,13 @@
             if(tab === 'login') {
                 formLogin.classList.remove('hidden');
                 formReg.classList.add('hidden');
-                btnLogin.className = "flex-1 py-2 rounded-lg text-xs font-bold transition-all bg-teal-700 text-white shadow";
-                btnReg.className = "flex-1 py-2 rounded-lg text-xs font-bold transition-all text-teal-300 hover:text-white";
+                btnLogin.className = "flex-1 py-2 rounded-lg text-xs font-bold transition-all bg-teal-700 text-white shadow cursor-pointer";
+                btnReg.className = "flex-1 py-2 rounded-lg text-xs font-bold transition-all text-teal-300 hover:text-white cursor-pointer";
             } else {
                 formLogin.classList.add('hidden');
                 formReg.classList.remove('hidden');
-                btnReg.className = "flex-1 py-2 rounded-lg text-xs font-bold transition-all bg-teal-700 text-white shadow";
-                btnLogin.className = "flex-1 py-2 rounded-lg text-xs font-bold transition-all text-teal-300 hover:text-white";
+                btnReg.className = "flex-1 py-2 rounded-lg text-xs font-bold transition-all bg-teal-700 text-white shadow cursor-pointer";
+                btnLogin.className = "flex-1 py-2 rounded-lg text-xs font-bold transition-all text-teal-300 hover:text-white cursor-pointer";
             }
         }
 
@@ -1934,24 +2115,34 @@
                     `).join('');
 
                     return `
-                        <div id="${citySlug}" class="bg-teal-900/90 rounded-2xl border border-teal-700/80 overflow-hidden shadow-lg transition-all duration-300 flex flex-col justify-between p-5 space-y-4">
-                            <div>
-                                <strong class="text-white block text-base font-heading">${cIdx + 1}. ${city.name}</strong>
-                                <span class="text-teal-200 block text-xs mt-0.5">${city.desc}</span>
+                        <div id="${citySlug}" class="bg-teal-900/90 rounded-2xl border border-teal-700/80 overflow-hidden shadow-lg transition-all duration-300 flex flex-col justify-between">
+                            <div class="w-full h-44 overflow-hidden border-b border-teal-800 bg-teal-950">
+                                <img src="${city.image}" alt="${city.name} Tourist Landmark" class="w-full h-full object-cover" loading="lazy">
                             </div>
+                            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                                <div>
+                                    <strong class="text-white block text-base font-heading">${cIdx + 1}. ${city.name}</strong>
+                                    <span class="text-teal-200 block text-xs mt-0.5">${city.desc}</span>
+                                </div>
 
-                            <button onclick="toggleCityHospitals('${cityAccId}')" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-xl text-[11px] flex items-center justify-between px-4 cursor-pointer transition-all shadow">
-                                <span>Top Accredited Hospitals (${city.hospitals.length})</span>
-                                <i class="fa-solid fa-chevron-down text-[10px]" id="icon-${cityAccId}"></i>
-                            </button>
-                            <div id="${cityAccId}" class="hidden space-y-2 pt-2 text-[11px] text-teal-200 border-t border-teal-800 max-h-52 overflow-y-auto">
-                                ${hospitalsListHTML}
+                                <button onclick="toggleCityHospitals('${cityAccId}')" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-xl text-[11px] flex items-center justify-between px-4 cursor-pointer transition-all shadow">
+                                    <span>Top Accredited Hospitals (${city.hospitals.length})</span>
+                                    <i class="fa-solid fa-chevron-down text-[10px]" id="icon-${cityAccId}"></i>
+                                </button>
+                                <div id="${cityAccId}" class="hidden space-y-2 pt-2 text-[11px] text-teal-200 border-t border-teal-800 max-h-52 overflow-y-auto">
+                                    ${hospitalsListHTML}
+                                </div>
                             </div>
                         </div>
                     `;
                 }).join('');
 
                 hubEl.innerHTML = `
+                    <!-- Clean Full-Width Hub Landmark Photograph Above Hub Name (Zero Text Overlay) -->
+                    <div class="w-full h-64 sm:h-80 overflow-hidden border-b border-teal-900 bg-teal-950">
+                        <img src="${hub.hubImage}" alt="${hub.title} Landmark" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+
                     <div class="p-6 sm:p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-teal-900 bg-teal-900/40">
                         <div>
                             <span class="bg-teal-600 text-white font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full">${hub.flag} Hub ${hub.num} of 8</span>
@@ -1962,15 +2153,6 @@
                             <span>See All ${hub.cities.length} Tied-Up Cities</span>
                             <i class="fa-solid fa-chevron-down" id="icon-cities-${hub.id}"></i>
                         </button>
-                    </div>
-
-                    <!-- Single Clean Full-Width Landmark Image for the Hub Tile -->
-                    <div class="w-full h-64 sm:h-80 overflow-hidden relative border-b border-teal-900">
-                        <img src="${hub.hubImage}" alt="${hub.title} Showcase Landmark" class="w-full h-full object-cover" loading="lazy">
-                        <div class="absolute inset-0 bg-gradient-to-t from-teal-950 via-transparent to-transparent opacity-80"></div>
-                        <div class="absolute bottom-4 left-6 bg-teal-950/80 backdrop-blur-md px-4 py-2 rounded-xl border border-teal-600 text-xs font-bold text-white shadow-lg">
-                            ${hub.flag} ${hub.country} Sovereign Clinical Network & Destination Hub
-                        </div>
                     </div>
 
                     <div id="cities-${hub.id}" class="hidden p-6 sm:p-8 space-y-6">
@@ -2056,14 +2238,14 @@
                 
                 item.innerHTML = `
                     <div class="flex justify-between items-center text-teal-100 font-bold text-[11px]">
-                        <a href="javascript:void(0)" onclick="jumpToTarget('${dept.id}')" class="hover:text-emerald-300 transition-colors flex-1">${dept.name}</a>
-                        <button onclick="toggleNavSubCategory('${subId}', 'icon-${subId}')" class="p-1">
-                            <i id="icon-${subId}" class="fa-solid fa-chevron-down text-[9px]"></i>
+                        <a href="javascript:void(0)" onclick="jumpToTarget('${dept.id}')" class="hover:text-emerald-300 flex-1">${dept.num}. ${dept.name}</a>
+                        <button onclick="toggleNavSubCategory('${subId}', 'icon-${subId}')" class="p-1 text-teal-400">
+                            <i id="icon-${subId}" class="fa-solid fa-chevron-down text-[9px] transition-transform"></i>
                         </button>
                     </div>
-                    <div id="${subId}" class="hidden pl-2 pt-1 border-t border-teal-800 space-y-1">
+                    <div id="${subId}" class="hidden pl-2 pt-1 border-t border-teal-800 space-y-0.5">
                         ${procs}
-                        <a href="javascript:void(0)" onclick="jumpToTarget('${dept.id}')" class="text-[9px] text-emerald-400 font-bold block pt-1 hover:underline">View all procedures →</a>
+                        <a href="javascript:void(0)" onclick="jumpToTarget('${dept.id}')" class="text-[9px] text-emerald-400 font-bold block pt-1">View All ${dept.procedures.length} Procedures →</a>
                     </div>
                 `;
                 footerDeptContainer.appendChild(item);
@@ -2075,91 +2257,118 @@
                 item.className = "bg-teal-900/60 rounded-lg p-2 border border-teal-800 space-y-1";
                 let cities = hub.cities.map(c => {
                     const citySlug = `city-${c.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`;
-                    return `<div class="text-[10px] text-teal-300 cursor-pointer hover:text-white" onclick="jumpToTarget('${citySlug}', '${hub.id}')">• ${c.name} Hub</div>`;
+                    return `<div class="text-[10px] text-teal-300 cursor-pointer hover:text-white" onclick="jumpToTarget('${citySlug}', '${hub.id}')">• ${c.name} (${c.hospitals.length} Hospitals)</div>`;
                 }).join('');
                 
                 item.innerHTML = `
                     <div class="flex justify-between items-center text-teal-100 font-bold text-[11px]">
-                        <a href="javascript:void(0)" onclick="jumpToTarget('${hub.id}')" class="hover:text-emerald-300 transition-colors flex-1">${hub.flag} ${hub.country} Hub</a>
-                        <button onclick="toggleNavSubCategory('${subId}', 'icon-${subId}')" class="p-1">
-                            <i id="icon-${subId}" class="fa-solid fa-chevron-down text-[9px]"></i>
+                        <a href="javascript:void(0)" onclick="jumpToTarget('${hub.id}')" class="hover:text-emerald-300 flex-1">${hub.flag} ${hub.country} (${hub.cities.length} Cities)</a>
+                        <button onclick="toggleNavSubCategory('${subId}', 'icon-${subId}')" class="p-1 text-teal-400">
+                            <i id="icon-${subId}" class="fa-solid fa-chevron-down text-[9px] transition-transform"></i>
                         </button>
                     </div>
-                    <div id="${subId}" class="hidden pl-2 pt-1 border-t border-teal-800 space-y-1">
+                    <div id="${subId}" class="hidden pl-2 pt-1 border-t border-teal-800 space-y-0.5">
                         ${cities}
-                        <a href="javascript:void(0)" onclick="jumpToTarget('${hub.id}')" class="text-[9px] text-emerald-400 font-bold block pt-1 hover:underline">Explore all cities & hospitals →</a>
                     </div>
                 `;
                 footerHubContainer.appendChild(item);
             });
         }
 
-        function toggleSurgeryList(listId) {
-            const listEl = document.getElementById(listId);
-            const iconEl = document.getElementById('icon-' + listId);
-            listEl.classList.toggle('hidden');
-            if(iconEl) iconEl.style.transform = listEl.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+        function toggleAppMenu() {
+            const drawer = document.getElementById('app-menu-drawer');
+            const overlay = document.getElementById('app-menu-overlay');
+            if(drawer.classList.contains('translate-x-full')) {
+                drawer.classList.remove('translate-x-full');
+                overlay.classList.remove('hidden');
+            } else {
+                drawer.classList.add('translate-x-full');
+                overlay.classList.add('hidden');
+            }
         }
 
-        function toggleHubCities(citiesId) {
-            const citiesEl = document.getElementById(citiesId);
-            const iconEl = document.getElementById('icon-' + citiesId);
-            citiesEl.classList.toggle('hidden');
-            if(iconEl) iconEl.style.transform = citiesEl.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
-        }
-
-        function toggleCityHospitals(cityId) {
-            const cityEl = document.getElementById(cityId);
-            const iconEl = document.getElementById('icon-' + cityId);
-            cityEl.classList.toggle('hidden');
-            if(iconEl) iconEl.style.transform = cityEl.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
-        }
-
-        function toggleNavCategory(accordionId, iconId) {
-            const acc = document.getElementById(accordionId);
+        function toggleNavCategory(listId, iconId) {
+            const list = document.getElementById(listId);
             const icon = document.getElementById(iconId);
-            acc.classList.toggle('hidden');
-            if(icon) icon.style.transform = acc.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+            if(list.classList.contains('hidden')) {
+                list.classList.remove('hidden');
+                if(icon) icon.style.transform = 'rotate(180deg)';
+            } else {
+                list.classList.add('hidden');
+                if(icon) icon.style.transform = 'rotate(0deg)';
+            }
         }
 
         function toggleNavSubCategory(subId, iconId) {
             const sub = document.getElementById(subId);
             const icon = document.getElementById(iconId);
-            sub.classList.toggle('hidden');
-            if(icon) icon.style.transform = sub.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+            if(sub.classList.contains('hidden')) {
+                sub.classList.remove('hidden');
+                if(icon) icon.style.transform = 'rotate(180deg)';
+            } else {
+                sub.classList.add('hidden');
+                if(icon) icon.style.transform = 'rotate(0deg)';
+            }
         }
 
-        function toggleFooterAccordion(accordionId, iconId) {
-            const acc = document.getElementById(accordionId);
+        function toggleFooterAccordion(listId, iconId) {
+            const list = document.getElementById(listId);
             const icon = document.getElementById(iconId);
-            acc.classList.toggle('hidden');
-            if(icon) icon.style.transform = acc.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+            if(list.classList.contains('hidden')) {
+                list.classList.remove('hidden');
+                if(icon) icon.style.transform = 'rotate(180deg)';
+            } else {
+                list.classList.add('hidden');
+                if(icon) icon.style.transform = 'rotate(0deg)';
+            }
         }
 
-        let liveRates = {};
+        function toggleSurgeryList(listId) {
+            const list = document.getElementById(listId);
+            const icon = document.getElementById('icon-' + listId);
+            if(list.classList.contains('hidden')) {
+                list.classList.remove('hidden');
+                if(icon) icon.style.transform = 'rotate(180deg)';
+            } else {
+                list.classList.add('hidden');
+                if(icon) icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        function toggleHubCities(citiesId) {
+            const el = document.getElementById(citiesId);
+            const icon = document.getElementById('icon-' + citiesId);
+            if(el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+                if(icon) icon.style.transform = 'rotate(180deg)';
+            } else {
+                el.classList.add('hidden');
+                if(icon) icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        function toggleCityHospitals(accId) {
+            const el = document.getElementById(accId);
+            const icon = document.getElementById('icon-' + accId);
+            if(el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+                if(icon) icon.style.transform = 'rotate(180deg)';
+            } else {
+                el.classList.add('hidden');
+                if(icon) icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        let liveRates = { USD: 1, EUR: 0.92, GBP: 0.79, INR: 83.5, AED: 3.67, JPY: 151.0, AUD: 1.52, CAD: 1.36, CHF: 0.88, SGD: 1.34, THB: 36.2, TRY: 32.2, KRW: 1350 };
         async function fetchLiveExchangeRates() {
             try {
-                const response = await fetch('https://open.er-api.com/v6/latest/USD');
-                const data = await response.json();
+                const res = await fetch('https://open.er-api.com/v6/latest/USD');
+                const data = await res.json();
                 if(data && data.rates) {
                     liveRates = data.rates;
                     calculateEstimate();
                 }
-            } catch(e) { console.error("Exchange API Error", e); }
-        }
-
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element');
-        }
-
-        function changeWebsiteLanguage(langCode) {
-            const frame = document.querySelector('.goog-te-combo');
-            if (frame) {
-                frame.value = langCode;
-                frame.dispatchEvent(new Event('change'));
-            } else {
-                setTimeout(() => { changeWebsiteLanguage(langCode); }, 500);
-            }
+            } catch (e) {}
         }
 
         function syncCurrency(val) {
@@ -2170,11 +2379,87 @@
             calculateEstimate();
         }
 
-        function toggleAppMenu() {
-            const overlay = document.getElementById('app-menu-overlay');
-            const drawer = document.getElementById('app-menu-drawer');
-            overlay.classList.toggle('hidden');
-            drawer.classList.toggle('translate-x-full');
+        function calculateEstimate() {
+            const procSelect = document.getElementById('calc-procedure');
+            if(!procSelect || procSelect.options.length === 0) return;
+
+            const westernUSD = parseFloat(procSelect.value);
+            const savingRate = parseFloat(procSelect.options[procSelect.selectedIndex].getAttribute('data-saving'));
+            const hubMult = parseFloat(document.getElementById('calc-hub').value);
+            const hotelUSD = parseFloat(document.getElementById('calc-hotel').value);
+            const compUSD = parseFloat(document.getElementById('calc-companions').value);
+
+            const targetSaving = savingRate || 0.45;
+            const discountedProcUSD = westernUSD * (1 - targetSaving) * hubMult;
+            const totalPackageUSD = discountedProcUSD + hotelUSD + compUSD;
+            const netSavingsUSD = westernUSD - totalPackageUSD;
+            const actualPercent = Math.round((netSavingsUSD / westernUSD) * 100);
+
+            const currSelect = document.getElementById('top-currency');
+            const code = currSelect ? currSelect.value : 'USD';
+            const symbol = (currSelect && currSelect.options[currSelect.selectedIndex]) ? currSelect.options[currSelect.selectedIndex].getAttribute('data-symbol') : '$';
+            const rate = liveRates[code] || 1;
+
+            const fmt = (val) => symbol + Math.round(val * rate).toLocaleString();
+
+            document.getElementById('out-western').textContent = fmt(westernUSD);
+            document.getElementById('out-package').textContent = fmt(totalPackageUSD);
+            document.getElementById('out-savings').textContent = `${actualPercent}% (~${fmt(netSavingsUSD)} Saved)`;
+        }
+
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element');
+        }
+
+        function changeWebsiteLanguage(langCode) {
+            const topLang = document.getElementById('custom-language-selector');
+            const mobileLang = document.getElementById('mobile-language');
+            if(topLang) topLang.value = langCode;
+            if(mobileLang) mobileLang.value = langCode;
+
+            const gtSelect = document.querySelector('.goog-te-combo');
+            if (gtSelect) {
+                gtSelect.value = langCode;
+                gtSelect.dispatchEvent(new Event('change'));
+            }
+        }
+
+        function handleSecondOpinion(event) {
+            event.preventDefault();
+            const name = document.getElementById('so-name').value;
+            const email = document.getElementById('so-email').value;
+            const category = document.getElementById('so-category').value;
+            const hub = document.getElementById('so-hub').value;
+            const code = document.getElementById('so-code').value;
+            const phone = document.getElementById('so-phone').value;
+            const notes = document.getElementById('so-notes').value;
+            const coupon = document.getElementById('so-coupon').value;
+
+            const subject = encodeURIComponent(`Valomedic Priority Case Intake ($29.99 Adjustable Deposit) - ${name}`);
+            const body = encodeURIComponent(
+                `Patient Name: ${name}\nEmail: ${email}\nPhone/WhatsApp: ${code} ${phone}\nClinical Category: ${category}\nPreferred Hub: ${hub}\nPromotional Voucher Applied: ${coupon}\nPriority Intake Fee: $29.99 USD (100% Adjustable against final surgery package)\n\nDiagnosis & Case Notes:\n${notes}`
+            );
+
+            window.open(`mailto:valomedic.care@gmail.com?subject=${subject}&body=${body}`, '_blank');
+            alert(`Executive Priority Case Intake Dossier Generated!\n\nPatient: ${name}\nVoucher Applied: ${coupon}\nDeposit: $29.99 USD (100% Adjustable against final surgery package)\n\nYour case dossier has been structured for dispatch to valomedic.care@gmail.com.`);
+        }
+
+        function handlePharmacyInquiry(event) {
+            event.preventDefault();
+            const name = document.getElementById('pharm-name').value;
+            const email = document.getElementById('pharm-email').value;
+            const code = document.getElementById('pharm-code').value;
+            const phone = document.getElementById('pharm-phone').value;
+            const category = document.getElementById('pharm-category').value;
+            const notes = document.getElementById('pharm-notes').value;
+
+            const subject = encodeURIComponent(`Valomedic Cold-Chain Pharmacy Order - ${name}`);
+            const body = encodeURIComponent(
+                `Patient Name: ${name}\nEmail: ${email}\nPhone/WhatsApp: ${code} ${phone}\nMedication Category: ${category}\n\nPrescription Details:\n${notes}`
+            );
+
+            window.open(`mailto:valomedic.care@gmail.com?subject=${subject}&body=${body}`, '_blank');
+            alert(`Pharmacy Cold-Chain Order Prepared for ${name}!\n\nYour prescription request has been formatted for dispatch to valomedic.care@gmail.com.`);
         }
 
         let deferredPrompt;
@@ -2184,98 +2469,14 @@
         });
 
         function triggerPWAInstall() {
-            if (deferredPrompt) {
+            if(deferredPrompt) {
                 deferredPrompt.prompt();
-                deferredPrompt.userChoice.then((choiceResult) => {
-                    if (choiceResult.outcome === 'accepted') {
-                        console.log('User installed PWA app');
-                    }
-                    deferredPrompt = null;
-                });
+                deferredPrompt.userChoice.then(() => { deferredPrompt = null; });
             } else {
-                alert("Valomedic PWA App is ready! To add to your home screen:\n\n• iPhone (Safari): Tap Share -> Add to Home Screen.\n• Android (Chrome): Tap Menu (3 dots) -> Install App.");
+                alert("To install Valomedic Global Medical Concierge as an app:\n\n• iOS Safari: Tap the Share icon and select 'Add to Home Screen'.\n• Android / Desktop Chrome: Open the browser menu (⋮) and select 'Install App' or 'Add to Home Screen'.");
             }
         }
-
-        function calculateEstimate() {
-            const procSelect = document.getElementById('calc-procedure');
-            if(!procSelect || !procSelect.value) return;
-
-            const westernBenchmarkUSD = parseFloat(procSelect.value);
-            const savingRate = parseFloat(procSelect.options[procSelect.selectedIndex].getAttribute('data-saving')) || 0.45;
-            const hubMultiplier = parseFloat(document.getElementById('calc-hub').value);
-            const hotelCostUSD = parseFloat(document.getElementById('calc-hotel').value);
-            const companionCostUSD = parseFloat(document.getElementById('calc-companions').value);
-
-            const currencySelect = document.getElementById('top-currency');
-            const targetCurrency = currencySelect ? currencySelect.value : 'USD';
-            const currencySymbol = currencySelect ? (currencySelect.options[currencySelect.selectedIndex].getAttribute('data-symbol') || targetCurrency) : '$';
-            
-            let conversionRate = liveRates[targetCurrency] || (targetCurrency === 'INR' ? 83.5 : 1.0);
-            const basePackageUSD = (westernBenchmarkUSD * (1.0 - savingRate) * hubMultiplier) + hotelCostUSD + companionCostUSD;
-            const moneySavedUSD = westernBenchmarkUSD - basePackageUSD;
-            const actualSavingsPercent = Math.round((moneySavedUSD / westernBenchmarkUSD) * 100);
-
-            document.getElementById('out-western').innerText = currencySymbol + Math.round(westernBenchmarkUSD * conversionRate).toLocaleString();
-            document.getElementById('out-package').innerText = currencySymbol + Math.round(basePackageUSD * conversionRate).toLocaleString();
-            document.getElementById('out-savings').innerText = actualSavingsPercent + '% (~' + currencySymbol + Math.round(moneySavedUSD * conversionRate).toLocaleString() + ' Saved)';
-        }
-
-        function handleSecondOpinion(event) {
-            event.preventDefault();
-            const name = document.getElementById('so-name').value;
-            const email = document.getElementById('so-email').value;
-            const category = document.getElementById('so-category').value;
-            const hub = document.getElementById('so-hub').value;
-            const phone = document.getElementById('so-code').value + " " + document.getElementById('so-phone').value;
-            const notes = document.getElementById('so-notes').value;
-            const coupon = document.getElementById('so-coupon').value;
-            
-            alert("Redirecting to secure $9.99 USD Consultation & Opinion Payment Gateway...\nUpon completion, your professionally structured dossier will be dispatched to valomedic.care@gmail.com.");
-
-            const emailSubject = `[EXECUTIVE CASE INTAKE] Valomedic Expert Opinion & Consultation - ${name} (${category})`;
-            const emailBody = `====================================================
-VALOMEDIC GLOBAL MEDICAL CONCIERGE
-EXECUTIVE CONSULTATION DOSSIER
-====================================================
-
-1. PATIENT IDENTIFICATION & CONTACT:
-----------------------------------------------------
-• Patient Full Name : ${name}
-• Email Address     : ${email}
-• Phone / WhatsApp  : ${phone}
-
-2. CLINICAL INQUIRY PARAMETERS:
-----------------------------------------------------
-• Inquiry Category  : ${category}
-• Target Destination: ${hub}
-• Consultation Fee  : $9.99 USD (Paid & Secured)
-
-3. PROMOTIONAL VOUCHER / CASHBACK APPLIED:
-----------------------------------------------------
-• Selected Coupon   : ${coupon}
-
-4. CLINICAL HISTORY & CASE NOTES:
-----------------------------------------------------
-${notes}
-
-----------------------------------------------------
-BRAND TAGLINE: "Bridging boundaries to connect health with enduring vitality."
-====================================================`;
-
-            window.location.href = `mailto:valomedic.care@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
-        }
-
-        function handlePharmacyInquiry(event) {
-            event.preventDefault();
-            const name = document.getElementById('pharm-name').value;
-            const email = document.getElementById('pharm-email').value;
-            const phone = document.getElementById('pharm-code').value + " " + document.getElementById('pharm-phone').value;
-            const category = document.getElementById('pharm-category').value;
-            const notes = document.getElementById('pharm-notes').value;
-            window.location.href = `mailto:valomedic.care@gmail.com?subject=${encodeURIComponent("Pharmacy Order: " + category)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nPhone: " + phone + "\nNotes: " + notes)}`;
-        }
     </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
