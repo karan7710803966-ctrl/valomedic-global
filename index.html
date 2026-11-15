@@ -7,6 +7,9 @@
   <meta name="description" content="Valomedic Global Medical Concierge coordinates JCI & NABH accredited cross-border surgical expeditions across 8 global hubs and 85 medical cities at 40%–50% guaranteed net savings.">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0f766e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Valomedic">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +19,7 @@
   <!-- Razorpay Standard Checkout & PayPal Hosted/SDK Scripts -->
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   <script src="https://www.paypal.com/sdk/js?client-id=BAAtSsF36PoYkiz0w_kenUESErjUnWqJ2agSJBGb9qVeYYb09OtnDpbZ9IEPuAwlJHfWU-4MnaXxCqbWkI&components=hosted-buttons&enable-funding=venmo&currency=USD" crossorigin="anonymous"></script>
-
+  
   <script>
     tailwind.config = {
       theme: {
@@ -820,7 +823,7 @@
             </button>
           </div>
         </div>
-
+  
         <form id="second-opinion-form" onsubmit="handleSecondOpinion(event)" class="space-y-5">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -1078,7 +1081,7 @@
       razorpayKeyId: "rzp_live_Tz6etcmMyTOy9W",
       consultationFeeUSD: 29.99
     };
-
+  
     // 195+ World Country Calling Codes
     const allCountryCodes = [
       {name: "Afghanistan", code: "+93", flag: "🇦🇫"}, {name: "Albania", code: "+355", flag: "🇦🇱"}, {name: "Algeria", code: "+213", flag: "🇩🇿"},
@@ -1845,16 +1848,16 @@
       fetchLiveExchangeRates();
       checkPostPaymentReturnState();
     });
-
+  
     function openLegalModal(tab = 'privacy') {
       document.getElementById('legal-modal').classList.remove('hidden');
       switchLegalTab(tab);
     }
-
+  
     function closeLegalModal() {
       document.getElementById('legal-modal').classList.add('hidden');
     }
-
+  
     function switchLegalTab(tab) {
       const tabs = ['privacy', 'terms', 'disclaimer'];
       const titles = {
@@ -2480,7 +2483,7 @@
       document.getElementById('out-package').innerText = currencySymbol + Math.round(basePackageUSD * conversionRate).toLocaleString();
       document.getElementById('out-savings').innerText = actualSavingsPercent + '% (~' + currencySymbol + Math.round(moneySavedUSD * conversionRate).toLocaleString() + ' Saved)';
     }
-
+  
     // Build Executive Case Dossier Email Payload
     function buildExecutiveDossierPayload(dossierData, paymentRef) {
       const emailSubject = encodeURIComponent(`[PAID: $29.99 USD | REF: ${paymentRef}] Valomedic Executive Case Dossier - ${dossierData.name} (${dossierData.category})`);
@@ -2489,30 +2492,30 @@
 VALOMEDIC GLOBAL MEDICAL CONCIERGE
 VERIFIED PAID CONSULTATION DOSSIER ($29.99 USD)
 ====================================================
-
+  
 1. PAYMENT VERIFICATION & GATEWAY STATUS:
 ----------------------------------------------------
 • Payment Status    : PAID ($29.99 USD - Non-Refundable)
 • Payment Gateway   : ${dossierData.gateway}
 • Transaction Ref   : ${paymentRef}
 • Timestamp (UTC)   : ${new Date().toISOString()}
-
+  
 2. PATIENT IDENTIFICATION & CONTACT:
 ----------------------------------------------------
 • Patient Full Name : ${dossierData.name}
 • Email Address     : ${dossierData.email}
 • Phone / WhatsApp  : ${dossierData.phone}
-
+  
 3. CLINICAL INQUIRY & DESTINATION PARAMETERS:
 ----------------------------------------------------
 • Inquiry Category  : ${dossierData.category}
 • Target Destination: ${dossierData.hub}
 • Selected Coupon   : ${dossierData.coupon}
-
+  
 4. CLINICAL HISTORY & CASE NOTES:
 ----------------------------------------------------
 ${dossierData.notes}
-
+  
 ----------------------------------------------------
 STATUTORY ACKNOWLEDGMENT:
 Patient has completed the $29.99 USD payment and agreed to
@@ -2521,7 +2524,7 @@ the Non-Clinical Facilitator Disclaimer and Strict Zero-Refund Policy.
       );
       return `mailto:valomedic.care@gmail.com?subject=${emailSubject}&body=${emailBody}`;
     }
-
+  
     // Finalize Payment -> Show Confirmation Banner & Trigger Dossier Email Dispatch
     function completePaymentAndDispatchDossier(dossierData, paymentRef) {
       const savedRecord = {
@@ -2530,7 +2533,7 @@ the Non-Clinical Facilitator Disclaimer and Strict Zero-Refund Policy.
         paidAt: new Date().toISOString()
       };
       localStorage.setItem('valomedic_paid_dossier', JSON.stringify(savedRecord));
-
+  
       const banner = document.getElementById('payment-confirmation-banner');
       const refDisplay = document.getElementById('payment-ref-display');
       if (banner && refDisplay) {
@@ -2538,24 +2541,24 @@ the Non-Clinical Facilitator Disclaimer and Strict Zero-Refund Policy.
         banner.classList.remove('hidden');
         banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
-
+  
       const mailtoHref = buildExecutiveDossierPayload(dossierData, paymentRef);
       window.location.href = mailtoHref;
     }
-
+  
     function dispatchSavedDossierEmail() {
       const raw = localStorage.getItem('valomedic_paid_dossier');
       if (!raw) return;
       const saved = JSON.parse(raw);
       window.location.href = buildExecutiveDossierPayload(saved, saved.paymentRef || 'VERIFIED');
     }
-
+  
     function clearPendingDossier() {
       localStorage.removeItem('valomedic_paid_dossier');
       const banner = document.getElementById('payment-confirmation-banner');
       if (banner) banner.classList.add('hidden');
     }
-
+  
     function checkPostPaymentReturnState() {
       const urlParams = new URLSearchParams(window.location.search);
       const rawPending = localStorage.getItem('valomedic_pending_paypal_dossier');
@@ -2566,7 +2569,7 @@ the Non-Clinical Facilitator Disclaimer and Strict Zero-Refund Policy.
         completePaymentAndDispatchDossier(pendingData, refId);
       }
     }
-
+  
     // Payment-First Consultation Workflow (Razorpay Standard Checkout & PayPal Direct Link)
     function handleSecondOpinion(event) {
       event.preventDefault();
@@ -2580,9 +2583,9 @@ the Non-Clinical Facilitator Disclaimer and Strict Zero-Refund Policy.
       const notes = document.getElementById('so-notes').value.trim();
       const coupon = document.getElementById('so-coupon').value;
       const gateway = document.querySelector('input[name="payment-gateway"]:checked').value;
-
+  
       const dossierData = { name, email, category, hub, phone, notes, coupon, gateway };
-
+  
       if (gateway === "Razorpay Global & UPI") {
         // Trigger Razorpay Live Checkout Modal ($29.99 USD = 2999 cents)
         if (typeof Razorpay === "undefined") {
@@ -2648,30 +2651,52 @@ the Non-Clinical Facilitator Disclaimer and Strict Zero-Refund Policy.
     
     function handlePharmacyInquiry(event) {
       event.preventDefault();
-      const name = document.getElementById('pharm-name').value;
-      const email = document.getElementById('pharm-email').value;
-      const phone = document.getElementById('pharm-code').value + " " + document.getElementById('pharm-phone').value;
+      const name = document.getElementById('pharm-name').value.trim();
+      const email = document.getElementById('pharm-email').value.trim();
+      const phone = document.getElementById('pharm-code').value + " " + document.getElementById('pharm-phone').value.trim();
       const category = document.getElementById('pharm-category').value;
-      const notes = document.getElementById('pharm-notes').value;
+      const notes = document.getElementById('pharm-notes').value.trim();
       
-      const emailSubject = encodeURIComponent(`[PHARMACY ORDER] Valomedic Cold-Chain Rx - ${name}`);
+      const emailSubject = encodeURIComponent(`[PHARMACY & COLD-CHAIN ORDER] Valomedic Logistics - ${name} (${category})`);
       const emailBody = encodeURIComponent(
-`VALOMEDIC CROSS-BORDER PHARMACY ORDER
+`====================================================
+VALOMEDIC GLOBAL MEDICAL CONCIERGE
+CROSS-BORDER PHARMACY & COLD-CHAIN REQUISITION
 ====================================================
-Patient Name : ${name}
-Email        : ${email}
-Phone        : ${phone}
-Category     : ${category}
 
-Prescription & Drug Details:
+1. PATIENT IDENTIFICATION & CONTACT:
+----------------------------------------------------
+• Patient Full Name   : ${name}
+• Email Address       : ${email}
+• Phone / WhatsApp    : ${phone}
+
+2. MEDICATION & LOGISTICS CATEGORY:
+----------------------------------------------------
+• Medication Category : ${category}
+
+3. PRESCRIPTION DETAILS & DRUG SPECIFICATIONS:
+----------------------------------------------------
 ${notes}
+
 ====================================================`
       );
       
-      alert("Opening your email client to dispatch your pharmacy order to valomedic.care@gmail.com...");
+      alert("Your Specialty Medication & Cold-Chain requisition is opening in your email client addressed to valomedic.care@gmail.com.");
       window.location.href = `mailto:valomedic.care@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+    }
+
+    // Register Service Worker for Offline PWA Capability
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+          .then((registration) => {
+            console.log('Valomedic Service Worker registered with scope:', registration.scope);
+          })
+          .catch((error) => {
+            console.error('Valomedic Service Worker registration failed:', error);
+          });
+      });
     }
   </script>
 </body>
 </html>
-
