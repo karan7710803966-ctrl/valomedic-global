@@ -1,70 +1,76 @@
-const CACHE_NAME = 'valomedic-safe-cache-v1';
-const ASSETS_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/manifest.json'
+const CACHE_NAME = 'valomedic-pwa-v1';
+const OFFLINE_ASSETS = [
+  './',
+  './index.html',
+  './manifest.json'
 ];
 
-// 1. Install Event: Safely cache assets without blocking runtime
+// Install: pre-cache core shell using relative paths for GitHub Pages subpath compatibility
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(ASSETS_TO_CACHE);
+      return cache.addAll(OFFLINE_ASSETS);
     }).then(() => self.skipWaiting())
   );
 });
 
-// 2. Activate Event: Clear old obsolete caches
+// Activate: clean up outdated caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
-        cacheNames.map((cache) => {
-          if (cache !== CACHE_NAME) {
-            return caches.delete(cache);
-          }
-        })
+        cacheNames
+          .filter((name) => name !== CACHE_NAME)
+          .map((name) => caches.delete(name))
       );
     }).then(() => self.clients.claim())
   );
 });
 
-// 3. Fetch Event: Serve cached content offline, network online (Safe Fallback)
+// Fetch: network-first for HTML & live APIs (Razorpay, PayPal, Exchange Rates), cache-first fallback for static assets
 self.addEventListener('fetch', (event) => {
+  const { request } = event;
+  const url = new URL(request.url);
+
+  // Bypass service worker for non-GET requests and live payment/exchange APIs
+  if (
+    request.method !== 'GET' ||
+    url.hostname.includes('razorpay.com') ||
+    url.hostname.includes('paypal.com') ||
+    url.hostname.includes('open.er-api.com') ||
+    url.hostname.includes('translate.google')
+  ) {
+    return;
+  }
+
+  // Navigation requests: Network-first with cached index.html fallback
+  if (request.mode === 'navigate') {
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          const copy = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
+          return response;
+        })
+        .catch(() => caches.match('./index.html'))
+    );
+    return;
+  }
+
+  // Other GET requests: Stale-while-revalidate / cache fallback
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-      return fetch(event.request).catch(() => {
-        if (event.request.mode === 'navigate') {
-          return caches.match('/index.html');
-        }
-      });
+    caches.match(request).then((cachedResponse) => {
+      const fetchPromise = fetch(request)
+        .then((networkResponse) => {
+          if (networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
+            const copy = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
+          }
+          return networkResponse;
+        })
+        .catch(() => cachedResponse);
+
+      return cachedResponse || fetchPromise;
     })
-  );
-});
-
-// 4. Push Event Listener: Receives incoming background alerts
-self.addEventListener('push', (event) => {
-  const data = event.data ? event.data.json() : { title: 'Valomedic Alert', body: 'New medical update available.' };
-  
-  const options = {
-    body: data.body,
-    icon: '/icons/icon-192.png',
-    badge: '/icons/icon-192.png',
-    data: { url: data.url || '/' }
-  };
-
-  event.waitUntil(
-    self.registration.showNotification(data.title, options)
-  );
-});
-
-// 5. Notification Click Event: Opens app when user taps the alert
-self.addEventListener('notificationclick', (event) => {
-  event.notification.close();
-  event.waitUntil(
-    clients.openWindow(event.notification.data.url)
   );
 });
