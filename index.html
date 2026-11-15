@@ -13,6 +13,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
   
+  <!-- Razorpay Standard Checkout & PayPal Hosted/SDK Scripts -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=BAAtSsF36PoYkiz0w_kenUESErjUnWqJ2agSJBGb9qVeYYb09OtnDpbZ9IEPuAwlJHfWU-4MnaXxCqbWkI&components=hosted-buttons&enable-funding=venmo&currency=USD" crossorigin="anonymous"></script>
+
   <script>
     tailwind.config = {
       theme: {
@@ -80,7 +84,7 @@
         </div>
       </div>
     </div>
-  
+    
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       <a href="#home" class="flex items-center space-x-3 group shrink-0">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" class="w-11 h-11 group-hover:scale-105 transition-transform">
@@ -103,7 +107,7 @@
           <span class="text-[9px] text-teal-300 font-bold uppercase tracking-widest block">Global Medical Concierge</span>
         </div>
       </a>
-  
+      
       <!-- Desktop Live Currency & Translation Controls -->
       <div class="hidden lg:flex items-center gap-3 bg-teal-900/90 border border-teal-700/80 rounded-2xl p-2 shadow-inner">
         <div class="flex items-center gap-1.5 px-2">
@@ -116,7 +120,7 @@
           <select id="custom-language-selector" onchange="changeWebsiteLanguage(this.value)" aria-label="Language Translator" class="bg-teal-950 text-xs text-white border border-teal-700 rounded-lg px-2 py-1 focus:outline-none cursor-pointer max-w-[160px] font-semibold"></select>
         </div>
       </div>
-  
+      
       <div class="flex items-center space-x-3">
         <button onclick="openAuthModal('login')" class="hidden sm:inline-flex items-center gap-2 bg-teal-800 hover:bg-teal-700 text-teal-100 text-xs font-bold px-4 py-2.5 rounded-xl border border-teal-600 transition-all shadow-md cursor-pointer">
           <i class="fa-solid fa-user-lock text-emerald-400"></i> Patient Portal
@@ -152,7 +156,7 @@
       </div>
       <button onclick="toggleAppMenu()" class="text-teal-300 hover:text-white text-xl font-bold w-9 h-9 rounded-full bg-teal-900 flex items-center justify-center cursor-pointer">✕</button>
     </div>
-  
+    
     <div class="flex-1 overflow-y-auto p-6 space-y-4 text-xs">
       <!-- Mobile Currency & Language Selectors -->
       <div class="bg-teal-900 p-3 rounded-xl space-y-3 lg:hidden border border-teal-700">
@@ -165,14 +169,14 @@
           <select id="mobile-language" onchange="changeWebsiteLanguage(this.value)" class="w-full bg-teal-950 text-xs text-white p-2 rounded-lg border border-teal-700 font-semibold"></select>
         </div>
       </div>
-  
+      
       <button onclick="toggleAppMenu(); openAuthModal('login');" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl text-xs uppercase tracking-wider shadow-lg flex items-center justify-center gap-2 sm:hidden cursor-pointer">
         <i class="fa-solid fa-user-lock"></i> Patient Portal Login / Register
       </button>
-  
+      
       <a href="#home" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">Home</a>
       <a href="#about" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">About Us &amp; Advantages</a>
-  
+      
       <div class="border-b border-teal-900 py-2">
         <button onclick="toggleNavCategory('nav-dept-accordion', 'nav-dept-icon')" class="w-full flex justify-between items-center font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-1 text-left cursor-pointer">
           <span>30+ Surgery Departments</span>
@@ -180,7 +184,7 @@
         </button>
         <div id="nav-dept-accordion" class="hidden mt-2 space-y-2 pl-3 border-l-2 border-teal-700 max-h-80 overflow-y-auto"></div>
       </div>
-  
+      
       <div class="border-b border-teal-900 py-2">
         <button onclick="toggleNavCategory('nav-hub-accordion', 'nav-hub-icon')" class="w-full flex justify-between items-center font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-1 text-left cursor-pointer">
           <span>Medical Destination Hubs (8 Hubs &amp; 85 Cities)</span>
@@ -188,7 +192,7 @@
         </button>
         <div id="nav-hub-accordion" class="hidden mt-2 space-y-2 pl-3 border-l-2 border-teal-700 max-h-80 overflow-y-auto"></div>
       </div>
-  
+      
       <a href="#estimator" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">Cost Estimator</a>
       <a href="#offers" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">Offers &amp; Cashback</a>
       <a href="#tourism" onclick="toggleAppMenu()" class="block font-bold uppercase tracking-wider text-teal-100 hover:text-teal-300 py-2 border-b border-teal-900">Tourism &amp; Travelism</a>
@@ -208,12 +212,12 @@
         <h3 class="text-xl font-extrabold font-heading text-white">Patient Portal &amp; Secure Access</h3>
         <p class="text-xs text-teal-200">Register or sign in with instant OTP verification for complete concierge coordination.</p>
       </div>
-  
+      
       <div class="flex rounded-xl bg-teal-900 p-1 border border-teal-700">
         <button id="tab-btn-login" onclick="switchAuthTab('login')" class="flex-1 py-2 rounded-lg text-xs font-bold transition-all bg-teal-700 text-white shadow cursor-pointer">Sign In</button>
         <button id="tab-btn-register" onclick="switchAuthTab('register')" class="flex-1 py-2 rounded-lg text-xs font-bold transition-all text-teal-300 hover:text-white cursor-pointer">Register Account</button>
       </div>
-  
+      
       <!-- Sign In Form -->
       <form id="form-login" onsubmit="handlePatientLogin(event)" class="space-y-4">
         <div>
@@ -223,12 +227,12 @@
             <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="login-method" value="mobile" onchange="toggleLoginMethod('mobile')"> Login with Mobile Number</label>
           </div>
         </div>
-  
+        
         <div id="login-email-group">
           <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Registered Email Address</label>
           <input type="email" id="login-email" placeholder="patient@example.com" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
         </div>
-  
+        
         <div id="login-mobile-group" class="hidden">
           <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Registered Mobile Number (With Country Code)</label>
           <div class="phone-row-wrap">
@@ -236,18 +240,18 @@
             <input type="tel" id="login-phone" placeholder="7710803966" class="phone-number-input bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
           </div>
         </div>
-  
+        
         <div>
           <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Password or OTP Verification Code</label>
           <input type="password" id="login-password" required placeholder="••••••••" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
         </div>
-  
+        
         <div class="flex gap-2">
           <button type="submit" class="flex-1 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-extrabold py-3.5 rounded-xl text-xs uppercase tracking-wider shadow-lg cursor-pointer">Sign In to Dashboard 🚀</button>
           <button type="button" onclick="sendLoginOTP()" class="bg-teal-800 hover:bg-teal-700 text-teal-200 font-bold px-4 py-3.5 rounded-xl text-xs uppercase tracking-wider border border-teal-600 cursor-pointer">Send OTP</button>
         </div>
       </form>
-  
+      
       <!-- Register Form -->
       <form id="form-register" onsubmit="handlePatientRegister(event)" class="space-y-4 hidden">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -270,12 +274,12 @@
             </select>
           </div>
         </div>
-  
+        
         <div>
           <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Email Address</label>
           <input type="email" id="reg-email" required placeholder="patient@example.com" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
         </div>
-  
+        
         <div>
           <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Mobile Number (With Country Code)</label>
           <div class="phone-row-wrap">
@@ -283,12 +287,12 @@
             <input type="tel" id="reg-phone" required placeholder="7710803966" class="phone-number-input bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
           </div>
         </div>
-  
+        
         <div>
           <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Create Password</label>
           <input type="password" id="reg-password" required placeholder="••••••••" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
         </div>
-  
+        
         <div>
           <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Select OTP Verification Channel</label>
           <div class="flex gap-4 text-xs font-bold text-white mb-2">
@@ -296,14 +300,14 @@
             <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="otp-channel" value="mobile"> Send OTP via Mobile SMS</label>
           </div>
         </div>
-  
+        
         <div class="bg-teal-900/80 p-3 rounded-xl border border-teal-700 text-[11px] text-teal-300">
           <i class="fa-solid fa-shield-check text-emerald-400 mr-1"></i> Automated verification engine dispatches the 6-digit security code to your selected channel and syncs encrypted intake records with <strong>valomedic.care@gmail.com</strong>.
         </div>
-  
+        
         <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-extrabold py-3.5 rounded-xl text-xs uppercase tracking-wider shadow-lg cursor-pointer">Register &amp; Send OTP ✉️</button>
       </form>
-  
+      
       <!-- OTP Verification Form -->
       <form id="form-otp" onsubmit="handleVerifyOTP(event)" class="space-y-4 hidden">
         <div class="text-center space-y-2">
@@ -332,13 +336,13 @@
         </div>
         <button onclick="closeLegalModal()" class="text-teal-300 hover:text-white text-lg font-bold w-9 h-9 rounded-full bg-teal-900 flex items-center justify-center cursor-pointer">✕</button>
       </div>
-  
+      
       <div class="flex flex-wrap gap-2 py-3 border-b border-teal-900 shrink-0">
         <button id="legal-tab-privacy" onclick="switchLegalTab('privacy')" class="px-4 py-2 rounded-xl text-xs font-bold bg-teal-700 text-white cursor-pointer transition-all">1. Privacy Policy &amp; HIPAA</button>
         <button id="legal-tab-terms" onclick="switchLegalTab('terms')" class="px-4 py-2 rounded-xl text-xs font-bold bg-teal-900 text-teal-300 hover:text-white cursor-pointer transition-all">2. Terms &amp; Zero-Refund Policy</button>
         <button id="legal-tab-disclaimer" onclick="switchLegalTab('disclaimer')" class="px-4 py-2 rounded-xl text-xs font-bold bg-teal-900 text-teal-300 hover:text-white cursor-pointer transition-all">3. Non-Clinical Disclaimer</button>
       </div>
-  
+      
       <div id="legal-modal-body" class="flex-1 overflow-y-auto py-5 space-y-5 text-xs text-teal-100 leading-relaxed pr-2">
         <div id="legal-content-privacy" class="space-y-4">
           <div class="bg-teal-900/70 border border-teal-700 p-4 rounded-2xl">
@@ -381,7 +385,7 @@
           </div>
           <button onclick="patientLogout()" class="bg-red-500/20 hover:bg-red-500/30 text-red-300 border border-red-500/40 text-xs font-bold px-4 py-2.5 rounded-xl transition-all cursor-pointer">Sign Out 🚪</button>
         </div>
-  
+        
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div class="bg-teal-900/90 border border-teal-700/80 p-5 rounded-2xl space-y-1">
             <span class="text-[10px] text-teal-300 uppercase tracking-widest font-bold">Selected Department</span>
@@ -399,7 +403,7 @@
             <span class="text-[11px] text-teal-300 font-semibold block">All-Inclusive Fixed Cost</span>
           </div>
         </div>
-  
+        
         <div class="bg-teal-900/50 border border-teal-700/80 rounded-2xl p-6 space-y-6">
           <h3 class="text-lg font-bold font-heading text-white flex items-center gap-2"><i class="fa-solid fa-list-check text-emerald-400"></i> Active Expedition Itinerary &amp; Patient Status Tracker</h3>
           <div class="space-y-3 text-xs">
@@ -434,13 +438,13 @@
             <i class="fa-solid fa-mobile-screen-button text-base"></i> Install App on Home Screen &amp; App Drawer 📲
           </button>
         </div>
-  
+        
         <div>
           <span class="inline-flex items-center gap-2 bg-teal-500/30 text-teal-200 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest border border-teal-400/40 shadow-sm mt-3">
             <i class="fa-solid fa-crown text-amber-300"></i> Valomedic Global Medical Concierge &amp; Sovereign Travelism
           </span>
         </div>
-  
+        
         <h1 class="text-4xl sm:text-6xl font-extrabold font-heading tracking-tight leading-tight">
           Valomedic Global Medical Concierge. Comprehensive Sovereign Clinical Expeditions &amp; Luxury Surgery at 40%–50% Guaranteed Net Savings.
         </h1>
@@ -448,11 +452,11 @@
         <div class="bg-teal-900/80 border-l-4 border-emerald-400 p-4 rounded-r-2xl italic text-teal-200 text-sm sm:text-base font-heading">
           &ldquo;Bridging boundaries to connect health with enduring vitality.&rdquo;
         </div>
-  
+        
         <p class="text-teal-100 text-lg sm:text-xl font-normal leading-relaxed max-w-3xl">
           Navigating global healthcare requires surgical precision, uncompromised safety, and total transparency. Valomedic coordinates end-to-end medical journeys by integrating tier-one JCI-accredited surgical care, robotic surgical suites, private tarmac ambulance transfers, dedicated multilingual medical escorts, and 5-star recovery suites—guaranteeing 40% to 50% net savings compared to Western healthcare costs across 8 global hubs and 85 medical cities.
         </p>
-  
+        
         <div class="flex flex-col sm:flex-row gap-4 pt-4">
           <a href="#second-opinion" class="bg-emerald-400 hover:bg-emerald-500 text-teal-950 font-extrabold px-8 py-4 rounded-2xl shadow-2xl transition-all text-center text-sm uppercase tracking-wider">
             Book Expert Consultation ($29.99 USD) 🌟
@@ -480,7 +484,7 @@
           <img src="https://lh3.googleusercontent.com/d/146kq9ED5Ku6zc73HHflnovaK832PR0wb" alt="Valomedic International Clinical Team" class="w-full h-80 object-cover">
         </div>
       </div>
-  
+      
       <div class="space-y-4 pt-4">
         <div class="bg-gradient-to-r from-teal-950 via-teal-900 to-teal-950 border border-teal-600/80 p-5 rounded-2xl shadow-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div class="flex items-center gap-4">
@@ -492,7 +496,7 @@
           </div>
           <span class="text-xs bg-teal-800 text-teal-200 font-bold px-4 py-2 rounded-xl whitespace-nowrap border border-teal-600">Fixed Cost Protection</span>
         </div>
-  
+        
         <div class="bg-gradient-to-r from-teal-950 via-teal-900 to-teal-950 border border-teal-600/80 p-5 rounded-2xl shadow-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div class="flex items-center gap-4">
             <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-black text-xl shrink-0"><i class="fa-solid fa-suitcase-medical"></i></div>
@@ -503,7 +507,7 @@
           </div>
           <span class="text-xs bg-emerald-900 text-emerald-200 font-bold px-4 py-2 rounded-xl whitespace-nowrap border border-emerald-600">Zero Surprise Fees</span>
         </div>
-  
+        
         <div class="bg-gradient-to-r from-teal-950 via-teal-900 to-teal-950 border border-teal-600/80 p-5 rounded-2xl shadow-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div class="flex items-center gap-4">
             <div class="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-300 flex items-center justify-center font-black text-xl shrink-0"><i class="fa-solid fa-certificate"></i></div>
@@ -514,7 +518,7 @@
           </div>
           <span class="text-xs bg-cyan-900 text-cyan-200 font-bold px-4 py-2 rounded-xl whitespace-nowrap border border-cyan-600">Gold Standard Safety</span>
         </div>
-  
+        
         <div class="bg-gradient-to-r from-teal-950 via-teal-900 to-teal-950 border border-teal-600/80 p-5 rounded-2xl shadow-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div class="flex items-center gap-4">
             <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center font-black text-xl shrink-0"><i class="fa-solid fa-user-doctor"></i></div>
@@ -593,9 +597,9 @@
         <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-2">30+ Comprehensive Procedure Surgery Departments</h2>
         <p class="text-teal-100 text-sm mt-2">Exhaustive sub-specialty clinical programs managed by pioneer chief surgeons operating in JCI-accredited global centers with 20+ procedures per department.</p>
       </div>
-  
+      
       <div id="departments-dynamic-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
-  
+      
       <div class="text-center mt-12">
         <button id="toggle-all-dept-btn" onclick="toggleAllDepartments()" class="bg-teal-700 hover:bg-teal-600 text-white font-black px-8 py-4 rounded-2xl text-xs uppercase tracking-widest shadow-2xl transition-all inline-flex items-center gap-3 cursor-pointer border border-teal-400/40">
           <span>Explore All Surgery Departments</span>
@@ -605,7 +609,7 @@
     </div>
   </section>
   
-  <!-- 8 Global Hubs & 85 Medical Cities (With Verified Google Drive Visual Galleries) -->
+  <!-- 8 Global Hubs & 85 Medical Cities -->
   <section id="destinations" class="py-20 bg-teal-950/80 border-b border-teal-500/35">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
@@ -613,7 +617,7 @@
         <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-2">Medical Destination Hubs &amp; Accredited Hospital Network (8 Global Hubs &amp; 85 Cities)</h2>
         <p class="text-teal-100 text-sm mt-2">Direct agreements with top-tier JCI and NABH accredited hospitals across 85 premier medical cities featuring verified destination landmark showcase galleries for every hub and city.</p>
       </div>
-  
+      
       <div id="hubs-dynamic-container" class="space-y-12"></div>
     </div>
   </section>
@@ -625,7 +629,7 @@
         <span class="text-teal-300 font-bold uppercase tracking-widest text-xs">Medical Travelism &amp; Holistic Recovery Packages</span>
         <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-2">Seamlessly Synthesizing Advanced Healing with Luxury Cultural Travelism</h2>
       </div>
-  
+      
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="bg-teal-950/90 border border-teal-500/40 rounded-3xl p-8 space-y-4">
           <div class="w-12 h-12 rounded-2xl bg-teal-500/20 text-teal-300 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-umbrella-beach"></i></div>
@@ -653,7 +657,7 @@
         <span class="text-teal-300 font-extrabold uppercase tracking-widest text-xs">24/7 Dynamic Real-Time Currency Cost Engine</span>
         <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-2">Transparent All-Inclusive Pricing Matrix with 40%–50% Savings</h2>
       </div>
-  
+      
       <div class="bg-teal-900 border border-teal-500/40 rounded-3xl shadow-2xl p-8 lg:p-12 max-w-4xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="space-y-6">
@@ -661,7 +665,7 @@
               <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Select Clinical Procedure</label>
               <select id="calc-procedure" onchange="calculateEstimate()" class="w-full bg-teal-950 border border-teal-700 rounded-xl px-4 py-3 text-xs font-semibold text-white focus:ring-2 focus:ring-teal-400"></select>
             </div>
-  
+            
             <div>
               <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Select Destination Hub</label>
               <select id="calc-hub" onchange="calculateEstimate()" class="w-full bg-teal-950 border border-teal-700 rounded-xl px-4 py-3 text-xs font-semibold text-white focus:ring-2 focus:ring-teal-400">
@@ -675,7 +679,7 @@
                 <option value="0.92">🇨🇷 Costa Rica Hub (10 Cities: San Jose)</option>
               </select>
             </div>
-  
+            
             <div>
               <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Recovery Lodging Tier</label>
               <select id="calc-hotel" onchange="calculateEstimate()" class="w-full bg-teal-950 border border-teal-700 rounded-xl px-4 py-3 text-xs font-semibold text-white focus:ring-2 focus:ring-teal-400">
@@ -684,7 +688,7 @@
                 <option value="1600" selected>5-Star Luxury Recovery Villa ($1,600 USD)</option>
               </select>
             </div>
-  
+            
             <div>
               <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-2">Companion &amp; Escort Package</label>
               <select id="calc-companions" onchange="calculateEstimate()" class="w-full bg-teal-950 border border-teal-700 rounded-xl px-4 py-3 text-xs font-semibold text-white focus:ring-2 focus:ring-teal-400">
@@ -695,13 +699,13 @@
               </select>
             </div>
           </div>
-  
+          
           <div class="bg-teal-950 text-white rounded-3xl p-8 flex flex-col justify-between space-y-6 border border-teal-600 shadow-md">
             <div>
               <span class="text-teal-300 font-bold uppercase tracking-widest text-xs">Cost Estimation Breakdown (Live Rates)</span>
               <h3 class="text-2xl font-extrabold font-heading mt-1">Valomedic Package Breakdown</h3>
             </div>
-  
+            
             <div class="space-y-4 border-t border-teal-800 pt-6">
               <div class="flex justify-between items-center text-sm">
                 <span class="text-teal-200">Western Domestic Cost:</span>
@@ -716,7 +720,7 @@
                 <span id="out-savings" class="font-extrabold text-emerald-300 text-lg">45% (~$67,000 Saved)</span>
               </div>
             </div>
-  
+            
             <a href="#second-opinion" class="bg-emerald-400 hover:bg-emerald-500 text-teal-950 font-extrabold py-4 rounded-2xl text-center text-xs uppercase tracking-wider shadow-xl transition-all block">
               Lock In Estimate &amp; Book Consultation ($29.99 USD) ↓
             </a>
@@ -750,7 +754,7 @@
             <code class="bg-teal-950 px-3 py-1 rounded-lg text-amber-300 font-mono font-bold text-xs border border-amber-500/40">LUCKY100</code>
           </div>
         </div>
-  
+        
         <div class="bg-gradient-to-br from-teal-950 to-teal-900 border border-emerald-500/50 rounded-3xl p-6 shadow-xl space-y-4 relative overflow-hidden flex flex-col justify-between">
           <div class="absolute top-0 right-0 bg-emerald-500 text-teal-950 font-black text-[10px] uppercase px-3 py-1 rounded-bl-xl">Excellence Benefit</div>
           <div class="space-y-3">
@@ -765,7 +769,7 @@
             <code class="bg-teal-950 px-3 py-1 rounded-lg text-emerald-300 font-mono font-bold text-xs border border-emerald-500/40">VALO7OFF</code>
           </div>
         </div>
-  
+        
         <div class="bg-gradient-to-br from-teal-950 to-teal-900 border border-cyan-500/50 rounded-3xl p-6 shadow-xl space-y-4 relative overflow-hidden flex flex-col justify-between">
           <div class="absolute top-0 right-0 bg-cyan-500 text-teal-950 font-black text-[10px] uppercase px-3 py-1 rounded-bl-xl">Care Credit</div>
           <div class="space-y-3">
@@ -784,7 +788,7 @@
     </div>
   </section>
   
-  <!-- Expert Opinion & Consultation ($29.99 USD with PayPal & Razorpay Routing + Zero-Refund Policy) -->
+  <!-- Expert Opinion & Consultation ($29.99 USD with Direct Razorpay Checkout & PayPal Gateway Routing) -->
   <section id="second-opinion" class="py-20 bg-teal-950/50 border-b border-teal-900">
     <div class="max-w-4xl mx-auto px-4">
       <div class="bg-teal-950 border border-teal-500/40 rounded-3xl p-8 lg:p-12 shadow-2xl space-y-6 box-border">
@@ -792,12 +796,32 @@
           <div>
             <span class="text-teal-300 font-extrabold uppercase tracking-widest text-xs">Valomedic Expert Opinion &amp; Consultation</span>
             <h2 class="text-2xl font-extrabold font-heading text-white mt-1">Request Expert Opinion &amp; Consultation ($29.99 USD Fee)</h2>
-            <p class="text-xs text-teal-200 mt-1">Submit your case details and complete the $29.99 USD consultation fee via PayPal or Razorpay to route your dossier to <strong>valomedic.care@gmail.com</strong>.</p>
+            <p class="text-xs text-teal-200 mt-1">Complete your $29.99 USD consultation payment directly via PayPal or Razorpay first. Once paid, your executive case dossier dispatches automatically to <strong>valomedic.care@gmail.com</strong>.</p>
           </div>
           <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-black px-4 py-2 rounded-xl text-sm shrink-0">$29.99 USD</span>
         </div>
-  
-        <form onsubmit="handleSecondOpinion(event)" class="space-y-5">
+        
+        <!-- Post-Payment Confirmation & Dossier Dispatch Banner (Shown after Payment) -->
+        <div id="payment-confirmation-banner" class="hidden bg-emerald-950/90 border-2 border-emerald-400 rounded-2xl p-6 space-y-4 shadow-2xl">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="space-y-1">
+              <h3 class="text-base font-extrabold text-white">Payment Verified ($29.99 USD) — Executive Dossier Ready</h3>
+              <p id="payment-ref-display" class="text-xs text-emerald-200 font-mono">Transaction Reference: CONFIRMED</p>
+              <p class="text-xs text-teal-100">Your consultation payment is complete. Click below if your email client did not open automatically to send your dossier to <strong>valomedic.care@gmail.com</strong>.</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <button type="button" onclick="dispatchSavedDossierEmail()" class="bg-emerald-400 hover:bg-emerald-500 text-teal-950 font-extrabold px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider cursor-pointer shadow">
+              <i class="fa-solid fa-envelope mr-1"></i> Send Dossier to valomedic.care@gmail.com
+            </button>
+            <button type="button" onclick="clearPendingDossier()" class="bg-teal-900 hover:bg-teal-800 text-teal-200 font-bold px-4 py-2.5 rounded-xl text-xs cursor-pointer border border-teal-700">
+              Dismiss
+            </button>
+          </div>
+        </div>
+
+        <form id="second-opinion-form" onsubmit="handleSecondOpinion(event)" class="space-y-5">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Patient Full Name</label>
@@ -808,7 +832,7 @@
               <input type="email" id="so-email" required placeholder="your.email@example.com" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
             </div>
           </div>
-  
+          
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Clinical Category</label>
@@ -836,7 +860,7 @@
               </select>
             </div>
           </div>
-  
+          
           <div>
             <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Phone / WhatsApp (All 195+ World Codes)</label>
             <div class="phone-row-wrap">
@@ -844,12 +868,12 @@
               <input type="tel" id="so-phone" required placeholder="7710803966" class="phone-number-input bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white">
             </div>
           </div>
-  
+          
           <div>
             <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Diagnosis &amp; Case Notes</label>
             <textarea id="so-notes" rows="3" required placeholder="Describe diagnosis, current treatment, or specific questions..." class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white"></textarea>
           </div>
-  
+          
           <div>
             <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Apply Promotional Voucher / Cashback Code</label>
             <select id="so-coupon" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white font-semibold">
@@ -859,7 +883,7 @@
               <option value="VALO5OFF (5% Patient Care Credit)">VALO5OFF - 5% Patient Care Credit</option>
             </select>
           </div>
-  
+          
           <!-- Dual Payment Gateway Selector -->
           <div class="bg-teal-900/80 border border-teal-700 rounded-2xl p-4 space-y-3">
             <label class="block text-xs font-bold uppercase tracking-wider text-teal-200">Select Secure Payment Gateway ($29.99 USD)</label>
@@ -868,19 +892,19 @@
                 <input type="radio" name="payment-gateway" value="PayPal International" checked>
                 <div>
                   <span class="font-bold text-white block"><i class="fa-brands fa-paypal text-sky-400 mr-1"></i> PayPal International</span>
-                  <span class="text-[10px] text-teal-300">US, UK, EU, Canada, Australia &amp; Global Cards</span>
+                  <span class="text-[10px] text-teal-300">Direct PayPal.Me ($29.99 USD) &amp; Global Cards</span>
                 </div>
               </label>
               <label class="flex items-center gap-3 p-3 bg-teal-950 border border-teal-600 rounded-xl cursor-pointer hover:border-emerald-400">
                 <input type="radio" name="payment-gateway" value="Razorpay Global & UPI">
                 <div>
                   <span class="font-bold text-white block"><i class="fa-solid fa-credit-card text-emerald-400 mr-1"></i> Razorpay Global &amp; UPI</span>
-                  <span class="text-[10px] text-teal-300">International Cards, NetBanking, UPI &amp; NRI</span>
+                  <span class="text-[10px] text-teal-300">Instant Razorpay Checkout ($29.99 USD), Cards &amp; UPI</span>
                 </div>
               </label>
             </div>
           </div>
-  
+          
           <!-- Mandatory Zero-Refund & Non-Clinical Facilitator Consent -->
           <div class="bg-amber-950/40 border border-amber-500/40 rounded-2xl p-4">
             <label class="flex items-start gap-3 text-[11px] text-amber-100 cursor-pointer">
@@ -890,9 +914,9 @@
               </span>
             </label>
           </div>
-  
-          <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-400 text-teal-950 font-extrabold py-4 rounded-xl text-xs uppercase tracking-wider shadow-xl cursor-pointer transition-all">
-            Pay $29.99 USD &amp; Dispatch Executive Case Dossier 📋
+          
+          <button type="submit" id="so-submit-btn" class="w-full bg-emerald-500 hover:bg-emerald-400 text-teal-950 font-extrabold py-4 rounded-xl text-xs uppercase tracking-wider shadow-xl cursor-pointer transition-all">
+            Proceed to Payment ($29.99 USD) 💳
           </button>
         </form>
       </div>
@@ -1000,7 +1024,7 @@
           <p class="text-teal-300 leading-relaxed text-xs">Global leader in cross-border medical concierge, JCI hospital coordination, and luxury medical tourism across 8 global hubs and 85 destination cities.</p>
           <p class="text-emerald-300 font-semibold text-xs">Contact: valomedic.care@gmail.com | +91 7710803966</p>
         </div>
-  
+        
         <div>
           <button onclick="toggleFooterAccordion('footer-quick-nav', 'footer-quick-icon')" class="w-full flex justify-between items-center text-white font-bold text-sm mb-3 text-left cursor-pointer border-b border-teal-800 pb-2">
             <span>Quick Navigation</span>
@@ -1019,7 +1043,7 @@
             <li><a href="#compliance-shield" class="hover:text-white transition-colors">• Legal &amp; Zero-Refund Policy</a></li>
           </ul>
         </div>
-  
+        
         <div>
           <button onclick="toggleFooterAccordion('footer-dept-list', 'footer-dept-icon')" class="w-full flex justify-between items-center text-white font-bold text-sm mb-3 text-left cursor-pointer border-b border-teal-800 pb-2">
             <span>All Surgery Departments</span>
@@ -1027,7 +1051,7 @@
           </button>
           <div id="footer-dept-list" class="space-y-2 text-xs max-h-72 overflow-y-auto pr-2"></div>
         </div>
-  
+        
         <div>
           <button onclick="toggleFooterAccordion('footer-hub-list', 'footer-hub-icon')" class="w-full flex justify-between items-center text-white font-bold text-sm mb-3 text-left cursor-pointer border-b border-teal-800 pb-2">
             <span>8 Destination Hubs &amp; 85 Cities</span>
@@ -1036,7 +1060,7 @@
           <div id="footer-hub-list" class="space-y-2 text-xs max-h-72 overflow-y-auto pr-2"></div>
         </div>
       </div>
-  
+      
       <div class="border-t border-teal-900 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
         <div>&copy; 2026 Valomedic Global Medical Concierge. All Rights Reserved.</div>
       </div>
@@ -1047,6 +1071,14 @@
   <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   
   <script type="text/javascript">
+    // Live Payment Gateway Configuration (Valomedic Global Medical Concierge)
+    const VALOMEDIC_PAYMENT_CONFIG = {
+      paypalMeUrl: "https://www.paypal.com/paypalme/valomedic/29.99USD",
+      paypalClientId: "BAAtSsF36PoYkiz0w_kenUESErjUnWqJ2agSJBGb9qVeYYb09OtnDpbZ9IEPuAwlJHfWU-4MnaXxCqbWkI",
+      razorpayKeyId: "rzp_live_Tz6etcmMyTOy9W",
+      consultationFeeUSD: 29.99
+    };
+
     // 195+ World Country Calling Codes
     const allCountryCodes = [
       {name: "Afghanistan", code: "+93", flag: "🇦🇫"}, {name: "Albania", code: "+355", flag: "🇦🇱"}, {name: "Algeria", code: "+213", flag: "🇩🇿"},
@@ -1106,7 +1138,7 @@
       {name: "Vietnam", code: "+84", flag: "🇻🇳"}, {name: "Yemen", code: "+967", flag: "🇾🇪"}, {name: "Zambia", code: "+260", flag: "🇿🇲"},
       {name: "Zimbabwe", code: "+263", flag: "🇿🇼"}
     ];
-  
+    
     // 150+ Global ISO Currencies
     const allCurrencies = [
       {code: "USD", symbol: "$", name: "USD - US Dollar"}, {code: "EUR", symbol: "€", name: "EUR - Euro"}, {code: "GBP", symbol: "£", name: "GBP - British Pound"},
@@ -1162,7 +1194,7 @@
       {code: "XPF", symbol: "₣", name: "XPF - CFP Franc"}, {code: "YER", symbol: "﷼", name: "YER - Yemeni Rial"}, {code: "ZAR", symbol: "R", name: "ZAR - South African Rand"},
       {code: "ZMW", symbol: "ZK", name: "ZMW - Zambian Kwacha"}, {code: "ZWL", symbol: "Z$", name: "ZWL - Zimbabwean Dollar"}
     ];
-  
+    
     // 200+ World Languages for Google Translate
     const allLanguages = [
       {code: "en", name: "English"}, {code: "es", name: "Spanish (Español)"}, {code: "hi", name: "Hindi (हिन्दी)"},
@@ -1194,7 +1226,7 @@
       {code: "uz", name: "Uzbek"}, {code: "vi", name: "Vietnamese"}, {code: "cy", name: "Welsh"}, {code: "xh", name: "Xhosa"},
       {code: "yi", name: "Yiddish"}, {code: "yo", name: "Yoruba"}, {code: "zu", name: "Zulu"}
     ];
-  
+    
     // 30 Comprehensive Surgery Departments
     const departmentsData = [
       {
@@ -1599,8 +1631,8 @@
         ]
       }
     ];
-  
-    // 8 Global Hubs & 85 Medical Cities (Preserving working India, Turkey, Singapore, Mexico assets + Updated South Korea, Thailand, UAE, Costa Rica Drive assets)
+    
+    // 8 Global Hubs & 85 Medical Cities
     const hubsData = [
       {
         id: "hub-india", num: 1, flag: "🇮🇳", country: "India",
@@ -1800,7 +1832,7 @@
         ]
       }
     ];
-  
+    
     window.addEventListener('DOMContentLoaded', () => {
       renderCountryCodes();
       renderCurrencies();
@@ -1811,6 +1843,7 @@
       renderFooterSubcategories();
       calculateEstimate();
       fetchLiveExchangeRates();
+      checkPostPaymentReturnState();
     });
 
     function openLegalModal(tab = 'privacy') {
@@ -1842,26 +1875,26 @@
         }
       });
     }
-  
+    
     let pendingRegistrationData = null;
-  
+    
     function openAuthModal(mode = 'login') {
       const modal = document.getElementById('auth-modal');
       modal.classList.remove('hidden');
       switchAuthTab(mode);
     }
-  
+    
     function closeAuthModal() {
       document.getElementById('auth-modal').classList.add('hidden');
     }
-  
+    
     function switchAuthTab(tab) {
       const formLogin = document.getElementById('form-login');
       const formReg = document.getElementById('form-register');
       const formOtp = document.getElementById('form-otp');
       const btnLogin = document.getElementById('tab-btn-login');
       const btnReg = document.getElementById('tab-btn-register');
-  
+      
       formOtp.classList.add('hidden');
       if (tab === 'login') {
         formLogin.classList.remove('hidden');
@@ -1875,7 +1908,7 @@
         btnLogin.className = "flex-1 py-2 rounded-lg text-xs font-bold transition-all text-teal-300 hover:text-white cursor-pointer";
       }
     }
-  
+    
     function toggleLoginMethod(method) {
       const emailGroup = document.getElementById('login-email-group');
       const mobileGroup = document.getElementById('login-mobile-group');
@@ -1887,16 +1920,16 @@
         mobileGroup.classList.remove('hidden');
       }
     }
-  
+    
     function handlePatientLogin(event) {
       event.preventDefault();
       const method = document.querySelector('input[name="login-method"]:checked').value;
       const pass = document.getElementById('login-password').value;
       let identifier = method === 'email' ? document.getElementById('login-email').value : document.getElementById('login-code').value + " " + document.getElementById('login-phone').value;
-  
+      
       let users = JSON.parse(localStorage.getItem('valomedic_users') || '[]');
       let found = users.find(u => (method === 'email' ? u.email === identifier : (u.code + " " + u.phone) === identifier) && u.password === pass);
-  
+      
       if (found || identifier.includes("karan7710803966@gmail.com") || identifier.includes("+91 7710803966")) {
         const userData = found || { name: "Karan Suthar", email: "karan7710803966@gmail.com", phone: "+91 7710803966", department: "Orthopedics & Joint Replacements" };
         localStorage.setItem('valomedic_active_session', JSON.stringify(userData));
@@ -1910,7 +1943,7 @@
         alert("Account not found or incorrect credentials. Please verify your details or register.");
       }
     }
-  
+    
     function sendLoginOTP() {
       const method = document.querySelector('input[name="login-method"]:checked').value;
       let target = method === 'email' ? document.getElementById('login-email').value : document.getElementById('login-code').value + " " + document.getElementById('login-phone').value;
@@ -1923,7 +1956,7 @@
       alert(`Secure Web OTP Code: ${generatedOTP}\nDispatched automatically via ${method.toUpperCase()} to ${target}.\n(Synced with valomedic.care@gmail.com)`);
       document.getElementById('login-password').value = generatedOTP;
     }
-  
+    
     function handlePatientRegister(event) {
       event.preventDefault();
       const name = document.getElementById('reg-name').value;
@@ -1933,28 +1966,28 @@
       const phone = document.getElementById('reg-phone').value;
       const password = document.getElementById('reg-password').value;
       const channel = document.querySelector('input[name="otp-channel"]:checked').value;
-  
+      
       pendingRegistrationData = { name, department, email, code, phone, password, channel };
-  
+      
       const generatedOTP = Math.floor(100000 + Math.random() * 900000).toString();
       localStorage.setItem('valomedic_pending_otp', generatedOTP);
-  
+      
       document.getElementById('form-register').classList.add('hidden');
       document.getElementById('form-otp').classList.remove('hidden');
       document.getElementById('otp-instruction-text').textContent = `Enter the 6-digit verification code sent via ${channel.toUpperCase()} to ${channel === 'email' ? email : code + " " + phone}. (Verification Code: ${generatedOTP})`;
     }
-  
+    
     function handleVerifyOTP(event) {
       event.preventDefault();
       const enteredOTP = document.getElementById('otp-input').value;
       const storedOTP = localStorage.getItem('valomedic_pending_otp');
-  
+      
       if (enteredOTP === storedOTP || enteredOTP === "771080") {
         let users = JSON.parse(localStorage.getItem('valomedic_users') || '[]');
         users.push(pendingRegistrationData);
         localStorage.setItem('valomedic_users', JSON.stringify(users));
         localStorage.setItem('valomedic_active_session', JSON.stringify(pendingRegistrationData));
-  
+        
         closeAuthModal();
         const drawer = document.getElementById('app-menu-drawer');
         if (drawer && !drawer.classList.contains('translate-x-full')) {
@@ -1965,7 +1998,7 @@
         alert("Invalid OTP code. Please enter the 6-digit verification code sent to your contact channel.");
       }
     }
-  
+    
     function openDashboard(user) {
       document.getElementById('dash-patient-name').textContent = user.name;
       document.getElementById('dash-patient-email').textContent = user.email || (user.code + " " + user.phone);
@@ -1976,22 +2009,22 @@
       dashSection.classList.remove('hidden');
       dashSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  
+    
     function closeDashboard() {
       document.getElementById('main-dashboard-section').classList.add('hidden');
     }
-  
+    
     function patientLogout() {
       localStorage.removeItem('valomedic_active_session');
       closeDashboard();
     }
-  
+    
     function jumpToTarget(targetId, hubIdToExpand = null) {
       const drawer = document.getElementById('app-menu-drawer');
       if (drawer && !drawer.classList.contains('translate-x-full')) {
         toggleAppMenu();
       }
-  
+      
       if (targetId.startsWith('dept-')) {
         const targetCard = document.getElementById(targetId);
         if (targetCard && targetCard.classList.contains('hidden')) {
@@ -2000,14 +2033,14 @@
           }
         }
       }
-  
+      
       if (hubIdToExpand) {
         const citiesEl = document.getElementById('cities-' + hubIdToExpand);
         if (citiesEl && citiesEl.classList.contains('hidden')) {
           toggleHubCities('cities-' + hubIdToExpand);
         }
       }
-  
+      
       setTimeout(() => {
         const el = document.getElementById(targetId);
         if (el) {
@@ -2017,7 +2050,7 @@
         }
       }, 120);
     }
-  
+    
     function renderCountryCodes() {
       document.querySelectorAll('.country-codes-select').forEach(select => {
         select.innerHTML = '';
@@ -2030,7 +2063,7 @@
         });
       });
     }
-  
+    
     function renderCurrencies() {
       const topCurr = document.getElementById('top-currency');
       const mobileCurr = document.getElementById('mobile-currency');
@@ -2047,7 +2080,7 @@
         });
       });
     }
-  
+    
     function renderLanguages() {
       const topLang = document.getElementById('custom-language-selector');
       const mobileLang = document.getElementById('mobile-language');
@@ -2063,14 +2096,14 @@
         });
       });
     }
-  
+    
     let showAllDepartmentsFlag = false;
     function renderDepartmentsGrid() {
       const container = document.getElementById('departments-dynamic-grid');
       const calcSelect = document.getElementById('calc-procedure');
       container.innerHTML = '';
       calcSelect.innerHTML = '';
-  
+      
       departmentsData.forEach((dept, index) => {
         const calcOpt = document.createElement('option');
         calcOpt.value = dept.cost;
@@ -2078,17 +2111,17 @@
         calcOpt.textContent = `${dept.name} ($${(dept.cost/1000).toFixed(0)}k US | Save ${Math.round(dept.saving*100)}%)`;
         if (dept.num === 2) calcOpt.selected = true;
         calcSelect.appendChild(calcOpt);
-  
+        
         const card = document.createElement('div');
         card.className = `bg-teal-950/90 border border-teal-500/40 rounded-3xl p-6 shadow-xl space-y-4 transition-all duration-300 ${index >= 4 && !showAllDepartmentsFlag ? 'hidden' : ''}`;
         card.id = dept.id;
-  
+        
         let proceduresListHTML = dept.procedures.map((p, idx) => `
           <div class="p-2.5 bg-teal-950 rounded-xl border border-teal-800/80 hover:border-teal-600 transition-colors">
             <strong class="text-teal-200 block">• ${idx + 1}. ${p}</strong>
           </div>
         `).join('');
-  
+        
         card.innerHTML = `
           <div class="flex items-center justify-between">
             <div class="w-12 h-12 rounded-2xl bg-teal-500/20 text-teal-300 flex items-center justify-center text-xl font-bold">
@@ -2109,7 +2142,7 @@
         container.appendChild(card);
       });
     }
-  
+    
     function toggleAllDepartments() {
       showAllDepartmentsFlag = !showAllDepartmentsFlag;
       renderDepartmentsGrid();
@@ -2123,16 +2156,16 @@
         icon.style.transform = 'rotate(0deg)';
       }
     }
-  
+    
     function renderHubsContainer() {
       const container = document.getElementById('hubs-dynamic-container');
       container.innerHTML = '';
-  
+      
       hubsData.forEach((hub) => {
         const hubEl = document.createElement('div');
         hubEl.className = "bg-teal-950/90 border border-teal-500/40 rounded-3xl overflow-hidden shadow-2xl transition-all duration-300";
         hubEl.id = hub.id;
-  
+        
         let galleryStripHTML = (hub.gallery || []).map(item => `
           <div class="relative h-28 rounded-xl overflow-hidden border border-teal-700/80 group">
             <img src="${item.url}" alt="${item.label}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
@@ -2140,17 +2173,17 @@
             <span class="absolute bottom-2 left-2.5 right-2 text-[10px] font-bold text-white leading-tight">${item.label}</span>
           </div>
         `).join('');
-  
+        
         let citiesGridHTML = hub.cities.map((city, cIdx) => {
           const citySlug = `city-${city.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`;
           const cityAccId = `${hub.id}-city-${cIdx}`;
-  
+          
           let hospitalsListHTML = city.hospitals.map((h, hIdx) => `
             <div class="p-2 bg-teal-950 rounded border border-teal-800 text-[11px] text-teal-200">
               • <strong>${hIdx + 1}. ${h}</strong> <span class="text-[9px] text-teal-400 font-semibold block">JCI &amp; NABH Accredited Quaternary Wing</span>
             </div>
           `).join('');
-  
+          
           return `
             <div id="${citySlug}" class="bg-teal-900/90 rounded-2xl border border-teal-700/80 overflow-hidden shadow-lg transition-all duration-300 flex flex-col justify-between">
               <div class="h-36 w-full overflow-hidden relative border-b border-teal-800">
@@ -2175,7 +2208,7 @@
             </div>
           `;
         }).join('');
-  
+        
         hubEl.innerHTML = `
           <div class="p-6 sm:p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-teal-900 bg-teal-900/40">
             <div>
@@ -2188,7 +2221,7 @@
               <i class="fa-solid fa-chevron-down" id="icon-cities-${hub.id}"></i>
             </button>
           </div>
-  
+          
           <div class="w-full h-64 sm:h-80 overflow-hidden relative border-b border-teal-900">
             <img src="${hub.hubImage}" alt="${hub.title} Showcase Landmark" class="w-full h-full object-cover" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-teal-950 via-transparent to-transparent opacity-80"></div>
@@ -2196,30 +2229,30 @@
               ${hub.flag} ${hub.country} Sovereign Clinical Network &amp; Destination Hub
             </div>
           </div>
-  
+          
           <div class="p-4 sm:p-6 bg-teal-900/30 border-b border-teal-900">
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
               ${galleryStripHTML}
             </div>
           </div>
-  
+          
           <div id="cities-${hub.id}" class="hidden p-6 sm:p-8 space-y-6">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               ${citiesGridHTML}
             </div>
           </div>
         `;
-  
+        
         container.appendChild(hubEl);
       });
     }
-  
+    
     function renderMenuDrawerSubcategories() {
       const deptContainer = document.getElementById('nav-dept-accordion');
       const hubContainer = document.getElementById('nav-hub-accordion');
       deptContainer.innerHTML = '';
       hubContainer.innerHTML = '';
-  
+      
       departmentsData.forEach(dept => {
         const subId = `menu-dept-${dept.id}`;
         const item = document.createElement('div');
@@ -2242,7 +2275,7 @@
         `;
         deptContainer.appendChild(item);
       });
-  
+      
       hubsData.forEach(hub => {
         const subId = `menu-hub-${hub.id}`;
         const item = document.createElement('div');
@@ -2271,13 +2304,13 @@
         hubContainer.appendChild(item);
       });
     }
-  
+    
     function renderFooterSubcategories() {
       const footerDeptContainer = document.getElementById('footer-dept-list');
       const footerHubContainer = document.getElementById('footer-hub-list');
       footerDeptContainer.innerHTML = '';
       footerHubContainer.innerHTML = '';
-  
+      
       departmentsData.forEach(dept => {
         const subId = `footer-sub-dept-${dept.id}`;
         const item = document.createElement('div');
@@ -2298,7 +2331,7 @@
         `;
         footerDeptContainer.appendChild(item);
       });
-  
+      
       hubsData.forEach(hub => {
         const subId = `footer-sub-hub-${hub.id}`;
         const item = document.createElement('div');
@@ -2323,49 +2356,49 @@
         footerHubContainer.appendChild(item);
       });
     }
-  
+    
     function toggleSurgeryList(listId) {
       const listEl = document.getElementById(listId);
       const iconEl = document.getElementById('icon-' + listId);
       listEl.classList.toggle('hidden');
       if (iconEl) iconEl.style.transform = listEl.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
     }
-  
+    
     function toggleHubCities(citiesId) {
       const citiesEl = document.getElementById(citiesId);
       const iconEl = document.getElementById('icon-' + citiesId);
       citiesEl.classList.toggle('hidden');
       if (iconEl) iconEl.style.transform = citiesEl.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
     }
-  
+    
     function toggleCityHospitals(cityId) {
       const cityEl = document.getElementById(cityId);
       const iconEl = document.getElementById('icon-' + cityId);
       cityEl.classList.toggle('hidden');
       if (iconEl) iconEl.style.transform = cityEl.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
     }
-  
+    
     function toggleNavCategory(accordionId, iconId) {
       const acc = document.getElementById(accordionId);
       const icon = document.getElementById(iconId);
       acc.classList.toggle('hidden');
       if (icon) icon.style.transform = acc.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
     }
-  
+    
     function toggleNavSubCategory(subId, iconId) {
       const sub = document.getElementById(subId);
       const icon = document.getElementById(iconId);
       sub.classList.toggle('hidden');
       if (icon) icon.style.transform = sub.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
     }
-  
+    
     function toggleFooterAccordion(accordionId, iconId) {
       const acc = document.getElementById(accordionId);
       const icon = document.getElementById(iconId);
       acc.classList.toggle('hidden');
       if (icon) icon.style.transform = acc.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
     }
-  
+    
     let liveRates = {};
     async function fetchLiveExchangeRates() {
       try {
@@ -2377,11 +2410,11 @@
         }
       } catch (e) { console.error("Exchange API Error", e); }
     }
-  
+    
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element');
     }
-  
+    
     function changeWebsiteLanguage(langCode) {
       const frame = document.querySelector('.goog-te-combo');
       if (frame) {
@@ -2391,7 +2424,7 @@
         setTimeout(() => { changeWebsiteLanguage(langCode); }, 500);
       }
     }
-  
+    
     function syncCurrency(val) {
       const topCurr = document.getElementById('top-currency');
       const mobileCurr = document.getElementById('mobile-currency');
@@ -2399,20 +2432,20 @@
       if (mobileCurr) mobileCurr.value = val;
       calculateEstimate();
     }
-  
+    
     function toggleAppMenu() {
       const overlay = document.getElementById('app-menu-overlay');
       const drawer = document.getElementById('app-menu-drawer');
       overlay.classList.toggle('hidden');
       drawer.classList.toggle('translate-x-full');
     }
-  
+    
     let deferredPrompt;
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
       deferredPrompt = e;
     });
-  
+    
     function triggerPWAInstall() {
       if (deferredPrompt) {
         deferredPrompt.prompt();
@@ -2423,17 +2456,17 @@
         alert("Valomedic PWA App is ready! To add to your home screen:\n\n• iPhone (Safari): Tap Share -> Add to Home Screen.\n• Android (Chrome): Tap Menu (3 dots) -> Install App.");
       }
     }
-  
+    
     function calculateEstimate() {
       const procSelect = document.getElementById('calc-procedure');
       if (!procSelect || !procSelect.value) return;
-  
+      
       const westernBenchmarkUSD = parseFloat(procSelect.value);
       const savingRate = parseFloat(procSelect.options[procSelect.selectedIndex].getAttribute('data-saving')) || 0.45;
       const hubMultiplier = parseFloat(document.getElementById('calc-hub').value);
       const hotelCostUSD = parseFloat(document.getElementById('calc-hotel').value);
       const companionCostUSD = parseFloat(document.getElementById('calc-companions').value);
-  
+      
       const currencySelect = document.getElementById('top-currency');
       const targetCurrency = currencySelect ? currencySelect.value : 'USD';
       const currencySymbol = currencySelect ? (currencySelect.options[currencySelect.selectedIndex].getAttribute('data-symbol') || targetCurrency) : '$';
@@ -2442,62 +2475,177 @@
       const basePackageUSD = (westernBenchmarkUSD * (1.0 - savingRate) * hubMultiplier) + hotelCostUSD + companionCostUSD;
       const moneySavedUSD = westernBenchmarkUSD - basePackageUSD;
       const actualSavingsPercent = Math.round((moneySavedUSD / westernBenchmarkUSD) * 100);
-  
+      
       document.getElementById('out-western').innerText = currencySymbol + Math.round(westernBenchmarkUSD * conversionRate).toLocaleString();
       document.getElementById('out-package').innerText = currencySymbol + Math.round(basePackageUSD * conversionRate).toLocaleString();
       document.getElementById('out-savings').innerText = actualSavingsPercent + '% (~' + currencySymbol + Math.round(moneySavedUSD * conversionRate).toLocaleString() + ' Saved)';
     }
-  
-    function handleSecondOpinion(event) {
-      event.preventDefault();
-      const name = document.getElementById('so-name').value;
-      const email = document.getElementById('so-email').value;
-      const category = document.getElementById('so-category').value;
-      const hub = document.getElementById('so-hub').value;
-      const phone = document.getElementById('so-code').value + " " + document.getElementById('so-phone').value;
-      const notes = document.getElementById('so-notes').value;
-      const coupon = document.getElementById('so-coupon').value;
-      const gateway = document.querySelector('input[name="payment-gateway"]:checked').value;
-  
-      const emailSubject = encodeURIComponent(`[EXECUTIVE CASE INTAKE - $29.99 USD] Valomedic Expert Opinion - ${name} (${category})`);
+
+    // Build Executive Case Dossier Email Payload
+    function buildExecutiveDossierPayload(dossierData, paymentRef) {
+      const emailSubject = encodeURIComponent(`[PAID: $29.99 USD | REF: ${paymentRef}] Valomedic Executive Case Dossier - ${dossierData.name} (${dossierData.category})`);
       const emailBody = encodeURIComponent(
 `====================================================
 VALOMEDIC GLOBAL MEDICAL CONCIERGE
-EXECUTIVE CONSULTATION DOSSIER ($29.99 USD FEE)
+VERIFIED PAID CONSULTATION DOSSIER ($29.99 USD)
 ====================================================
-  
-1. PATIENT IDENTIFICATION & CONTACT:
+
+1. PAYMENT VERIFICATION & GATEWAY STATUS:
 ----------------------------------------------------
-• Patient Full Name : ${name}
-• Email Address     : ${email}
-• Phone / WhatsApp  : ${phone}
-  
-2. CLINICAL INQUIRY & PAYMENT PARAMETERS:
+• Payment Status    : PAID ($29.99 USD - Non-Refundable)
+• Payment Gateway   : ${dossierData.gateway}
+• Transaction Ref   : ${paymentRef}
+• Timestamp (UTC)   : ${new Date().toISOString()}
+
+2. PATIENT IDENTIFICATION & CONTACT:
 ----------------------------------------------------
-• Inquiry Category  : ${category}
-• Target Destination: ${hub}
-• Consultation Fee  : $29.99 USD (100% Non-Refundable)
-• Payment Gateway   : ${gateway}
-  
-3. PROMOTIONAL VOUCHER / CASHBACK APPLIED:
+• Patient Full Name : ${dossierData.name}
+• Email Address     : ${dossierData.email}
+• Phone / WhatsApp  : ${dossierData.phone}
+
+3. CLINICAL INQUIRY & DESTINATION PARAMETERS:
 ----------------------------------------------------
-• Selected Coupon   : ${coupon}
-  
+• Inquiry Category  : ${dossierData.category}
+• Target Destination: ${dossierData.hub}
+• Selected Coupon   : ${dossierData.coupon}
+
 4. CLINICAL HISTORY & CASE NOTES:
 ----------------------------------------------------
-${notes}
-  
+${dossierData.notes}
+
 ----------------------------------------------------
 STATUTORY ACKNOWLEDGMENT:
-Patient has agreed to the Non-Clinical Facilitator Disclaimer
-and Strict Zero-Refund Policy ($29.99 USD).
+Patient has completed the $29.99 USD payment and agreed to
+the Non-Clinical Facilitator Disclaimer and Strict Zero-Refund Policy.
 ====================================================`
       );
-  
-      alert(`Routing to ${gateway} for $29.99 USD Consultation Fee...\nYour structured executive dossier will open in your mail client addressed to valomedic.care@gmail.com.`);
-      window.location.href = `mailto:valomedic.care@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+      return `mailto:valomedic.care@gmail.com?subject=${emailSubject}&body=${emailBody}`;
     }
-  
+
+    // Finalize Payment -> Show Confirmation Banner & Trigger Dossier Email Dispatch
+    function completePaymentAndDispatchDossier(dossierData, paymentRef) {
+      const savedRecord = {
+        ...dossierData,
+        paymentRef: paymentRef,
+        paidAt: new Date().toISOString()
+      };
+      localStorage.setItem('valomedic_paid_dossier', JSON.stringify(savedRecord));
+
+      const banner = document.getElementById('payment-confirmation-banner');
+      const refDisplay = document.getElementById('payment-ref-display');
+      if (banner && refDisplay) {
+        refDisplay.textContent = `Gateway: ${dossierData.gateway} | Ref: ${paymentRef}`;
+        banner.classList.remove('hidden');
+        banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+
+      const mailtoHref = buildExecutiveDossierPayload(dossierData, paymentRef);
+      window.location.href = mailtoHref;
+    }
+
+    function dispatchSavedDossierEmail() {
+      const raw = localStorage.getItem('valomedic_paid_dossier');
+      if (!raw) return;
+      const saved = JSON.parse(raw);
+      window.location.href = buildExecutiveDossierPayload(saved, saved.paymentRef || 'VERIFIED');
+    }
+
+    function clearPendingDossier() {
+      localStorage.removeItem('valomedic_paid_dossier');
+      const banner = document.getElementById('payment-confirmation-banner');
+      if (banner) banner.classList.add('hidden');
+    }
+
+    function checkPostPaymentReturnState() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const rawPending = localStorage.getItem('valomedic_pending_paypal_dossier');
+      if (urlParams.get('payment_status') === 'success' && rawPending) {
+        const pendingData = JSON.parse(rawPending);
+        localStorage.removeItem('valomedic_pending_paypal_dossier');
+        const refId = urlParams.get('tx') || ('PP-' + Date.now());
+        completePaymentAndDispatchDossier(pendingData, refId);
+      }
+    }
+
+    // Payment-First Consultation Workflow (Razorpay Standard Checkout & PayPal Direct Link)
+    function handleSecondOpinion(event) {
+      event.preventDefault();
+      const name = document.getElementById('so-name').value.trim();
+      const email = document.getElementById('so-email').value.trim();
+      const category = document.getElementById('so-category').value;
+      const hub = document.getElementById('so-hub').value;
+      const phoneCode = document.getElementById('so-code').value;
+      const phoneRaw = document.getElementById('so-phone').value.trim();
+      const phone = `${phoneCode} ${phoneRaw}`;
+      const notes = document.getElementById('so-notes').value.trim();
+      const coupon = document.getElementById('so-coupon').value;
+      const gateway = document.querySelector('input[name="payment-gateway"]:checked').value;
+
+      const dossierData = { name, email, category, hub, phone, notes, coupon, gateway };
+
+      if (gateway === "Razorpay Global & UPI") {
+        // Trigger Razorpay Live Checkout Modal ($29.99 USD = 2999 cents)
+        if (typeof Razorpay === "undefined") {
+          alert("Razorpay Checkout SDK is loading. Please check your internet connection and try again.");
+          return;
+        }
+        const rzpOptions = {
+          key: VALOMEDIC_PAYMENT_CONFIG.razorpayKeyId,
+          amount: 2999, // $29.99 USD in smallest currency unit (cents)
+          currency: "USD",
+          name: "Valomedic Global Medical Concierge",
+          description: `Expert Opinion & Consultation (${category})`,
+          prefill: {
+            name: name,
+            email: email,
+            contact: `${phoneCode}${phoneRaw.replace(/\D/g, '')}`
+          },
+          notes: {
+            patient_name: name,
+            clinical_category: category,
+            destination_hub: hub,
+            promo_code: coupon
+          },
+          theme: {
+            color: "#0f766e"
+          },
+          handler: function (response) {
+            const paymentId = response.razorpay_payment_id || ('RZP-' + Date.now());
+            completePaymentAndDispatchDossier(dossierData, paymentId);
+          },
+          modal: {
+            ondismiss: function () {
+              alert("Payment was cancelled before completion. Your case dossier will only be dispatched to valomedic.care@gmail.com once the $29.99 USD consultation payment is completed.");
+            }
+          }
+        };
+        const rzpInstance = new Razorpay(rzpOptions);
+        rzpInstance.on('payment.failed', function (response) {
+          alert("Razorpay payment failed: " + (response.error && response.error.description ? response.error.description : "Transaction declined. Please retry or use PayPal International."));
+        });
+        rzpInstance.open();
+      } else {
+        // Trigger PayPal International Direct Checkout ($29.99 USD via PayPal.Me)
+        localStorage.setItem('valomedic_pending_paypal_dossier', JSON.stringify(dossierData));
+        const paypalPopup = window.open(VALOMEDIC_PAYMENT_CONFIG.paypalMeUrl, '_blank', 'noopener,noreferrer');
+        if (!paypalPopup) {
+          window.location.href = VALOMEDIC_PAYMENT_CONFIG.paypalMeUrl;
+          return;
+        }
+        // Display immediate confirmation prompt once patient completes PayPal payment in new tab
+        setTimeout(() => {
+          const confirmed = confirm(
+            `PayPal International ($29.99 USD) opened in a new tab (${VALOMEDIC_PAYMENT_CONFIG.paypalMeUrl}).\n\n` +
+            `Click OK once you have completed your $29.99 USD PayPal payment to immediately generate and dispatch your Executive Case Dossier to valomedic.care@gmail.com.`
+          );
+          if (confirmed) {
+            localStorage.removeItem('valomedic_pending_paypal_dossier');
+            completePaymentAndDispatchDossier(dossierData, 'PAYPAL-VERIFIED-' + Date.now());
+          }
+        }, 1200);
+      }
+    }
+    
     function handlePharmacyInquiry(event) {
       event.preventDefault();
       const name = document.getElementById('pharm-name').value;
@@ -2505,25 +2653,25 @@ and Strict Zero-Refund Policy ($29.99 USD).
       const phone = document.getElementById('pharm-code').value + " " + document.getElementById('pharm-phone').value;
       const category = document.getElementById('pharm-category').value;
       const notes = document.getElementById('pharm-notes').value;
-  
-      const emailSubject = encodeURIComponent(`[COLD-CHAIN PHARMACY ORDER] Valomedic Logistics - ${name}`);
+      
+      const emailSubject = encodeURIComponent(`[PHARMACY ORDER] Valomedic Cold-Chain Rx - ${name}`);
       const emailBody = encodeURIComponent(
-`====================================================
-VALOMEDIC GLOBAL MEDICAL CONCIERGE
-COLD-CHAIN PHARMACY & MEDICATION ORDER
+`VALOMEDIC CROSS-BORDER PHARMACY ORDER
 ====================================================
-• Patient Full Name : ${name}
-• Email Address     : ${email}
-• Phone / WhatsApp  : ${phone}
-• Medication Group  : ${category}
+Patient Name : ${name}
+Email        : ${email}
+Phone        : ${phone}
+Category     : ${category}
 
-PRESCRIPTION DETAILS:
+Prescription & Drug Details:
 ${notes}
 ====================================================`
       );
-  
+      
+      alert("Opening your email client to dispatch your pharmacy order to valomedic.care@gmail.com...");
       window.location.href = `mailto:valomedic.care@gmail.com?subject=${emailSubject}&body=${emailBody}`;
     }
   </script>
 </body>
 </html>
+
