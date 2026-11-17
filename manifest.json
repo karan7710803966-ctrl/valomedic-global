@@ -1,51 +1,22 @@
 {
   "name": "Valomedic Global Medical Concierge",
   "short_name": "Valomedic",
-  "description": "Sovereign Cross-Border Healthcare, JCI & NABH Hospital Coordination & Luxury Medical Travelism across 8 Global Hubs and 85 Medical Cities.",
+  "description": "Sovereign Healthcare Expeditions, JCI & NABH Accredited Hospitals, and 24/7 Medical Concierge across 8 Global Hubs and 85 Cities.",
   "start_url": "./index.html",
-  "scope": "./",
   "display": "standalone",
-  "orientation": "portrait-primary",
   "background_color": "#0f2927",
   "theme_color": "#0f766e",
-  "categories": [
-    "medical",
-    "health",
-    "travel",
-    "lifestyle"
-  ],
+  "orientation": "portrait-primary",
   "icons": [
     {
       "src": "https://lh3.googleusercontent.com/d/146kq9ED5Ku6zc73HHflnovaK832PR0wb",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
+      "type": "image/png"
     },
     {
       "src": "https://lh3.googleusercontent.com/d/146kq9ED5Ku6zc73HHflnovaK832PR0wb",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
-  ],
-  "shortcuts": [
-    {
-      "name": "Book Expert Consultation ($29.99)",
-      "short_name": "Consultation",
-      "description": "Request an expert medical second opinion and case coordination",
-      "url": "./index.html#second-opinion"
-    },
-    {
-      "name": "Treatment Cost Estimator",
-      "short_name": "Cost Estimator",
-      "description": "Calculate real-time 40%-50% net medical travel savings",
-      "url": "./index.html#estimator"
-    },
-    {
-      "name": "8 Global Hubs & 85 Cities",
-      "short_name": "Global Hubs",
-      "description": "Explore JCI & NABH accredited hospitals worldwide",
-      "url": "./index.html#destinations"
+      "type": "image/png"
     }
   ]
 }
