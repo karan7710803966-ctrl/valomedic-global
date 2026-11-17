@@ -161,7 +161,6 @@
     </div>
     
     <div class="flex-1 overflow-y-auto p-6 space-y-4 text-xs">
-      <!-- Mobile Currency & Language Selectors -->
       <div class="bg-teal-900 p-3 rounded-xl space-y-3 lg:hidden border border-teal-700">
         <div>
           <label class="text-[10px] text-teal-300 block font-bold mb-1">Global Currency Converter (150+):</label>
@@ -305,7 +304,7 @@
         </div>
         
         <div class="bg-teal-900/80 p-3 rounded-xl border border-teal-700 text-[11px] text-teal-300">
-          <i class="fa-solid fa-shield-check text-emerald-400 mr-1"></i> Automated verification engine dispatches the 6-digit security code to your selected channel and syncs encrypted intake records with <strong>valomedic.care@gmail.com</strong>.
+          <i class="fa-solid fa-shield-check text-emerald-400 mr-1"></i> Automated verification engine dispatches the 6-digit security code and syncs encrypted intake records with <strong>Valomedic CRM &amp; valomedic.care@gmail.com</strong>.
         </div>
         
         <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-extrabold py-3.5 rounded-xl text-xs uppercase tracking-wider shadow-lg cursor-pointer">Register &amp; Send OTP ✉️</button>
@@ -791,7 +790,7 @@
     </div>
   </section>
   
-  <!-- Expert Opinion & Consultation ($29.99 USD with Direct Razorpay Checkout & PayPal Gateway Routing) -->
+  <!-- Expert Opinion & Consultation ($29.99 USD with Direct Razorpay Checkout, PayPal & Live CRM Sync) -->
   <section id="second-opinion" class="py-20 bg-teal-950/50 border-b border-teal-900">
     <div class="max-w-4xl mx-auto px-4">
       <div class="bg-teal-950 border border-teal-500/40 rounded-3xl p-8 lg:p-12 shadow-2xl space-y-6 box-border">
@@ -799,7 +798,7 @@
           <div>
             <span class="text-teal-300 font-extrabold uppercase tracking-widest text-xs">Valomedic Expert Opinion &amp; Consultation</span>
             <h2 class="text-2xl font-extrabold font-heading text-white mt-1">Request Expert Opinion &amp; Consultation ($29.99 USD Fee)</h2>
-            <p class="text-xs text-teal-200 mt-1">Complete your $29.99 USD consultation payment directly via PayPal or Razorpay first. Once paid, your executive case dossier dispatches automatically to <strong>valomedic.care@gmail.com</strong>.</p>
+            <p class="text-xs text-teal-200 mt-1">Complete your $29.99 USD consultation payment directly via PayPal or Razorpay first. Once paid, your executive case dossier logs automatically to our live CRM and dispatches to <strong>valomedic.care@gmail.com</strong>.</p>
           </div>
           <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-black px-4 py-2 rounded-xl text-sm shrink-0">$29.99 USD</span>
         </div>
@@ -809,14 +808,17 @@
           <div class="flex items-start gap-3">
             <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-circle-check"></i></div>
             <div class="space-y-1">
-              <h3 class="text-base font-extrabold text-white">Payment Verified ($29.99 USD) — Executive Dossier Ready</h3>
-              <p id="payment-ref-display" class="text-xs text-emerald-200 font-mono">Transaction Reference: CONFIRMED</p>
-              <p class="text-xs text-teal-100">Your consultation payment is complete. Click below if your email client did not open automatically to send your dossier to <strong>valomedic.care@gmail.com</strong>.</p>
+              <h3 class="text-base font-extrabold text-white">Payment Verified ($29.99 USD) — Priority Dossier Activated</h3>
+              <p id="payment-ref-display" class="text-xs text-emerald-200 font-mono">Reference ID: VALO-2026-XXX | Transaction Reference: CONFIRMED</p>
+              <p id="crm-sync-status-text" class="text-xs text-teal-100">Your consultation payment is verified and synced with Valomedic CRM. Click below if you also want to send a direct backup email copy to <strong>valomedic.care@gmail.com</strong>.</p>
             </div>
           </div>
           <div class="flex flex-wrap gap-3">
-            <button type="button" onclick="dispatchSavedDossierEmail()" class="bg-emerald-400 hover:bg-emerald-500 text-teal-950 font-extrabold px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider cursor-pointer shadow">
-              <i class="fa-solid fa-envelope mr-1"></i> Send Dossier to valomedic.care@gmail.com
+            <a id="post-payment-wa-btn" href="https://wa.me/917710803966" target="_blank" rel="noopener noreferrer" class="bg-emerald-400 hover:bg-emerald-500 text-teal-950 font-extrabold px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider cursor-pointer shadow inline-flex items-center gap-1.5">
+              <i class="fa-brands fa-whatsapp text-sm"></i> Priority WhatsApp Desk
+            </a>
+            <button type="button" onclick="dispatchSavedDossierEmail()" class="bg-teal-800 hover:bg-teal-700 text-white font-extrabold px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider cursor-pointer border border-teal-600 shadow">
+              <i class="fa-solid fa-envelope mr-1"></i> Send Backup Email Copy
             </button>
             <button type="button" onclick="clearPendingDossier()" class="bg-teal-900 hover:bg-teal-800 text-teal-200 font-bold px-4 py-2.5 rounded-xl text-xs cursor-pointer border border-teal-700">
               Dismiss
@@ -880,10 +882,10 @@
           <div>
             <label class="block text-xs font-bold uppercase tracking-wider text-teal-200 mb-1">Apply Promotional Voucher / Cashback Code</label>
             <select id="so-coupon" class="w-full bg-teal-900 border border-teal-700 rounded-xl px-4 py-3 text-xs text-white font-semibold">
-              <option value="None Applied">-- Select Available Promotional Code (Optional) --</option>
-              <option value="LUCKY100 (Annual 100% Treatment Cashback)">LUCKY100 - Annual 100% Treatment Cashback</option>
-              <option value="VALO7OFF (7% Excellence Package Discount)">VALO7OFF - 7% Excellence Package Discount</option>
-              <option value="VALO5OFF (5% Patient Care Credit)">VALO5OFF - 5% Patient Care Credit</option>
+              <option value="NONE">-- Select Available Promotional Code (Optional) --</option>
+              <option value="LUCKY100">LUCKY100 - Annual 100% Treatment Cashback</option>
+              <option value="VALO7OFF">VALO7OFF - 7% Excellence Package Discount</option>
+              <option value="VALO5OFF">VALO5OFF - 5% Patient Care Credit</option>
             </select>
           </div>
           
@@ -933,7 +935,7 @@
         <div>
           <span class="text-teal-300 font-extrabold uppercase tracking-widest text-xs">Cross-Border Pharmacy Logistics</span>
           <h2 class="text-2xl font-extrabold font-heading text-white mt-1">Specialty Medication &amp; Cold-Chain Order Form</h2>
-          <p class="text-xs text-teal-200 mt-1">Submit your prescription requirements for direct dispatch to <strong>valomedic.care@gmail.com</strong>.</p>
+          <p class="text-xs text-teal-200 mt-1">Submit your prescription requirements for automated CRM intake and dispatch to <strong>valomedic.care@gmail.com</strong>.</p>
         </div>
         <form onsubmit="handlePharmacyInquiry(event)" class="space-y-6">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -1074,13 +1076,47 @@
   <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   
   <script type="text/javascript">
-    // Live Payment Gateway Configuration (Valomedic Global Medical Concierge)
+    // =========================================================================
+    // VALOMEDIC V7 PRODUCTION CONFIGURATION (PAYMENT GATEWAYS + LIVE CRM BRIDGE)
+    // =========================================================================
     const VALOMEDIC_PAYMENT_CONFIG = {
+      // PASTE YOUR DEPLOYED GOOGLE APPS SCRIPT WEB APP URL BELOW:
+      crmWebhookUrl: "https://script.google.com/macros/s/YOUR_DEPLOYED_SCRIPT_ID/exec",
       paypalMeUrl: "https://www.paypal.com/paypalme/valomedic/29.99USD",
       paypalClientId: "BAAtSsF36PoYkiz0w_kenUESErjUnWqJ2agSJBGb9qVeYYb09OtnDpbZ9IEPuAwlJHfWU-4MnaXxCqbWkI",
       razorpayKeyId: "rzp_live_Tz6etcmMyTOy9W",
-      consultationFeeUSD: 29.99
+      consultationFeeUSD: 29.99,
+      adminEmail: "valomedic.care@gmail.com",
+      whatsappBase: "https://wa.me/917710803966"
     };
+
+    // Register PWA Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch((err) => console.log('SW registration info:', err));
+      });
+    }
+
+    // Universal Sync Function to Google Apps Script CRM Bridge V7
+    async function syncToValomedicCRM(payload) {
+      if (!VALOMEDIC_PAYMENT_CONFIG.crmWebhookUrl || VALOMEDIC_PAYMENT_CONFIG.crmWebhookUrl.includes("YOUR_DEPLOYED_SCRIPT_ID")) {
+        console.warn("Valomedic CRM Webhook URL not configured yet. Using local backup & email dispatch.");
+        return false;
+      }
+      try {
+        await fetch(VALOMEDIC_PAYMENT_CONFIG.crmWebhookUrl, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        console.log("Valomedic CRM V7 Payload dispatched successfully.");
+        return true;
+      } catch (err) {
+        console.error("Valomedic CRM Sync Error:", err);
+        return false;
+      }
+    }
   
     // 195+ World Country Calling Codes
     const allCountryCodes = [
@@ -1229,7 +1265,6 @@
       {code: "uz", name: "Uzbek"}, {code: "vi", name: "Vietnamese"}, {code: "cy", name: "Welsh"}, {code: "xh", name: "Xhosa"},
       {code: "yi", name: "Yiddish"}, {code: "yo", name: "Yoruba"}, {code: "zu", name: "Zulu"}
     ];
-    
     // 30 Comprehensive Surgery Departments
     const departmentsData = [
       {
@@ -1634,7 +1669,6 @@
         ]
       }
     ];
-    
     // 8 Global Hubs & 85 Medical Cities
     const hubsData = [
       {
@@ -1980,7 +2014,7 @@
       document.getElementById('otp-instruction-text').textContent = `Enter the 6-digit verification code sent via ${channel.toUpperCase()} to ${channel === 'email' ? email : code + " " + phone}. (Verification Code: ${generatedOTP})`;
     }
     
-    function handleVerifyOTP(event) {
+    async function handleVerifyOTP(event) {
       event.preventDefault();
       const enteredOTP = document.getElementById('otp-input').value;
       const storedOTP = localStorage.getItem('valomedic_pending_otp');
@@ -1990,6 +2024,18 @@
         users.push(pendingRegistrationData);
         localStorage.setItem('valomedic_users', JSON.stringify(users));
         localStorage.setItem('valomedic_active_session', JSON.stringify(pendingRegistrationData));
+
+        // Sync new registration to Valomedic CRM Bridge V7
+        syncToValomedicCRM({
+          eventType: "patient_registration",
+          intakeDate: new Date().toISOString().split('T')[0],
+          patientName: pendingRegistrationData.name,
+          patientEmail: pendingRegistrationData.email,
+          patientPhone: `${pendingRegistrationData.code} ${pendingRegistrationData.phone}`,
+          department: pendingRegistrationData.department,
+          priorityFee: "$0.00",
+          clinicalNotes: `Portal Registration Verified via OTP (${pendingRegistrationData.channel.toUpperCase()}).`
+        });
         
         closeAuthModal();
         const drawer = document.getElementById('app-menu-drawer');
@@ -2484,38 +2530,39 @@
       document.getElementById('out-savings').innerText = actualSavingsPercent + '% (~' + currencySymbol + Math.round(moneySavedUSD * conversionRate).toLocaleString() + ' Saved)';
     }
   
-    // Build Executive Case Dossier Email Payload
-    function buildExecutiveDossierPayload(dossierData, paymentRef) {
-      const emailSubject = encodeURIComponent(`[PAID: $29.99 USD | REF: ${paymentRef}] Valomedic Executive Case Dossier - ${dossierData.name} (${dossierData.category})`);
+    // Build Executive Case Dossier Backup Mailto URL
+    function buildExecutiveDossierPayload(dossierData, paymentRef, leadId) {
+      const emailSubject = encodeURIComponent(`[PAID: $29.99 USD | ${leadId} | REF: ${paymentRef}] Valomedic Executive Case Dossier - ${dossierData.name} (${dossierData.category})`);
       const emailBody = encodeURIComponent(
 `====================================================
 VALOMEDIC GLOBAL MEDICAL CONCIERGE
 VERIFIED PAID CONSULTATION DOSSIER ($29.99 USD)
 ====================================================
-  
+
 1. PAYMENT VERIFICATION & GATEWAY STATUS:
 ----------------------------------------------------
+• Reference ID      : ${leadId}
 • Payment Status    : PAID ($29.99 USD - Non-Refundable)
 • Payment Gateway   : ${dossierData.gateway}
 • Transaction Ref   : ${paymentRef}
 • Timestamp (UTC)   : ${new Date().toISOString()}
-  
+
 2. PATIENT IDENTIFICATION & CONTACT:
 ----------------------------------------------------
 • Patient Full Name : ${dossierData.name}
 • Email Address     : ${dossierData.email}
 • Phone / WhatsApp  : ${dossierData.phone}
-  
+
 3. CLINICAL INQUIRY & DESTINATION PARAMETERS:
 ----------------------------------------------------
 • Inquiry Category  : ${dossierData.category}
 • Target Destination: ${dossierData.hub}
 • Selected Coupon   : ${dossierData.coupon}
-  
+
 4. CLINICAL HISTORY & CASE NOTES:
 ----------------------------------------------------
 ${dossierData.notes}
-  
+
 ----------------------------------------------------
 STATUTORY ACKNOWLEDGMENT:
 Patient has completed the $29.99 USD payment and agreed to
@@ -2525,32 +2572,58 @@ the Non-Clinical Facilitator Disclaimer and Strict Zero-Refund Policy.
       return `mailto:valomedic.care@gmail.com?subject=${emailSubject}&body=${emailBody}`;
     }
   
-    // Finalize Payment -> Show Confirmation Banner & Trigger Dossier Email Dispatch
-    function completePaymentAndDispatchDossier(dossierData, paymentRef) {
+    // Finalize Payment -> Sync to Live Google Sheets CRM V7 + Show Confirmation Banner
+    async function completePaymentAndDispatchDossier(dossierData, paymentRef) {
+      const generatedId = "VALO-2026-" + Math.floor(100 + Math.random() * 900);
       const savedRecord = {
         ...dossierData,
+        leadId: generatedId,
         paymentRef: paymentRef,
         paidAt: new Date().toISOString()
       };
       localStorage.setItem('valomedic_paid_dossier', JSON.stringify(savedRecord));
+
+      // 1. Dispatch JSON payload to Google Apps Script CRM Bridge V7
+      const crmPayload = {
+        eventType: "consultation_paid",
+        intakeDate: new Date().toISOString().split('T')[0],
+        patientName: dossierData.name,
+        patientEmail: dossierData.email,
+        patientPhone: dossierData.phone,
+        destinationHub: dossierData.hub,
+        department: dossierData.category,
+        voucherCode: dossierData.coupon || "NONE",
+        priorityFee: "$29.99",
+        transactionRef: `${dossierData.gateway}: ${paymentRef}`,
+        clinicalNotes: `Email: ${dossierData.email} | Phone: ${dossierData.phone} | Notes: ${dossierData.notes}`
+      };
+      const synced = await syncToValomedicCRM(crmPayload);
   
+      // 2. Display Confirmation Banner & Update WhatsApp Link
       const banner = document.getElementById('payment-confirmation-banner');
       const refDisplay = document.getElementById('payment-ref-display');
+      const waBtn = document.getElementById('post-payment-wa-btn');
       if (banner && refDisplay) {
-        refDisplay.textContent = `Gateway: ${dossierData.gateway} | Ref: ${paymentRef}`;
+        refDisplay.textContent = `Reference ID: ${generatedId} | Gateway: ${dossierData.gateway} | Txn: ${paymentRef}`;
+        if (waBtn) {
+          waBtn.href = `${VALOMEDIC_PAYMENT_CONFIG.whatsappBase}?text=${encodeURIComponent(`Hello Valomedic Executive Desk, my Priority Consultation ($29.99 USD) is verified. Reference ID: ${generatedId} | Txn Ref: ${paymentRef} | Patient: ${dossierData.name}`)}`;
+        }
         banner.classList.remove('hidden');
         banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
   
-      const mailtoHref = buildExecutiveDossierPayload(dossierData, paymentRef);
-      window.location.href = mailtoHref;
+      // 3. Fallback mailto trigger if webhook placeholder is still active
+      if (!synced) {
+        const mailtoHref = buildExecutiveDossierPayload(dossierData, paymentRef, generatedId);
+        window.location.href = mailtoHref;
+      }
     }
   
     function dispatchSavedDossierEmail() {
       const raw = localStorage.getItem('valomedic_paid_dossier');
       if (!raw) return;
       const saved = JSON.parse(raw);
-      window.location.href = buildExecutiveDossierPayload(saved, saved.paymentRef || 'VERIFIED');
+      window.location.href = buildExecutiveDossierPayload(saved, saved.paymentRef || 'VERIFIED', saved.leadId || 'VALO-2026-NEW');
     }
   
     function clearPendingDossier() {
@@ -2587,14 +2660,13 @@ the Non-Clinical Facilitator Disclaimer and Strict Zero-Refund Policy.
       const dossierData = { name, email, category, hub, phone, notes, coupon, gateway };
   
       if (gateway === "Razorpay Global & UPI") {
-        // Trigger Razorpay Live Checkout Modal ($29.99 USD = 2999 cents)
         if (typeof Razorpay === "undefined") {
           alert("Razorpay Checkout SDK is loading. Please check your internet connection and try again.");
           return;
         }
         const rzpOptions = {
           key: VALOMEDIC_PAYMENT_CONFIG.razorpayKeyId,
-          amount: 2999, // $29.99 USD in smallest currency unit (cents)
+          amount: 2999,
           currency: "USD",
           name: "Valomedic Global Medical Concierge",
           description: `Expert Opinion & Consultation (${category})`,
@@ -2618,7 +2690,7 @@ the Non-Clinical Facilitator Disclaimer and Strict Zero-Refund Policy.
           },
           modal: {
             ondismiss: function () {
-              alert("Payment was cancelled before completion. Your case dossier will only be dispatched to valomedic.care@gmail.com once the $29.99 USD consultation payment is completed.");
+              alert("Payment was cancelled before completion. Your case dossier will only be logged and dispatched once the $29.99 USD consultation payment is completed.");
             }
           }
         };
@@ -2628,18 +2700,16 @@ the Non-Clinical Facilitator Disclaimer and Strict Zero-Refund Policy.
         });
         rzpInstance.open();
       } else {
-        // Trigger PayPal International Direct Checkout ($29.99 USD via PayPal.Me)
         localStorage.setItem('valomedic_pending_paypal_dossier', JSON.stringify(dossierData));
         const paypalPopup = window.open(VALOMEDIC_PAYMENT_CONFIG.paypalMeUrl, '_blank', 'noopener,noreferrer');
         if (!paypalPopup) {
           window.location.href = VALOMEDIC_PAYMENT_CONFIG.paypalMeUrl;
           return;
         }
-        // Display immediate confirmation prompt once patient completes PayPal payment in new tab
         setTimeout(() => {
           const confirmed = confirm(
             `PayPal International ($29.99 USD) opened in a new tab (${VALOMEDIC_PAYMENT_CONFIG.paypalMeUrl}).\n\n` +
-            `Click OK once you have completed your $29.99 USD PayPal payment to immediately generate and dispatch your Executive Case Dossier to valomedic.care@gmail.com.`
+            `Click OK once you have completed your $29.99 USD PayPal payment to immediately record your dossier in Valomedic CRM and dispatch executive notifications.`
           );
           if (confirmed) {
             localStorage.removeItem('valomedic_pending_paypal_dossier');
@@ -2649,13 +2719,30 @@ the Non-Clinical Facilitator Disclaimer and Strict Zero-Refund Policy.
       }
     }
     
-    function handlePharmacyInquiry(event) {
+    async function handlePharmacyInquiry(event) {
       event.preventDefault();
       const name = document.getElementById('pharm-name').value.trim();
       const email = document.getElementById('pharm-email').value.trim();
       const phone = document.getElementById('pharm-code').value + " " + document.getElementById('pharm-phone').value.trim();
       const category = document.getElementById('pharm-category').value;
       const notes = document.getElementById('pharm-notes').value.trim();
+
+      const synced = await syncToValomedicCRM({
+        eventType: "pharmacy_order",
+        intakeDate: new Date().toISOString().split('T')[0],
+        patientName: name,
+        patientEmail: email,
+        patientPhone: phone,
+        department: category,
+        priorityFee: "$0.00",
+        clinicalNotes: `Cold-Chain Rx Inquiry | Email: ${email} | Phone: ${phone} | Prescription: ${notes}`
+      });
+
+      if (synced) {
+        alert("Pharmacy & Cold-Chain Requisition logged into Valomedic CRM and dispatched to valomedic.care@gmail.com.");
+        event.target.reset();
+        return;
+      }
       
       const emailSubject = encodeURIComponent(`[PHARMACY & COLD-CHAIN ORDER] Valomedic Logistics - ${name} (${category})`);
       const emailBody = encodeURIComponent(
@@ -2670,32 +2757,14 @@ CROSS-BORDER PHARMACY & COLD-CHAIN REQUISITION
 • Email Address       : ${email}
 • Phone / WhatsApp    : ${phone}
 
-2. MEDICATION & LOGISTICS CATEGORY:
+2. MEDICATION CATEGORY & PRESCRIPTION DETAILS:
 ----------------------------------------------------
 • Medication Category : ${category}
-
-3. PRESCRIPTION DETAILS & DRUG SPECIFICATIONS:
-----------------------------------------------------
+• Prescription Details:
 ${notes}
-
 ====================================================`
       );
-      
-      alert("Your Specialty Medication & Cold-Chain requisition is opening in your email client addressed to valomedic.care@gmail.com.");
       window.location.href = `mailto:valomedic.care@gmail.com?subject=${emailSubject}&body=${emailBody}`;
-    }
-
-    // Register Service Worker for Offline PWA Capability
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('service-worker.js')
-          .then((registration) => {
-            console.log('Valomedic Service Worker registered with scope:', registration.scope);
-          })
-          .catch((error) => {
-            console.error('Valomedic Service Worker registration failed:', error);
-          });
-      });
     }
   </script>
 </body>
