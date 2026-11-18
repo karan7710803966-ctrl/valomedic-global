@@ -1091,11 +1091,13 @@
     };
 
     // Register PWA Service Worker
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js').catch((err) => console.log('SW registration info:', err));
-      });
-    }
+    <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js');
+    });
+  }
+</script>
 
     // Universal Sync Function to Google Apps Script CRM Bridge V7
     async function syncToValomedicCRM(payload) {
