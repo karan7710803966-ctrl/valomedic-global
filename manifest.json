@@ -1,10 +1,12 @@
 {
-  "id": "/index.html",
+  "id": "./index.html",
   "name": "Valomedic Global Medical Concierge",
   "short_name": "Valomedic",
+  "description": "Sovereign Healthcare & Cross-Border Surgical Concierge across 8 Global Hubs and 85 Medical Cities.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#030814",
   "theme_color": "#0f766e",
   "icons": [
@@ -19,6 +21,12 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }
