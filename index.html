@@ -2489,22 +2489,45 @@
       drawer.classList.toggle('translate-x-full');
     }
     
-    let deferredPrompt;
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-    });
-    
-    function triggerPWAInstall() {
-      if (deferredPrompt) {
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then(() => {
-          deferredPrompt = null;
-        });
-      } else {
-        alert("Valomedic PWA App is ready! To add to your home screen:\n\n• iPhone (Safari): Tap Share -> Add to Home Screen.\n• Android (Chrome): Tap Menu (3 dots) -> Install App.");
-      }
+    let deferredPrompt = null;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  const installBtn = document.getElementById('pwa-install-btn');
+  if (installBtn) {
+    installBtn.innerHTML = '<i class="fa-solid fa-mobile-screen-button text-base"></i> Tap to Install Valomedic App 📲';
+  }
+});
+
+window.addEventListener('appinstalled', () => {
+  deferredPrompt = null;
+  const installBtn = document.getElementById('pwa-install-btn');
+  if (installBtn) {
+    installBtn.innerHTML = '<i class="fa-solid fa-circle-check text-base"></i> App Installed in App Drawer ✓';
+    installBtn.classList.remove('animate-pulse');
+  }
+});
+
+async function triggerPWAInstall() {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    if (outcome === 'accepted') {
+      deferredPrompt = null;
     }
+    return;
+  }
+
+  // Fallback only if browser blocks automatic prompt (e.g. iOS Safari or already installed)
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  if (isIOS) {
+    alert('To install on iPhone/iPad: Tap the Share button at the bottom of Safari, then select "Add to Home Screen".');
+  } else {
+    alert('To install directly: Tap Chrome\'s 3-dot menu (⋮) at the top right and select "Install app" or "Add to home screen".');
+  }
+}
+
     
     function calculateEstimate() {
       const procSelect = document.getElementById('calc-procedure');
