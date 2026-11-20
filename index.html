@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Razorpay Standard Checkout & PayPal Hosted/SDK Scripts -->
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
@@ -25,9 +25,12 @@
       theme: {
         extend: {
           colors: {
-            brand: { teal: '#0f766e', cyan: '#0284c7', light: '#f8fafc', emerald: '#10b981', gold: '#f59e0b' }
+            brand: { teal: '#0f766e', cyan: '#0284c7', light: '#f2fbf7', emerald: '#059669', gold: '#d97706' }
           },
-          fontFamily: { sans: ['Inter', 'sans-serif'], heading: ['Playfair Display', 'serif'] }
+          fontFamily: { 
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'], 
+            heading: ['"Cormorant Garamond"', 'serif'] 
+          }
         }
       }
     }
@@ -35,23 +38,110 @@
   <style>
     @keyframes pulseFlow { 0% { stroke-dashoffset: 400; } 100% { stroke-dashoffset: 0; } }
     .ecg-flow { stroke-dasharray: 100 300; animation: pulseFlow 2.5s linear infinite; }
+
+    /* Very Light Mint-Green Clinical Background & Professional Typography */
     body {
-      background-color: #0f2927;
+      background-color: #f2fbf7 !important;
       background-image: 
-        radial-gradient(circle at 15% 20%, rgba(20, 184, 166, 0.22) 0%, transparent 45%),
-        radial-gradient(circle at 85% 80%, rgba(2, 132, 199, 0.25) 0%, transparent 50%),
-        linear-gradient(135deg, rgba(12, 20, 35, 0.95) 0%, rgba(15, 41, 39, 0.97) 100%);
+        radial-gradient(circle at 12% 18%, rgba(16, 185, 129, 0.10) 0%, transparent 45%),
+        radial-gradient(circle at 88% 82%, rgba(20, 184, 166, 0.10) 0%, transparent 50%),
+        linear-gradient(180deg, #f4fcf8 0%, #eaf8f1 100%) !important;
       background-attachment: fixed;
-      background-size: cover;
-      color: #f1f5f9;
+      color: #0f2922 !important;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      letter-spacing: -0.01em;
       top: 0px !important;
       position: static !important;
     }
-    .gradient-hero {
-      background: linear-gradient(135deg, rgba(15, 118, 110, 0.88) 0%, rgba(2, 132, 199, 0.85) 100%), url('https://lh3.googleusercontent.com/d/146kq9ED5Ku6zc73HHflnovaK832PR0wb');
-      background-size: cover;
-      background-position: center;
+
+    h1, h2, h3, .font-heading {
+      font-family: 'Cormorant Garamond', Georgia, serif !important;
+      letter-spacing: -0.015em;
     }
+
+    /* Hero Banner: Soft Luminous Mint-Teal Overlay */
+    .gradient-hero {
+      background: linear-gradient(135deg, rgba(240, 253, 248, 0.94) 0%, rgba(220, 247, 236, 0.90) 100%), url('https://lh3.googleusercontent.com/d/146kq9ED5Ku6zc73HHflnovaK832PR0wb') !important;
+      background-size: cover !important;
+      background-position: center !important;
+      color: #064e3b !important;
+      border-bottom: 1px solid #bbf7d0;
+    }
+
+    /* Transform Dark Teal Sections & Cards to Crisp Light Green & White Surfaces */
+    section.bg-teal-950\/50,
+    section.bg-teal-950\/80,
+    section.bg-teal-950\/90,
+    section.bg-teal-900\/40,
+    section.bg-teal-900\/60,
+    section.bg-teal-900\/70,
+    section.bg-teal-900\/80,
+    section.bg-teal-900\/90 {
+      background-color: rgba(242, 251, 247, 0.85) !important;
+      border-color: #cdece0 !important;
+    }
+
+    /* Elevated White / Mint Cards */
+    section .bg-teal-950,
+    section .bg-teal-950\/90,
+    section .bg-teal-900,
+    section .bg-teal-900\/90,
+    section .bg-teal-900\/80,
+    section .bg-teal-900\/70,
+    section .bg-teal-900\/60,
+    section .bg-teal-900\/50,
+    section .from-teal-950 {
+      background-color: #ffffff !important;
+      background-image: none !important;
+      border-color: #cbeae0 !important;
+      box-shadow: 0 10px 25px -5px rgba(6, 78, 59, 0.06), 0 4px 10px -6px rgba(6, 78, 59, 0.04) !important;
+    }
+
+    /* Typography Readability on Light Green Background */
+    section h1, section h2, section h3, section h4, section strong {
+      color: #064e3b !important;
+    }
+    section p, section span, section label, section li, section div {
+      color: #1e4238;
+    }
+    section .text-teal-300, section .text-emerald-300, section .text-cyan-300 {
+      color: #047857 !important;
+    }
+    section .text-teal-200, section .text-teal-100 {
+      color: #275347 !important;
+    }
+
+    /* Keep Image Overlay Labels & Primary Buttons High-Contrast */
+    section .relative span.text-white,
+    section .relative .text-white {
+      color: #ffffff !important;
+    }
+    section a.bg-emerald-400,
+    section button.bg-emerald-500,
+    section button.bg-emerald-600,
+    section button.bg-teal-600,
+    section button.bg-teal-700,
+    section button.bg-teal-800 {
+      color: #ffffff !important;
+      background-color: #059669 !important;
+    }
+    section a.bg-emerald-400:hover,
+    section button.bg-emerald-500:hover,
+    section button.bg-teal-600:hover {
+      background-color: #047857 !important;
+    }
+
+    /* Clean Light Inputs & Dropdowns Inside Forms */
+    section input, section select, section textarea {
+      background-color: #f6fcf9 !important;
+      color: #064e3b !important;
+      border: 1px solid #a7d7c5 !important;
+    }
+    section input::placeholder, section textarea::placeholder {
+      color: #6b9080 !important;
+    }
+
+    /* Scrollbar & Utility Overrides */
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     .goog-te-banner-frame.skiptranslate, .goog-te-gadget, .goog-logo-link, #google_translate_element { display: none !important; }
